@@ -19,19 +19,21 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"wuranim.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.8.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/./public/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="MongoDB 简介">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"wuranim.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.8.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富、最像关系数据库的。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MongoDB数据库和集合的基本操作">
 <meta property="og:url" content="http://wuranim.github.io/2019/03/17/MongoDB%E6%93%8D%E4%BD%9C(%E4%B8%80)/index.html">
 <meta property="og:site_name" content="Ran3D">
-<meta property="og:description" content="MongoDB 简介">
+<meta property="og:description" content="MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富、最像关系数据库的。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://wuranim.github.io/2019/03/17/MongoDB%E6%93%8D%E4%BD%9C(%E4%B8%80)/MongoDB.jpeg">
 <meta property="article:published_time" content="2019-03-16T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-12-04T09:12:01.256Z">
+<meta property="article:modified_time" content="2021-12-06T09:10:15.233Z">
 <meta property="article:author" content="Ran">
 <meta property="article:tag" content="基础">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://wuranim.github.io/2019/03/17/MongoDB%E6%93%8D%E4%BD%9C(%E4%B8%80)/MongoDB.jpeg">
 
 
 <link rel="canonical" href="http://wuranim.github.io/2019/03/17/MongoDB%E6%93%8D%E4%BD%9C(%E4%B8%80)/">
@@ -78,7 +80,6 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -90,35 +91,13 @@
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">14</span></a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">30</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">38</span></a></li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">31</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">37</span></a></li>
   </ul>
 </nav>
 
 
 
-  <div class="search-pop-overlay">
-    <div class="popup search-popup"><div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container"></div>
-  <span class="popup-btn-close" role="button">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div class="search-result-container">
-  <div class="algolia-stats"><hr></div>
-  <div class="algolia-hits"></div>
-  <div class="algolia-pagination"></div>
-</div>
-
-    </div>
-  </div>
 
 </div>
         
@@ -144,7 +123,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MongoDB-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">MongoDB 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">1.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E9%9B%86%E5%90%88%E7%9A%84%E5%AD%98%E5%82%A8"><span class="nav-number">1.2.</span> <span class="nav-text">面向集合的存储</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%BC%80%E6%9C%BA%E9%85%8D%E7%BD%AE"><span class="nav-number">1.3.</span> <span class="nav-text">虚拟机开机配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">2.</span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">2.1.</span> <span class="nav-text">数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%A1%A3"><span class="nav-number">2.2.</span> <span class="nav-text">文档</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%A1%A3%E7%9A%84%E9%80%BB%E8%BE%91%E8%81%94%E7%B3%BB"><span class="nav-number">2.3.</span> <span class="nav-text">文档的逻辑联系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%86%E5%90%88"><span class="nav-number">2.4.</span> <span class="nav-text">集合</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E9%9B%86%E5%90%88%E7%9A%84%E5%AD%98%E5%82%A8"><span class="nav-number">1.</span> <span class="nav-text">面向集合的存储</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%BC%80%E6%9C%BA%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">虚拟机开机配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number"></span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">1.</span> <span class="nav-text">数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%A1%A3"><span class="nav-number">2.</span> <span class="nav-text">文档</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%A1%A3%E7%9A%84%E9%80%BB%E8%BE%91%E8%81%94%E7%B3%BB"><span class="nav-number">3.</span> <span class="nav-text">文档的逻辑联系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%86%E5%90%88"><span class="nav-number">4.</span> <span class="nav-text">集合</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -159,13 +138,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">38</span>
+          <span class="site-state-item-count">37</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">30</span>
+        <span class="site-state-item-count">31</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -264,8 +243,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="MongoDB-简介"><a href="#MongoDB-简介" class="headerlink" title="MongoDB 简介"></a>MongoDB 简介</h1><span id="more"></span>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富、最像关系数据库的。</p>
+        <img src="/2019/03/17/MongoDB%E6%93%8D%E4%BD%9C(%E4%B8%80)/MongoDB.jpeg" class="" title="image">
+
+<p>MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富、最像关系数据库的。</p>
+<span id="more"></span>
+
 <h2 id="面向集合的存储"><a href="#面向集合的存储" class="headerlink" title="面向集合的存储"></a>面向集合的存储</h2><p>在 MongoDB 中，一个数据库包含多个集合，类似于 MySQL 中一个数据库包含多个表；一个集合包含多个文档，类似于 MySQL 中一个表包含多条数据。</p>
 <p>可以把集合记为表，文档记为一条记录。</p>
 <p>这样命名是有原因的，因为 MongoDB 没有行列统一的表格式排列，而是采用一个大仓库的形式将所有数据包纳其中。文档也一样，它是一段自由独立的数据，受外部限制少，所以区别于关系型数据库的记录。</p>
@@ -318,12 +300,12 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2019/03/17/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C/" rel="prev" title="数据库操作">
-                  <i class="fa fa-chevron-left"></i> 数据库操作
+                <a href="/2019/03/17/MySQL_%E8%A1%A8%E7%9A%84%E6%93%8D%E4%BD%9C/" rel="prev" title="表的操作">
+                  <i class="fa fa-chevron-left"></i> 表的操作
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2019/03/18/mysqljoin/" rel="next" title="数据库中的左连接(left join)和右连接(right join)区别">
+                <a href="/2019/03/18/MySQL_join/" rel="next" title="数据库中的左连接(left join)和右连接(right join)区别">
                   数据库中的左连接(left join)和右连接(right join)区别 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
@@ -379,8 +361,6 @@
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   
-<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.11.0/dist/algoliasearch-lite.umd.js" integrity="sha256-48AZ24Ct05NAMLT7hvYgeW1X350OgEcZvHd6Ih6xwOA=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.33.2/dist/instantsearch.production.min.js" integrity="sha256-0B5Q7I/DVd8yp8JYLzbpELEonNBlVe7NLixMCLEnlBU=" crossorigin="anonymous"></script><script src="/js/third-party/search/algolia-search.js"></script>
 
 
 
