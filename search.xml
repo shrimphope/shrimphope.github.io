@@ -88,35 +88,6 @@
       </tags>
   </entry>
   <entry>
-    <title>184.部门工资最高的员工</title>
-    <url>/2019/05/06/LeetCode_184-%E9%83%A8%E9%97%A8%E5%B7%A5%E8%B5%84%E6%9C%80%E9%AB%98%E7%9A%84%E5%91%98%E5%B7%A5/</url>
-    <content><![CDATA[<img src="/2019/05/06/LeetCode_184-%E9%83%A8%E9%97%A8%E5%B7%A5%E8%B5%84%E6%9C%80%E9%AB%98%E7%9A%84%E5%91%98%E5%B7%A5/leetcode.jpeg" class="" title="image">
-<p>编写一个 SQL 查询，找出每个部门工资最高的员工。</p>
-<span id="more"></span>
-<p>SQL架构：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Create</span> <span class="keyword">table</span> If <span class="keyword">Not</span> <span class="keyword">Exists</span> Employee (Id <span class="type">int</span>, Name <span class="type">varchar</span>(<span class="number">255</span>), Salary <span class="type">int</span>, DepartmentId <span class="type">int</span>)</span><br><span class="line"><span class="keyword">Create</span> <span class="keyword">table</span> If <span class="keyword">Not</span> <span class="keyword">Exists</span> Department (Id <span class="type">int</span>, Name <span class="type">varchar</span>(<span class="number">255</span>))</span><br><span class="line"><span class="keyword">Truncate</span> <span class="keyword">table</span> Employee</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Employee (Id, Name, Salary, DepartmentId) <span class="keyword">values</span> (<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;Joe&#x27;</span>, <span class="string">&#x27;70000&#x27;</span>, <span class="string">&#x27;1&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Employee (Id, Name, Salary, DepartmentId) <span class="keyword">values</span> (<span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;Jim&#x27;</span>, <span class="string">&#x27;90000&#x27;</span>, <span class="string">&#x27;1&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Employee (Id, Name, Salary, DepartmentId) <span class="keyword">values</span> (<span class="string">&#x27;3&#x27;</span>, <span class="string">&#x27;Henry&#x27;</span>, <span class="string">&#x27;80000&#x27;</span>, <span class="string">&#x27;2&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Employee (Id, Name, Salary, DepartmentId) <span class="keyword">values</span> (<span class="string">&#x27;4&#x27;</span>, <span class="string">&#x27;Sam&#x27;</span>, <span class="string">&#x27;60000&#x27;</span>, <span class="string">&#x27;2&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Employee (Id, Name, Salary, DepartmentId) <span class="keyword">values</span> (<span class="string">&#x27;5&#x27;</span>, <span class="string">&#x27;Max&#x27;</span>, <span class="string">&#x27;90000&#x27;</span>, <span class="string">&#x27;1&#x27;</span>)</span><br><span class="line"><span class="keyword">Truncate</span> <span class="keyword">table</span> Department</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Department (Id, Name) <span class="keyword">values</span> (<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;IT&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Department (Id, Name) <span class="keyword">values</span> (<span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;Sales&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>Employee 表包含所有员工信息，每个员工有其对应的 Id, salary 和 department Id。</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">----+-------+--------+--------------+</span></span><br><span class="line"><span class="operator">|</span> Id <span class="operator">|</span> Name  <span class="operator">|</span> Salary <span class="operator">|</span> DepartmentId <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----+-------+--------+--------------+</span></span><br><span class="line"><span class="operator">|</span> <span class="number">1</span>  <span class="operator">|</span> Joe   <span class="operator">|</span> <span class="number">70000</span>  <span class="operator">|</span> <span class="number">1</span>            <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">2</span>  <span class="operator">|</span> Henry <span class="operator">|</span> <span class="number">80000</span>  <span class="operator">|</span> <span class="number">2</span>            <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">3</span>  <span class="operator">|</span> Sam   <span class="operator">|</span> <span class="number">60000</span>  <span class="operator">|</span> <span class="number">2</span>            <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">4</span>  <span class="operator">|</span> Max   <span class="operator">|</span> <span class="number">90000</span>  <span class="operator">|</span> <span class="number">1</span>            <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----+-------+--------+--------------+</span></span><br></pre></td></tr></table></figure>
-<p>Department 表包含公司所有部门的信息。</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">----+----------+</span></span><br><span class="line"><span class="operator">|</span> Id <span class="operator">|</span> Name     <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----+----------+</span></span><br><span class="line"><span class="operator">|</span> <span class="number">1</span>  <span class="operator">|</span> IT       <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">2</span>  <span class="operator">|</span> Sales    <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----+----------+</span></span><br></pre></td></tr></table></figure>
-<p>编写一个 SQL 查询，找出每个部门工资最高的员工。例如，根据上述给定的表格，Max 在 IT 部门有最高工资，Henry 在 Sales 部门有最高工资。</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">------------+----------+--------+</span></span><br><span class="line"><span class="operator">|</span> Department <span class="operator">|</span> Employee <span class="operator">|</span> Salary <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">------------+----------+--------+</span></span><br><span class="line"><span class="operator">|</span> IT         <span class="operator">|</span> Max      <span class="operator">|</span> <span class="number">90000</span>  <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> Sales      <span class="operator">|</span> Henry    <span class="operator">|</span> <span class="number">80000</span>  <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">------------+----------+--------+</span></span><br></pre></td></tr></table></figure>
-
-<p>思路：</p>
-<p>用JOIN子句内连接查询两个表，用GROUP子句分组并用聚合函数MAX()获得各个部门的最高工资</p>
-<p>解答：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> </span><br><span class="line">    Department.Name <span class="keyword">AS</span> Department, </span><br><span class="line">    Employee.Name <span class="keyword">AS</span> Employee, </span><br><span class="line">    Employee.Salary <span class="keyword">AS</span> Salary </span><br><span class="line"><span class="keyword">FROM</span> </span><br><span class="line">    Employee <span class="keyword">JOIN</span> Department <span class="keyword">ON</span> Employee.DepartmentId <span class="operator">=</span> Department.Id </span><br><span class="line"><span class="keyword">WHERE</span> </span><br><span class="line">    (Employee.DepartmentId, Employee.Salary) </span><br><span class="line">    <span class="keyword">IN</span> </span><br><span class="line">    (<span class="keyword">SELECT</span> DepartmentId, <span class="built_in">MAX</span>(Salary) <span class="keyword">FROM</span> Employee <span class="keyword">GROUP</span> <span class="keyword">BY</span> DepartmentId);</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>LeetCode</category>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>183.从不订购的用户</title>
     <url>/2019/04/29/LeetCode_183-%E4%BB%8E%E4%B8%8D%E8%AE%A2%E8%B4%AD%E7%9A%84%E7%94%A8%E6%88%B7/</url>
     <content><![CDATA[<img src="/2019/04/29/LeetCode_183-%E4%BB%8E%E4%B8%8D%E8%AE%A2%E8%B4%AD%E7%9A%84%E7%94%A8%E6%88%B7/leetcode.jpeg" class="" title="image">
@@ -140,6 +111,35 @@
 <p>查询目标：Name(As Customers)<br>查询范围：Customers表和Orders表<br>查询条件：从不订购任何东西。</p>
 <p>解答：</p>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span></span><br><span class="line">    Customers.Name <span class="keyword">as</span> Customers</span><br><span class="line"><span class="keyword">from</span></span><br><span class="line">    Customers <span class="keyword">left</span> <span class="keyword">join</span> Orders <span class="keyword">on</span> Customers.Id <span class="operator">=</span> Orders.CustomerId</span><br><span class="line"><span class="keyword">where</span></span><br><span class="line">    Orders.Id <span class="keyword">is</span> <span class="keyword">null</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>184.部门工资最高的员工</title>
+    <url>/2019/05/06/LeetCode_184-%E9%83%A8%E9%97%A8%E5%B7%A5%E8%B5%84%E6%9C%80%E9%AB%98%E7%9A%84%E5%91%98%E5%B7%A5/</url>
+    <content><![CDATA[<img src="/2019/05/06/LeetCode_184-%E9%83%A8%E9%97%A8%E5%B7%A5%E8%B5%84%E6%9C%80%E9%AB%98%E7%9A%84%E5%91%98%E5%B7%A5/leetcode.jpeg" class="" title="image">
+<p>编写一个 SQL 查询，找出每个部门工资最高的员工。</p>
+<span id="more"></span>
+<p>SQL架构：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Create</span> <span class="keyword">table</span> If <span class="keyword">Not</span> <span class="keyword">Exists</span> Employee (Id <span class="type">int</span>, Name <span class="type">varchar</span>(<span class="number">255</span>), Salary <span class="type">int</span>, DepartmentId <span class="type">int</span>)</span><br><span class="line"><span class="keyword">Create</span> <span class="keyword">table</span> If <span class="keyword">Not</span> <span class="keyword">Exists</span> Department (Id <span class="type">int</span>, Name <span class="type">varchar</span>(<span class="number">255</span>))</span><br><span class="line"><span class="keyword">Truncate</span> <span class="keyword">table</span> Employee</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Employee (Id, Name, Salary, DepartmentId) <span class="keyword">values</span> (<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;Joe&#x27;</span>, <span class="string">&#x27;70000&#x27;</span>, <span class="string">&#x27;1&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Employee (Id, Name, Salary, DepartmentId) <span class="keyword">values</span> (<span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;Jim&#x27;</span>, <span class="string">&#x27;90000&#x27;</span>, <span class="string">&#x27;1&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Employee (Id, Name, Salary, DepartmentId) <span class="keyword">values</span> (<span class="string">&#x27;3&#x27;</span>, <span class="string">&#x27;Henry&#x27;</span>, <span class="string">&#x27;80000&#x27;</span>, <span class="string">&#x27;2&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Employee (Id, Name, Salary, DepartmentId) <span class="keyword">values</span> (<span class="string">&#x27;4&#x27;</span>, <span class="string">&#x27;Sam&#x27;</span>, <span class="string">&#x27;60000&#x27;</span>, <span class="string">&#x27;2&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Employee (Id, Name, Salary, DepartmentId) <span class="keyword">values</span> (<span class="string">&#x27;5&#x27;</span>, <span class="string">&#x27;Max&#x27;</span>, <span class="string">&#x27;90000&#x27;</span>, <span class="string">&#x27;1&#x27;</span>)</span><br><span class="line"><span class="keyword">Truncate</span> <span class="keyword">table</span> Department</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Department (Id, Name) <span class="keyword">values</span> (<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;IT&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Department (Id, Name) <span class="keyword">values</span> (<span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;Sales&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Employee 表包含所有员工信息，每个员工有其对应的 Id, salary 和 department Id。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">----+-------+--------+--------------+</span></span><br><span class="line"><span class="operator">|</span> Id <span class="operator">|</span> Name  <span class="operator">|</span> Salary <span class="operator">|</span> DepartmentId <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----+-------+--------+--------------+</span></span><br><span class="line"><span class="operator">|</span> <span class="number">1</span>  <span class="operator">|</span> Joe   <span class="operator">|</span> <span class="number">70000</span>  <span class="operator">|</span> <span class="number">1</span>            <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">2</span>  <span class="operator">|</span> Henry <span class="operator">|</span> <span class="number">80000</span>  <span class="operator">|</span> <span class="number">2</span>            <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">3</span>  <span class="operator">|</span> Sam   <span class="operator">|</span> <span class="number">60000</span>  <span class="operator">|</span> <span class="number">2</span>            <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">4</span>  <span class="operator">|</span> Max   <span class="operator">|</span> <span class="number">90000</span>  <span class="operator">|</span> <span class="number">1</span>            <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----+-------+--------+--------------+</span></span><br></pre></td></tr></table></figure>
+<p>Department 表包含公司所有部门的信息。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">----+----------+</span></span><br><span class="line"><span class="operator">|</span> Id <span class="operator">|</span> Name     <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----+----------+</span></span><br><span class="line"><span class="operator">|</span> <span class="number">1</span>  <span class="operator">|</span> IT       <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">2</span>  <span class="operator">|</span> Sales    <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----+----------+</span></span><br></pre></td></tr></table></figure>
+<p>编写一个 SQL 查询，找出每个部门工资最高的员工。例如，根据上述给定的表格，Max 在 IT 部门有最高工资，Henry 在 Sales 部门有最高工资。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">------------+----------+--------+</span></span><br><span class="line"><span class="operator">|</span> Department <span class="operator">|</span> Employee <span class="operator">|</span> Salary <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">------------+----------+--------+</span></span><br><span class="line"><span class="operator">|</span> IT         <span class="operator">|</span> Max      <span class="operator">|</span> <span class="number">90000</span>  <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> Sales      <span class="operator">|</span> Henry    <span class="operator">|</span> <span class="number">80000</span>  <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">------------+----------+--------+</span></span><br></pre></td></tr></table></figure>
+
+<p>思路：</p>
+<p>用JOIN子句内连接查询两个表，用GROUP子句分组并用聚合函数MAX()获得各个部门的最高工资</p>
+<p>解答：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> </span><br><span class="line">    Department.Name <span class="keyword">AS</span> Department, </span><br><span class="line">    Employee.Name <span class="keyword">AS</span> Employee, </span><br><span class="line">    Employee.Salary <span class="keyword">AS</span> Salary </span><br><span class="line"><span class="keyword">FROM</span> </span><br><span class="line">    Employee <span class="keyword">JOIN</span> Department <span class="keyword">ON</span> Employee.DepartmentId <span class="operator">=</span> Department.Id </span><br><span class="line"><span class="keyword">WHERE</span> </span><br><span class="line">    (Employee.DepartmentId, Employee.Salary) </span><br><span class="line">    <span class="keyword">IN</span> </span><br><span class="line">    (<span class="keyword">SELECT</span> DepartmentId, <span class="built_in">MAX</span>(Salary) <span class="keyword">FROM</span> Employee <span class="keyword">GROUP</span> <span class="keyword">BY</span> DepartmentId);</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>LeetCode</category>
@@ -176,26 +176,6 @@
       </tags>
   </entry>
   <entry>
-    <title>2.两数相加</title>
-    <url>/2019/05/09/LeetCode_2-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/</url>
-    <content><![CDATA[<img src="/2019/05/09/LeetCode_2-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/leetcode.jpeg" class="" title="image">
-<p>给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。</p>
-<span id="more"></span>
-<p>如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。</p>
-<p>您可以假设除了数字 0 之外，这两个数都不会以 0 开头。</p>
-<figure class="highlight clean"><table><tr><td class="code"><pre><span class="line">输入：(<span class="number">2</span> -&gt; <span class="number">4</span> -&gt; <span class="number">3</span>) + (<span class="number">5</span> -&gt; <span class="number">6</span> -&gt; <span class="number">4</span>)</span><br><span class="line">输出：<span class="number">7</span> -&gt; <span class="number">0</span> -&gt; <span class="number">8</span></span><br><span class="line">原因：<span class="number">342</span> + <span class="number">465</span> = <span class="number">807</span></span><br></pre></td></tr></table></figure>
-
-<p>解答：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"># class ListNode:  # 定义链表节点类</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.next = None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span>  <span class="comment"># solution解决方案</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addTwoNumbers</span>(<span class="params">self, l1, l2</span>):</span>  <span class="comment"># 定义两数相加函数</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type l1: ListNode</span></span><br><span class="line"><span class="string">        :type l2: ListNode</span></span><br><span class="line"><span class="string">        :rtype: ListNode</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment"># 如果有一个链表为空，返回另外一个</span></span><br><span class="line">        <span class="keyword">if</span> l1 <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">return</span> l2</span><br><span class="line">        <span class="keyword">if</span> l2 <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">return</span> l1</span><br><span class="line">        <span class="comment"># tmp是暂存（temporal）</span></span><br><span class="line">        tmp = ListNode(<span class="number">0</span>)  <span class="comment"># 引用ListNode类定义了一个链表节点并赋给tmp</span></span><br><span class="line">        <span class="comment"># res是重置（reset）</span></span><br><span class="line">        res = tmp  <span class="comment"># 赋值</span></span><br><span class="line">        <span class="comment"># flag 标示</span></span><br><span class="line">        flag = <span class="number">0</span>  <span class="comment"># 初始化</span></span><br><span class="line">        <span class="keyword">while</span> l1 <span class="keyword">or</span> l2:  <span class="comment"># l1或l2不为空就持续执行</span></span><br><span class="line">            tmp_sum = <span class="number">0</span>  <span class="comment"># 链表节点值的和</span></span><br><span class="line">            <span class="keyword">if</span> l1:  <span class="comment"># 如果l1不为空，把l1的某个节点值的和赋给tmp_sum</span></span><br><span class="line">                tmp_sum = l1.val  <span class="comment"># 把l1的某个节点的值赋给tmp_sum</span></span><br><span class="line">                l1 = l1.<span class="built_in">next</span></span><br><span class="line">            <span class="keyword">if</span> l2:  <span class="comment"># 如果l2不为空，把l2中和l1对应的节点的值加到tmp_sum</span></span><br><span class="line">                tmp_sum += l2.val</span><br><span class="line">                l2 = l2.<span class="built_in">next</span>  <span class="comment"># 指向下一个节点，为下一次的加和做准备</span></span><br><span class="line">            tmp_res = ((tmp_sum + flag) % <span class="number">10</span>)  <span class="comment"># 个位数字</span></span><br><span class="line">            flag = ((tmp_sum + flag) // <span class="number">10</span>)  <span class="comment"># 进位的数</span></span><br><span class="line">            res.<span class="built_in">next</span> = ListNode(tmp_res)</span><br><span class="line">            res = res.<span class="built_in">next</span>  <span class="comment"># res后移</span></span><br><span class="line">            <span class="keyword">if</span> flag:  <span class="comment"># 如果flag不为0，就是对应位置相加后有进位</span></span><br><span class="line">                res.<span class="built_in">next</span> = ListNode(<span class="number">1</span>)  <span class="comment"># res的下一节点设为1</span></span><br><span class="line">        res = tmp.<span class="built_in">next</span>  <span class="comment"># 赋值</span></span><br><span class="line">        <span class="keyword">del</span> tmp  <span class="comment"># 删除tmp变量</span></span><br><span class="line">        <span class="keyword">return</span> res  <span class="comment"># 返回res链表</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>LeetCode</category>
-        <category>链表</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>196.删除重复的电子邮箱</title>
     <url>/2019/05/02/LeetCode_196-%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E7%9A%84%E7%94%B5%E5%AD%90%E9%82%AE%E7%AE%B1/</url>
     <content><![CDATA[<img src="/2019/05/02/LeetCode_196-%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E7%9A%84%E7%94%B5%E5%AD%90%E9%82%AE%E7%AE%B1/leetcode.jpeg" class="" title="image">
@@ -214,6 +194,26 @@
       <categories>
         <category>LeetCode</category>
         <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2.两数相加</title>
+    <url>/2019/05/09/LeetCode_2-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/</url>
+    <content><![CDATA[<img src="/2019/05/09/LeetCode_2-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/leetcode.jpeg" class="" title="image">
+<p>给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。</p>
+<span id="more"></span>
+<p>如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。</p>
+<p>您可以假设除了数字 0 之外，这两个数都不会以 0 开头。</p>
+<figure class="highlight clean"><table><tr><td class="code"><pre><span class="line">输入：(<span class="number">2</span> -&gt; <span class="number">4</span> -&gt; <span class="number">3</span>) + (<span class="number">5</span> -&gt; <span class="number">6</span> -&gt; <span class="number">4</span>)</span><br><span class="line">输出：<span class="number">7</span> -&gt; <span class="number">0</span> -&gt; <span class="number">8</span></span><br><span class="line">原因：<span class="number">342</span> + <span class="number">465</span> = <span class="number">807</span></span><br></pre></td></tr></table></figure>
+
+<p>解答：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"># class ListNode:  # 定义链表节点类</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.next = None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span>  <span class="comment"># solution解决方案</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addTwoNumbers</span>(<span class="params">self, l1, l2</span>):</span>  <span class="comment"># 定义两数相加函数</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type l1: ListNode</span></span><br><span class="line"><span class="string">        :type l2: ListNode</span></span><br><span class="line"><span class="string">        :rtype: ListNode</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment"># 如果有一个链表为空，返回另外一个</span></span><br><span class="line">        <span class="keyword">if</span> l1 <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">return</span> l2</span><br><span class="line">        <span class="keyword">if</span> l2 <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">return</span> l1</span><br><span class="line">        <span class="comment"># tmp是暂存（temporal）</span></span><br><span class="line">        tmp = ListNode(<span class="number">0</span>)  <span class="comment"># 引用ListNode类定义了一个链表节点并赋给tmp</span></span><br><span class="line">        <span class="comment"># res是重置（reset）</span></span><br><span class="line">        res = tmp  <span class="comment"># 赋值</span></span><br><span class="line">        <span class="comment"># flag 标示</span></span><br><span class="line">        flag = <span class="number">0</span>  <span class="comment"># 初始化</span></span><br><span class="line">        <span class="keyword">while</span> l1 <span class="keyword">or</span> l2:  <span class="comment"># l1或l2不为空就持续执行</span></span><br><span class="line">            tmp_sum = <span class="number">0</span>  <span class="comment"># 链表节点值的和</span></span><br><span class="line">            <span class="keyword">if</span> l1:  <span class="comment"># 如果l1不为空，把l1的某个节点值的和赋给tmp_sum</span></span><br><span class="line">                tmp_sum = l1.val  <span class="comment"># 把l1的某个节点的值赋给tmp_sum</span></span><br><span class="line">                l1 = l1.<span class="built_in">next</span></span><br><span class="line">            <span class="keyword">if</span> l2:  <span class="comment"># 如果l2不为空，把l2中和l1对应的节点的值加到tmp_sum</span></span><br><span class="line">                tmp_sum += l2.val</span><br><span class="line">                l2 = l2.<span class="built_in">next</span>  <span class="comment"># 指向下一个节点，为下一次的加和做准备</span></span><br><span class="line">            tmp_res = ((tmp_sum + flag) % <span class="number">10</span>)  <span class="comment"># 个位数字</span></span><br><span class="line">            flag = ((tmp_sum + flag) // <span class="number">10</span>)  <span class="comment"># 进位的数</span></span><br><span class="line">            res.<span class="built_in">next</span> = ListNode(tmp_res)</span><br><span class="line">            res = res.<span class="built_in">next</span>  <span class="comment"># res后移</span></span><br><span class="line">            <span class="keyword">if</span> flag:  <span class="comment"># 如果flag不为0，就是对应位置相加后有进位</span></span><br><span class="line">                res.<span class="built_in">next</span> = ListNode(<span class="number">1</span>)  <span class="comment"># res的下一节点设为1</span></span><br><span class="line">        res = tmp.<span class="built_in">next</span>  <span class="comment"># 赋值</span></span><br><span class="line">        <span class="keyword">del</span> tmp  <span class="comment"># 删除tmp变量</span></span><br><span class="line">        <span class="keyword">return</span> res  <span class="comment"># 返回res链表</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>LeetCode</category>
+        <category>链表</category>
       </categories>
       <tags>
         <tag>LeetCode</tag>
@@ -308,6 +308,27 @@
       <categories>
         <category>LeetCode</category>
         <category>排序</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>输入有序数组</title>
+    <url>/2019/05/12/LeetCode_%E4%BA%8C%E5%88%86%E6%B3%95_%E8%BE%93%E5%85%A5%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/</url>
+    <content><![CDATA[<img src="/2019/05/12/LeetCode_%E4%BA%8C%E5%88%86%E6%B3%95_%E8%BE%93%E5%85%A5%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/leetcode.jpeg" class="" title="image">
+<p>给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。</p>
+<span id="more"></span>
+<p>函数应该返回这两个下标值 index1 和 index2，其中 index1 必须小于 index2。</p>
+<p>说明:</p>
+<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">1</span>.返回的下标值（index<span class="number">1</span> 和 index<span class="number">2</span>）不是从零开始的。</span><br><span class="line"><span class="attribute">2</span>.你可以假设每个输入只对应唯一的答案，而且你不可以重复使用相同的元素。</span><br></pre></td></tr></table></figure>
+<p>示例:</p>
+<figure class="highlight nix"><table><tr><td class="code"><pre><span class="line">输入: <span class="attr">numbers</span> = [<span class="number">2</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span>], <span class="attr">target</span> = <span class="number">9</span></span><br><span class="line">输出: [<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">解释: <span class="number">2</span> 与 <span class="number">7</span> 之和等于目标数 <span class="number">9</span> 。因此 <span class="attr">index1</span> = <span class="number">1</span>, <span class="attr">index2</span> = <span class="number">2</span> 。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span>(<span class="params">self, numbers: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type numbers: List[int]</span></span><br><span class="line"><span class="string">        :type target: int</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        s = &#123;&#125;</span><br><span class="line">        r = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(numbers)):</span><br><span class="line">            <span class="keyword">if</span> numbers[i] <span class="keyword">in</span> s.keys():</span><br><span class="line">                r.append(s[numbers[i]]+<span class="number">1</span>)</span><br><span class="line">                r.append(i+<span class="number">1</span>)</span><br><span class="line">                <span class="keyword">return</span> r</span><br><span class="line">            s[target-numbers[i]] = i</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>LeetCode</category>
+        <category>二分查找</category>
       </categories>
       <tags>
         <tag>LeetCode</tag>
@@ -491,27 +512,6 @@ Hello
       </categories>
       <tags>
         <tag>基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>输入有序数组</title>
-    <url>/2019/05/12/LeetCode_%E4%BA%8C%E5%88%86%E6%B3%95_%E8%BE%93%E5%85%A5%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/</url>
-    <content><![CDATA[<img src="/2019/05/12/LeetCode_%E4%BA%8C%E5%88%86%E6%B3%95_%E8%BE%93%E5%85%A5%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/leetcode.jpeg" class="" title="image">
-<p>给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。</p>
-<span id="more"></span>
-<p>函数应该返回这两个下标值 index1 和 index2，其中 index1 必须小于 index2。</p>
-<p>说明:</p>
-<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">1</span>.返回的下标值（index<span class="number">1</span> 和 index<span class="number">2</span>）不是从零开始的。</span><br><span class="line"><span class="attribute">2</span>.你可以假设每个输入只对应唯一的答案，而且你不可以重复使用相同的元素。</span><br></pre></td></tr></table></figure>
-<p>示例:</p>
-<figure class="highlight nix"><table><tr><td class="code"><pre><span class="line">输入: <span class="attr">numbers</span> = [<span class="number">2</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span>], <span class="attr">target</span> = <span class="number">9</span></span><br><span class="line">输出: [<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">解释: <span class="number">2</span> 与 <span class="number">7</span> 之和等于目标数 <span class="number">9</span> 。因此 <span class="attr">index1</span> = <span class="number">1</span>, <span class="attr">index2</span> = <span class="number">2</span> 。</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span>(<span class="params">self, numbers: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type numbers: List[int]</span></span><br><span class="line"><span class="string">        :type target: int</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        s = &#123;&#125;</span><br><span class="line">        r = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(numbers)):</span><br><span class="line">            <span class="keyword">if</span> numbers[i] <span class="keyword">in</span> s.keys():</span><br><span class="line">                r.append(s[numbers[i]]+<span class="number">1</span>)</span><br><span class="line">                r.append(i+<span class="number">1</span>)</span><br><span class="line">                <span class="keyword">return</span> r</span><br><span class="line">            s[target-numbers[i]] = i</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>LeetCode</category>
-        <category>二分查找</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
       </tags>
   </entry>
   <entry>
@@ -732,6 +732,30 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
+    <title>python之input()</title>
+    <url>/2019/03/03/Python_%E5%87%BD%E6%95%B0_input/</url>
+    <content><![CDATA[<img src="/2019/03/03/Python_%E5%87%BD%E6%95%B0_input/python.jpg" class="" title="image">
+<span id="more"></span>
+<p>通过input()函数，可以从标准输入中读取内容，那么读到的内容是什么类型?</p>
+<img src="/2019/03/03/Python_%E5%87%BD%E6%95%B0_input/input%E8%BE%93%E5%85%A5%E7%B1%BB%E5%9E%8B.png" class="">
+<p>通过type函数可以看到即使输入的int类型，input还是将其转换为字符串类型，那么如何将input的字符串类型转换为int类型？</p>
+<p><em><strong>1.使用强制类型转换int()函数</strong></em></p>
+<img src="/2019/03/03/Python_%E5%87%BD%E6%95%B0_input/input%E8%BE%93%E5%85%A5%E7%B1%BB%E5%9E%8B2.png" class="">
+
+<p><em><strong>2.使用eval()函数</strong></em></p>
+<img src="/2019/03/03/Python_%E5%87%BD%E6%95%B0_input/input%E8%BE%93%E5%85%A5%E7%B1%BB%E5%9E%8B1.png" class="">
+
+<p>eval()函数的用法见<a href="#">Post not found: python之eval</a><br>不过eval()函数有一些潜在的风险，所以更推荐第一种方法来转换类型</p>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>常用函数</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python之format()</title>
     <url>/2019/03/01/Python_%E5%87%BD%E6%95%B0_format/</url>
     <content><![CDATA[<img src="/2019/03/01/Python_%E5%87%BD%E6%95%B0_format/python.jpg" class="" title="image">
@@ -890,30 +914,6 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
-    <title>python之input()</title>
-    <url>/2019/03/03/Python_%E5%87%BD%E6%95%B0_input/</url>
-    <content><![CDATA[<img src="/2019/03/03/Python_%E5%87%BD%E6%95%B0_input/python.jpg" class="" title="image">
-<span id="more"></span>
-<p>通过input()函数，可以从标准输入中读取内容，那么读到的内容是什么类型?</p>
-<img src="/2019/03/03/Python_%E5%87%BD%E6%95%B0_input/input%E8%BE%93%E5%85%A5%E7%B1%BB%E5%9E%8B.png" class="">
-<p>通过type函数可以看到即使输入的int类型，input还是将其转换为字符串类型，那么如何将input的字符串类型转换为int类型？</p>
-<p><em><strong>1.使用强制类型转换int()函数</strong></em></p>
-<img src="/2019/03/03/Python_%E5%87%BD%E6%95%B0_input/input%E8%BE%93%E5%85%A5%E7%B1%BB%E5%9E%8B2.png" class="">
-
-<p><em><strong>2.使用eval()函数</strong></em></p>
-<img src="/2019/03/03/Python_%E5%87%BD%E6%95%B0_input/input%E8%BE%93%E5%85%A5%E7%B1%BB%E5%9E%8B1.png" class="">
-
-<p>eval()函数的用法见<a href="#">Post not found: python之eval</a><br>不过eval()函数有一些潜在的风险，所以更推荐第一种方法来转换类型</p>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>常用函数</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>使用PyInstaller库生成可执行文件</title>
     <url>/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/</url>
     <content><![CDATA[<img src="/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/python.jpg" class="" title="image">
@@ -975,23 +975,6 @@ tail -f ping.log（查看日志）
       </categories>
   </entry>
   <entry>
-    <title>脑脊液全脑成像</title>
-    <url>/2021/12/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86_%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA_amira/</url>
-    <content><![CDATA[<img src="/2021/12/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86_%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA_amira/demo.png" class="" title="image">
-
-<span id="more"></span>
-
-<iframe src="//player.bilibili.com/player.html?aid=849544274&bvid=BV1LL4y1W73T&cid=453606403&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-]]></content>
-      <categories>
-        <category>图像处理</category>
-        <category>三维重建</category>
-      </categories>
-      <tags>
-        <tag>amira</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>交换排序</title>
     <url>/2019/04/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95_%E4%BA%A4%E6%8D%A2%E6%8E%92%E5%BA%8F/</url>
     <content><![CDATA[<img src="/2019/04/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95_%E4%BA%A4%E6%8D%A2%E6%8E%92%E5%BA%8F/%E7%AE%97%E6%B3%95.jpg" class="" title="image">
@@ -1015,6 +998,23 @@ tail -f ping.log（查看日志）
         <tag>递归</tag>
         <tag>数组</tag>
         <tag>分治</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>脑脊液全脑成像</title>
+    <url>/2021/12/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86_%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA_amira/</url>
+    <content><![CDATA[<img src="/2021/12/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86_%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA_amira/demo.png" class="" title="image">
+
+<span id="more"></span>
+
+<iframe src="//player.bilibili.com/player.html?aid=849544274&bvid=BV1LL4y1W73T&cid=453606403&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+]]></content>
+      <categories>
+        <category>图像处理</category>
+        <category>三维重建</category>
+      </categories>
+      <tags>
+        <tag>amira</tag>
       </tags>
   </entry>
   <entry>
@@ -1200,7 +1200,7 @@ tail -f ping.log（查看日志）
 
 <p>[\w.] 匹配的是字母数字或者 . ，在其后面加上 + ，表示匹配多次。在字符集合 [ ] 里，. 不是元字符；</p>
 <p><em><strong>匹配结果</strong></em></p>
-<p><a href="mailto:&#x61;&#x62;&#99;&#46;&#x64;&#x65;&#x66;&#x40;&#113;&#x71;&#x2e;&#99;&#x6f;&#x6d;">&#x61;&#x62;&#99;&#46;&#x64;&#x65;&#x66;&#x40;&#113;&#x71;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+<p><a href="mailto:&#97;&#x62;&#x63;&#x2e;&#100;&#x65;&#102;&#x40;&#113;&#113;&#46;&#x63;&#111;&#x6d;">&#97;&#x62;&#x63;&#x2e;&#100;&#x65;&#102;&#x40;&#113;&#113;&#46;&#x63;&#111;&#x6d;</a></p>
 <ul>
 <li><p>{n} 匹配 n 个字符</p>
 </li>
