@@ -1327,4 +1327,42 @@ tail -f ping.log（查看日志）
         <tag>网络</tag>
       </tags>
   </entry>
+  <entry>
+    <title>3D-brain Ⅰ</title>
+    <url>/2020/08/15/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%831/</url>
+    <content><![CDATA[<img src="/2020/08/15/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%831/%E6%B5%81%E7%A8%8B.jpg" class="">
+<p>2020年8月8日，湘潭大学化学学院曹毅博士课题组在 Science of the Total Environment (影响因子6.551)发表研究论文 “Multi-walled carbon nanotubes decrease neuronal NO synthase in 3D brain organoids”，应用三维成像技术实现了对一种新型人3D类脑中的特定蛋白空间分布的成像。</p>
+<span id="more"></span>
+
+<p>团队利用了一种新型的3D人类脑模型来分析碳管对神经系统一氧化氮活性的影响，发现高浓度的碳管能降低神经型nNOS的活性，进而导致类脑中一氧化氮产生量不足，但传统毒理学分析手段并不能提供空间分布信息，无法确定类脑对多壁碳纳米管暴露最敏感的部位。</p>
+<p><img src="./wb.jpeg" alt="利用三维重建技术在脑范围内3D重构了nNOS蛋白的分布。A为control组，B为64 mg/mL多壁碳纳米管暴露组。"></p>
+<p>在与三维成像技术相结合后，研究人员得以分析多壁碳纳米管暴露以后nNOS在全类脑的分布，发现这种影响不仅仅发生在类脑的外层细胞，也发生在类脑的内部，这表明碳管的作用是整体的。</p>
+<p><img src="./volume.jpeg" alt="利用三维重建技术在脑范围内3D重构了nNOS蛋白的分布。A为control组，B为64 mg/mL多壁碳纳米管暴露组。"></p>
+<p><a href="https://doi.org/10.1016/j.scitotenv.2020.141384">原文链接</a></p>
+]]></content>
+      <categories>
+        <category>图像处理</category>
+        <category>三维重建</category>
+      </categories>
+      <tags>
+        <tag>Sci</tag>
+        <tag>Science of The Total Environment</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>3D-brain Ⅱ</title>
+    <url>/2021/11/19/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%832/</url>
+    <content><![CDATA[<img src="/2021/11/19/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%832/%E6%B5%81%E7%A8%8B.png" class="" title="image">
+
+<p>2021年11月11日，南华大学公共卫生学院曹毅博士课题组在 Cell Biology and Toxicology (影响因子6.691)发表研究论文 “The cytotoxicity of zinc oxide nanoparticles to 3D brain organoids results from excessive intracellular zinc ions and defective autophagy”，应用三维成像技术分析纳米氧化锌对新型人3D类脑模型的损伤机制。</p>
+<span id="more"></span>]]></content>
+      <categories>
+        <category>图像处理</category>
+        <category>三维重建</category>
+      </categories>
+      <tags>
+        <tag>Cell Biology and Toxicology</tag>
+        <tag>Sci</tag>
+      </tags>
+  </entry>
 </search>
