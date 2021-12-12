@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>git和github(一)基础操作</title>
+    <url>/2019/04/10/Git_&amp;Github/</url>
+    <content><![CDATA[<img src="/2019/04/10/Git_&Github/git+github.jpg" class="" title="image">
+<span id="more"></span>
+<h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><h2 id="git三个分区和远程仓库关系"><a href="#git三个分区和远程仓库关系" class="headerlink" title="git三个分区和远程仓库关系"></a>git三个分区和远程仓库关系</h2><img src="/2019/04/10/Git_&Github/git%E5%88%86%E5%8C%BA.jpg" class="">
+]]></content>
+      <categories>
+        <category>版本控制</category>
+        <category>GIT</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>1.两数之和</title>
     <url>/2019/05/13/LeetCode_1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</url>
     <content><![CDATA[<img src="/2019/05/13/LeetCode_1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/leetcode.jpeg" class="" title="image">
@@ -18,21 +33,6 @@
       </categories>
       <tags>
         <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git和github(一)基础操作</title>
-    <url>/2019/04/10/Git_&amp;Github/</url>
-    <content><![CDATA[<img src="/2019/04/10/Git_&Github/git+github.jpg" class="" title="image">
-<span id="more"></span>
-<h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><h2 id="git三个分区和远程仓库关系"><a href="#git三个分区和远程仓库关系" class="headerlink" title="git三个分区和远程仓库关系"></a>git三个分区和远程仓库关系</h2><img src="/2019/04/10/Git_&Github/git%E5%88%86%E5%8C%BA.jpg" class="">
-]]></content>
-      <categories>
-        <category>版本控制</category>
-        <category>GIT</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -55,6 +55,36 @@
       </categories>
       <tags>
         <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>175.组合两个表</title>
+    <url>/2019/04/27/LeetCode_175-%E7%BB%84%E5%90%88%E4%B8%A4%E4%B8%AA%E8%A1%A8/</url>
+    <content><![CDATA[<img src="/2019/04/27/LeetCode_175-%E7%BB%84%E5%90%88%E4%B8%A4%E4%B8%AA%E8%A1%A8/leetcode.jpeg" class="" title="image">
+<p>根据两个表的信息组合一个新表。</p>
+<span id="more"></span>
+<p>SQL架构：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Create</span> <span class="keyword">table</span> Person (PersonId <span class="type">int</span>, FirstName <span class="type">varchar</span>(<span class="number">255</span>), LastName <span class="type">varchar</span>(<span class="number">255</span>))</span><br><span class="line"><span class="keyword">Create</span> <span class="keyword">table</span> Address (AddressId <span class="type">int</span>, PersonId <span class="type">int</span>, City <span class="type">varchar</span>(<span class="number">255</span>), State <span class="type">varchar</span>(<span class="number">255</span>))</span><br><span class="line"><span class="keyword">Truncate</span> <span class="keyword">table</span> Person</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Person (PersonId, LastName, FirstName) <span class="keyword">values</span> (<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;Wang&#x27;</span>, <span class="string">&#x27;Allen&#x27;</span>)</span><br><span class="line"><span class="keyword">Truncate</span> <span class="keyword">table</span> Address</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Address (AddressId, PersonId, City, State) <span class="keyword">values</span> (<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;New York City&#x27;</span>, <span class="string">&#x27;New York&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>表1: Person：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">-------------+---------+</span></span><br><span class="line"><span class="operator">|</span> 列名         <span class="operator">|</span> 类型     <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">-------------+---------+</span></span><br><span class="line"><span class="operator">|</span> PersonId    <span class="operator">|</span> <span class="type">int</span>     <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> FirstName   <span class="operator">|</span> <span class="type">varchar</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> LastName    <span class="operator">|</span> <span class="type">varchar</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">-------------+---------+</span></span><br></pre></td></tr></table></figure>
+<p>PersonId 是上表主键</p>
+<p>表2: Address：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">-------------+---------+</span></span><br><span class="line"><span class="operator">|</span> 列名         <span class="operator">|</span> 类型    <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">-------------+---------+</span></span><br><span class="line"><span class="operator">|</span> AddressId   <span class="operator">|</span> <span class="type">int</span>     <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> PersonId    <span class="operator">|</span> <span class="type">int</span>     <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> City        <span class="operator">|</span> <span class="type">varchar</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> State       <span class="operator">|</span> <span class="type">varchar</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">-------------+---------+</span></span><br></pre></td></tr></table></figure>
+<p>AddressId 是上表主键</p>
+<p>编写一个 SQL 查询，满足条件：<br>无论 person 是否有地址信息，都需要基于两表提供 person 的以下信息：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">FirstName, LastName, City, State</span><br></pre></td></tr></table></figure>
+
+<p>思路:</p>
+<p>查询目标：Person表的FirstName, LastName, City, State<br>查询范围：Person和Address</p>
+<p>解答:</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Select</span></span><br><span class="line">    Person.FirstName, Person.LastName, Address.City, Address.State </span><br><span class="line"><span class="keyword">from</span></span><br><span class="line">    Person <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> Address <span class="keyword">ON</span> Person.PersonId <span class="operator">=</span> Address.PersonId;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>LeetCode</category>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
       </tags>
   </entry>
   <entry>
@@ -82,36 +112,6 @@
 <p>解答：</p>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span></span><br><span class="line">    Customers.Name <span class="keyword">as</span> Customers</span><br><span class="line"><span class="keyword">from</span></span><br><span class="line">    Customers <span class="keyword">left</span> <span class="keyword">join</span> Orders <span class="keyword">on</span> Customers.Id <span class="operator">=</span> Orders.CustomerId</span><br><span class="line"><span class="keyword">where</span></span><br><span class="line">    Orders.Id <span class="keyword">is</span> <span class="keyword">null</span></span><br></pre></td></tr></table></figure>
 ]]></content>
-      <categories>
-        <category>LeetCode</category>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>175.组合两个表</title>
-    <url>/2019/04/27/LeetCode_175-%E7%BB%84%E5%90%88%E4%B8%A4%E4%B8%AA%E8%A1%A8/</url>
-    <content><![CDATA[<img src="/2019/04/27/LeetCode_175-%E7%BB%84%E5%90%88%E4%B8%A4%E4%B8%AA%E8%A1%A8/leetcode.jpeg" class="" title="image">
-<p>根据两个表的信息组合一个新表。</p>
-<span id="more"></span>
-<p>SQL架构：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Create</span> <span class="keyword">table</span> Person (PersonId <span class="type">int</span>, FirstName <span class="type">varchar</span>(<span class="number">255</span>), LastName <span class="type">varchar</span>(<span class="number">255</span>))</span><br><span class="line"><span class="keyword">Create</span> <span class="keyword">table</span> Address (AddressId <span class="type">int</span>, PersonId <span class="type">int</span>, City <span class="type">varchar</span>(<span class="number">255</span>), State <span class="type">varchar</span>(<span class="number">255</span>))</span><br><span class="line"><span class="keyword">Truncate</span> <span class="keyword">table</span> Person</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Person (PersonId, LastName, FirstName) <span class="keyword">values</span> (<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;Wang&#x27;</span>, <span class="string">&#x27;Allen&#x27;</span>)</span><br><span class="line"><span class="keyword">Truncate</span> <span class="keyword">table</span> Address</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Address (AddressId, PersonId, City, State) <span class="keyword">values</span> (<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;New York City&#x27;</span>, <span class="string">&#x27;New York&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>表1: Person：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">-------------+---------+</span></span><br><span class="line"><span class="operator">|</span> 列名         <span class="operator">|</span> 类型     <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">-------------+---------+</span></span><br><span class="line"><span class="operator">|</span> PersonId    <span class="operator">|</span> <span class="type">int</span>     <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> FirstName   <span class="operator">|</span> <span class="type">varchar</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> LastName    <span class="operator">|</span> <span class="type">varchar</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">-------------+---------+</span></span><br></pre></td></tr></table></figure>
-<p>PersonId 是上表主键</p>
-<p>表2: Address：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">-------------+---------+</span></span><br><span class="line"><span class="operator">|</span> 列名         <span class="operator">|</span> 类型    <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">-------------+---------+</span></span><br><span class="line"><span class="operator">|</span> AddressId   <span class="operator">|</span> <span class="type">int</span>     <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> PersonId    <span class="operator">|</span> <span class="type">int</span>     <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> City        <span class="operator">|</span> <span class="type">varchar</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> State       <span class="operator">|</span> <span class="type">varchar</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">-------------+---------+</span></span><br></pre></td></tr></table></figure>
-<p>AddressId 是上表主键</p>
-<p>编写一个 SQL 查询，满足条件：<br>无论 person 是否有地址信息，都需要基于两表提供 person 的以下信息：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">FirstName, LastName, City, State</span><br></pre></td></tr></table></figure>
-
-<p>思路:</p>
-<p>查询目标：Person表的FirstName, LastName, City, State<br>查询范围：Person和Address</p>
-<p>解答:</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Select</span></span><br><span class="line">    Person.FirstName, Person.LastName, Address.City, Address.State </span><br><span class="line"><span class="keyword">from</span></span><br><span class="line">    Person <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> Address <span class="keyword">ON</span> Person.PersonId <span class="operator">=</span> Address.PersonId;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>LeetCode</category>
         <category>数据库</category>
@@ -150,30 +150,6 @@
       </tags>
   </entry>
   <entry>
-    <title>196.删除重复的电子邮箱</title>
-    <url>/2019/05/02/LeetCode_196-%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E7%9A%84%E7%94%B5%E5%AD%90%E9%82%AE%E7%AE%B1/</url>
-    <content><![CDATA[<img src="/2019/05/02/LeetCode_196-%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E7%9A%84%E7%94%B5%E5%AD%90%E9%82%AE%E7%AE%B1/leetcode.jpeg" class="" title="image">
-<p>编写一个 SQL 查询，来删除 Person 表中所有重复的电子邮箱，<br>重复的邮箱里只保留 Id 最小 的那个。</p>
-<span id="more"></span>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">+----+------------------+</span><br><span class="line">| Id | Email            |</span><br><span class="line">+----+------------------+</span><br><span class="line">| 1  | john@example.com |</span><br><span class="line">| 2  | bob@example.com  |</span><br><span class="line">| 3  | john@example.com |</span><br><span class="line">+----+------------------+</span><br></pre></td></tr></table></figure>
-
-<p>Id 是这个表的主键。<br>例如，在运行你的查询语句之后，上面的 Person 表应返回以下几行:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">+----+------------------+</span><br><span class="line">| Id | Email            |</span><br><span class="line">+----+------------------+</span><br><span class="line">| 1  | john@example.com |</span><br><span class="line">| 2  | bob@example.com  |</span><br><span class="line">+----+------------------+</span><br></pre></td></tr></table></figure>
-
-<p>思路：<br>1.查询目标：删除一条记录<br>2.查询范围：Person表<br>3.查询条件：删除所有重复的电子邮箱 ，重复的邮箱里只保留Id最小的哪个。<br>显然，通过这个查询条件可以提取出来两条and关系的条件：<br>（1）找出所有重复的电子邮箱（2）删除Id大的重复邮箱；<br>对于条件（1），需要判断出所有重复的电子邮箱，即p1.Email = p2.Email；<br>对于条件（2），需要判断重复邮箱中Id较大的：p1.Id &gt; p2.Id</p>
-<p>解答：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">delete</span> </span><br><span class="line">    p1 </span><br><span class="line"><span class="keyword">from</span> </span><br><span class="line">    Person p1,</span><br><span class="line">    Person p2 </span><br><span class="line"><span class="keyword">where</span> </span><br><span class="line">    (p1.email <span class="operator">=</span> p2.email) <span class="keyword">and</span> (p1.id <span class="operator">&gt;</span> p2.id)</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>LeetCode</category>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>185.部门工资前三高的员工</title>
     <url>/2019/05/07/LeetCode_185-%E9%83%A8%E9%97%A8%E5%B7%A5%E8%B5%84%E5%89%8D%E4%B8%89%E9%AB%98%E7%9A%84%E5%91%98%E5%B7%A5/</url>
     <content><![CDATA[<img src="/2019/05/07/LeetCode_185-%E9%83%A8%E9%97%A8%E5%B7%A5%E8%B5%84%E5%89%8D%E4%B8%89%E9%AB%98%E7%9A%84%E5%91%98%E5%B7%A5/leetcode.jpeg" class="" title="image">
@@ -200,6 +176,30 @@
       </tags>
   </entry>
   <entry>
+    <title>196.删除重复的电子邮箱</title>
+    <url>/2019/05/02/LeetCode_196-%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E7%9A%84%E7%94%B5%E5%AD%90%E9%82%AE%E7%AE%B1/</url>
+    <content><![CDATA[<img src="/2019/05/02/LeetCode_196-%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E7%9A%84%E7%94%B5%E5%AD%90%E9%82%AE%E7%AE%B1/leetcode.jpeg" class="" title="image">
+<p>编写一个 SQL 查询，来删除 Person 表中所有重复的电子邮箱，<br>重复的邮箱里只保留 Id 最小 的那个。</p>
+<span id="more"></span>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">+----+------------------+</span><br><span class="line">| Id | Email            |</span><br><span class="line">+----+------------------+</span><br><span class="line">| 1  | john@example.com |</span><br><span class="line">| 2  | bob@example.com  |</span><br><span class="line">| 3  | john@example.com |</span><br><span class="line">+----+------------------+</span><br></pre></td></tr></table></figure>
+
+<p>Id 是这个表的主键。<br>例如，在运行你的查询语句之后，上面的 Person 表应返回以下几行:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">+----+------------------+</span><br><span class="line">| Id | Email            |</span><br><span class="line">+----+------------------+</span><br><span class="line">| 1  | john@example.com |</span><br><span class="line">| 2  | bob@example.com  |</span><br><span class="line">+----+------------------+</span><br></pre></td></tr></table></figure>
+
+<p>思路：<br>1.查询目标：删除一条记录<br>2.查询范围：Person表<br>3.查询条件：删除所有重复的电子邮箱 ，重复的邮箱里只保留Id最小的哪个。<br>显然，通过这个查询条件可以提取出来两条and关系的条件：<br>（1）找出所有重复的电子邮箱（2）删除Id大的重复邮箱；<br>对于条件（1），需要判断出所有重复的电子邮箱，即p1.Email = p2.Email；<br>对于条件（2），需要判断重复邮箱中Id较大的：p1.Id &gt; p2.Id</p>
+<p>解答：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">delete</span> </span><br><span class="line">    p1 </span><br><span class="line"><span class="keyword">from</span> </span><br><span class="line">    Person p1,</span><br><span class="line">    Person p2 </span><br><span class="line"><span class="keyword">where</span> </span><br><span class="line">    (p1.email <span class="operator">=</span> p2.email) <span class="keyword">and</span> (p1.id <span class="operator">&gt;</span> p2.id)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2.两数相加</title>
     <url>/2019/05/09/LeetCode_2-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/</url>
     <content><![CDATA[<img src="/2019/05/09/LeetCode_2-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/leetcode.jpeg" class="" title="image">
@@ -214,29 +214,6 @@
       <categories>
         <category>LeetCode</category>
         <category>链表</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>3.无重复字符的最长子串</title>
-    <url>/2019/05/10/LeetCode_3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/</url>
-    <content><![CDATA[<img src="/2019/05/10/LeetCode_3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/leetcode.jpeg" class="" title="image">
-<p>给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。</p>
-<span id="more"></span>
-<p>示例 1:</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">输入: &quot;abcabcbb&quot;</span></span><br><span class="line"><span class="section">输出: 3 </span></span><br><span class="line"><span class="section">解释: 因为无重复字符的最长子串是 &quot;abc&quot;，所以其长度为 3。</span></span><br></pre></td></tr></table></figure>
-<p>示例 2:</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">输入: &quot;bbbbb&quot;</span></span><br><span class="line"><span class="section">输出: 1</span></span><br><span class="line"><span class="section">解释: 因为无重复字符的最长子串是 &quot;b&quot;，所以其长度为 1。</span></span><br></pre></td></tr></table></figure>
-<p>示例 3:</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">输入: &quot;pwwkew&quot;</span></span><br><span class="line"><span class="section">输出: 3</span></span><br><span class="line"><span class="section">解释: 因为无重复字符的最长子串是 &quot;wke&quot;，所以其长度为 3。</span></span><br><span class="line">     请注意，你的答案必须是 子串 的长度，<span class="string">&quot;pwke&quot;</span> 是一个子序列，不是子串。</span><br></pre></td></tr></table></figure>
-
-<p>解答:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">lengthOfLongestSubstring</span>(<span class="params">self, s</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type s: str</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment"># 存储历史循环中最长的子串长度</span></span><br><span class="line">        max_len = <span class="number">0</span></span><br><span class="line">        <span class="comment"># 判断传入的字符串是否为空</span></span><br><span class="line">        <span class="keyword">if</span> s <span class="keyword">is</span> <span class="literal">None</span> <span class="keyword">or</span> <span class="built_in">len</span>(s) == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> max_len</span><br><span class="line">        <span class="comment"># 定义一个字典，存储不重复的字符和字符所在的下标</span></span><br><span class="line">        str_dict = &#123;&#125;</span><br><span class="line">        <span class="comment"># 存储每次循环中最长的子串长度</span></span><br><span class="line">        one_max = <span class="number">0</span></span><br><span class="line">        <span class="comment">#记录最近重复字符所在的位置+1</span></span><br><span class="line">        start = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(s)):</span><br><span class="line">            <span class="comment"># 判断当前字符是否在字典中和当前字符的下标是否大于等于最近重复字符的所在位置</span></span><br><span class="line">            <span class="keyword">if</span> s[i] <span class="keyword">in</span> str_dict <span class="keyword">and</span> str_dict[s[i]] &gt;= start:</span><br><span class="line">                <span class="comment"># 记录当前字符的值+1</span></span><br><span class="line">                start = str_dict[s[i]]</span><br><span class="line">            <span class="comment"># 在此次循环中，最大的不重复子串的长度</span></span><br><span class="line">            one_max = i - start+<span class="number">1</span></span><br><span class="line">            <span class="comment"># 把当前位置覆盖字典中的位置</span></span><br><span class="line">            str_dict[s[i]] = i</span><br><span class="line">            <span class="comment"># 比较此次循环的最大不重复子串长度和历史循环最大不重复子串长度</span></span><br><span class="line">            max_len = <span class="built_in">max</span>(max_len, one_max)</span><br><span class="line">        <span class="keyword">return</span> max_len</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>LeetCode</category>
-        <category>字符串</category>
       </categories>
       <tags>
         <tag>LeetCode</tag>
@@ -270,22 +247,23 @@
       </tags>
   </entry>
   <entry>
-    <title>56.合并区间</title>
-    <url>/2019/05/11/LeetCode_56-%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4/</url>
-    <content><![CDATA[<img src="/2019/05/11/LeetCode_56-%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4/leetcode.jpeg" class="" title="image">
-<p>给出一个区间的集合，请合并所有重叠的区间。</p>
+    <title>3.无重复字符的最长子串</title>
+    <url>/2019/05/10/LeetCode_3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/</url>
+    <content><![CDATA[<img src="/2019/05/10/LeetCode_3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/leetcode.jpeg" class="" title="image">
+<p>给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。</p>
 <span id="more"></span>
 <p>示例 1:</p>
-<figure class="highlight prolog"><table><tr><td class="code"><pre><span class="line">输入: [[<span class="number">1</span>,<span class="number">3</span>],[<span class="number">2</span>,<span class="number">6</span>],[<span class="number">8</span>,<span class="number">10</span>],[<span class="number">15</span>,<span class="number">18</span>]]</span><br><span class="line">输出: [[<span class="number">1</span>,<span class="number">6</span>],[<span class="number">8</span>,<span class="number">10</span>],[<span class="number">15</span>,<span class="number">18</span>]]</span><br><span class="line">解释: 区间 [<span class="number">1</span>,<span class="number">3</span>] 和 [<span class="number">2</span>,<span class="number">6</span>] 重叠, 将它们合并为 [<span class="number">1</span>,<span class="number">6</span>].</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">输入: &quot;abcabcbb&quot;</span></span><br><span class="line"><span class="section">输出: 3 </span></span><br><span class="line"><span class="section">解释: 因为无重复字符的最长子串是 &quot;abc&quot;，所以其长度为 3。</span></span><br></pre></td></tr></table></figure>
 <p>示例 2:</p>
-<figure class="highlight lua"><table><tr><td class="code"><pre><span class="line">输入: <span class="string">[[1,4],[4,5]]</span></span><br><span class="line">输出: <span class="string">[[1,5]]</span></span><br><span class="line">解释: 区间 [<span class="number">1</span>,<span class="number">4</span>] 和 [<span class="number">4</span>,<span class="number">5</span>] 可被视为重叠区间。</span><br></pre></td></tr></table></figure>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">输入: &quot;bbbbb&quot;</span></span><br><span class="line"><span class="section">输出: 1</span></span><br><span class="line"><span class="section">解释: 因为无重复字符的最长子串是 &quot;b&quot;，所以其长度为 1。</span></span><br></pre></td></tr></table></figure>
+<p>示例 3:</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">输入: &quot;pwwkew&quot;</span></span><br><span class="line"><span class="section">输出: 3</span></span><br><span class="line"><span class="section">解释: 因为无重复字符的最长子串是 &quot;wke&quot;，所以其长度为 3。</span></span><br><span class="line">     请注意，你的答案必须是 子串 的长度，<span class="string">&quot;pwke&quot;</span> 是一个子序列，不是子串。</span><br></pre></td></tr></table></figure>
 
-<p>解答：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Definition for an interval.</span></span><br><span class="line"><span class="comment"># class Interval(object):</span></span><br><span class="line"><span class="comment">#     def __init__(self, s=0, e=0):</span></span><br><span class="line"><span class="comment">#         self.start = s</span></span><br><span class="line"><span class="comment">#         self.end = e</span></span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">merge</span>(<span class="params">self, intervals: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>) -&gt; <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]:</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type intervals: List[Interval]</span></span><br><span class="line"><span class="string">        :rtype: List[Interval]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> intervals:</span><br><span class="line">            <span class="keyword">return</span> []</span><br><span class="line">        intervals = <span class="built_in">sorted</span>(intervals,key=<span class="keyword">lambda</span> x:x.start)</span><br><span class="line">        res = []</span><br><span class="line">        left = intervals[<span class="number">0</span>].start</span><br><span class="line">        right = intervals[<span class="number">0</span>].end</span><br><span class="line">        <span class="keyword">for</span> item <span class="keyword">in</span> intervals:</span><br><span class="line">            <span class="keyword">if</span> item.start &lt;= right:</span><br><span class="line">                right = <span class="built_in">max</span>(right, item.end)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                res.append([left, right])</span><br><span class="line">                left = item.start</span><br><span class="line">                right = item.end</span><br><span class="line">        res.append([left, right])</span><br><span class="line">                </span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>]]></content>
+<p>解答:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">lengthOfLongestSubstring</span>(<span class="params">self, s</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type s: str</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment"># 存储历史循环中最长的子串长度</span></span><br><span class="line">        max_len = <span class="number">0</span></span><br><span class="line">        <span class="comment"># 判断传入的字符串是否为空</span></span><br><span class="line">        <span class="keyword">if</span> s <span class="keyword">is</span> <span class="literal">None</span> <span class="keyword">or</span> <span class="built_in">len</span>(s) == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> max_len</span><br><span class="line">        <span class="comment"># 定义一个字典，存储不重复的字符和字符所在的下标</span></span><br><span class="line">        str_dict = &#123;&#125;</span><br><span class="line">        <span class="comment"># 存储每次循环中最长的子串长度</span></span><br><span class="line">        one_max = <span class="number">0</span></span><br><span class="line">        <span class="comment">#记录最近重复字符所在的位置+1</span></span><br><span class="line">        start = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(s)):</span><br><span class="line">            <span class="comment"># 判断当前字符是否在字典中和当前字符的下标是否大于等于最近重复字符的所在位置</span></span><br><span class="line">            <span class="keyword">if</span> s[i] <span class="keyword">in</span> str_dict <span class="keyword">and</span> str_dict[s[i]] &gt;= start:</span><br><span class="line">                <span class="comment"># 记录当前字符的值+1</span></span><br><span class="line">                start = str_dict[s[i]]</span><br><span class="line">            <span class="comment"># 在此次循环中，最大的不重复子串的长度</span></span><br><span class="line">            one_max = i - start+<span class="number">1</span></span><br><span class="line">            <span class="comment"># 把当前位置覆盖字典中的位置</span></span><br><span class="line">            str_dict[s[i]] = i</span><br><span class="line">            <span class="comment"># 比较此次循环的最大不重复子串长度和历史循环最大不重复子串长度</span></span><br><span class="line">            max_len = <span class="built_in">max</span>(max_len, one_max)</span><br><span class="line">        <span class="keyword">return</span> max_len</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>LeetCode</category>
-        <category>排序</category>
+        <category>字符串</category>
       </categories>
       <tags>
         <tag>LeetCode</tag>
@@ -308,6 +286,28 @@
       <categories>
         <category>LeetCode</category>
         <category>二分查找</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>56.合并区间</title>
+    <url>/2019/05/11/LeetCode_56-%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4/</url>
+    <content><![CDATA[<img src="/2019/05/11/LeetCode_56-%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4/leetcode.jpeg" class="" title="image">
+<p>给出一个区间的集合，请合并所有重叠的区间。</p>
+<span id="more"></span>
+<p>示例 1:</p>
+<figure class="highlight prolog"><table><tr><td class="code"><pre><span class="line">输入: [[<span class="number">1</span>,<span class="number">3</span>],[<span class="number">2</span>,<span class="number">6</span>],[<span class="number">8</span>,<span class="number">10</span>],[<span class="number">15</span>,<span class="number">18</span>]]</span><br><span class="line">输出: [[<span class="number">1</span>,<span class="number">6</span>],[<span class="number">8</span>,<span class="number">10</span>],[<span class="number">15</span>,<span class="number">18</span>]]</span><br><span class="line">解释: 区间 [<span class="number">1</span>,<span class="number">3</span>] 和 [<span class="number">2</span>,<span class="number">6</span>] 重叠, 将它们合并为 [<span class="number">1</span>,<span class="number">6</span>].</span><br></pre></td></tr></table></figure>
+
+<p>示例 2:</p>
+<figure class="highlight lua"><table><tr><td class="code"><pre><span class="line">输入: <span class="string">[[1,4],[4,5]]</span></span><br><span class="line">输出: <span class="string">[[1,5]]</span></span><br><span class="line">解释: 区间 [<span class="number">1</span>,<span class="number">4</span>] 和 [<span class="number">4</span>,<span class="number">5</span>] 可被视为重叠区间。</span><br></pre></td></tr></table></figure>
+
+<p>解答：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Definition for an interval.</span></span><br><span class="line"><span class="comment"># class Interval(object):</span></span><br><span class="line"><span class="comment">#     def __init__(self, s=0, e=0):</span></span><br><span class="line"><span class="comment">#         self.start = s</span></span><br><span class="line"><span class="comment">#         self.end = e</span></span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">merge</span>(<span class="params">self, intervals: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>) -&gt; <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]:</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type intervals: List[Interval]</span></span><br><span class="line"><span class="string">        :rtype: List[Interval]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> intervals:</span><br><span class="line">            <span class="keyword">return</span> []</span><br><span class="line">        intervals = <span class="built_in">sorted</span>(intervals,key=<span class="keyword">lambda</span> x:x.start)</span><br><span class="line">        res = []</span><br><span class="line">        left = intervals[<span class="number">0</span>].start</span><br><span class="line">        right = intervals[<span class="number">0</span>].end</span><br><span class="line">        <span class="keyword">for</span> item <span class="keyword">in</span> intervals:</span><br><span class="line">            <span class="keyword">if</span> item.start &lt;= right:</span><br><span class="line">                right = <span class="built_in">max</span>(right, item.end)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                res.append([left, right])</span><br><span class="line">                left = item.start</span><br><span class="line">                right = item.end</span><br><span class="line">        res.append([left, right])</span><br><span class="line">                </span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>LeetCode</category>
+        <category>排序</category>
       </categories>
       <tags>
         <tag>LeetCode</tag>
@@ -515,6 +515,39 @@ Hello
       </tags>
   </entry>
   <entry>
+    <title>Linux常用命令(二)</title>
+    <url>/2019/03/15/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4(%E4%BA%8C)/</url>
+    <content><![CDATA[<img src="/2019/03/15/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4(%E4%BA%8C)/Linux.jpeg" class="" title="image">
+<span id="more"></span>
+<h1 id="head命令"><a href="#head命令" class="headerlink" title="head命令"></a>head命令</h1><p>head 用来显示档案的开头至标准输出中，默认head命令打印其相应文件的开头10行。</p>
+<h2 id="常用参数："><a href="#常用参数：" class="headerlink" title="常用参数："></a>常用参数：</h2><p>-n&lt;行数&gt; 显示的行数（行数为复数表示从最后向前数）</p>
+<h2 id="实例："><a href="#实例：" class="headerlink" title="实例："></a>实例：</h2><p>（1）显示1.log文件中前20行</p>
+<pre><code>head 1.log -n 20
+</code></pre>
+<p>（2）显示1.log文件前20字节</p>
+<pre><code>head -c 20 log2014.log
+</code></pre>
+<p>（3）显示t.log最后10行</p>
+<pre><code>head -n -10 t.log
+</code></pre>
+<h1 id="tail命令"><a href="#tail命令" class="headerlink" title="tail命令"></a>tail命令</h1><p>用于显示指定文件末尾内容，不指定文件时，作为输入信息进行处理。常用查看日志文件。</p>
+<h2 id="常用参数：-1"><a href="#常用参数：-1" class="headerlink" title="常用参数："></a>常用参数：</h2><p>-f 循环读取（常用于查看递增的日志文件）</p>
+<p>-n&lt;行数&gt; 显示行数（从后向前）</p>
+<p>（1）循环读取逐渐增加的文件内容</p>
+<pre><code>ping 127.0.0.1 &gt; ping.log &amp;（后台运行：可使用jobs -l查看，也可使用fg将其移到前台运行）
+
+tail -f ping.log（查看日志）
+</code></pre>
+]]></content>
+      <categories>
+        <category>操作系统</category>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>基础</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MongoDB数据库和集合的基本操作</title>
     <url>/2019/03/17/MongoDB%E6%93%8D%E4%BD%9C(%E4%B8%80)/</url>
     <content><![CDATA[<img src="/2019/03/17/MongoDB%E6%93%8D%E4%BD%9C(%E4%B8%80)/MongoDB.jpeg" class="" title="image">
@@ -562,39 +595,6 @@ Hello
       <categories>
         <category>数据库</category>
         <category>MongoDB</category>
-      </categories>
-      <tags>
-        <tag>基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux常用命令(二)</title>
-    <url>/2019/03/15/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4(%E4%BA%8C)/</url>
-    <content><![CDATA[<img src="/2019/03/15/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4(%E4%BA%8C)/Linux.jpeg" class="" title="image">
-<span id="more"></span>
-<h1 id="head命令"><a href="#head命令" class="headerlink" title="head命令"></a>head命令</h1><p>head 用来显示档案的开头至标准输出中，默认head命令打印其相应文件的开头10行。</p>
-<h2 id="常用参数："><a href="#常用参数：" class="headerlink" title="常用参数："></a>常用参数：</h2><p>-n&lt;行数&gt; 显示的行数（行数为复数表示从最后向前数）</p>
-<h2 id="实例："><a href="#实例：" class="headerlink" title="实例："></a>实例：</h2><p>（1）显示1.log文件中前20行</p>
-<pre><code>head 1.log -n 20
-</code></pre>
-<p>（2）显示1.log文件前20字节</p>
-<pre><code>head -c 20 log2014.log
-</code></pre>
-<p>（3）显示t.log最后10行</p>
-<pre><code>head -n -10 t.log
-</code></pre>
-<h1 id="tail命令"><a href="#tail命令" class="headerlink" title="tail命令"></a>tail命令</h1><p>用于显示指定文件末尾内容，不指定文件时，作为输入信息进行处理。常用查看日志文件。</p>
-<h2 id="常用参数：-1"><a href="#常用参数：-1" class="headerlink" title="常用参数："></a>常用参数：</h2><p>-f 循环读取（常用于查看递增的日志文件）</p>
-<p>-n&lt;行数&gt; 显示行数（从后向前）</p>
-<p>（1）循环读取逐渐增加的文件内容</p>
-<pre><code>ping 127.0.0.1 &gt; ping.log &amp;（后台运行：可使用jobs -l查看，也可使用fg将其移到前台运行）
-
-tail -f ping.log（查看日志）
-</code></pre>
-]]></content>
-      <categories>
-        <category>操作系统</category>
-        <category>Linux</category>
       </categories>
       <tags>
         <tag>基础</tag>
@@ -698,6 +698,20 @@ tail -f ping.log（查看日志）
       </categories>
   </entry>
   <entry>
+    <title>Web框架_Flask</title>
+    <url>/2019/05/23/Python_Web%E6%A1%86%E6%9E%B6_Flask/</url>
+    <content><![CDATA[<img src="/2019/05/23/Python_Web%E6%A1%86%E6%9E%B6_Flask/Flask.jpeg" class="" title="image">
+
+<p>Flask是一个Python构建的轻量级WEB框架。</p>
+<span id="more"></span>
+<p>官网：<a href="http://flask.pocoo.org/">http://flask.pocoo.org/</a><br>中文文档：<a href="http://docs.jinkan.org/docs/flask/">http://docs.jinkan.org/docs/flask/</a><br>demo：<a href="https://github.com/cimex7/new-watchlist">https://github.com/cimex7/new-watchlist</a></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Flask</category>
+      </categories>
+  </entry>
+  <entry>
     <title>python之eval()</title>
     <url>/2019/03/03/Python_%E5%87%BD%E6%95%B0_eval/</url>
     <content><![CDATA[<img src="/2019/03/03/Python_%E5%87%BD%E6%95%B0_eval/python.jpg" class="" title="image">
@@ -716,20 +730,6 @@ tail -f ping.log（查看日志）
       <tags>
         <tag>python</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Web框架_Flask</title>
-    <url>/2019/05/23/Python_Web%E6%A1%86%E6%9E%B6_Flask/</url>
-    <content><![CDATA[<img src="/2019/05/23/Python_Web%E6%A1%86%E6%9E%B6_Flask/Flask.jpeg" class="" title="image">
-
-<p>Flask是一个Python构建的轻量级WEB框架。</p>
-<span id="more"></span>
-<p>官网：<a href="http://flask.pocoo.org/">http://flask.pocoo.org/</a><br>中文文档：<a href="http://docs.jinkan.org/docs/flask/">http://docs.jinkan.org/docs/flask/</a><br>demo：<a href="https://github.com/cimex7/new-watchlist">https://github.com/cimex7/new-watchlist</a></p>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Flask</category>
-      </categories>
   </entry>
   <entry>
     <title>python之format()</title>
@@ -942,6 +942,28 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
+    <title>科赫雪花</title>
+    <url>/2019/04/03/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_%E9%9B%AA%E8%8A%B1/</url>
+    <content><![CDATA[<img src="/2019/04/03/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_%E9%9B%AA%E8%8A%B1/python.jpg" class="" title="image">
+<span id="more"></span>
+<p>koch曲线</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">koch</span>(<span class="params">size, n</span>):</span></span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">0</span>:</span><br><span class="line">        turtle.fd(size)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">for</span> angle <span class="keyword">in</span> [<span class="number">0</span>, <span class="number">60</span>, -<span class="number">120</span>, <span class="number">60</span>]:</span><br><span class="line">            turtle.left(angle)</span><br><span class="line">            koch(size/<span class="number">3</span>, n-<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    turtle.setup(<span class="number">0.5</span>,<span class="number">0.8</span>)</span><br><span class="line">    turtle.speed(<span class="number">0</span>)</span><br><span class="line">    turtle.penup()</span><br><span class="line">    turtle.goto(-<span class="number">200</span>, <span class="number">100</span>)</span><br><span class="line">    turtle.pendown()</span><br><span class="line">    turtle.pensize(<span class="number">2</span>)</span><br><span class="line">    koch(<span class="number">600</span>,<span class="number">3</span>)</span><br><span class="line">    turtle.hideturtle()</span><br><span class="line">    turtle.done()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<img src="/2019/04/03/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_%E9%9B%AA%E8%8A%B1/koch%E6%9B%B2%E7%BA%BF.png" class="">
+
+<h1 id="koch雪花"><a href="#koch雪花" class="headerlink" title="koch雪花"></a>koch雪花</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">koch</span>(<span class="params">size, n</span>):</span></span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">0</span>:</span><br><span class="line">        turtle.fd(size)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">for</span> angle <span class="keyword">in</span> [<span class="number">0</span>, <span class="number">60</span>, -<span class="number">120</span>, <span class="number">60</span>]:</span><br><span class="line">            turtle.left(angle)</span><br><span class="line">            koch(size/<span class="number">3</span>, n-<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    turtle.setup(<span class="number">0.5</span>,<span class="number">0.8</span>)</span><br><span class="line">    turtle.speed(<span class="number">0</span>)</span><br><span class="line">    turtle.penup()</span><br><span class="line">    turtle.goto(-<span class="number">200</span>, <span class="number">100</span>)</span><br><span class="line">    turtle.pendown()</span><br><span class="line">    turtle.pensize(<span class="number">2</span>)</span><br><span class="line">    level = <span class="number">3</span></span><br><span class="line">    koch(<span class="number">400</span>, level)</span><br><span class="line">    turtle.right(<span class="number">120</span>)</span><br><span class="line">    koch(<span class="number">400</span>, level)</span><br><span class="line">    turtle.right(<span class="number">120</span>)</span><br><span class="line">    koch(<span class="number">400</span>, level)</span><br><span class="line">    turtle.hideturtle()</span><br><span class="line">    turtle.done()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+<img src="/2019/04/03/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_%E9%9B%AA%E8%8A%B1/koch%E9%9B%AA%E8%8A%B1.png" class="">]]></content>
+      <categories>
+        <category>Python</category>
+        <category>常用库</category>
+      </categories>
+      <tags>
+        <tag>turtle</tag>
+        <tag>递归</tag>
+        <tag>分形几何</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>图片转字符</title>
     <url>/2019/03/20/Python_%E8%84%9A%E6%9C%AC_%E5%9B%BE%E7%89%87%E8%BD%AC%E5%AD%97%E7%AC%A6/</url>
     <content><![CDATA[<img src="/2019/03/20/Python_%E8%84%9A%E6%9C%AC_%E5%9B%BE%E7%89%87%E8%BD%AC%E5%AD%97%E7%AC%A6/python.jpg" class="" title="image">
@@ -953,26 +975,20 @@ tail -f ping.log（查看日志）
       </categories>
   </entry>
   <entry>
-    <title>3D-brain Ⅱ</title>
-    <url>/2021/11/19/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%832/</url>
-    <content><![CDATA[<img src="/2021/11/19/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%832/%E6%B5%81%E7%A8%8B.png" class="" title="image">
-
-<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>2021年11月11日，南华大学公共卫生学院曹毅博士课题组在 Cell Biology and Toxicology (影响因子6.691)发表研究论文 “The cytotoxicity of zinc oxide nanoparticles to 3D brain organoids results from excessive intracellular zinc ions and defective autophagy”，应用三维成像技术分析纳米氧化锌对新型人3D类脑模型的损伤机制。</p>
+    <title>SAS Studio</title>
+    <url>/2020/05/12/SAS-%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%AF%91/</url>
+    <content><![CDATA[<img src="/2020/05/12/SAS-%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%AF%91/SAS.jpeg" class="">
 <span id="more"></span>
-
-<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>研究人员使用了一种新型的基于人诱导多能干细胞分化出来的3D类脑模型，分析了纳米氧化锌对3D类脑模型的损伤作用。通过传统的毒理学分析手段，研究人员发高浓度纳米氧化锌会导致自噬不足，自噬蛋白LC3B下调，进而导致对类脑的神经毒性的发生。这证实了类脑模型可以应用于纳米材料毒性的机理的研究工作。但传统理学分析手段并没有提供空间分布信息，无法确定LC3B蛋白变化最显著的部位，也无法确定LC3B蛋白下调以后所伴随的细节变化。<br><img src="./wb2.png"></p>
-<h1 id="三维重建"><a href="#三维重建" class="headerlink" title="三维重建"></a>三维重建</h1><p>与三维重建技术结合后，研究人员得以分析纳米氧化锌暴露以后LC3B蛋白在全类脑的分布，结果表明，纳米氧化锌暴露导致了LC3B蛋白的重排，与纳米氧化锌直接接触的外层细胞LC3B蛋白的荧光信号有明显的下调，而里层不明显，这可能是因为类脑作为一种3D模型，外层的细胞保护了内层的细胞。<br><img src="./3d-1.PNG"></p>
-<p>为进一步说明LC3B蛋白在外层变化的情况，团队重构了LC3B荧光结果图。假定LC3B绿色荧光的外围代表LC3B蛋白可以分布的最大范围，而最外层的细胞核红色光可以代表类脑的最大外围，那么LC3B的体积变化就可以计算出来。结果表明，纳米氧化锌的暴露导致LC3B的体积缩小。<br><img src="./volume2.png" alt="2"></p>
-<p>再进一步分析LC3B蛋白变化明显区域细胞核形态的变化，团队重构了70um^3内类脑细胞核的高清晰度的变化，发现在control组外层和内层类脑细胞核均出现一定的微核．但数量并不多。纳米氧化锌暴露以后，外层类脑细胞的细胞核微核出现明显增加，而内层细胞的微核出现不明显。这提示LC3B在外层的下调可能加大了纳米氧化锌对细胞核的损伤作用。与传统的毒理学分析技术相结合，三维高精度成像可以用于进一步确认纳米材料的暴露对类脑特定蛋白的影响，并提供传统的分析技术所无法提供的信息。<br><img src="./local2.png"></p>
-<p><a href="https://link.springer.com/article/10.1007/s10565-021-09678-x">原文链接</a></p>
+<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>SAS基本软件大小有二三十个G，下载安装运行对于一般的电脑都有点吃力，SAS ODA提供了一个在线编写、调试代码的环境，可以上传自己的数据。</p>
+<h1 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h1><p><a href="https://welcome.oda.sas.com/login">网站地址</a><br>用邮箱(无需.edu)注册一个账号，根据分配的ID和自设密码登录云服务器，选亚太地区。</p>
+<h1 id="测试环境"><a href="#测试环境" class="headerlink" title="测试环境"></a>测试环境</h1><p>右键单击 文件(主目录) 新建文件即可，整个界面可以选择中英文。<br><img src="./dvp.png"></p>
 ]]></content>
       <categories>
-        <category>图像处理</category>
-        <category>三维重建</category>
+        <category>数据库</category>
+        <category>SAS</category>
       </categories>
       <tags>
-        <tag>Sci</tag>
-        <tag>Cell Biology and Toxicology</tag>
+        <tag>SAS</tag>
       </tags>
   </entry>
   <entry>
@@ -998,25 +1014,43 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
-    <title>科赫雪花</title>
-    <url>/2019/04/03/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_%E9%9B%AA%E8%8A%B1/</url>
-    <content><![CDATA[<img src="/2019/04/03/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_%E9%9B%AA%E8%8A%B1/python.jpg" class="" title="image">
+    <title>3D-brain Ⅱ</title>
+    <url>/2021/11/19/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%832/</url>
+    <content><![CDATA[<img src="/2021/11/19/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%832/%E6%B5%81%E7%A8%8B.png" class="" title="image">
+
+<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>2021年11月11日，南华大学公共卫生学院曹毅博士课题组在 Cell Biology and Toxicology (影响因子6.691)发表研究论文 “The cytotoxicity of zinc oxide nanoparticles to 3D brain organoids results from excessive intracellular zinc ions and defective autophagy”，应用三维成像技术分析纳米氧化锌对新型人3D类脑模型的损伤机制。</p>
 <span id="more"></span>
-<p>koch曲线</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">koch</span>(<span class="params">size, n</span>):</span></span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">0</span>:</span><br><span class="line">        turtle.fd(size)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">for</span> angle <span class="keyword">in</span> [<span class="number">0</span>, <span class="number">60</span>, -<span class="number">120</span>, <span class="number">60</span>]:</span><br><span class="line">            turtle.left(angle)</span><br><span class="line">            koch(size/<span class="number">3</span>, n-<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    turtle.setup(<span class="number">0.5</span>,<span class="number">0.8</span>)</span><br><span class="line">    turtle.speed(<span class="number">0</span>)</span><br><span class="line">    turtle.penup()</span><br><span class="line">    turtle.goto(-<span class="number">200</span>, <span class="number">100</span>)</span><br><span class="line">    turtle.pendown()</span><br><span class="line">    turtle.pensize(<span class="number">2</span>)</span><br><span class="line">    koch(<span class="number">600</span>,<span class="number">3</span>)</span><br><span class="line">    turtle.hideturtle()</span><br><span class="line">    turtle.done()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-<img src="/2019/04/03/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_%E9%9B%AA%E8%8A%B1/koch%E6%9B%B2%E7%BA%BF.png" class="">
 
-<h1 id="koch雪花"><a href="#koch雪花" class="headerlink" title="koch雪花"></a>koch雪花</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">koch</span>(<span class="params">size, n</span>):</span></span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">0</span>:</span><br><span class="line">        turtle.fd(size)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">for</span> angle <span class="keyword">in</span> [<span class="number">0</span>, <span class="number">60</span>, -<span class="number">120</span>, <span class="number">60</span>]:</span><br><span class="line">            turtle.left(angle)</span><br><span class="line">            koch(size/<span class="number">3</span>, n-<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    turtle.setup(<span class="number">0.5</span>,<span class="number">0.8</span>)</span><br><span class="line">    turtle.speed(<span class="number">0</span>)</span><br><span class="line">    turtle.penup()</span><br><span class="line">    turtle.goto(-<span class="number">200</span>, <span class="number">100</span>)</span><br><span class="line">    turtle.pendown()</span><br><span class="line">    turtle.pensize(<span class="number">2</span>)</span><br><span class="line">    level = <span class="number">3</span></span><br><span class="line">    koch(<span class="number">400</span>, level)</span><br><span class="line">    turtle.right(<span class="number">120</span>)</span><br><span class="line">    koch(<span class="number">400</span>, level)</span><br><span class="line">    turtle.right(<span class="number">120</span>)</span><br><span class="line">    koch(<span class="number">400</span>, level)</span><br><span class="line">    turtle.hideturtle()</span><br><span class="line">    turtle.done()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-
-<img src="/2019/04/03/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_%E9%9B%AA%E8%8A%B1/koch%E9%9B%AA%E8%8A%B1.png" class="">]]></content>
+<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>研究人员使用了一种新型的基于人诱导多能干细胞分化出来的3D类脑模型，分析了纳米氧化锌对3D类脑模型的损伤作用。通过传统的毒理学分析手段，研究人员发高浓度纳米氧化锌会导致自噬不足，自噬蛋白LC3B下调，进而导致对类脑的神经毒性的发生。这证实了类脑模型可以应用于纳米材料毒性的机理的研究工作。但传统理学分析手段并没有提供空间分布信息，无法确定LC3B蛋白变化最显著的部位，也无法确定LC3B蛋白下调以后所伴随的细节变化。<br><img src="./wb2.png"></p>
+<h1 id="三维重建"><a href="#三维重建" class="headerlink" title="三维重建"></a>三维重建</h1><p>与三维重建技术结合后，研究人员得以分析纳米氧化锌暴露以后LC3B蛋白在全类脑的分布，结果表明，纳米氧化锌暴露导致了LC3B蛋白的重排，与纳米氧化锌直接接触的外层细胞LC3B蛋白的荧光信号有明显的下调，而里层不明显，这可能是因为类脑作为一种3D模型，外层的细胞保护了内层的细胞。<br><img src="./3d-1.PNG"></p>
+<p>为进一步说明LC3B蛋白在外层变化的情况，团队重构了LC3B荧光结果图。假定LC3B绿色荧光的外围代表LC3B蛋白可以分布的最大范围，而最外层的细胞核红色光可以代表类脑的最大外围，那么LC3B的体积变化就可以计算出来。结果表明，纳米氧化锌的暴露导致LC3B的体积缩小。<br><img src="./volume2.png" alt="2"></p>
+<p>再进一步分析LC3B蛋白变化明显区域细胞核形态的变化，团队重构了70um^3内类脑细胞核的高清晰度的变化，发现在control组外层和内层类脑细胞核均出现一定的微核．但数量并不多。纳米氧化锌暴露以后，外层类脑细胞的细胞核微核出现明显增加，而内层细胞的微核出现不明显。这提示LC3B在外层的下调可能加大了纳米氧化锌对细胞核的损伤作用。与传统的毒理学分析技术相结合，三维高精度成像可以用于进一步确认纳米材料的暴露对类脑特定蛋白的影响，并提供传统的分析技术所无法提供的信息。<br><img src="./local2.png"></p>
+<p><a href="https://link.springer.com/article/10.1007/s10565-021-09678-x">原文链接</a></p>
+]]></content>
       <categories>
-        <category>Python</category>
-        <category>常用库</category>
+        <category>图像处理</category>
+        <category>三维重建</category>
       </categories>
       <tags>
-        <tag>turtle</tag>
-        <tag>递归</tag>
-        <tag>分形几何</tag>
+        <tag>Sci</tag>
+        <tag>Cell Biology and Toxicology</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>脑脊液全脑成像</title>
+    <url>/2021/12/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86_%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA_amira/</url>
+    <content><![CDATA[<img src="/2021/12/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86_%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA_amira/demo.png" class="" title="image">
+
+<span id="more"></span>
+
+<iframe src="//player.bilibili.com/player.html?aid=849544274&bvid=BV1LL4y1W73T&cid=453606403&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+]]></content>
+      <categories>
+        <category>图像处理</category>
+        <category>三维重建</category>
+      </categories>
+      <tags>
+        <tag>amira</tag>
       </tags>
   </entry>
   <entry>
@@ -1043,23 +1077,6 @@ tail -f ping.log（查看日志）
         <tag>递归</tag>
         <tag>数组</tag>
         <tag>分治</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>脑脊液全脑成像</title>
-    <url>/2021/12/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86_%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA_amira/</url>
-    <content><![CDATA[<img src="/2021/12/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86_%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA_amira/demo.png" class="" title="image">
-
-<span id="more"></span>
-
-<iframe src="//player.bilibili.com/player.html?aid=849544274&bvid=BV1LL4y1W73T&cid=453606403&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-]]></content>
-      <categories>
-        <category>图像处理</category>
-        <category>三维重建</category>
-      </categories>
-      <tags>
-        <tag>amira</tag>
       </tags>
   </entry>
   <entry>
@@ -1245,7 +1262,7 @@ tail -f ping.log（查看日志）
 
 <p>[\w.] 匹配的是字母数字或者 . ，在其后面加上 + ，表示匹配多次。在字符集合 [ ] 里，. 不是元字符；</p>
 <p><em><strong>匹配结果</strong></em></p>
-<p><a href="mailto:&#x61;&#x62;&#99;&#46;&#100;&#x65;&#x66;&#64;&#x71;&#113;&#46;&#x63;&#x6f;&#109;">&#x61;&#x62;&#99;&#46;&#100;&#x65;&#x66;&#64;&#x71;&#113;&#46;&#x63;&#x6f;&#109;</a></p>
+<p><a href="mailto:&#97;&#x62;&#x63;&#46;&#100;&#x65;&#102;&#64;&#113;&#113;&#x2e;&#99;&#111;&#109;">&#97;&#x62;&#x63;&#46;&#100;&#x65;&#102;&#64;&#113;&#113;&#x2e;&#99;&#111;&#109;</a></p>
 <ul>
 <li><p>{n} 匹配 n 个字符</p>
 </li>
@@ -1270,23 +1287,6 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
-    <title>DNS</title>
-    <url>/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_DNS/</url>
-    <content><![CDATA[<img src="/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_DNS/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.jpg" class="" title="image">
-<span id="more"></span>
-<p>域名和IP地址相互映射的一个分布式数据库。</p>
-<p>打个比方就是一本记载名字和外号的字典</p>
-<img src="/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_DNS/DNS.jpg" class="">]]></content>
-      <categories>
-        <category>计算机网络</category>
-        <category>DNS</category>
-      </categories>
-      <tags>
-        <tag>基础</tag>
-        <tag>网络</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>正则表达式(二)</title>
     <url>/2019/07/03/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F-2/</url>
     <content><![CDATA[<img src="/2019/07/03/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F-2/regex.jpg" class="" title="image">
@@ -1308,6 +1308,23 @@ tail -f ping.log（查看日志）
       </categories>
       <tags>
         <tag>RegEx</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>DNS</title>
+    <url>/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_DNS/</url>
+    <content><![CDATA[<img src="/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_DNS/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.jpg" class="" title="image">
+<span id="more"></span>
+<p>域名和IP地址相互映射的一个分布式数据库。</p>
+<p>打个比方就是一本记载名字和外号的字典</p>
+<img src="/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_DNS/DNS.jpg" class="">]]></content>
+      <categories>
+        <category>计算机网络</category>
+        <category>DNS</category>
+      </categories>
+      <tags>
+        <tag>基础</tag>
+        <tag>网络</tag>
       </tags>
   </entry>
   <entry>
