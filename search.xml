@@ -16,26 +16,6 @@
       </tags>
   </entry>
   <entry>
-    <title>1.两数之和</title>
-    <url>/2019/05/13/LeetCode_1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</url>
-    <content><![CDATA[<img src="/2019/05/13/LeetCode_1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/leetcode.jpeg" class="" title="image">
-<p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。</p>
-<span id="more"></span>
-<p>你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。</p>
-<p>示例:</p>
-<figure class="highlight inform7"><table><tr><td class="code"><pre><span class="line">给定 nums = <span class="comment">[2, 7, 11, 15]</span>, target = 9</span><br><span class="line"></span><br><span class="line">因为 nums<span class="comment">[0]</span> + nums<span class="comment">[1]</span> = 2 + 7 = 9</span><br><span class="line">所以返回 <span class="comment">[0, 1]</span></span><br></pre></td></tr></table></figure>
-
-<p>解答：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type nums: List[int]</span></span><br><span class="line"><span class="string">        :type target: int</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span>   </span><br><span class="line">        <span class="comment">#创建一个空字典        </span></span><br><span class="line">        n = <span class="built_in">len</span>(nums)</span><br><span class="line">        d = &#123;&#125;</span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            a = target - nums[x]</span><br><span class="line">            <span class="comment">#字典d中存在nums[x]时</span></span><br><span class="line">            <span class="keyword">if</span> nums[x] <span class="keyword">in</span> d:</span><br><span class="line">                <span class="keyword">return</span> d[nums[x]],x</span><br><span class="line">            <span class="comment">#否则往字典增加键/值对</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                d[a] = x</span><br><span class="line">        <span class="comment">#边往字典增加键/值对，边与nums[x]进行对比</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>LeetCode</category>
-        <category>数组</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>git提交到远程库问题</title>
     <url>/2019/06/06/Git_%E6%8F%90%E4%BA%A4%E5%88%B0%E8%BF%9C%E7%A8%8B%E5%BA%93%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<img src="/2019/06/06/Git_%E6%8F%90%E4%BA%A4%E5%88%B0%E8%BF%9C%E7%A8%8B%E5%BA%93%E9%97%AE%E9%A2%98/git+github.jpg" class="" title="image">
@@ -55,6 +35,26 @@
       </categories>
       <tags>
         <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>1.两数之和</title>
+    <url>/2019/05/13/LeetCode_1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</url>
+    <content><![CDATA[<img src="/2019/05/13/LeetCode_1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/leetcode.jpeg" class="" title="image">
+<p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。</p>
+<span id="more"></span>
+<p>你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。</p>
+<p>示例:</p>
+<figure class="highlight inform7"><table><tr><td class="code"><pre><span class="line">给定 nums = <span class="comment">[2, 7, 11, 15]</span>, target = 9</span><br><span class="line"></span><br><span class="line">因为 nums<span class="comment">[0]</span> + nums<span class="comment">[1]</span> = 2 + 7 = 9</span><br><span class="line">所以返回 <span class="comment">[0, 1]</span></span><br></pre></td></tr></table></figure>
+
+<p>解答：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type nums: List[int]</span></span><br><span class="line"><span class="string">        :type target: int</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span>   </span><br><span class="line">        <span class="comment">#创建一个空字典        </span></span><br><span class="line">        n = <span class="built_in">len</span>(nums)</span><br><span class="line">        d = &#123;&#125;</span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            a = target - nums[x]</span><br><span class="line">            <span class="comment">#字典d中存在nums[x]时</span></span><br><span class="line">            <span class="keyword">if</span> nums[x] <span class="keyword">in</span> d:</span><br><span class="line">                <span class="keyword">return</span> d[nums[x]],x</span><br><span class="line">            <span class="comment">#否则往字典增加键/值对</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                d[a] = x</span><br><span class="line">        <span class="comment">#边往字典增加键/值对，边与nums[x]进行对比</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>LeetCode</category>
+        <category>数组</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
       </tags>
   </entry>
   <entry>
@@ -292,6 +292,27 @@
       </tags>
   </entry>
   <entry>
+    <title>输入有序数组</title>
+    <url>/2019/05/12/LeetCode_%E4%BA%8C%E5%88%86%E6%B3%95_%E8%BE%93%E5%85%A5%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/</url>
+    <content><![CDATA[<img src="/2019/05/12/LeetCode_%E4%BA%8C%E5%88%86%E6%B3%95_%E8%BE%93%E5%85%A5%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/leetcode.jpeg" class="" title="image">
+<p>给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。</p>
+<span id="more"></span>
+<p>函数应该返回这两个下标值 index1 和 index2，其中 index1 必须小于 index2。</p>
+<p>说明:</p>
+<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">1</span>.返回的下标值（index<span class="number">1</span> 和 index<span class="number">2</span>）不是从零开始的。</span><br><span class="line"><span class="attribute">2</span>.你可以假设每个输入只对应唯一的答案，而且你不可以重复使用相同的元素。</span><br></pre></td></tr></table></figure>
+<p>示例:</p>
+<figure class="highlight nix"><table><tr><td class="code"><pre><span class="line">输入: <span class="attr">numbers</span> = [<span class="number">2</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span>], <span class="attr">target</span> = <span class="number">9</span></span><br><span class="line">输出: [<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">解释: <span class="number">2</span> 与 <span class="number">7</span> 之和等于目标数 <span class="number">9</span> 。因此 <span class="attr">index1</span> = <span class="number">1</span>, <span class="attr">index2</span> = <span class="number">2</span> 。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span>(<span class="params">self, numbers: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type numbers: List[int]</span></span><br><span class="line"><span class="string">        :type target: int</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        s = &#123;&#125;</span><br><span class="line">        r = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(numbers)):</span><br><span class="line">            <span class="keyword">if</span> numbers[i] <span class="keyword">in</span> s.keys():</span><br><span class="line">                r.append(s[numbers[i]]+<span class="number">1</span>)</span><br><span class="line">                r.append(i+<span class="number">1</span>)</span><br><span class="line">                <span class="keyword">return</span> r</span><br><span class="line">            s[target-numbers[i]] = i</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>LeetCode</category>
+        <category>二分查找</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>56.合并区间</title>
     <url>/2019/05/11/LeetCode_56-%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4/</url>
     <content><![CDATA[<img src="/2019/05/11/LeetCode_56-%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4/leetcode.jpeg" class="" title="image">
@@ -308,27 +329,6 @@
       <categories>
         <category>LeetCode</category>
         <category>排序</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>输入有序数组</title>
-    <url>/2019/05/12/LeetCode_%E4%BA%8C%E5%88%86%E6%B3%95_%E8%BE%93%E5%85%A5%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/</url>
-    <content><![CDATA[<img src="/2019/05/12/LeetCode_%E4%BA%8C%E5%88%86%E6%B3%95_%E8%BE%93%E5%85%A5%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/leetcode.jpeg" class="" title="image">
-<p>给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。</p>
-<span id="more"></span>
-<p>函数应该返回这两个下标值 index1 和 index2，其中 index1 必须小于 index2。</p>
-<p>说明:</p>
-<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">1</span>.返回的下标值（index<span class="number">1</span> 和 index<span class="number">2</span>）不是从零开始的。</span><br><span class="line"><span class="attribute">2</span>.你可以假设每个输入只对应唯一的答案，而且你不可以重复使用相同的元素。</span><br></pre></td></tr></table></figure>
-<p>示例:</p>
-<figure class="highlight nix"><table><tr><td class="code"><pre><span class="line">输入: <span class="attr">numbers</span> = [<span class="number">2</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span>], <span class="attr">target</span> = <span class="number">9</span></span><br><span class="line">输出: [<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">解释: <span class="number">2</span> 与 <span class="number">7</span> 之和等于目标数 <span class="number">9</span> 。因此 <span class="attr">index1</span> = <span class="number">1</span>, <span class="attr">index2</span> = <span class="number">2</span> 。</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span>(<span class="params">self, numbers: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type numbers: List[int]</span></span><br><span class="line"><span class="string">        :type target: int</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        s = &#123;&#125;</span><br><span class="line">        r = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(numbers)):</span><br><span class="line">            <span class="keyword">if</span> numbers[i] <span class="keyword">in</span> s.keys():</span><br><span class="line">                r.append(s[numbers[i]]+<span class="number">1</span>)</span><br><span class="line">                r.append(i+<span class="number">1</span>)</span><br><span class="line">                <span class="keyword">return</span> r</span><br><span class="line">            s[target-numbers[i]] = i</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>LeetCode</category>
-        <category>二分查找</category>
       </categories>
       <tags>
         <tag>LeetCode</tag>
@@ -601,31 +601,6 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
-    <title>数据库中的左连接(left join)和右连接(right join)区别</title>
-    <url>/2019/03/18/MySQL_join/</url>
-    <content><![CDATA[<img src="/2019/03/18/MySQL_join/MySql.png" class="" title="image">
-
-<p>Left Join / Right Join /inner join<br>左连接where只影向右表，右连接where只影响左表。</p>
-<span id="more"></span>
-<h1 id="Left-Join"><a href="#Left-Join" class="headerlink" title="Left Join"></a>Left Join</h1><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> tbl1 <span class="keyword">Left</span> <span class="keyword">Join</span> tbl2</span><br><span class="line">    <span class="keyword">where</span> tbl1.ID <span class="operator">=</span> tbl2.ID</span><br></pre></td></tr></table></figure>
-<p>左连接后的检索结果是显示tbl1的所有数据和tbl2中满足where 条件的数据。</p>
-<p>简言之 Left Join影响到的是右边的表</p>
-<h1 id="Right-Join"><a href="#Right-Join" class="headerlink" title="Right Join"></a>Right Join</h1><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> tbl1 <span class="keyword">Right</span> <span class="keyword">Join</span> tbl2</span><br><span class="line">    <span class="keyword">where</span> tbl1.ID <span class="operator">=</span> tbl2.ID</span><br></pre></td></tr></table></figure>
-<p>检索结果是tbl2的所有数据和tbl1中满足where 条件的数据。</p>
-<p>简言之 Right Join影响到的是左边的表。</p>
-<h1 id="inner-join"><a href="#inner-join" class="headerlink" title="inner join"></a>inner join</h1><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">FROM</span> tbl1 <span class="keyword">INNER</span> <span class="keyword">JOIN</span> tbl2</span><br><span class="line">    <span class="keyword">ON</span> tbl1.ID <span class="operator">=</span> tbl2.ID</span><br></pre></td></tr></table></figure>
-
-<p>功能和 select * from tbl1,tbl2 where tbl1.id=tbl2.id相同。</p>
-]]></content>
-      <categories>
-        <category>数据库</category>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>SQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MySQL的安装</title>
     <url>/2019/03/16/MySQL_%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<img src="/2019/03/16/MySQL_%E5%AE%89%E8%A3%85/MySql.png" class="" title="image">
@@ -662,6 +637,31 @@ tail -f ping.log（查看日志）
       </categories>
       <tags>
         <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据库中的左连接(left join)和右连接(right join)区别</title>
+    <url>/2019/03/18/MySQL_join/</url>
+    <content><![CDATA[<img src="/2019/03/18/MySQL_join/MySql.png" class="" title="image">
+
+<p>Left Join / Right Join /inner join<br>左连接where只影向右表，右连接where只影响左表。</p>
+<span id="more"></span>
+<h1 id="Left-Join"><a href="#Left-Join" class="headerlink" title="Left Join"></a>Left Join</h1><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> tbl1 <span class="keyword">Left</span> <span class="keyword">Join</span> tbl2</span><br><span class="line">    <span class="keyword">where</span> tbl1.ID <span class="operator">=</span> tbl2.ID</span><br></pre></td></tr></table></figure>
+<p>左连接后的检索结果是显示tbl1的所有数据和tbl2中满足where 条件的数据。</p>
+<p>简言之 Left Join影响到的是右边的表</p>
+<h1 id="Right-Join"><a href="#Right-Join" class="headerlink" title="Right Join"></a>Right Join</h1><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> tbl1 <span class="keyword">Right</span> <span class="keyword">Join</span> tbl2</span><br><span class="line">    <span class="keyword">where</span> tbl1.ID <span class="operator">=</span> tbl2.ID</span><br></pre></td></tr></table></figure>
+<p>检索结果是tbl2的所有数据和tbl1中满足where 条件的数据。</p>
+<p>简言之 Right Join影响到的是左边的表。</p>
+<h1 id="inner-join"><a href="#inner-join" class="headerlink" title="inner join"></a>inner join</h1><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">FROM</span> tbl1 <span class="keyword">INNER</span> <span class="keyword">JOIN</span> tbl2</span><br><span class="line">    <span class="keyword">ON</span> tbl1.ID <span class="operator">=</span> tbl2.ID</span><br></pre></td></tr></table></figure>
+
+<p>功能和 select * from tbl1,tbl2 where tbl1.id=tbl2.id相同。</p>
+]]></content>
+      <categories>
+        <category>数据库</category>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>SQL</tag>
       </tags>
   </entry>
   <entry>
@@ -964,17 +964,6 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
-    <title>图片转字符</title>
-    <url>/2019/03/20/Python_%E8%84%9A%E6%9C%AC_%E5%9B%BE%E7%89%87%E8%BD%AC%E5%AD%97%E7%AC%A6/</url>
-    <content><![CDATA[<img src="/2019/03/20/Python_%E8%84%9A%E6%9C%AC_%E5%9B%BE%E7%89%87%E8%BD%AC%E5%AD%97%E7%AC%A6/python.jpg" class="" title="image">
-<span id="more"></span>
-<p>代码如下</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding=utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> argparse</span><br><span class="line"></span><br><span class="line"><span class="comment">#命令行输入参数处理</span></span><br><span class="line">parser = argparse.ArgumentParser()</span><br><span class="line"></span><br><span class="line">parser.add_argument(<span class="string">&#x27;file&#x27;</span>)     <span class="comment">#输入文件</span></span><br><span class="line">parser.add_argument(<span class="string">&#x27;-o&#x27;</span>, <span class="string">&#x27;--output&#x27;</span>)   <span class="comment">#输出文件</span></span><br><span class="line">parser.add_argument(<span class="string">&#x27;--width&#x27;</span>, <span class="built_in">type</span> = <span class="built_in">int</span>, default = <span class="number">80</span>) <span class="comment">#输出字符画宽</span></span><br><span class="line">parser.add_argument(<span class="string">&#x27;--height&#x27;</span>, <span class="built_in">type</span> = <span class="built_in">int</span>, default = <span class="number">80</span>) <span class="comment">#输出字符画高</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#获取参数</span></span><br><span class="line">args = parser.parse_args()</span><br><span class="line"></span><br><span class="line">IMG = args.file</span><br><span class="line">WIDTH = args.width</span><br><span class="line">HEIGHT = args.height</span><br><span class="line">OUTPUT = args.output</span><br><span class="line"></span><br><span class="line">ascii_char = <span class="built_in">list</span>(<span class="string">&quot;$@B%8&amp;WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1&#123;&#125;[]?-_+~&lt;&gt;i!lI;:,\&quot;^`&#x27;. &quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将256灰度映射到70个字符上</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_char</span>(<span class="params">r,g,b,alpha = <span class="number">256</span></span>):</span></span><br><span class="line">    <span class="keyword">if</span> alpha == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27; &#x27;</span></span><br><span class="line">    length = <span class="built_in">len</span>(ascii_char)</span><br><span class="line">    gray = <span class="built_in">int</span>(<span class="number">0.2126</span> * r + <span class="number">0.7152</span> * g + <span class="number">0.0722</span> * b)</span><br><span class="line"></span><br><span class="line">    unit = (<span class="number">256.0</span> + <span class="number">1</span>)/length</span><br><span class="line">    <span class="keyword">return</span> ascii_char[<span class="built_in">int</span>(gray/unit)]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line"></span><br><span class="line">    im = Image.<span class="built_in">open</span>(IMG)</span><br><span class="line">    im = im.resize((WIDTH,HEIGHT), Image.NEAREST)</span><br><span class="line"></span><br><span class="line">    txt = <span class="string">&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(HEIGHT):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(WIDTH):</span><br><span class="line">            txt += get_char(*im.getpixel((j,i)))</span><br><span class="line">        txt += <span class="string">&#x27;\n&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(txt)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#字符画输出到文件</span></span><br><span class="line">    <span class="keyword">if</span> OUTPUT:</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(OUTPUT,<span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">            f.write(txt)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;output.txt&quot;</span>,<span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">            f.write(txt)</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-  </entry>
-  <entry>
     <title>SAS Studio</title>
     <url>/2021/03/12/SAS-%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%AF%91/</url>
     <content><![CDATA[<img src="/2021/03/12/SAS-%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%AF%91/SAS.jpeg" class="">
@@ -990,6 +979,17 @@ tail -f ping.log（查看日志）
       <tags>
         <tag>SAS</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>图片转字符</title>
+    <url>/2019/03/20/Python_%E8%84%9A%E6%9C%AC_%E5%9B%BE%E7%89%87%E8%BD%AC%E5%AD%97%E7%AC%A6/</url>
+    <content><![CDATA[<img src="/2019/03/20/Python_%E8%84%9A%E6%9C%AC_%E5%9B%BE%E7%89%87%E8%BD%AC%E5%AD%97%E7%AC%A6/python.jpg" class="" title="image">
+<span id="more"></span>
+<p>代码如下</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding=utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> argparse</span><br><span class="line"></span><br><span class="line"><span class="comment">#命令行输入参数处理</span></span><br><span class="line">parser = argparse.ArgumentParser()</span><br><span class="line"></span><br><span class="line">parser.add_argument(<span class="string">&#x27;file&#x27;</span>)     <span class="comment">#输入文件</span></span><br><span class="line">parser.add_argument(<span class="string">&#x27;-o&#x27;</span>, <span class="string">&#x27;--output&#x27;</span>)   <span class="comment">#输出文件</span></span><br><span class="line">parser.add_argument(<span class="string">&#x27;--width&#x27;</span>, <span class="built_in">type</span> = <span class="built_in">int</span>, default = <span class="number">80</span>) <span class="comment">#输出字符画宽</span></span><br><span class="line">parser.add_argument(<span class="string">&#x27;--height&#x27;</span>, <span class="built_in">type</span> = <span class="built_in">int</span>, default = <span class="number">80</span>) <span class="comment">#输出字符画高</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#获取参数</span></span><br><span class="line">args = parser.parse_args()</span><br><span class="line"></span><br><span class="line">IMG = args.file</span><br><span class="line">WIDTH = args.width</span><br><span class="line">HEIGHT = args.height</span><br><span class="line">OUTPUT = args.output</span><br><span class="line"></span><br><span class="line">ascii_char = <span class="built_in">list</span>(<span class="string">&quot;$@B%8&amp;WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1&#123;&#125;[]?-_+~&lt;&gt;i!lI;:,\&quot;^`&#x27;. &quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将256灰度映射到70个字符上</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_char</span>(<span class="params">r,g,b,alpha = <span class="number">256</span></span>):</span></span><br><span class="line">    <span class="keyword">if</span> alpha == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27; &#x27;</span></span><br><span class="line">    length = <span class="built_in">len</span>(ascii_char)</span><br><span class="line">    gray = <span class="built_in">int</span>(<span class="number">0.2126</span> * r + <span class="number">0.7152</span> * g + <span class="number">0.0722</span> * b)</span><br><span class="line"></span><br><span class="line">    unit = (<span class="number">256.0</span> + <span class="number">1</span>)/length</span><br><span class="line">    <span class="keyword">return</span> ascii_char[<span class="built_in">int</span>(gray/unit)]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line"></span><br><span class="line">    im = Image.<span class="built_in">open</span>(IMG)</span><br><span class="line">    im = im.resize((WIDTH,HEIGHT), Image.NEAREST)</span><br><span class="line"></span><br><span class="line">    txt = <span class="string">&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(HEIGHT):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(WIDTH):</span><br><span class="line">            txt += get_char(*im.getpixel((j,i)))</span><br><span class="line">        txt += <span class="string">&#x27;\n&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(txt)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#字符画输出到文件</span></span><br><span class="line">    <span class="keyword">if</span> OUTPUT:</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(OUTPUT,<span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">            f.write(txt)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;output.txt&quot;</span>,<span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">            f.write(txt)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
   </entry>
   <entry>
     <title>3D-brain Ⅰ</title>
@@ -1125,18 +1125,18 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
-    <title>正则表达式(一)</title>
-    <url>/2019/06/08/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F-1/</url>
-    <content><![CDATA[<img src="/2019/06/08/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F-1/regex.jpg" class="" title="image">
+    <title>正则表达式</title>
+    <url>/2019/06/08/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+    <content><![CDATA[<img src="/2019/06/08/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/regex.jpg" class="" title="image">
 
-<p>正则表达式用于文本内容的查找，替换(<a href="https://regexr.com/" title="" target="">正则表达式在线工具</a>)</p>
+<p>正则表达式用于文本内容的查找，替换。(<a href="https://regexr.com/" title="" target="">一个正则表达式在线测试网站</a>)</p>
 <span id="more"></span>
-<p>刚用python学写爬虫第一个难点就是正则表达式，学习曲线比较陡峭，一直是需要用就去查，没有刻意去记忆。<br>最近学Django框架，发现它的路由路径形式有一种就是正则形式，觉得值得一学。</p>
+
 <h1 id="匹配单个字符"><a href="#匹配单个字符" class="headerlink" title="匹配单个字符"></a>匹配单个字符</h1><p>. 可以用来匹配任何的单个字符，但是在大多数实现里面，不能匹配换行符；</p>
 <p>. 是元字符，表示它有特殊的含义，而不是字符本身的含义。如果需要匹配 . 那么要用 \ 进行转义，即在 . 前面加上 \ 。</p>
 <p>正则表达式一般是区分大小写的，但是也有些实现是不区分。</p>
 <p>正则表达式</p>
-<figure class="highlight erlang"><table><tr><td class="code"><pre><span class="line">nam.</span><br></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">name</span>.</span><br></pre></td></tr></table></figure>
 <p>匹配结果</p>
 <figure class="highlight applescript"><table><tr><td class="code"><pre><span class="line">My <span class="built_in">name</span> <span class="keyword">is</span> Zheng.</span><br></pre></td></tr></table></figure>
 
@@ -1262,7 +1262,7 @@ tail -f ping.log（查看日志）
 
 <p>[\w.] 匹配的是字母数字或者 . ，在其后面加上 + ，表示匹配多次。在字符集合 [ ] 里，. 不是元字符；</p>
 <p><em><strong>匹配结果</strong></em></p>
-<p><a href="mailto:&#97;&#x62;&#x63;&#46;&#100;&#x65;&#102;&#64;&#113;&#113;&#x2e;&#99;&#111;&#109;">&#97;&#x62;&#x63;&#46;&#100;&#x65;&#102;&#64;&#113;&#113;&#x2e;&#99;&#111;&#109;</a></p>
+<p><a href="mailto:&#97;&#x62;&#99;&#x2e;&#100;&#x65;&#x66;&#64;&#113;&#113;&#46;&#99;&#111;&#x6d;">&#97;&#x62;&#99;&#x2e;&#100;&#x65;&#x66;&#64;&#113;&#113;&#46;&#99;&#111;&#x6d;</a></p>
 <ul>
 <li><p>{n} 匹配 n 个字符</p>
 </li>
@@ -1277,20 +1277,7 @@ tail -f ping.log（查看日志）
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">a</span>.+c</span><br></pre></td></tr></table></figure>
 <p>由于 + 是贪婪型的，因此 .+ 会匹配更可能多的内容，所以会把整个abcabcabc<br>文本都匹配，而不是只匹配前面的 abc 文本。用懒惰型可以实现匹配前面的。</p>
 <p><em><strong>匹配结果</strong></em></p>
-<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">abcabcabc</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>工具</category>
-        <category>正则表达式</category>
-      </categories>
-      <tags>
-        <tag>RegEx</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>正则表达式(二)</title>
-    <url>/2019/07/03/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F-2/</url>
-    <content><![CDATA[<img src="/2019/07/03/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F-2/regex.jpg" class="" title="image">
-<span id="more"></span>
+<figure class="highlight ebnf"><table><tr><td class="code"><pre><span class="line"><span class="attribute">abcabcabc</span></span><br></pre></td></tr></table></figure>
 <h1 id="位置匹配"><a href="#位置匹配" class="headerlink" title="位置匹配"></a>位置匹配</h1><p><em><strong>单词边界</strong></em><br>\b 可以匹配一个单词的边界,边界是指位于 \w 和 \W 之间的位置；\B 匹配一个不是单词边界的位置。</p>
 <p>\b 只匹配位置，不匹配字符，因此 \babc\b 匹配出来的结果为3个字符。</p>
 <p><em><strong>字符串边界</strong></em><br>^ 匹配整个字符串的开头，$ 匹配结尾。</p>
@@ -1321,6 +1308,23 @@ tail -f ping.log（查看日志）
       <categories>
         <category>计算机网络</category>
         <category>DNS</category>
+      </categories>
+      <tags>
+        <tag>基础</tag>
+        <tag>网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>http协议</title>
+    <url>/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_http/</url>
+    <content><![CDATA[<img src="/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_http/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.jpg" class="" title="image">
+<span id="more"></span>
+<h2 id="从输入url到页面加载的过程中发生了什么？"><a href="#从输入url到页面加载的过程中发生了什么？" class="headerlink" title="从输入url到页面加载的过程中发生了什么？"></a>从输入url到页面加载的过程中发生了什么？</h2><p>DNS解析url的ip地址<br>发送HTTP请求<br>TCP分割HTTP请求报文进行可靠的传输<br>IP协议对请求报文进行中转和传送<br>服务端TCP接受并重组报文<br>服务端HTTP处理请求<br>返回资源</p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><img src="/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_http/%E6%95%B4%E4%B8%AA%E8%BF%87%E7%A8%8B.jpg" class="">
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+        <category>HTTP</category>
       </categories>
       <tags>
         <tag>基础</tag>
@@ -1366,23 +1370,6 @@ tail -f ping.log（查看日志）
       <categories>
         <category>计算机网络</category>
         <category>TCP/IP</category>
-      </categories>
-      <tags>
-        <tag>基础</tag>
-        <tag>网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>http协议</title>
-    <url>/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_http/</url>
-    <content><![CDATA[<img src="/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_http/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.jpg" class="" title="image">
-<span id="more"></span>
-<h2 id="从输入url到页面加载的过程中发生了什么？"><a href="#从输入url到页面加载的过程中发生了什么？" class="headerlink" title="从输入url到页面加载的过程中发生了什么？"></a>从输入url到页面加载的过程中发生了什么？</h2><p>DNS解析url的ip地址<br>发送HTTP请求<br>TCP分割HTTP请求报文进行可靠的传输<br>IP协议对请求报文进行中转和传送<br>服务端TCP接受并重组报文<br>服务端HTTP处理请求<br>返回资源</p>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><img src="/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_http/%E6%95%B4%E4%B8%AA%E8%BF%87%E7%A8%8B.jpg" class="">
-]]></content>
-      <categories>
-        <category>计算机网络</category>
-        <category>HTTP</category>
       </categories>
       <tags>
         <tag>基础</tag>
