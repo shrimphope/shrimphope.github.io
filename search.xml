@@ -890,34 +890,6 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
-    <title>使用PyInstaller库生成可执行文件</title>
-    <url>/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/</url>
-    <content><![CDATA[<img src="/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/python.jpg" class="" title="image">
-<span id="more"></span>
-<h1 id="首先安装PyInstaller库-cmd命令行"><a href="#首先安装PyInstaller库-cmd命令行" class="headerlink" title="首先安装PyInstaller库(cmd命令行)"></a>首先安装PyInstaller库(cmd命令行)</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install pyinstaller</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="主要参数"><a href="#主要参数" class="headerlink" title="主要参数"></a>主要参数</h1><img src="/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/%E4%B8%BB%E8%A6%81%E5%8F%82%E6%95%B0.png" class="">
-
-<h1 id="修改图标并打包"><a href="#修改图标并打包" class="headerlink" title="修改图标并打包"></a>修改图标并打包</h1><p>需要一个ico图标</p>
-<img src="/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/%E6%89%93%E5%8C%85%E5%89%8D.png" class="">
-
-<p>在需要打包的文件根目录下使用命令</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pyinstaller -i Digits.ico -F SevenDigits.py</span><br></pre></td></tr></table></figure>
-
-<p>打包完成</p>
-<img src="/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/%E6%89%93%E5%8C%85%E5%90%8E.png" class="">
-<p>需要的可执行文件在dist目录，如下</p>
-<img src="/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/dist%E6%96%87%E4%BB%B6%E5%A4%B9.png" class="">]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>基础</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>科赫雪花</title>
     <url>/2019/04/03/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_%E9%9B%AA%E8%8A%B1/</url>
     <content><![CDATA[<img src="/2019/04/03/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_%E9%9B%AA%E8%8A%B1/python.jpg" class="" title="image">
@@ -1122,6 +1094,34 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
+    <title>使用PyInstaller库生成可执行文件</title>
+    <url>/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/</url>
+    <content><![CDATA[<img src="/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/python.jpg" class="" title="image">
+<span id="more"></span>
+<h1 id="首先安装PyInstaller库-cmd命令行"><a href="#首先安装PyInstaller库-cmd命令行" class="headerlink" title="首先安装PyInstaller库(cmd命令行)"></a>首先安装PyInstaller库(cmd命令行)</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install pyinstaller</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="主要参数"><a href="#主要参数" class="headerlink" title="主要参数"></a>主要参数</h1><img src="/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/%E4%B8%BB%E8%A6%81%E5%8F%82%E6%95%B0.png" class="">
+
+<h1 id="修改图标并打包"><a href="#修改图标并打包" class="headerlink" title="修改图标并打包"></a>修改图标并打包</h1><p>需要一个ico图标</p>
+<img src="/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/%E6%89%93%E5%8C%85%E5%89%8D.png" class="">
+
+<p>在需要打包的文件根目录下使用命令</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pyinstaller -i Digits.ico -F SevenDigits.py</span><br></pre></td></tr></table></figure>
+
+<p>打包完成</p>
+<img src="/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/%E6%89%93%E5%8C%85%E5%90%8E.png" class="">
+<p>需要的可执行文件在dist目录，如下</p>
+<img src="/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/dist%E6%96%87%E4%BB%B6%E5%A4%B9.png" class="">]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>基础</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>插入排序</title>
     <url>/2019/04/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95_%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/</url>
     <content><![CDATA[<img src="/2019/04/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95_%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/%E7%AE%97%E6%B3%95.jpg" class="" title="image">
@@ -1304,7 +1304,7 @@ tail -f ping.log（查看日志）
 
 <p>[\w.] 匹配的是字母数字或者 . ，在其后面加上 + ，表示匹配多次。在字符集合 [ ] 里，. 不是元字符；</p>
 <p><em><strong>匹配结果</strong></em></p>
-<p><a href="mailto:&#97;&#x62;&#x63;&#x2e;&#100;&#x65;&#x66;&#64;&#113;&#113;&#46;&#x63;&#111;&#x6d;">&#97;&#x62;&#x63;&#x2e;&#100;&#x65;&#x66;&#64;&#113;&#113;&#46;&#x63;&#111;&#x6d;</a></p>
+<p><a href="mailto:&#x61;&#98;&#x63;&#46;&#100;&#101;&#x66;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#x6d;">&#x61;&#98;&#x63;&#46;&#100;&#101;&#x66;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#x6d;</a></p>
 <ul>
 <li><p>{n} 匹配 n 个字符</p>
 </li>
