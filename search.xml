@@ -940,7 +940,7 @@ tail -f ping.log（查看日志）
     <url>/2021/03/12/SAS_%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%AF%91/</url>
     <content><![CDATA[<img src="/2021/03/12/SAS_%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%AF%91/SAS.jpeg" class="">
 <span id="more"></span>
-<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>SAS基本软件大小有二三十个G，下载安装运行对于一般的电脑都有点吃力，SAS ODA提供了一个在线编写、调试代码的环境，可以上传自己的数据。</p>
+<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>SAS基本软件大小有二三十个G，下载安装运行对于一般的电脑都有点吃力，SAS Studio提供了一个在线编写、调试代码的环境，可以上传自己的数据。</p>
 <h1 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h1><p><a href="https://welcome.oda.sas.com/login">网站地址</a><br>用邮箱(无需.edu)注册一个账号，根据分配的ID和自设密码登录云服务器，选亚太地区。</p>
 <h1 id="测试环境"><a href="#测试环境" class="headerlink" title="测试环境"></a>测试环境</h1><p>右键单击 文件(主目录) 新建文件即可，小人那个图标就是run。<br><img src="./dvp.png"></p>
 ]]></content>
