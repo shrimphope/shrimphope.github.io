@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://wuranim.github.io/2021/03/13/SAS-%E6%95%B0%E5%AD%97%E6%A0%BC%E5%BC%8F/SAS.jpeg">
 <meta property="article:published_time" content="2021-03-13T14:08:58.000Z">
-<meta property="article:modified_time" content="2021-12-15T14:12:26.737Z">
+<meta property="article:modified_time" content="2021-12-16T08:33:15.323Z">
 <meta property="article:author" content="Ran">
 <meta property="article:tag" content="SAS">
 <meta name="twitter:card" content="summary">
@@ -88,7 +88,7 @@
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">18</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">17</span></a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">32</span></a></li>
         <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">39</span></a></li>
       <li class="menu-item menu-item-search">
@@ -134,7 +134,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -147,6 +147,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%B4%E6%98%8E"><span class="nav-number">1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">读取数据格式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%85%A5%E6%95%B0%E5%AD%97%E6%A0%BC%E5%BC%8F"><span class="nav-number">3.1.</span> <span class="nav-text">输入数字格式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%98%BE%E7%A4%BA%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">显示数据格式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BE%93%E5%87%BA%E6%95%B0%E5%AD%97%E6%A0%BC%E5%BC%8F"><span class="nav-number">4.1.</span> <span class="nav-text">输出数字格式</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -172,7 +173,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-count">17</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -268,6 +269,57 @@
     <div class="post-body" itemprop="articleBody">
         <img src="/2021/03/13/SAS-%E6%95%B0%E5%AD%97%E6%A0%BC%E5%BC%8F/SAS.jpeg" class="">
 <span id="more"></span>
+<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>SAS可以处理各种数字数据格式，它在变量名的末尾使用这些格式，以向数据应用特定的数字格式。 SAS使用两种数字格式，一个用于读取数字数据的特定格式，称为informat，另一个用于显示称为输出格式的特定格式。这个格式带有很鲜明的语言特点。</p>
+<h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Varname <span class="module-access"><span class="module"><span class="identifier">Formatnamew</span>.</span></span>d</span><br></pre></td></tr></table></figure>
+<ul>
+<li>VARNAME 变量名。</li>
+<li>FORMATNAME 应用于变量的数字格式名称（COMMA/DOLLAR）。</li>
+<li>w是允许变量存储的数据列的最大位数（整数位和小数位，小数点也算一位）。</li>
+<li>d是小数的位数。</li>
+</ul>
+<h1 id="读取数据格式"><a href="#读取数据格式" class="headerlink" title="读取数据格式"></a>读取数据格式</h1><p>读取输入的数据，按照给定的格式进行显示 </p>
+<h2 id="输入数字格式"><a href="#输入数字格式" class="headerlink" title="输入数字格式"></a>输入数字格式</h2><table>
+<thead>
+<tr>
+<th>格式</th>
+<th>使用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>n.</td>
+<td>最多“n”个没有小数的列数。</td>
+</tr>
+<tr>
+<td>n.p</td>
+<td>最多“n”个带“p”位小数的列数。</td>
+</tr>
+<tr>
+<td>COMMAn.p</td>
+<td>COMMAn.p最多“n”个具有“p”小数的列，删除任何逗号或美元符号。</td>
+</tr>
+</tbody></table>
+<h1 id="显示数据格式"><a href="#显示数据格式" class="headerlink" title="显示数据格式"></a>显示数据格式</h1><p>类似于在读取数据时应用格式，以下是用于在SAS程序的输出中显示数据的格式的列表。</p>
+<h2 id="输出数字格式"><a href="#输出数字格式" class="headerlink" title="输出数字格式"></a>输出数字格式</h2><table>
+<thead>
+<tr>
+<th>格式</th>
+<th>使用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>n.</td>
+<td>写入最多“n”个没有小数的列数。</td>
+</tr>
+<tr>
+<td>n.p</td>
+<td>写入最多“n”个带“p”位小数的列数。</td>
+</tr>
+<tr>
+<td>DOLLARn.p</td>
+<td>写入最多“n”个具有“p”小数的列，前面带有美元符号，在第千个位置使用逗号。</td>
+</tr>
+</tbody></table>
+
     </div>
 
     
