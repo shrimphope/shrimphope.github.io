@@ -632,6 +632,9 @@ tail -f ping.log（查看日志）
         <category>Python</category>
         <category>Django</category>
       </categories>
+      <tags>
+        <tag>Web</tag>
+      </tags>
   </entry>
   <entry>
     <title>数据库中的左连接(left join)和右连接(right join)区别</title>
@@ -671,6 +674,9 @@ tail -f ping.log（查看日志）
         <category>Python</category>
         <category>Flask</category>
       </categories>
+      <tags>
+        <tag>Web</tag>
+      </tags>
   </entry>
   <entry>
     <title>python之eval()</title>
@@ -689,7 +695,7 @@ tail -f ping.log（查看日志）
         <category>常用函数</category>
       </categories>
       <tags>
-        <tag>python</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -847,7 +853,7 @@ tail -f ping.log（查看日志）
         <category>常用函数</category>
       </categories>
       <tags>
-        <tag>python</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -909,6 +915,7 @@ tail -f ping.log（查看日志）
         <tag>turtle</tag>
         <tag>递归</tag>
         <tag>分形几何</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -919,7 +926,7 @@ tail -f ping.log（查看日志）
 <p>代码如下</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding=utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> argparse</span><br><span class="line"></span><br><span class="line"><span class="comment">#命令行输入参数处理</span></span><br><span class="line">parser = argparse.ArgumentParser()</span><br><span class="line"></span><br><span class="line">parser.add_argument(<span class="string">&#x27;file&#x27;</span>)     <span class="comment">#输入文件</span></span><br><span class="line">parser.add_argument(<span class="string">&#x27;-o&#x27;</span>, <span class="string">&#x27;--output&#x27;</span>)   <span class="comment">#输出文件</span></span><br><span class="line">parser.add_argument(<span class="string">&#x27;--width&#x27;</span>, <span class="built_in">type</span> = <span class="built_in">int</span>, default = <span class="number">80</span>) <span class="comment">#输出字符画宽</span></span><br><span class="line">parser.add_argument(<span class="string">&#x27;--height&#x27;</span>, <span class="built_in">type</span> = <span class="built_in">int</span>, default = <span class="number">80</span>) <span class="comment">#输出字符画高</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#获取参数</span></span><br><span class="line">args = parser.parse_args()</span><br><span class="line"></span><br><span class="line">IMG = args.file</span><br><span class="line">WIDTH = args.width</span><br><span class="line">HEIGHT = args.height</span><br><span class="line">OUTPUT = args.output</span><br><span class="line"></span><br><span class="line">ascii_char = <span class="built_in">list</span>(<span class="string">&quot;$@B%8&amp;WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1&#123;&#125;[]?-_+~&lt;&gt;i!lI;:,\&quot;^`&#x27;. &quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将256灰度映射到70个字符上</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_char</span>(<span class="params">r,g,b,alpha = <span class="number">256</span></span>):</span></span><br><span class="line">    <span class="keyword">if</span> alpha == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27; &#x27;</span></span><br><span class="line">    length = <span class="built_in">len</span>(ascii_char)</span><br><span class="line">    gray = <span class="built_in">int</span>(<span class="number">0.2126</span> * r + <span class="number">0.7152</span> * g + <span class="number">0.0722</span> * b)</span><br><span class="line"></span><br><span class="line">    unit = (<span class="number">256.0</span> + <span class="number">1</span>)/length</span><br><span class="line">    <span class="keyword">return</span> ascii_char[<span class="built_in">int</span>(gray/unit)]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line"></span><br><span class="line">    im = Image.<span class="built_in">open</span>(IMG)</span><br><span class="line">    im = im.resize((WIDTH,HEIGHT), Image.NEAREST)</span><br><span class="line"></span><br><span class="line">    txt = <span class="string">&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(HEIGHT):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(WIDTH):</span><br><span class="line">            txt += get_char(*im.getpixel((j,i)))</span><br><span class="line">        txt += <span class="string">&#x27;\n&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(txt)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#字符画输出到文件</span></span><br><span class="line">    <span class="keyword">if</span> OUTPUT:</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(OUTPUT,<span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">            f.write(txt)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;output.txt&quot;</span>,<span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">            f.write(txt)</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>python</category>
+        <category>Python</category>
       </categories>
   </entry>
   <entry>
@@ -965,6 +972,7 @@ tail -f ping.log（查看日志）
       </categories>
       <tags>
         <tag>基础</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
