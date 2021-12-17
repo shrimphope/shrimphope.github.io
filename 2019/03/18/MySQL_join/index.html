@@ -27,13 +27,13 @@
 <meta property="og:site_name" content="Ran">
 <meta property="og:description" content="Left Join &#x2F; Right Join &#x2F;inner join左连接where只影向右表，右连接where只影响左表。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://wuranim.github.io/2019/03/18/MySQL_join/MySql.png">
+<meta property="og:image" content="http://wuranim.github.io/pictures/MySql.png">
 <meta property="article:published_time" content="2019-03-17T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-12-16T07:57:58.339Z">
+<meta property="article:modified_time" content="2021-12-17T08:58:11.153Z">
 <meta property="article:author" content="Ran">
 <meta property="article:tag" content="SQL">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://wuranim.github.io/2019/03/18/MySQL_join/MySql.png">
+<meta name="twitter:image" content="http://wuranim.github.io/pictures/MySql.png">
 
 
 <link rel="canonical" href="http://wuranim.github.io/2019/03/18/MySQL_join/">
@@ -269,9 +269,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <img src="/2019/03/18/MySQL_join/MySql.png" class="" title="image">
-
-<p>Left Join / Right Join /inner join<br>左连接where只影向右表，右连接where只影响左表。</p>
+        <p><img src="/pictures/MySql.png"><br>Left Join / Right Join /inner join<br>左连接where只影向右表，右连接where只影响左表。</p>
 <span id="more"></span>
 <h1 id="Left-Join"><a href="#Left-Join" class="headerlink" title="Left Join"></a>Left Join</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> tbl1 <span class="keyword">Left</span> <span class="keyword">Join</span> tbl2</span><br><span class="line">    <span class="keyword">where</span> tbl1.ID <span class="operator">=</span> tbl2.ID</span><br></pre></td></tr></table></figure>
 <p>左连接后的检索结果是显示tbl1的所有数据和tbl2中满足where 条件的数据。</p>
