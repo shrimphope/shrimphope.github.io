@@ -200,6 +200,51 @@
       </tags>
   </entry>
   <entry>
+    <title>3.无重复字符的最长子串</title>
+    <url>/2019/05/10/LeetCode_3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/</url>
+    <content><![CDATA[<img src="/2019/05/10/LeetCode_3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/leetcode.jpeg" class="" title="image">
+<p>给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。</p>
+<span id="more"></span>
+<p>示例 1:</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">输入: &quot;abcabcbb&quot;</span></span><br><span class="line"><span class="section">输出: 3 </span></span><br><span class="line"><span class="section">解释: 因为无重复字符的最长子串是 &quot;abc&quot;，所以其长度为 3。</span></span><br></pre></td></tr></table></figure>
+<p>示例 2:</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">输入: &quot;bbbbb&quot;</span></span><br><span class="line"><span class="section">输出: 1</span></span><br><span class="line"><span class="section">解释: 因为无重复字符的最长子串是 &quot;b&quot;，所以其长度为 1。</span></span><br></pre></td></tr></table></figure>
+<p>示例 3:</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">输入: &quot;pwwkew&quot;</span></span><br><span class="line"><span class="section">输出: 3</span></span><br><span class="line"><span class="section">解释: 因为无重复字符的最长子串是 &quot;wke&quot;，所以其长度为 3。</span></span><br><span class="line">     请注意，你的答案必须是 子串 的长度，<span class="string">&quot;pwke&quot;</span> 是一个子序列，不是子串。</span><br></pre></td></tr></table></figure>
+
+<p>解答:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">lengthOfLongestSubstring</span>(<span class="params">self, s</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type s: str</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment"># 存储历史循环中最长的子串长度</span></span><br><span class="line">        max_len = <span class="number">0</span></span><br><span class="line">        <span class="comment"># 判断传入的字符串是否为空</span></span><br><span class="line">        <span class="keyword">if</span> s <span class="keyword">is</span> <span class="literal">None</span> <span class="keyword">or</span> <span class="built_in">len</span>(s) == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> max_len</span><br><span class="line">        <span class="comment"># 定义一个字典，存储不重复的字符和字符所在的下标</span></span><br><span class="line">        str_dict = &#123;&#125;</span><br><span class="line">        <span class="comment"># 存储每次循环中最长的子串长度</span></span><br><span class="line">        one_max = <span class="number">0</span></span><br><span class="line">        <span class="comment">#记录最近重复字符所在的位置+1</span></span><br><span class="line">        start = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(s)):</span><br><span class="line">            <span class="comment"># 判断当前字符是否在字典中和当前字符的下标是否大于等于最近重复字符的所在位置</span></span><br><span class="line">            <span class="keyword">if</span> s[i] <span class="keyword">in</span> str_dict <span class="keyword">and</span> str_dict[s[i]] &gt;= start:</span><br><span class="line">                <span class="comment"># 记录当前字符的值+1</span></span><br><span class="line">                start = str_dict[s[i]]</span><br><span class="line">            <span class="comment"># 在此次循环中，最大的不重复子串的长度</span></span><br><span class="line">            one_max = i - start+<span class="number">1</span></span><br><span class="line">            <span class="comment"># 把当前位置覆盖字典中的位置</span></span><br><span class="line">            str_dict[s[i]] = i</span><br><span class="line">            <span class="comment"># 比较此次循环的最大不重复子串长度和历史循环最大不重复子串长度</span></span><br><span class="line">            max_len = <span class="built_in">max</span>(max_len, one_max)</span><br><span class="line">        <span class="keyword">return</span> max_len</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>LeetCode</category>
+        <category>字符串</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>35.搜索插入位置</title>
+    <url>/2019/05/08/LeetCode_35-%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/</url>
+    <content><![CDATA[<img src="/2019/05/08/LeetCode_35-%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/leetcode.jpeg" class="" title="image">
+<p>给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。</p>
+<span id="more"></span>
+<p>你可以假设数组中无重复元素。</p>
+<p>示例 1:</p>
+<p>输入: [1,3,5,6], 5<br>输出: 2<br>示例 2:</p>
+<p>输入: [1,3,5,6], 2<br>输出: 1<br>示例 3:</p>
+<p>输入: [1,3,5,6], 7<br>输出: 4<br>示例 4:</p>
+<p>输入: [1,3,5,6], 0<br>输出: 0</p>
+<p>解答</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">searchInsert</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">for</span> i,num <span class="keyword">in</span> <span class="built_in">enumerate</span>(nums):<span class="comment">#没超过列表边界</span></span><br><span class="line">            <span class="keyword">if</span> target&lt;=num:</span><br><span class="line">                <span class="keyword">return</span> i</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">len</span>(nums)<span class="comment">#若超出</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>LeetCode</category>
+        <category>二分查找</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2.两数相加</title>
     <url>/2019/05/09/LeetCode_2-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/</url>
     <content><![CDATA[<img src="/2019/05/09/LeetCode_2-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/leetcode.jpeg" class="" title="image">
@@ -247,42 +292,18 @@
       </tags>
   </entry>
   <entry>
-    <title>3.无重复字符的最长子串</title>
-    <url>/2019/05/10/LeetCode_3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/</url>
-    <content><![CDATA[<img src="/2019/05/10/LeetCode_3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/leetcode.jpeg" class="" title="image">
-<p>给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。</p>
+    <title>输入有序数组</title>
+    <url>/2019/05/12/LeetCode_%E4%BA%8C%E5%88%86%E6%B3%95_%E8%BE%93%E5%85%A5%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/</url>
+    <content><![CDATA[<img src="/2019/05/12/LeetCode_%E4%BA%8C%E5%88%86%E6%B3%95_%E8%BE%93%E5%85%A5%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/leetcode.jpeg" class="" title="image">
+<p>给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。</p>
 <span id="more"></span>
-<p>示例 1:</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">输入: &quot;abcabcbb&quot;</span></span><br><span class="line"><span class="section">输出: 3 </span></span><br><span class="line"><span class="section">解释: 因为无重复字符的最长子串是 &quot;abc&quot;，所以其长度为 3。</span></span><br></pre></td></tr></table></figure>
-<p>示例 2:</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">输入: &quot;bbbbb&quot;</span></span><br><span class="line"><span class="section">输出: 1</span></span><br><span class="line"><span class="section">解释: 因为无重复字符的最长子串是 &quot;b&quot;，所以其长度为 1。</span></span><br></pre></td></tr></table></figure>
-<p>示例 3:</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">输入: &quot;pwwkew&quot;</span></span><br><span class="line"><span class="section">输出: 3</span></span><br><span class="line"><span class="section">解释: 因为无重复字符的最长子串是 &quot;wke&quot;，所以其长度为 3。</span></span><br><span class="line">     请注意，你的答案必须是 子串 的长度，<span class="string">&quot;pwke&quot;</span> 是一个子序列，不是子串。</span><br></pre></td></tr></table></figure>
+<p>函数应该返回这两个下标值 index1 和 index2，其中 index1 必须小于 index2。</p>
+<p>说明:</p>
+<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">1</span>.返回的下标值（index<span class="number">1</span> 和 index<span class="number">2</span>）不是从零开始的。</span><br><span class="line"><span class="attribute">2</span>.你可以假设每个输入只对应唯一的答案，而且你不可以重复使用相同的元素。</span><br></pre></td></tr></table></figure>
+<p>示例:</p>
+<figure class="highlight nix"><table><tr><td class="code"><pre><span class="line">输入: <span class="attr">numbers</span> = [<span class="number">2</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span>], <span class="attr">target</span> = <span class="number">9</span></span><br><span class="line">输出: [<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">解释: <span class="number">2</span> 与 <span class="number">7</span> 之和等于目标数 <span class="number">9</span> 。因此 <span class="attr">index1</span> = <span class="number">1</span>, <span class="attr">index2</span> = <span class="number">2</span> 。</span><br></pre></td></tr></table></figure>
 
-<p>解答:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">lengthOfLongestSubstring</span>(<span class="params">self, s</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type s: str</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment"># 存储历史循环中最长的子串长度</span></span><br><span class="line">        max_len = <span class="number">0</span></span><br><span class="line">        <span class="comment"># 判断传入的字符串是否为空</span></span><br><span class="line">        <span class="keyword">if</span> s <span class="keyword">is</span> <span class="literal">None</span> <span class="keyword">or</span> <span class="built_in">len</span>(s) == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> max_len</span><br><span class="line">        <span class="comment"># 定义一个字典，存储不重复的字符和字符所在的下标</span></span><br><span class="line">        str_dict = &#123;&#125;</span><br><span class="line">        <span class="comment"># 存储每次循环中最长的子串长度</span></span><br><span class="line">        one_max = <span class="number">0</span></span><br><span class="line">        <span class="comment">#记录最近重复字符所在的位置+1</span></span><br><span class="line">        start = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(s)):</span><br><span class="line">            <span class="comment"># 判断当前字符是否在字典中和当前字符的下标是否大于等于最近重复字符的所在位置</span></span><br><span class="line">            <span class="keyword">if</span> s[i] <span class="keyword">in</span> str_dict <span class="keyword">and</span> str_dict[s[i]] &gt;= start:</span><br><span class="line">                <span class="comment"># 记录当前字符的值+1</span></span><br><span class="line">                start = str_dict[s[i]]</span><br><span class="line">            <span class="comment"># 在此次循环中，最大的不重复子串的长度</span></span><br><span class="line">            one_max = i - start+<span class="number">1</span></span><br><span class="line">            <span class="comment"># 把当前位置覆盖字典中的位置</span></span><br><span class="line">            str_dict[s[i]] = i</span><br><span class="line">            <span class="comment"># 比较此次循环的最大不重复子串长度和历史循环最大不重复子串长度</span></span><br><span class="line">            max_len = <span class="built_in">max</span>(max_len, one_max)</span><br><span class="line">        <span class="keyword">return</span> max_len</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>LeetCode</category>
-        <category>字符串</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>35.搜索插入位置</title>
-    <url>/2019/05/08/LeetCode_35-%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/</url>
-    <content><![CDATA[<img src="/2019/05/08/LeetCode_35-%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/leetcode.jpeg" class="" title="image">
-<p>给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。</p>
-<span id="more"></span>
-<p>你可以假设数组中无重复元素。</p>
-<p>示例 1:</p>
-<p>输入: [1,3,5,6], 5<br>输出: 2<br>示例 2:</p>
-<p>输入: [1,3,5,6], 2<br>输出: 1<br>示例 3:</p>
-<p>输入: [1,3,5,6], 7<br>输出: 4<br>示例 4:</p>
-<p>输入: [1,3,5,6], 0<br>输出: 0</p>
-<p>解答</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">searchInsert</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">for</span> i,num <span class="keyword">in</span> <span class="built_in">enumerate</span>(nums):<span class="comment">#没超过列表边界</span></span><br><span class="line">            <span class="keyword">if</span> target&lt;=num:</span><br><span class="line">                <span class="keyword">return</span> i</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">len</span>(nums)<span class="comment">#若超出</span></span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span>(<span class="params">self, numbers: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type numbers: List[int]</span></span><br><span class="line"><span class="string">        :type target: int</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        s = &#123;&#125;</span><br><span class="line">        r = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(numbers)):</span><br><span class="line">            <span class="keyword">if</span> numbers[i] <span class="keyword">in</span> s.keys():</span><br><span class="line">                r.append(s[numbers[i]]+<span class="number">1</span>)</span><br><span class="line">                r.append(i+<span class="number">1</span>)</span><br><span class="line">                <span class="keyword">return</span> r</span><br><span class="line">            s[target-numbers[i]] = i</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>LeetCode</category>
         <category>二分查找</category>
@@ -308,27 +329,6 @@
       <categories>
         <category>LeetCode</category>
         <category>排序</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>输入有序数组</title>
-    <url>/2019/05/12/LeetCode_%E4%BA%8C%E5%88%86%E6%B3%95_%E8%BE%93%E5%85%A5%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/</url>
-    <content><![CDATA[<img src="/2019/05/12/LeetCode_%E4%BA%8C%E5%88%86%E6%B3%95_%E8%BE%93%E5%85%A5%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/leetcode.jpeg" class="" title="image">
-<p>给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。</p>
-<span id="more"></span>
-<p>函数应该返回这两个下标值 index1 和 index2，其中 index1 必须小于 index2。</p>
-<p>说明:</p>
-<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">1</span>.返回的下标值（index<span class="number">1</span> 和 index<span class="number">2</span>）不是从零开始的。</span><br><span class="line"><span class="attribute">2</span>.你可以假设每个输入只对应唯一的答案，而且你不可以重复使用相同的元素。</span><br></pre></td></tr></table></figure>
-<p>示例:</p>
-<figure class="highlight nix"><table><tr><td class="code"><pre><span class="line">输入: <span class="attr">numbers</span> = [<span class="number">2</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span>], <span class="attr">target</span> = <span class="number">9</span></span><br><span class="line">输出: [<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">解释: <span class="number">2</span> 与 <span class="number">7</span> 之和等于目标数 <span class="number">9</span> 。因此 <span class="attr">index1</span> = <span class="number">1</span>, <span class="attr">index2</span> = <span class="number">2</span> 。</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span>(<span class="params">self, numbers: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type numbers: List[int]</span></span><br><span class="line"><span class="string">        :type target: int</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        s = &#123;&#125;</span><br><span class="line">        r = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(numbers)):</span><br><span class="line">            <span class="keyword">if</span> numbers[i] <span class="keyword">in</span> s.keys():</span><br><span class="line">                r.append(s[numbers[i]]+<span class="number">1</span>)</span><br><span class="line">                r.append(i+<span class="number">1</span>)</span><br><span class="line">                <span class="keyword">return</span> r</span><br><span class="line">            s[target-numbers[i]] = i</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>LeetCode</category>
-        <category>二分查找</category>
       </categories>
       <tags>
         <tag>LeetCode</tag>
@@ -515,39 +515,6 @@ Hello
       </tags>
   </entry>
   <entry>
-    <title>Linux常用命令(二)</title>
-    <url>/2019/03/15/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4(%E4%BA%8C)/</url>
-    <content><![CDATA[<img src="/2019/03/15/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4(%E4%BA%8C)/Linux.jpeg" class="" title="image">
-<span id="more"></span>
-<h1 id="head命令"><a href="#head命令" class="headerlink" title="head命令"></a>head命令</h1><p>head 用来显示档案的开头至标准输出中，默认head命令打印其相应文件的开头10行。</p>
-<h2 id="常用参数："><a href="#常用参数：" class="headerlink" title="常用参数："></a>常用参数：</h2><p>-n&lt;行数&gt; 显示的行数（行数为复数表示从最后向前数）</p>
-<h2 id="实例："><a href="#实例：" class="headerlink" title="实例："></a>实例：</h2><p>（1）显示1.log文件中前20行</p>
-<pre><code>head 1.log -n 20
-</code></pre>
-<p>（2）显示1.log文件前20字节</p>
-<pre><code>head -c 20 log2014.log
-</code></pre>
-<p>（3）显示t.log最后10行</p>
-<pre><code>head -n -10 t.log
-</code></pre>
-<h1 id="tail命令"><a href="#tail命令" class="headerlink" title="tail命令"></a>tail命令</h1><p>用于显示指定文件末尾内容，不指定文件时，作为输入信息进行处理。常用查看日志文件。</p>
-<h2 id="常用参数：-1"><a href="#常用参数：-1" class="headerlink" title="常用参数："></a>常用参数：</h2><p>-f 循环读取（常用于查看递增的日志文件）</p>
-<p>-n&lt;行数&gt; 显示行数（从后向前）</p>
-<p>（1）循环读取逐渐增加的文件内容</p>
-<pre><code>ping 127.0.0.1 &gt; ping.log &amp;（后台运行：可使用jobs -l查看，也可使用fg将其移到前台运行）
-
-tail -f ping.log（查看日志）
-</code></pre>
-]]></content>
-      <categories>
-        <category>操作系统</category>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>基础</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MongoDB数据库和集合的基本操作</title>
     <url>/2019/03/17/MongoDB%E6%93%8D%E4%BD%9C(%E4%B8%80)/</url>
     <content><![CDATA[<img src="/2019/03/17/MongoDB%E6%93%8D%E4%BD%9C(%E4%B8%80)/MongoDB.jpeg" class="" title="image">
@@ -601,67 +568,36 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
-    <title>数据库中的左连接(left join)和右连接(right join)区别</title>
-    <url>/2019/03/18/MySQL_join/</url>
-    <content><![CDATA[<img src="/2019/03/18/MySQL_join/MySql.png" class="" title="image">
-
-<p>Left Join / Right Join /inner join<br>左连接where只影向右表，右连接where只影响左表。</p>
+    <title>Linux常用命令(二)</title>
+    <url>/2019/03/15/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4(%E4%BA%8C)/</url>
+    <content><![CDATA[<img src="/2019/03/15/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4(%E4%BA%8C)/Linux.jpeg" class="" title="image">
 <span id="more"></span>
-<h1 id="Left-Join"><a href="#Left-Join" class="headerlink" title="Left Join"></a>Left Join</h1><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> tbl1 <span class="keyword">Left</span> <span class="keyword">Join</span> tbl2</span><br><span class="line">    <span class="keyword">where</span> tbl1.ID <span class="operator">=</span> tbl2.ID</span><br></pre></td></tr></table></figure>
-<p>左连接后的检索结果是显示tbl1的所有数据和tbl2中满足where 条件的数据。</p>
-<p>简言之 Left Join影响到的是右边的表</p>
-<h1 id="Right-Join"><a href="#Right-Join" class="headerlink" title="Right Join"></a>Right Join</h1><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> tbl1 <span class="keyword">Right</span> <span class="keyword">Join</span> tbl2</span><br><span class="line">    <span class="keyword">where</span> tbl1.ID <span class="operator">=</span> tbl2.ID</span><br></pre></td></tr></table></figure>
-<p>检索结果是tbl2的所有数据和tbl1中满足where 条件的数据。</p>
-<p>简言之 Right Join影响到的是左边的表。</p>
-<h1 id="inner-join"><a href="#inner-join" class="headerlink" title="inner join"></a>inner join</h1><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">FROM</span> tbl1 <span class="keyword">INNER</span> <span class="keyword">JOIN</span> tbl2</span><br><span class="line">    <span class="keyword">ON</span> tbl1.ID <span class="operator">=</span> tbl2.ID</span><br></pre></td></tr></table></figure>
+<h1 id="head命令"><a href="#head命令" class="headerlink" title="head命令"></a>head命令</h1><p>head 用来显示档案的开头至标准输出中，默认head命令打印其相应文件的开头10行。</p>
+<h2 id="常用参数："><a href="#常用参数：" class="headerlink" title="常用参数："></a>常用参数：</h2><p>-n&lt;行数&gt; 显示的行数（行数为复数表示从最后向前数）</p>
+<h2 id="实例："><a href="#实例：" class="headerlink" title="实例："></a>实例：</h2><p>（1）显示1.log文件中前20行</p>
+<pre><code>head 1.log -n 20
+</code></pre>
+<p>（2）显示1.log文件前20字节</p>
+<pre><code>head -c 20 log2014.log
+</code></pre>
+<p>（3）显示t.log最后10行</p>
+<pre><code>head -n -10 t.log
+</code></pre>
+<h1 id="tail命令"><a href="#tail命令" class="headerlink" title="tail命令"></a>tail命令</h1><p>用于显示指定文件末尾内容，不指定文件时，作为输入信息进行处理。常用查看日志文件。</p>
+<h2 id="常用参数：-1"><a href="#常用参数：-1" class="headerlink" title="常用参数："></a>常用参数：</h2><p>-f 循环读取（常用于查看递增的日志文件）</p>
+<p>-n&lt;行数&gt; 显示行数（从后向前）</p>
+<p>（1）循环读取逐渐增加的文件内容</p>
+<pre><code>ping 127.0.0.1 &gt; ping.log &amp;（后台运行：可使用jobs -l查看，也可使用fg将其移到前台运行）
 
-<p>功能和 select * from tbl1,tbl2 where tbl1.id=tbl2.id相同。</p>
+tail -f ping.log（查看日志）
+</code></pre>
 ]]></content>
       <categories>
-        <category>数据库</category>
-        <category>MySQL</category>
+        <category>操作系统</category>
+        <category>Linux</category>
       </categories>
       <tags>
-        <tag>SQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MySQL的安装</title>
-    <url>/2019/03/16/MySQL_%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<img src="/2019/03/16/MySQL_%E5%AE%89%E8%A3%85/MySql.png" class="" title="image">
-<ul>
-<li><p>SQL(Structured Query Language)是一种数据库查询和程序设计语言，用于存取数据以及查询、更新和管理关系数据库系统，同时也是数据库脚本文件的扩展名。</p>
-</li>
-<li><p>MySQL是一个关系型DBMS,使用SQL语言进行操作。</p>
-</li>
-</ul>
-<span id="more"></span>
-
-<h1 id="Ubuntu-Linux-安装配置-MySQL"><a href="#Ubuntu-Linux-安装配置-MySQL" class="headerlink" title="Ubuntu Linux 安装配置 MySQL"></a>Ubuntu Linux 安装配置 MySQL</h1><p><strong>安装环境：ubuntu-18.04.2</strong></p>
-<p><em><strong>安装MySQL服务端，核心程序：</strong></em></p>
-<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">sudo apt-<span class="keyword">get</span> install mysql-<span class="keyword">server</span></span><br></pre></td></tr></table></figure>
-<p><em><strong>安装 MySQL 客户端：</strong></em></p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">sudo apt-<span class="builtin-name">get</span> install mysql-client </span><br></pre></td></tr></table></figure>
-<p><em><strong>验证是否安装成功：</strong></em></p>
-<figure class="highlight 1c"><table><tr><td class="code"><pre><span class="line">sudo netstat -tap <span class="string">| grep mysql</span></span><br></pre></td></tr></table></figure>
-<p><em><strong>用 gedit 修改 MySQL 的配置文件（my.cnf）：</strong></em></p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">sudo gedit <span class="regexp">/etc/my</span>sql/my.cnf</span><br></pre></td></tr></table></figure>
-<p><em><strong>打开 MySQL 服务并使用 root 用户登录：</strong></em></p>
-<figure class="highlight vala"><table><tr><td class="code"><pre><span class="line"><span class="meta">#启动MySQL服务</span></span><br><span class="line">sudo service mysql start</span><br><span class="line"><span class="meta">#使用root用户登录</span></span><br><span class="line">mysql -u root -p password</span><br></pre></td></tr></table></figure>
-<p><em><strong>查看数据库</strong></em></p>
-<figure class="highlight abnf"><table><tr><td class="code"><pre><span class="line">show databases<span class="comment">;</span></span><br></pre></td></tr></table></figure>
-<p><em><strong>连接数据库</strong></em></p>
-<figure class="highlight openscad"><table><tr><td class="code"><pre><span class="line"><span class="meta"><span class="meta-keyword">use</span> &lt;数据库名&gt;</span></span><br></pre></td></tr></table></figure>
-<p><em><strong>查看表</strong></em></p>
-<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">tables</span>;</span><br></pre></td></tr></table></figure>
-<p><em><strong>退出</strong></em></p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">quit(<span class="keyword">exit</span>)</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>数据库</category>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>SQL</tag>
+        <tag>基础</tag>
       </tags>
   </entry>
   <entry>
@@ -696,6 +632,31 @@ tail -f ping.log（查看日志）
         <category>Python</category>
         <category>Django</category>
       </categories>
+  </entry>
+  <entry>
+    <title>数据库中的左连接(left join)和右连接(right join)区别</title>
+    <url>/2019/03/18/MySQL_join/</url>
+    <content><![CDATA[<img src="/2019/03/18/MySQL_join/MySql.png" class="" title="image">
+
+<p>Left Join / Right Join /inner join<br>左连接where只影向右表，右连接where只影响左表。</p>
+<span id="more"></span>
+<h1 id="Left-Join"><a href="#Left-Join" class="headerlink" title="Left Join"></a>Left Join</h1><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> tbl1 <span class="keyword">Left</span> <span class="keyword">Join</span> tbl2</span><br><span class="line">    <span class="keyword">where</span> tbl1.ID <span class="operator">=</span> tbl2.ID</span><br></pre></td></tr></table></figure>
+<p>左连接后的检索结果是显示tbl1的所有数据和tbl2中满足where 条件的数据。</p>
+<p>简言之 Left Join影响到的是右边的表</p>
+<h1 id="Right-Join"><a href="#Right-Join" class="headerlink" title="Right Join"></a>Right Join</h1><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> tbl1 <span class="keyword">Right</span> <span class="keyword">Join</span> tbl2</span><br><span class="line">    <span class="keyword">where</span> tbl1.ID <span class="operator">=</span> tbl2.ID</span><br></pre></td></tr></table></figure>
+<p>检索结果是tbl2的所有数据和tbl1中满足where 条件的数据。</p>
+<p>简言之 Right Join影响到的是左边的表。</p>
+<h1 id="inner-join"><a href="#inner-join" class="headerlink" title="inner join"></a>inner join</h1><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">FROM</span> tbl1 <span class="keyword">INNER</span> <span class="keyword">JOIN</span> tbl2</span><br><span class="line">    <span class="keyword">ON</span> tbl1.ID <span class="operator">=</span> tbl2.ID</span><br></pre></td></tr></table></figure>
+
+<p>功能和 select * from tbl1,tbl2 where tbl1.id=tbl2.id相同。</p>
+]]></content>
+      <categories>
+        <category>数据库</category>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>SQL</tag>
+      </tags>
   </entry>
   <entry>
     <title>Web框架_Flask</title>
@@ -890,6 +851,45 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
+    <title>MySQL的安装</title>
+    <url>/2019/03/16/MySQL_%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<img src="/2019/03/16/MySQL_%E5%AE%89%E8%A3%85/MySql.png" class="" title="image">
+<ul>
+<li><p>SQL(Structured Query Language)是一种数据库查询和程序设计语言，用于存取数据以及查询、更新和管理关系数据库系统，同时也是数据库脚本文件的扩展名。</p>
+</li>
+<li><p>MySQL是一个关系型DBMS,使用SQL语言进行操作。</p>
+</li>
+</ul>
+<span id="more"></span>
+
+<h1 id="Ubuntu-Linux-安装配置-MySQL"><a href="#Ubuntu-Linux-安装配置-MySQL" class="headerlink" title="Ubuntu Linux 安装配置 MySQL"></a>Ubuntu Linux 安装配置 MySQL</h1><p><strong>安装环境：ubuntu-18.04.2</strong></p>
+<p><em><strong>安装MySQL服务端，核心程序：</strong></em></p>
+<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">sudo apt-<span class="keyword">get</span> install mysql-<span class="keyword">server</span></span><br></pre></td></tr></table></figure>
+<p><em><strong>安装 MySQL 客户端：</strong></em></p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">sudo apt-<span class="builtin-name">get</span> install mysql-client </span><br></pre></td></tr></table></figure>
+<p><em><strong>验证是否安装成功：</strong></em></p>
+<figure class="highlight 1c"><table><tr><td class="code"><pre><span class="line">sudo netstat -tap <span class="string">| grep mysql</span></span><br></pre></td></tr></table></figure>
+<p><em><strong>用 gedit 修改 MySQL 的配置文件（my.cnf）：</strong></em></p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">sudo gedit <span class="regexp">/etc/my</span>sql/my.cnf</span><br></pre></td></tr></table></figure>
+<p><em><strong>打开 MySQL 服务并使用 root 用户登录：</strong></em></p>
+<figure class="highlight vala"><table><tr><td class="code"><pre><span class="line"><span class="meta">#启动MySQL服务</span></span><br><span class="line">sudo service mysql start</span><br><span class="line"><span class="meta">#使用root用户登录</span></span><br><span class="line">mysql -u root -p password</span><br></pre></td></tr></table></figure>
+<p><em><strong>查看数据库</strong></em></p>
+<figure class="highlight abnf"><table><tr><td class="code"><pre><span class="line">show databases<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<p><em><strong>连接数据库</strong></em></p>
+<figure class="highlight openscad"><table><tr><td class="code"><pre><span class="line"><span class="meta"><span class="meta-keyword">use</span> &lt;数据库名&gt;</span></span><br></pre></td></tr></table></figure>
+<p><em><strong>查看表</strong></em></p>
+<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">tables</span>;</span><br></pre></td></tr></table></figure>
+<p><em><strong>退出</strong></em></p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">quit(<span class="keyword">exit</span>)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>数据库</category>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>SQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>科赫雪花</title>
     <url>/2019/04/03/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_%E9%9B%AA%E8%8A%B1/</url>
     <content><![CDATA[<img src="/2019/04/03/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_%E9%9B%AA%E8%8A%B1/python.jpg" class="" title="image">
@@ -937,6 +937,34 @@ tail -f ping.log（查看日志）
       </categories>
       <tags>
         <tag>SAS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用PyInstaller库生成可执行文件</title>
+    <url>/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/</url>
+    <content><![CDATA[<img src="/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/python.jpg" class="" title="image">
+<span id="more"></span>
+<h1 id="首先安装PyInstaller库-cmd命令行"><a href="#首先安装PyInstaller库-cmd命令行" class="headerlink" title="首先安装PyInstaller库(cmd命令行)"></a>首先安装PyInstaller库(cmd命令行)</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install pyinstaller</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="主要参数"><a href="#主要参数" class="headerlink" title="主要参数"></a>主要参数</h1><img src="/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/%E4%B8%BB%E8%A6%81%E5%8F%82%E6%95%B0.png" class="">
+
+<h1 id="修改图标并打包"><a href="#修改图标并打包" class="headerlink" title="修改图标并打包"></a>修改图标并打包</h1><p>需要一个ico图标</p>
+<img src="/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/%E6%89%93%E5%8C%85%E5%89%8D.png" class="">
+
+<p>在需要打包的文件根目录下使用命令</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pyinstaller -i Digits.ico -F SevenDigits.py</span><br></pre></td></tr></table></figure>
+
+<p>打包完成</p>
+<img src="/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/%E6%89%93%E5%8C%85%E5%90%8E.png" class="">
+<p>需要的可执行文件在dist目录，如下</p>
+<img src="/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/dist%E6%96%87%E4%BB%B6%E5%A4%B9.png" class="">]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>基础</tag>
       </tags>
   </entry>
   <entry>
@@ -1006,28 +1034,6 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
-    <title>3D-brain Ⅰ</title>
-    <url>/2020/08/15/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%831/</url>
-    <content><![CDATA[<img src="/2020/08/15/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%831/%E6%B5%81%E7%A8%8B.jpg" class="">
-<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>2020年8月8日，湘潭大学化学学院曹毅博士课题组在 Science of the Total Environment (影响因子6.551)发表研究论文 “Multi-walled carbon nanotubes decrease neuronal NO synthase in 3D brain organoids”，应用三维成像技术实现了对一种新型人3D类脑中的特定蛋白空间分布的成像。</p>
-<span id="more"></span>
-
-<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>团队利用了一种新型的3D人类脑模型来分析碳管对神经系统一氧化氮活性的影响，发现高浓度的碳管能降低神经型nNOS的活性，进而导致类脑中一氧化氮产生量不足，但传统毒理学分析手段并不能提供空间分布信息，无法确定类脑对多壁碳纳米管暴露最敏感的部位。</p>
-<p><img src="./wb.jpeg" alt="利用三维重建技术在脑范围内3D重构了nNOS蛋白的分布。A为control组，B为64 mg/mL多壁碳纳米管暴露组。"></p>
-<h1 id="三维重建"><a href="#三维重建" class="headerlink" title="三维重建"></a>三维重建</h1><p>在与三维成像技术相结合后，研究人员得以分析多壁碳纳米管暴露以后nNOS在全类脑的分布，发现这种影响不仅仅发生在类脑的外层细胞，也发生在类脑的内部，这表明碳管的作用是整体的。</p>
-<p><img src="./volume.jpeg" alt="利用三维重建技术在脑范围内3D重构了nNOS蛋白的分布。A为control组，B为64 mg/mL多壁碳纳米管暴露组。"></p>
-<p><a href="https://doi.org/10.1016/j.scitotenv.2020.141384">原文链接</a></p>
-]]></content>
-      <categories>
-        <category>图像处理</category>
-        <category>三维重建</category>
-      </categories>
-      <tags>
-        <tag>Sci</tag>
-        <tag>Science of The Total Environment</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>3D-brain Ⅱ</title>
     <url>/2021/11/19/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%832/</url>
     <content><![CDATA[<img src="/2021/11/19/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%832/%E6%B5%81%E7%A8%8B.png" class="" title="image">
@@ -1053,12 +1059,18 @@ tail -f ping.log（查看日志）
   <entry>
     <title>脑脊液全脑成像</title>
     <url>/2021/12/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86_%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA_amira/</url>
-    <content><![CDATA[<img src="/2021/12/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86_%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA_amira/demo.png" class="" title="image">
-
-<span id="more"></span>
-
-<iframe src="//player.bilibili.com/player.html?aid=849544274&bvid=BV1LL4y1W73T&cid=453606403&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-]]></content>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="642c6964f1784304535c098e5afc14576d51d82a2b68a76a3f639c6da621c8da">a8a7a388b6abc8729fcdecad1c5a51422a869f86e98599225eb23b0fd212d3af9a59184aa7d2ea3f0341b815d9e16b5f382d92b1da9e6987fbf7b8af137fe0097da0cb7e32fdf95f7026c7dae5527a7a655bd5642a2a984b52968fee0747f5c047c39b16cf3c7f60264e2c72c94ba9aabb5f99eb5ca861d16d70f89ae80ad391213a244fd5b77758c872ed8199c91956637c1ff5487f0acc32b519418a203272adc2fed08bb86d4294afb77bd0991eb839e3e394ffb5685454e2ea983510de1d6add02b22530fb09ee9253d49d0fa60283394e8f61e185e8169911812cbffa278cb88dc008e809e53a97e79d7855d5a07a0a554e8acad7419456309418694c433cfb8d21dd95531e369f74dc59fa53c7f99c7c82d3c891aff99d82337f80f80c00610070a04eb2c6f6b9397862851704859ffeaacb0c6082063b44899f63a3688fa2bc7f53f8bd0078c240ee406b2b856df8bc0275e994b7cb2d3c955ee6d06db9cdd45b611d89f391b4cbb5b1330e4e80c87c6c2f6e0296ba0dcb9d1cb87bde</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
         <category>图像处理</category>
         <category>三维重建</category>
@@ -1094,34 +1106,6 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
-    <title>使用PyInstaller库生成可执行文件</title>
-    <url>/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/</url>
-    <content><![CDATA[<img src="/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/python.jpg" class="" title="image">
-<span id="more"></span>
-<h1 id="首先安装PyInstaller库-cmd命令行"><a href="#首先安装PyInstaller库-cmd命令行" class="headerlink" title="首先安装PyInstaller库(cmd命令行)"></a>首先安装PyInstaller库(cmd命令行)</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install pyinstaller</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="主要参数"><a href="#主要参数" class="headerlink" title="主要参数"></a>主要参数</h1><img src="/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/%E4%B8%BB%E8%A6%81%E5%8F%82%E6%95%B0.png" class="">
-
-<h1 id="修改图标并打包"><a href="#修改图标并打包" class="headerlink" title="修改图标并打包"></a>修改图标并打包</h1><p>需要一个ico图标</p>
-<img src="/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/%E6%89%93%E5%8C%85%E5%89%8D.png" class="">
-
-<p>在需要打包的文件根目录下使用命令</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pyinstaller -i Digits.ico -F SevenDigits.py</span><br></pre></td></tr></table></figure>
-
-<p>打包完成</p>
-<img src="/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/%E6%89%93%E5%8C%85%E5%90%8E.png" class="">
-<p>需要的可执行文件在dist目录，如下</p>
-<img src="/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/dist%E6%96%87%E4%BB%B6%E5%A4%B9.png" class="">]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>基础</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>插入排序</title>
     <url>/2019/04/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95_%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/</url>
     <content><![CDATA[<img src="/2019/04/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95_%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/%E7%AE%97%E6%B3%95.jpg" class="" title="image">
@@ -1147,6 +1131,28 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
+    <title>3D-brain Ⅰ</title>
+    <url>/2020/08/15/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%831/</url>
+    <content><![CDATA[<img src="/2020/08/15/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%831/%E6%B5%81%E7%A8%8B.jpg" class="">
+<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>2020年8月8日，湘潭大学化学学院曹毅博士课题组在 Science of the Total Environment (影响因子6.551)发表研究论文 “Multi-walled carbon nanotubes decrease neuronal NO synthase in 3D brain organoids”，应用三维成像技术实现了对一种新型人3D类脑中的特定蛋白空间分布的成像。</p>
+<span id="more"></span>
+
+<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>团队利用了一种新型的3D人类脑模型来分析碳管对神经系统一氧化氮活性的影响，发现高浓度的碳管能降低神经型nNOS的活性，进而导致类脑中一氧化氮产生量不足，但传统毒理学分析手段并不能提供空间分布信息，无法确定类脑对多壁碳纳米管暴露最敏感的部位。</p>
+<p><img src="./wb.jpeg" alt="利用三维重建技术在脑范围内3D重构了nNOS蛋白的分布。A为control组，B为64 mg/mL多壁碳纳米管暴露组。"></p>
+<h1 id="三维重建"><a href="#三维重建" class="headerlink" title="三维重建"></a>三维重建</h1><p>在与三维成像技术相结合后，研究人员得以分析多壁碳纳米管暴露以后nNOS在全类脑的分布，发现这种影响不仅仅发生在类脑的外层细胞，也发生在类脑的内部，这表明碳管的作用是整体的。</p>
+<p><img src="./volume.jpeg" alt="利用三维重建技术在脑范围内3D重构了nNOS蛋白的分布。A为control组，B为64 mg/mL多壁碳纳米管暴露组。"></p>
+<p><a href="https://doi.org/10.1016/j.scitotenv.2020.141384">原文链接</a></p>
+]]></content>
+      <categories>
+        <category>图像处理</category>
+        <category>三维重建</category>
+      </categories>
+      <tags>
+        <tag>Sci</tag>
+        <tag>Science of The Total Environment</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hanoi问题</title>
     <url>/2019/04/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95_%E9%80%92%E5%BD%92_hanoi/</url>
     <content><![CDATA[<img src="/2019/04/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95_%E9%80%92%E5%BD%92_hanoi/%E7%AE%97%E6%B3%95.jpg" class="" title="image">
@@ -1164,6 +1170,85 @@ tail -f ping.log（查看日志）
       </categories>
       <tags>
         <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TCP三次握手四次挥手</title>
+    <url>/2019/04/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_TCP-IP/</url>
+    <content><![CDATA[<img src="/2019/04/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_TCP-IP/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.jpg" class="" title="image">
+<span id="more"></span>
+<h1 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h1><h2 id="三次握手过程"><a href="#三次握手过程" class="headerlink" title="三次握手过程"></a>三次握手过程</h2><ul>
+<li>B 处于 LISTEN 状态，等待来自 A 的连接请求。</li>
+</ul>
+<ol>
+<li>A 向 B发送连接请求报文SYN(synchronize)。</li>
+<li>B 收到 A 发来的 SYN，如果同意建立连接，则向 A 发送连接确认报文 SYN/ACK。</li>
+<li>A 收到 SYN/ACK 后，再向B发出确认报文 ACK，代表握手结束。</li>
+</ol>
+<ul>
+<li>B 收到 ACK 后，连接建立。</li>
+</ul>
+<img src="/2019/04/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_TCP-IP/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.jpg" class="">
+
+<h2 id="三次握手的原因"><a href="#三次握手的原因" class="headerlink" title="三次握手的原因"></a>三次握手的原因</h2><p>第三次握手是为了防止失效的连接请求到达服务器，让服务器错误打开连接。</p>
+<p>客户端发送的连接请求如果在网络中滞留，那么就会隔很长一段时间才能收到服务器端发回的连接确认。客户端等待一个超时重传时间之后，就会重新请求连接。但是这个滞留的连接请求最后还是会到达服务器，如果不进行三次握手，那么服务器就会打开两个连接。如果有第三次握手，客户端会忽略服务器之后发送的对滞留连接请求的连接确认，不进行第三次握手，因此就不会再次打开连接。</p>
+<h1 id="四次挥手"><a href="#四次挥手" class="headerlink" title="四次挥手"></a>四次挥手</h1><h2 id="四次挥手过程"><a href="#四次挥手过程" class="headerlink" title="四次挥手过程"></a>四次挥手过程</h2><ul>
+<li>A 发送连接释放报文 FIN。</li>
+<li>B 收到 FIN 之后发出确认 ACK，此时 TCP 属于半关闭状态，B 能向 A 发送数据但是 A 不能向 B 发送数据。</li>
+<li>当 B 不再需要连接时，发送连接释放报文 FIN。</li>
+<li>A 收到 FIN 后发出确认 ACK，进入 TIME-WAIT 状态，等待 2 倍的 MSL（最大报文存活时间）后释放连接。</li>
+<li>B 收到 ACK 后释放连接。</li>
+</ul>
+<img src="/2019/04/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_TCP-IP/%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B.jpg" class="">
+
+<h2 id="四次挥手的原因"><a href="#四次挥手的原因" class="headerlink" title="四次挥手的原因"></a>四次挥手的原因</h2><p>客户端发送了 FIN 连接释放报文之后，服务器端收到了这个报文，就进入了 CLOSE-WAIT 状态。这个状态是为了让服务器端发送还未传送完毕的数据，传送完毕之后，服务器端会发送 FIN 连接释放报文。</p>
+<h2 id="TIME-WAIT"><a href="#TIME-WAIT" class="headerlink" title="TIME_WAIT"></a>TIME_WAIT</h2><p>客户端接收到服务器端的 FIN 报文后进入此状态，而并不是直接进入 CLOSED 状态，还需要等待一个时间计时器设置的时间 2MSL。这么做有两个理由：</p>
+<ul>
+<li>确保最后一个确认报文 ACK 能够到达。如果服务器端没收到客户端发送来的确认报文 ACK，那么就需要重新发送连接释放请求报文 FIN，客户端等待一段时间就是为了处理这种情况的发生。</li>
+<li>等待一段时间是为了让本次连接持续时间内产生的所有报文都从网络中消失，使得下一个新的连接不会出现旧的连接请求报文 SYN，从而错误打开连接。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+        <category>TCP/IP</category>
+      </categories>
+      <tags>
+        <tag>基础</tag>
+        <tag>网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>http协议</title>
+    <url>/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_http/</url>
+    <content><![CDATA[<img src="/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_http/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.jpg" class="" title="image">
+<span id="more"></span>
+<h2 id="从输入url到页面加载的过程中发生了什么？"><a href="#从输入url到页面加载的过程中发生了什么？" class="headerlink" title="从输入url到页面加载的过程中发生了什么？"></a>从输入url到页面加载的过程中发生了什么？</h2><p>DNS解析url的ip地址<br>发送HTTP请求<br>TCP分割HTTP请求报文进行可靠的传输<br>IP协议对请求报文进行中转和传送<br>服务端TCP接受并重组报文<br>服务端HTTP处理请求<br>返回资源</p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><img src="/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_http/%E6%95%B4%E4%B8%AA%E8%BF%87%E7%A8%8B.jpg" class="">
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+        <category>HTTP</category>
+      </categories>
+      <tags>
+        <tag>基础</tag>
+        <tag>网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>DNS</title>
+    <url>/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_DNS/</url>
+    <content><![CDATA[<img src="/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_DNS/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.jpg" class="" title="image">
+<span id="more"></span>
+<p>域名和IP地址相互映射的一个分布式数据库。</p>
+<p>打个比方就是一本记载名字和外号的字典</p>
+<img src="/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_DNS/DNS.jpg" class="">]]></content>
+      <categories>
+        <category>计算机网络</category>
+        <category>DNS</category>
+      </categories>
+      <tags>
+        <tag>基础</tag>
+        <tag>网络</tag>
       </tags>
   </entry>
   <entry>
@@ -1304,7 +1389,7 @@ tail -f ping.log（查看日志）
 
 <p>[\w.] 匹配的是字母数字或者 . ，在其后面加上 + ，表示匹配多次。在字符集合 [ ] 里，. 不是元字符；</p>
 <p><em><strong>匹配结果</strong></em></p>
-<p><a href="mailto:&#x61;&#98;&#x63;&#46;&#100;&#101;&#x66;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#x6d;">&#x61;&#98;&#x63;&#46;&#100;&#101;&#x66;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#x6d;</a></p>
+<p><a href="mailto:&#97;&#x62;&#99;&#x2e;&#100;&#x65;&#102;&#64;&#113;&#113;&#46;&#x63;&#111;&#x6d;">&#97;&#x62;&#99;&#x2e;&#100;&#x65;&#102;&#64;&#113;&#113;&#46;&#x63;&#111;&#x6d;</a></p>
 <ul>
 <li><p>{n} 匹配 n 个字符</p>
 </li>
@@ -1337,85 +1422,6 @@ tail -f ping.log（查看日志）
       </categories>
       <tags>
         <tag>RegEx</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>DNS</title>
-    <url>/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_DNS/</url>
-    <content><![CDATA[<img src="/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_DNS/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.jpg" class="" title="image">
-<span id="more"></span>
-<p>域名和IP地址相互映射的一个分布式数据库。</p>
-<p>打个比方就是一本记载名字和外号的字典</p>
-<img src="/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_DNS/DNS.jpg" class="">]]></content>
-      <categories>
-        <category>计算机网络</category>
-        <category>DNS</category>
-      </categories>
-      <tags>
-        <tag>基础</tag>
-        <tag>网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>TCP三次握手四次挥手</title>
-    <url>/2019/04/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_TCP-IP/</url>
-    <content><![CDATA[<img src="/2019/04/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_TCP-IP/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.jpg" class="" title="image">
-<span id="more"></span>
-<h1 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h1><h2 id="三次握手过程"><a href="#三次握手过程" class="headerlink" title="三次握手过程"></a>三次握手过程</h2><ul>
-<li>B 处于 LISTEN 状态，等待来自 A 的连接请求。</li>
-</ul>
-<ol>
-<li>A 向 B发送连接请求报文SYN(synchronize)。</li>
-<li>B 收到 A 发来的 SYN，如果同意建立连接，则向 A 发送连接确认报文 SYN/ACK。</li>
-<li>A 收到 SYN/ACK 后，再向B发出确认报文 ACK，代表握手结束。</li>
-</ol>
-<ul>
-<li>B 收到 ACK 后，连接建立。</li>
-</ul>
-<img src="/2019/04/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_TCP-IP/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.jpg" class="">
-
-<h2 id="三次握手的原因"><a href="#三次握手的原因" class="headerlink" title="三次握手的原因"></a>三次握手的原因</h2><p>第三次握手是为了防止失效的连接请求到达服务器，让服务器错误打开连接。</p>
-<p>客户端发送的连接请求如果在网络中滞留，那么就会隔很长一段时间才能收到服务器端发回的连接确认。客户端等待一个超时重传时间之后，就会重新请求连接。但是这个滞留的连接请求最后还是会到达服务器，如果不进行三次握手，那么服务器就会打开两个连接。如果有第三次握手，客户端会忽略服务器之后发送的对滞留连接请求的连接确认，不进行第三次握手，因此就不会再次打开连接。</p>
-<h1 id="四次挥手"><a href="#四次挥手" class="headerlink" title="四次挥手"></a>四次挥手</h1><h2 id="四次挥手过程"><a href="#四次挥手过程" class="headerlink" title="四次挥手过程"></a>四次挥手过程</h2><ul>
-<li>A 发送连接释放报文 FIN。</li>
-<li>B 收到 FIN 之后发出确认 ACK，此时 TCP 属于半关闭状态，B 能向 A 发送数据但是 A 不能向 B 发送数据。</li>
-<li>当 B 不再需要连接时，发送连接释放报文 FIN。</li>
-<li>A 收到 FIN 后发出确认 ACK，进入 TIME-WAIT 状态，等待 2 倍的 MSL（最大报文存活时间）后释放连接。</li>
-<li>B 收到 ACK 后释放连接。</li>
-</ul>
-<img src="/2019/04/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_TCP-IP/%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B.jpg" class="">
-
-<h2 id="四次挥手的原因"><a href="#四次挥手的原因" class="headerlink" title="四次挥手的原因"></a>四次挥手的原因</h2><p>客户端发送了 FIN 连接释放报文之后，服务器端收到了这个报文，就进入了 CLOSE-WAIT 状态。这个状态是为了让服务器端发送还未传送完毕的数据，传送完毕之后，服务器端会发送 FIN 连接释放报文。</p>
-<h2 id="TIME-WAIT"><a href="#TIME-WAIT" class="headerlink" title="TIME_WAIT"></a>TIME_WAIT</h2><p>客户端接收到服务器端的 FIN 报文后进入此状态，而并不是直接进入 CLOSED 状态，还需要等待一个时间计时器设置的时间 2MSL。这么做有两个理由：</p>
-<ul>
-<li>确保最后一个确认报文 ACK 能够到达。如果服务器端没收到客户端发送来的确认报文 ACK，那么就需要重新发送连接释放请求报文 FIN，客户端等待一段时间就是为了处理这种情况的发生。</li>
-<li>等待一段时间是为了让本次连接持续时间内产生的所有报文都从网络中消失，使得下一个新的连接不会出现旧的连接请求报文 SYN，从而错误打开连接。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>计算机网络</category>
-        <category>TCP/IP</category>
-      </categories>
-      <tags>
-        <tag>基础</tag>
-        <tag>网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>http协议</title>
-    <url>/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_http/</url>
-    <content><![CDATA[<img src="/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_http/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.jpg" class="" title="image">
-<span id="more"></span>
-<h2 id="从输入url到页面加载的过程中发生了什么？"><a href="#从输入url到页面加载的过程中发生了什么？" class="headerlink" title="从输入url到页面加载的过程中发生了什么？"></a>从输入url到页面加载的过程中发生了什么？</h2><p>DNS解析url的ip地址<br>发送HTTP请求<br>TCP分割HTTP请求报文进行可靠的传输<br>IP协议对请求报文进行中转和传送<br>服务端TCP接受并重组报文<br>服务端HTTP处理请求<br>返回资源</p>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><img src="/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_http/%E6%95%B4%E4%B8%AA%E8%BF%87%E7%A8%8B.jpg" class="">
-]]></content>
-      <categories>
-        <category>计算机网络</category>
-        <category>HTTP</category>
-      </categories>
-      <tags>
-        <tag>基础</tag>
-        <tag>网络</tag>
       </tags>
   </entry>
 </search>
