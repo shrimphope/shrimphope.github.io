@@ -16,6 +16,27 @@
       </tags>
   </entry>
   <entry>
+    <title>git提交到远程库问题</title>
+    <url>/2019/06/06/Git_%E6%8F%90%E4%BA%A4%E5%88%B0%E8%BF%9C%E7%A8%8B%E5%BA%93%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p><img src="/pictures/git+github.jpg"><br>用git提交到github时出现问题</p>
+<span id="more"></span>
+<p>如图，第一次出现这种问题，这个demo是在pycharm做的，<br>以前没有pycharm时没有出现过这种问题。</p>
+<img src="/2019/06/06/Git_%E6%8F%90%E4%BA%A4%E5%88%B0%E8%BF%9C%E7%A8%8B%E5%BA%93%E9%97%AE%E9%A2%98/1.png" class="">
+<p>我觉得是冲突了，就用git pull –rebase origin master进行合并提交，行不通。<br>最后尝试git push -f进行强推</p>
+<img src="/2019/06/06/Git_%E6%8F%90%E4%BA%A4%E5%88%B0%E8%BF%9C%E7%A8%8B%E5%BA%93%E9%97%AE%E9%A2%98/2.png" class="">
+<p>最后成功</p>
+<img src="/2019/06/06/Git_%E6%8F%90%E4%BA%A4%E5%88%B0%E8%BF%9C%E7%A8%8B%E5%BA%93%E9%97%AE%E9%A2%98/3.png" class="">
+<p>应该是README文件的问题</p>
+]]></content>
+      <categories>
+        <category>版本控制</category>
+        <category>GIT</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>1.两数之和</title>
     <url>/2019/05/13/LeetCode_1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</url>
     <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"></p>
@@ -65,27 +86,6 @@
       </tags>
   </entry>
   <entry>
-    <title>git提交到远程库问题</title>
-    <url>/2019/06/06/Git_%E6%8F%90%E4%BA%A4%E5%88%B0%E8%BF%9C%E7%A8%8B%E5%BA%93%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p><img src="/pictures/git+github.jpg"><br>用git提交到github时出现问题</p>
-<span id="more"></span>
-<p>如图，第一次出现这种问题，这个demo是在pycharm做的，<br>以前没有pycharm时没有出现过这种问题。</p>
-<img src="/2019/06/06/Git_%E6%8F%90%E4%BA%A4%E5%88%B0%E8%BF%9C%E7%A8%8B%E5%BA%93%E9%97%AE%E9%A2%98/1.png" class="">
-<p>我觉得是冲突了，就用git pull –rebase origin master进行合并提交，行不通。<br>最后尝试git push -f进行强推</p>
-<img src="/2019/06/06/Git_%E6%8F%90%E4%BA%A4%E5%88%B0%E8%BF%9C%E7%A8%8B%E5%BA%93%E9%97%AE%E9%A2%98/2.png" class="">
-<p>最后成功</p>
-<img src="/2019/06/06/Git_%E6%8F%90%E4%BA%A4%E5%88%B0%E8%BF%9C%E7%A8%8B%E5%BA%93%E9%97%AE%E9%A2%98/3.png" class="">
-<p>应该是README文件的问题</p>
-]]></content>
-      <categories>
-        <category>版本控制</category>
-        <category>GIT</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>183.从不订购的用户</title>
     <url>/2019/04/29/LeetCode_183-%E4%BB%8E%E4%B8%8D%E8%AE%A2%E8%B4%AD%E7%9A%84%E7%94%A8%E6%88%B7/</url>
     <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"></p>
@@ -117,31 +117,6 @@
       </tags>
   </entry>
   <entry>
-    <title>185.部门工资前三高的员工</title>
-    <url>/2019/05/07/LeetCode_185-%E9%83%A8%E9%97%A8%E5%B7%A5%E8%B5%84%E5%89%8D%E4%B8%89%E9%AB%98%E7%9A%84%E5%91%98%E5%B7%A5/</url>
-    <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"><br>编写一个 SQL 查询，找出每个部门工资前三高的员工。</p>
-<span id="more"></span>
-<p>SQL架构：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Create</span> <span class="keyword">table</span> If <span class="keyword">Not</span> <span class="keyword">Exists</span> Employee (Id <span class="type">int</span>, Name <span class="type">varchar</span>(<span class="number">255</span>), Salary <span class="type">int</span>, DepartmentId <span class="type">int</span>)</span><br><span class="line"><span class="keyword">Create</span> <span class="keyword">table</span> If <span class="keyword">Not</span> <span class="keyword">Exists</span> Department (Id <span class="type">int</span>, Name <span class="type">varchar</span>(<span class="number">255</span>))</span><br><span class="line"><span class="keyword">Truncate</span> <span class="keyword">table</span> Employee</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Employee (Id, Name, Salary, DepartmentId) <span class="keyword">values</span> (<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;Joe&#x27;</span>, <span class="string">&#x27;85000&#x27;</span>, <span class="string">&#x27;1&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Employee (Id, Name, Salary, DepartmentId) <span class="keyword">values</span> (<span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;Henry&#x27;</span>, <span class="string">&#x27;80000&#x27;</span>, <span class="string">&#x27;2&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Employee (Id, Name, Salary, DepartmentId) <span class="keyword">values</span> (<span class="string">&#x27;3&#x27;</span>, <span class="string">&#x27;Sam&#x27;</span>, <span class="string">&#x27;60000&#x27;</span>, <span class="string">&#x27;2&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Employee (Id, Name, Salary, DepartmentId) <span class="keyword">values</span> (<span class="string">&#x27;4&#x27;</span>, <span class="string">&#x27;Max&#x27;</span>, <span class="string">&#x27;90000&#x27;</span>, <span class="string">&#x27;1&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Employee (Id, Name, Salary, DepartmentId) <span class="keyword">values</span> (<span class="string">&#x27;5&#x27;</span>, <span class="string">&#x27;Janet&#x27;</span>, <span class="string">&#x27;69000&#x27;</span>, <span class="string">&#x27;1&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Employee (Id, Name, Salary, DepartmentId) <span class="keyword">values</span> (<span class="string">&#x27;6&#x27;</span>, <span class="string">&#x27;Randy&#x27;</span>, <span class="string">&#x27;85000&#x27;</span>, <span class="string">&#x27;1&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Employee (Id, Name, Salary, DepartmentId) <span class="keyword">values</span> (<span class="string">&#x27;7&#x27;</span>, <span class="string">&#x27;Will&#x27;</span>, <span class="string">&#x27;70000&#x27;</span>, <span class="string">&#x27;1&#x27;</span>)</span><br><span class="line"><span class="keyword">Truncate</span> <span class="keyword">table</span> Department</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Department (Id, Name) <span class="keyword">values</span> (<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;IT&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Department (Id, Name) <span class="keyword">values</span> (<span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;Sales&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>Employee 表包含所有员工信息，每个员工有其对应的 Id, salary 和 department Id 。</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">----+-------+--------+--------------+</span></span><br><span class="line"><span class="operator">|</span> Id <span class="operator">|</span> Name  <span class="operator">|</span> Salary <span class="operator">|</span> DepartmentId <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----+-------+--------+--------------+</span></span><br><span class="line"><span class="operator">|</span> <span class="number">1</span>  <span class="operator">|</span> Joe   <span class="operator">|</span> <span class="number">70000</span>  <span class="operator">|</span> <span class="number">1</span>            <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">2</span>  <span class="operator">|</span> Henry <span class="operator">|</span> <span class="number">80000</span>  <span class="operator">|</span> <span class="number">2</span>            <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">3</span>  <span class="operator">|</span> Sam   <span class="operator">|</span> <span class="number">60000</span>  <span class="operator">|</span> <span class="number">2</span>            <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">4</span>  <span class="operator">|</span> Max   <span class="operator">|</span> <span class="number">90000</span>  <span class="operator">|</span> <span class="number">1</span>            <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">5</span>  <span class="operator">|</span> Janet <span class="operator">|</span> <span class="number">69000</span>  <span class="operator">|</span> <span class="number">1</span>            <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">6</span>  <span class="operator">|</span> Randy <span class="operator">|</span> <span class="number">85000</span>  <span class="operator">|</span> <span class="number">1</span>            <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----+-------+--------+--------------+</span></span><br></pre></td></tr></table></figure>
-
-<p>Department 表包含公司所有部门的信息。</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">----+----------+</span></span><br><span class="line"><span class="operator">|</span> Id <span class="operator">|</span> Name     <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----+----------+</span></span><br><span class="line"><span class="operator">|</span> <span class="number">1</span>  <span class="operator">|</span> IT       <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">2</span>  <span class="operator">|</span> Sales    <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----+----------+</span></span><br></pre></td></tr></table></figure>
-<p>编写一个 SQL 查询，找出每个部门工资前三高的员工。例如，根据上述给定的表格，查询结果应返回：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">------------+----------+--------+</span></span><br><span class="line"><span class="operator">|</span> Department <span class="operator">|</span> Employee <span class="operator">|</span> Salary <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">------------+----------+--------+</span></span><br><span class="line"><span class="operator">|</span> IT         <span class="operator">|</span> Max      <span class="operator">|</span> <span class="number">90000</span>  <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> IT         <span class="operator">|</span> Randy    <span class="operator">|</span> <span class="number">85000</span>  <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> IT         <span class="operator">|</span> Joe      <span class="operator">|</span> <span class="number">70000</span>  <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> Sales      <span class="operator">|</span> Henry    <span class="operator">|</span> <span class="number">80000</span>  <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> Sales      <span class="operator">|</span> Sam      <span class="operator">|</span> <span class="number">60000</span>  <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">------------+----------+--------+</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>LeetCode</category>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>184.部门工资最高的员工</title>
     <url>/2019/05/06/LeetCode_184-%E9%83%A8%E9%97%A8%E5%B7%A5%E8%B5%84%E6%9C%80%E9%AB%98%E7%9A%84%E5%91%98%E5%B7%A5/</url>
     <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"><br>编写一个 SQL 查询，找出每个部门工资最高的员工。</p>
@@ -160,6 +135,31 @@
 <p>用JOIN子句内连接查询两个表，用GROUP子句分组并用聚合函数MAX()获得各个部门的最高工资</p>
 <p>解答：</p>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> </span><br><span class="line">    Department.Name <span class="keyword">AS</span> Department, </span><br><span class="line">    Employee.Name <span class="keyword">AS</span> Employee, </span><br><span class="line">    Employee.Salary <span class="keyword">AS</span> Salary </span><br><span class="line"><span class="keyword">FROM</span> </span><br><span class="line">    Employee <span class="keyword">JOIN</span> Department <span class="keyword">ON</span> Employee.DepartmentId <span class="operator">=</span> Department.Id </span><br><span class="line"><span class="keyword">WHERE</span> </span><br><span class="line">    (Employee.DepartmentId, Employee.Salary) </span><br><span class="line">    <span class="keyword">IN</span> </span><br><span class="line">    (<span class="keyword">SELECT</span> DepartmentId, <span class="built_in">MAX</span>(Salary) <span class="keyword">FROM</span> Employee <span class="keyword">GROUP</span> <span class="keyword">BY</span> DepartmentId);</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>185.部门工资前三高的员工</title>
+    <url>/2019/05/07/LeetCode_185-%E9%83%A8%E9%97%A8%E5%B7%A5%E8%B5%84%E5%89%8D%E4%B8%89%E9%AB%98%E7%9A%84%E5%91%98%E5%B7%A5/</url>
+    <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"><br>编写一个 SQL 查询，找出每个部门工资前三高的员工。</p>
+<span id="more"></span>
+<p>SQL架构：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Create</span> <span class="keyword">table</span> If <span class="keyword">Not</span> <span class="keyword">Exists</span> Employee (Id <span class="type">int</span>, Name <span class="type">varchar</span>(<span class="number">255</span>), Salary <span class="type">int</span>, DepartmentId <span class="type">int</span>)</span><br><span class="line"><span class="keyword">Create</span> <span class="keyword">table</span> If <span class="keyword">Not</span> <span class="keyword">Exists</span> Department (Id <span class="type">int</span>, Name <span class="type">varchar</span>(<span class="number">255</span>))</span><br><span class="line"><span class="keyword">Truncate</span> <span class="keyword">table</span> Employee</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Employee (Id, Name, Salary, DepartmentId) <span class="keyword">values</span> (<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;Joe&#x27;</span>, <span class="string">&#x27;85000&#x27;</span>, <span class="string">&#x27;1&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Employee (Id, Name, Salary, DepartmentId) <span class="keyword">values</span> (<span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;Henry&#x27;</span>, <span class="string">&#x27;80000&#x27;</span>, <span class="string">&#x27;2&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Employee (Id, Name, Salary, DepartmentId) <span class="keyword">values</span> (<span class="string">&#x27;3&#x27;</span>, <span class="string">&#x27;Sam&#x27;</span>, <span class="string">&#x27;60000&#x27;</span>, <span class="string">&#x27;2&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Employee (Id, Name, Salary, DepartmentId) <span class="keyword">values</span> (<span class="string">&#x27;4&#x27;</span>, <span class="string">&#x27;Max&#x27;</span>, <span class="string">&#x27;90000&#x27;</span>, <span class="string">&#x27;1&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Employee (Id, Name, Salary, DepartmentId) <span class="keyword">values</span> (<span class="string">&#x27;5&#x27;</span>, <span class="string">&#x27;Janet&#x27;</span>, <span class="string">&#x27;69000&#x27;</span>, <span class="string">&#x27;1&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Employee (Id, Name, Salary, DepartmentId) <span class="keyword">values</span> (<span class="string">&#x27;6&#x27;</span>, <span class="string">&#x27;Randy&#x27;</span>, <span class="string">&#x27;85000&#x27;</span>, <span class="string">&#x27;1&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Employee (Id, Name, Salary, DepartmentId) <span class="keyword">values</span> (<span class="string">&#x27;7&#x27;</span>, <span class="string">&#x27;Will&#x27;</span>, <span class="string">&#x27;70000&#x27;</span>, <span class="string">&#x27;1&#x27;</span>)</span><br><span class="line"><span class="keyword">Truncate</span> <span class="keyword">table</span> Department</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Department (Id, Name) <span class="keyword">values</span> (<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;IT&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Department (Id, Name) <span class="keyword">values</span> (<span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;Sales&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Employee 表包含所有员工信息，每个员工有其对应的 Id, salary 和 department Id 。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">----+-------+--------+--------------+</span></span><br><span class="line"><span class="operator">|</span> Id <span class="operator">|</span> Name  <span class="operator">|</span> Salary <span class="operator">|</span> DepartmentId <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----+-------+--------+--------------+</span></span><br><span class="line"><span class="operator">|</span> <span class="number">1</span>  <span class="operator">|</span> Joe   <span class="operator">|</span> <span class="number">70000</span>  <span class="operator">|</span> <span class="number">1</span>            <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">2</span>  <span class="operator">|</span> Henry <span class="operator">|</span> <span class="number">80000</span>  <span class="operator">|</span> <span class="number">2</span>            <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">3</span>  <span class="operator">|</span> Sam   <span class="operator">|</span> <span class="number">60000</span>  <span class="operator">|</span> <span class="number">2</span>            <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">4</span>  <span class="operator">|</span> Max   <span class="operator">|</span> <span class="number">90000</span>  <span class="operator">|</span> <span class="number">1</span>            <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">5</span>  <span class="operator">|</span> Janet <span class="operator">|</span> <span class="number">69000</span>  <span class="operator">|</span> <span class="number">1</span>            <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">6</span>  <span class="operator">|</span> Randy <span class="operator">|</span> <span class="number">85000</span>  <span class="operator">|</span> <span class="number">1</span>            <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----+-------+--------+--------------+</span></span><br></pre></td></tr></table></figure>
+
+<p>Department 表包含公司所有部门的信息。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">----+----------+</span></span><br><span class="line"><span class="operator">|</span> Id <span class="operator">|</span> Name     <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----+----------+</span></span><br><span class="line"><span class="operator">|</span> <span class="number">1</span>  <span class="operator">|</span> IT       <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">2</span>  <span class="operator">|</span> Sales    <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----+----------+</span></span><br></pre></td></tr></table></figure>
+<p>编写一个 SQL 查询，找出每个部门工资前三高的员工。例如，根据上述给定的表格，查询结果应返回：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">------------+----------+--------+</span></span><br><span class="line"><span class="operator">|</span> Department <span class="operator">|</span> Employee <span class="operator">|</span> Salary <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">------------+----------+--------+</span></span><br><span class="line"><span class="operator">|</span> IT         <span class="operator">|</span> Max      <span class="operator">|</span> <span class="number">90000</span>  <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> IT         <span class="operator">|</span> Randy    <span class="operator">|</span> <span class="number">85000</span>  <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> IT         <span class="operator">|</span> Joe      <span class="operator">|</span> <span class="number">70000</span>  <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> Sales      <span class="operator">|</span> Henry    <span class="operator">|</span> <span class="number">80000</span>  <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> Sales      <span class="operator">|</span> Sam      <span class="operator">|</span> <span class="number">60000</span>  <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">------------+----------+--------+</span></span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>LeetCode</category>
@@ -260,27 +260,6 @@
       </tags>
   </entry>
   <entry>
-    <title>56.合并区间</title>
-    <url>/2019/05/11/LeetCode_56-%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4/</url>
-    <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"><br>给出一个区间的集合，请合并所有重叠的区间。</p>
-<span id="more"></span>
-<p>示例 1:</p>
-<figure class="highlight prolog"><table><tr><td class="code"><pre><span class="line">输入: [[<span class="number">1</span>,<span class="number">3</span>],[<span class="number">2</span>,<span class="number">6</span>],[<span class="number">8</span>,<span class="number">10</span>],[<span class="number">15</span>,<span class="number">18</span>]]</span><br><span class="line">输出: [[<span class="number">1</span>,<span class="number">6</span>],[<span class="number">8</span>,<span class="number">10</span>],[<span class="number">15</span>,<span class="number">18</span>]]</span><br><span class="line">解释: 区间 [<span class="number">1</span>,<span class="number">3</span>] 和 [<span class="number">2</span>,<span class="number">6</span>] 重叠, 将它们合并为 [<span class="number">1</span>,<span class="number">6</span>].</span><br></pre></td></tr></table></figure>
-
-<p>示例 2:</p>
-<figure class="highlight lua"><table><tr><td class="code"><pre><span class="line">输入: <span class="string">[[1,4],[4,5]]</span></span><br><span class="line">输出: <span class="string">[[1,5]]</span></span><br><span class="line">解释: 区间 [<span class="number">1</span>,<span class="number">4</span>] 和 [<span class="number">4</span>,<span class="number">5</span>] 可被视为重叠区间。</span><br></pre></td></tr></table></figure>
-
-<p>解答：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Definition for an interval.</span></span><br><span class="line"><span class="comment"># class Interval(object):</span></span><br><span class="line"><span class="comment">#     def __init__(self, s=0, e=0):</span></span><br><span class="line"><span class="comment">#         self.start = s</span></span><br><span class="line"><span class="comment">#         self.end = e</span></span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">merge</span>(<span class="params">self, intervals: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>) -&gt; <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]:</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type intervals: List[Interval]</span></span><br><span class="line"><span class="string">        :rtype: List[Interval]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> intervals:</span><br><span class="line">            <span class="keyword">return</span> []</span><br><span class="line">        intervals = <span class="built_in">sorted</span>(intervals,key=<span class="keyword">lambda</span> x:x.start)</span><br><span class="line">        res = []</span><br><span class="line">        left = intervals[<span class="number">0</span>].start</span><br><span class="line">        right = intervals[<span class="number">0</span>].end</span><br><span class="line">        <span class="keyword">for</span> item <span class="keyword">in</span> intervals:</span><br><span class="line">            <span class="keyword">if</span> item.start &lt;= right:</span><br><span class="line">                right = <span class="built_in">max</span>(right, item.end)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                res.append([left, right])</span><br><span class="line">                left = item.start</span><br><span class="line">                right = item.end</span><br><span class="line">        res.append([left, right])</span><br><span class="line">                </span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>LeetCode</category>
-        <category>排序</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>35.搜索插入位置</title>
     <url>/2019/05/08/LeetCode_35-%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/</url>
     <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"><br>给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。</p>
@@ -296,6 +275,27 @@
       <categories>
         <category>LeetCode</category>
         <category>二分查找</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>56.合并区间</title>
+    <url>/2019/05/11/LeetCode_56-%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4/</url>
+    <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"><br>给出一个区间的集合，请合并所有重叠的区间。</p>
+<span id="more"></span>
+<p>示例 1:</p>
+<figure class="highlight prolog"><table><tr><td class="code"><pre><span class="line">输入: [[<span class="number">1</span>,<span class="number">3</span>],[<span class="number">2</span>,<span class="number">6</span>],[<span class="number">8</span>,<span class="number">10</span>],[<span class="number">15</span>,<span class="number">18</span>]]</span><br><span class="line">输出: [[<span class="number">1</span>,<span class="number">6</span>],[<span class="number">8</span>,<span class="number">10</span>],[<span class="number">15</span>,<span class="number">18</span>]]</span><br><span class="line">解释: 区间 [<span class="number">1</span>,<span class="number">3</span>] 和 [<span class="number">2</span>,<span class="number">6</span>] 重叠, 将它们合并为 [<span class="number">1</span>,<span class="number">6</span>].</span><br></pre></td></tr></table></figure>
+
+<p>示例 2:</p>
+<figure class="highlight lua"><table><tr><td class="code"><pre><span class="line">输入: <span class="string">[[1,4],[4,5]]</span></span><br><span class="line">输出: <span class="string">[[1,5]]</span></span><br><span class="line">解释: 区间 [<span class="number">1</span>,<span class="number">4</span>] 和 [<span class="number">4</span>,<span class="number">5</span>] 可被视为重叠区间。</span><br></pre></td></tr></table></figure>
+
+<p>解答：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># Definition for an interval.</span></span><br><span class="line"><span class="comment"># class Interval(object):</span></span><br><span class="line"><span class="comment">#     def __init__(self, s=0, e=0):</span></span><br><span class="line"><span class="comment">#         self.start = s</span></span><br><span class="line"><span class="comment">#         self.end = e</span></span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">merge</span>(<span class="params">self, intervals: <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]</span>) -&gt; <span class="type">List</span>[<span class="type">List</span>[<span class="built_in">int</span>]]:</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type intervals: List[Interval]</span></span><br><span class="line"><span class="string">        :rtype: List[Interval]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> intervals:</span><br><span class="line">            <span class="keyword">return</span> []</span><br><span class="line">        intervals = <span class="built_in">sorted</span>(intervals,key=<span class="keyword">lambda</span> x:x.start)</span><br><span class="line">        res = []</span><br><span class="line">        left = intervals[<span class="number">0</span>].start</span><br><span class="line">        right = intervals[<span class="number">0</span>].end</span><br><span class="line">        <span class="keyword">for</span> item <span class="keyword">in</span> intervals:</span><br><span class="line">            <span class="keyword">if</span> item.start &lt;= right:</span><br><span class="line">                right = <span class="built_in">max</span>(right, item.end)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                res.append([left, right])</span><br><span class="line">                left = item.start</span><br><span class="line">                right = item.end</span><br><span class="line">        res.append([left, right])</span><br><span class="line">                </span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>LeetCode</category>
+        <category>排序</category>
       </categories>
       <tags>
         <tag>LeetCode</tag>
@@ -587,29 +587,6 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
-    <title>数据库中的左连接(left join)和右连接(right join)区别</title>
-    <url>/2019/03/18/MySQL_join/</url>
-    <content><![CDATA[<p><img src="/pictures/MySql.png"><br>Left Join / Right Join /inner join<br>左连接where只影向右表，右连接where只影响左表。</p>
-<span id="more"></span>
-<h1 id="Left-Join"><a href="#Left-Join" class="headerlink" title="Left Join"></a>Left Join</h1><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> tbl1 <span class="keyword">Left</span> <span class="keyword">Join</span> tbl2</span><br><span class="line">    <span class="keyword">where</span> tbl1.ID <span class="operator">=</span> tbl2.ID</span><br></pre></td></tr></table></figure>
-<p>左连接后的检索结果是显示tbl1的所有数据和tbl2中满足where 条件的数据。</p>
-<p>简言之 Left Join影响到的是右边的表</p>
-<h1 id="Right-Join"><a href="#Right-Join" class="headerlink" title="Right Join"></a>Right Join</h1><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> tbl1 <span class="keyword">Right</span> <span class="keyword">Join</span> tbl2</span><br><span class="line">    <span class="keyword">where</span> tbl1.ID <span class="operator">=</span> tbl2.ID</span><br></pre></td></tr></table></figure>
-<p>检索结果是tbl2的所有数据和tbl1中满足where 条件的数据。</p>
-<p>简言之 Right Join影响到的是左边的表。</p>
-<h1 id="inner-join"><a href="#inner-join" class="headerlink" title="inner join"></a>inner join</h1><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">FROM</span> tbl1 <span class="keyword">INNER</span> <span class="keyword">JOIN</span> tbl2</span><br><span class="line">    <span class="keyword">ON</span> tbl1.ID <span class="operator">=</span> tbl2.ID</span><br></pre></td></tr></table></figure>
-
-<p>功能和 select * from tbl1,tbl2 where tbl1.id=tbl2.id相同。</p>
-]]></content>
-      <categories>
-        <category>数据库</category>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>SQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MySQL的安装</title>
     <url>/2019/03/16/MySQL_%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<p><img src="/pictures/MySql.png"></p>
@@ -640,6 +617,29 @@ tail -f ping.log（查看日志）
 <figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">tables</span>;</span><br></pre></td></tr></table></figure>
 <p><em><strong>退出</strong></em></p>
 <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">quit(<span class="keyword">exit</span>)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>数据库</category>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>SQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据库中的左连接(left join)和右连接(right join)区别</title>
+    <url>/2019/03/18/MySQL_join/</url>
+    <content><![CDATA[<p><img src="/pictures/MySql.png"><br>Left Join / Right Join /inner join<br>左连接where只影向右表，右连接where只影响左表。</p>
+<span id="more"></span>
+<h1 id="Left-Join"><a href="#Left-Join" class="headerlink" title="Left Join"></a>Left Join</h1><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> tbl1 <span class="keyword">Left</span> <span class="keyword">Join</span> tbl2</span><br><span class="line">    <span class="keyword">where</span> tbl1.ID <span class="operator">=</span> tbl2.ID</span><br></pre></td></tr></table></figure>
+<p>左连接后的检索结果是显示tbl1的所有数据和tbl2中满足where 条件的数据。</p>
+<p>简言之 Left Join影响到的是右边的表</p>
+<h1 id="Right-Join"><a href="#Right-Join" class="headerlink" title="Right Join"></a>Right Join</h1><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> tbl1 <span class="keyword">Right</span> <span class="keyword">Join</span> tbl2</span><br><span class="line">    <span class="keyword">where</span> tbl1.ID <span class="operator">=</span> tbl2.ID</span><br></pre></td></tr></table></figure>
+<p>检索结果是tbl2的所有数据和tbl1中满足where 条件的数据。</p>
+<p>简言之 Right Join影响到的是左边的表。</p>
+<h1 id="inner-join"><a href="#inner-join" class="headerlink" title="inner join"></a>inner join</h1><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">FROM</span> tbl1 <span class="keyword">INNER</span> <span class="keyword">JOIN</span> tbl2</span><br><span class="line">    <span class="keyword">ON</span> tbl1.ID <span class="operator">=</span> tbl2.ID</span><br></pre></td></tr></table></figure>
+
+<p>功能和 select * from tbl1,tbl2 where tbl1.id=tbl2.id相同。</p>
+]]></content>
       <categories>
         <category>数据库</category>
         <category>MySQL</category>
@@ -939,23 +939,6 @@ tail -f ping.log（查看日志）
       </categories>
   </entry>
   <entry>
-    <title>SAS Studio</title>
-    <url>/2021/03/12/SAS_%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%AF%91/</url>
-    <content><![CDATA[<p><img src="/pictures/SAS.jpeg"></p>
-<span id="more"></span>
-<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>SAS基本软件大小有二三十个G，下载安装运行对于一般的电脑都有点吃力，SAS Studio提供了一个在线编写、调试代码的环境，可以上传自己的数据。</p>
-<h1 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h1><p><a href="https://welcome.oda.sas.com/login">网站地址</a><br>用邮箱(无需.edu)注册一个账号，根据分配的ID和自设密码登录云服务器，选亚太地区。</p>
-<h1 id="测试环境"><a href="#测试环境" class="headerlink" title="测试环境"></a>测试环境</h1><p>右键单击 文件(主目录) 新建文件即可，小人那个图标就是run。<br><img src="./dvp.png"></p>
-]]></content>
-      <categories>
-        <category>数据库</category>
-        <category>SAS</category>
-      </categories>
-      <tags>
-        <tag>SAS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>SAS_数字格式</title>
     <url>/2021/03/13/SAS_%E6%95%B0%E5%AD%97%E6%A0%BC%E5%BC%8F/</url>
     <content><![CDATA[<p><img src="/pictures/SAS.jpeg"></p>
@@ -1012,6 +995,23 @@ tail -f ping.log（查看日志）
 </tbody></table>
 <h1 id="测试用例"><a href="#测试用例" class="headerlink" title="测试用例"></a>测试用例</h1><p>我们可以随意写几个数字来看一下这个输入和输出，input x 6.限制了读入数据的长度和格式即为无小数位的五位整数，format X DOLLAR10.2则规定了显示的格式，这里我们可以看到数据的完全显示、美元符号和千位逗号的显示优先级。</p>
 <img src="/2021/03/13/SAS_%E6%95%B0%E5%AD%97%E6%A0%BC%E5%BC%8F/test.jpg" class="">
+]]></content>
+      <categories>
+        <category>数据库</category>
+        <category>SAS</category>
+      </categories>
+      <tags>
+        <tag>SAS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SAS Studio</title>
+    <url>/2021/03/12/SAS_%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%AF%91/</url>
+    <content><![CDATA[<p><img src="/pictures/SAS.jpeg"></p>
+<span id="more"></span>
+<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>SAS基本软件大小有二三十个G，下载安装运行对于一般的电脑都有点吃力，SAS Studio提供了一个在线编写、调试代码的环境，可以上传自己的数据。</p>
+<h1 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h1><p><a href="https://welcome.oda.sas.com/login">网站地址</a><br>用邮箱(无需.edu)注册一个账号，根据分配的ID和自设密码登录云服务器，选亚太地区。</p>
+<h1 id="测试环境"><a href="#测试环境" class="headerlink" title="测试环境"></a>测试环境</h1><p>右键单击 文件(主目录) 新建文件即可，小人那个图标就是run。<br><img src="./dvp.png"></p>
 ]]></content>
       <categories>
         <category>数据库</category>
@@ -1159,26 +1159,6 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
-    <title>hanoi问题</title>
-    <url>/2019/04/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95_%E9%80%92%E5%BD%92_hanoi/</url>
-    <content><![CDATA[<p><img src="/pictures/%E7%AE%97%E6%B3%95.jpg"></p>
-<span id="more"></span>
-<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>用递归求解(A原始柱，B过渡柱，C目标柱)：<br>1.当A只有一个时，A-&gt;C</p>
-<p>2.否则将n-1个从A先移动到B(C作为过渡柱)，然后再将这n-1个从B移动到C(A作为过渡柱)</p>
-<h1 id="Python代码"><a href="#Python代码" class="headerlink" title="Python代码"></a>Python代码</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">count = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hanoi</span>(<span class="params">n, src, dst, mid</span>):</span></span><br><span class="line">    <span class="keyword">global</span> count</span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;:&#123;&#125;-&gt;&#123;&#125;&quot;</span>.<span class="built_in">format</span>(<span class="number">1</span>, src, dst))</span><br><span class="line">        count += <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        hanoi(n-<span class="number">1</span>, src, mid, dst)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;:&#123;&#125;-&gt;&#123;&#125;&quot;</span>.<span class="built_in">format</span>(n, src, dst))</span><br><span class="line">        count += <span class="number">1</span></span><br><span class="line">        hanoi(n-<span class="number">1</span>, mid, dst, src)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    hanoi(<span class="number">3</span>, <span class="string">&quot;A&quot;</span>, <span class="string">&quot;C&quot;</span>, <span class="string">&quot;B&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(count)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-<h1 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h1><img src="/2019/04/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95_%E9%80%92%E5%BD%92_hanoi/hanoi.png" class="">
-
-<h1 id="移动示意图"><a href="#移动示意图" class="headerlink" title="移动示意图"></a>移动示意图</h1><img src="/2019/04/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95_%E9%80%92%E5%BD%92_hanoi/hanoi3%E9%98%B6%E7%A4%BA%E6%84%8F%E5%9B%BE.jpg" class="">
-]]></content>
-      <categories>
-        <category>数据结构和算法</category>
-        <category>递归</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>插入排序</title>
     <url>/2019/04/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95_%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/</url>
     <content><![CDATA[<p><img src="/pictures/%E7%AE%97%E6%B3%95.jpg"><br>小规模数据需要排序，并且初始数据几乎是有序的(稳定)。</p>
@@ -1200,6 +1180,26 @@ tail -f ping.log（查看日志）
       </categories>
       <tags>
         <tag>数组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hanoi问题</title>
+    <url>/2019/04/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95_%E9%80%92%E5%BD%92_hanoi/</url>
+    <content><![CDATA[<p><img src="/pictures/%E7%AE%97%E6%B3%95.jpg"></p>
+<span id="more"></span>
+<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>用递归求解(A原始柱，B过渡柱，C目标柱)：<br>1.当A只有一个时，A-&gt;C</p>
+<p>2.否则将n-1个从A先移动到B(C作为过渡柱)，然后再将这n-1个从B移动到C(A作为过渡柱)</p>
+<h1 id="Python代码"><a href="#Python代码" class="headerlink" title="Python代码"></a>Python代码</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">count = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hanoi</span>(<span class="params">n, src, dst, mid</span>):</span></span><br><span class="line">    <span class="keyword">global</span> count</span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;:&#123;&#125;-&gt;&#123;&#125;&quot;</span>.<span class="built_in">format</span>(<span class="number">1</span>, src, dst))</span><br><span class="line">        count += <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        hanoi(n-<span class="number">1</span>, src, mid, dst)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;:&#123;&#125;-&gt;&#123;&#125;&quot;</span>.<span class="built_in">format</span>(n, src, dst))</span><br><span class="line">        count += <span class="number">1</span></span><br><span class="line">        hanoi(n-<span class="number">1</span>, mid, dst, src)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    hanoi(<span class="number">3</span>, <span class="string">&quot;A&quot;</span>, <span class="string">&quot;C&quot;</span>, <span class="string">&quot;B&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(count)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<h1 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h1><img src="/2019/04/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95_%E9%80%92%E5%BD%92_hanoi/hanoi.png" class="">
+
+<h1 id="移动示意图"><a href="#移动示意图" class="headerlink" title="移动示意图"></a>移动示意图</h1><img src="/2019/04/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95_%E9%80%92%E5%BD%92_hanoi/hanoi3%E9%98%B6%E7%A4%BA%E6%84%8F%E5%9B%BE.jpg" class="">
+]]></content>
+      <categories>
+        <category>数据结构和算法</category>
+        <category>递归</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -1339,7 +1339,7 @@ tail -f ping.log（查看日志）
 
 <p>[\w.] 匹配的是字母数字或者 . ，在其后面加上 + ，表示匹配多次。在字符集合 [ ] 里，. 不是元字符；</p>
 <p><em><strong>匹配结果</strong></em></p>
-<p><a href="mailto:&#97;&#x62;&#99;&#46;&#100;&#101;&#x66;&#x40;&#113;&#x71;&#x2e;&#99;&#111;&#x6d;">&#97;&#x62;&#99;&#46;&#100;&#101;&#x66;&#x40;&#113;&#x71;&#x2e;&#99;&#111;&#x6d;</a></p>
+<p><a href="mailto:&#x61;&#x62;&#x63;&#46;&#x64;&#x65;&#102;&#64;&#x71;&#x71;&#x2e;&#99;&#x6f;&#109;">&#x61;&#x62;&#x63;&#46;&#x64;&#x65;&#102;&#64;&#x71;&#x71;&#x2e;&#99;&#x6f;&#109;</a></p>
 <ul>
 <li><p>{n} 匹配 n 个字符</p>
 </li>
