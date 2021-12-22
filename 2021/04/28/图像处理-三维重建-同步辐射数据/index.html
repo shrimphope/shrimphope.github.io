@@ -32,7 +32,7 @@
 <meta property="og:image" content="http://wuranim.github.io/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/5.jpg">
 <meta property="og:image" content="http://wuranim.github.io/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/7.png">
 <meta property="article:published_time" content="2021-04-28T04:04:01.000Z">
-<meta property="article:modified_time" content="2021-12-22T08:52:47.427Z">
+<meta property="article:modified_time" content="2021-12-22T09:05:13.231Z">
 <meta property="article:author" content="Ran">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://wuranim.github.io/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/0.png">
@@ -260,13 +260,13 @@
         <img src="/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/0.png" class="">
 
 <span id="more"></span>
-<p>如图是一张同步辐射鼠脑断面图(8位灰度图)，如何将血管(红色框)分割出来？</p>
+<p>如下图是一张同步辐射鼠脑断面图(8位灰度图)，如何将血管(红色框)分割出来？</p>
 <img src="/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/1.png" class="">
 <p>因为同步辐射相衬成像的特点和部分容积效应，脑组织与背景和脑室之间的交界处(蓝色框部分)会出现灰度值并不连续的过渡带，且血管的灰度值与背景和脑室更为接近，很难通过灰度分布直方图直接选取血管的灰度值范围进行阈值分割。</p>
 <img src="/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/2.png" class="">
 <p>那我们可以换一个思路，分割非血管部分的脑组织，后续再通过一系列的逻辑运算和形态学处理的组合使用，得到血管与脑室部分。</p>
 <img src="/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/3.png" class="">
-<p>最后我们再分割血管、脑室和病灶部分，图像的分割连接着预处理和后分析，分割完成后就可以进行一系列的建模分析和渲染展示。</p>
+<p>最后我们再分割血管、脑室和病灶部分，图像分割承前启后，分割效果至关重要，分割完成后就可以进行一系列的建模分析和渲染展示。</p>
 <img src="/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/5.jpg" class="">
 <p>整个处理流程的探索主要使用Amira/Avizo完成，整个过程之所以选择简单阈值分割是因为这套流程可以最大限度的减少人工勾勒标记的时间(纹理分割或者深度学习都需要对每套数据进行一个人工的标记)，虽然整体的步骤较多，但完全可以自动化，只需要人为修改参数，对于不同批次的的数据可以减少很多人工时间，其次，因为全流程都是使用常规的图像处理方法，对于电脑配置较低的可以将第三方软件里完成的流程通过matlab/opencv进行复现。</p>
 <img src="/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/7.png" class="">
