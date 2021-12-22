@@ -32,7 +32,7 @@
 <meta property="og:image" content="http://wuranim.github.io/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/5.jpg">
 <meta property="og:image" content="http://wuranim.github.io/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/7.png">
 <meta property="article:published_time" content="2021-04-28T04:04:01.000Z">
-<meta property="article:modified_time" content="2021-12-22T09:28:26.704Z">
+<meta property="article:modified_time" content="2021-12-22T14:12:43.615Z">
 <meta property="article:author" content="Ran">
 <meta property="article:tag" content="amira">
 <meta property="article:tag" content="matlab">
@@ -273,7 +273,6 @@
     
     <div class="post-body" itemprop="articleBody">
         <img src="/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/0.png" class="">
-
 <span id="more"></span>
 <p>如下图是一张同步辐射鼠脑断面图(8位灰度图)，如何将血管(红色框)分割出来？</p>
 <img src="/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/1.png" class="">
@@ -283,7 +282,7 @@
 <img src="/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/3.png" class="">
 <p>最后我们再分割血管、脑室和病灶部分，图像分割承前启后，分割效果至关重要，分割完成后就可以进行一系列的建模分析和渲染展示。</p>
 <img src="/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/5.jpg" class="">
-<p>整个处理流程的探索主要使用Amira/Avizo完成，整个流程之所以选择简单阈值分割是因为这套流程可以最大限度的减少人工勾勒标记的时间(纹理分割或者深度学习都需要对每套数据进行人工的标记)，虽然整体的步骤较多，但完全可以自动化，只需要人为修改参数，对于不同批次的的数据可以减少很多人工时间，其次，因为全流程都是使用常规的图像处理方法，对于电脑配置较低的可以将第三方软件里完成的流程通过matlab/opencv进行复现。</p>
+<p>整个处理流程的探索主要使用Amira/Avizo完成，流程中最重要的分割部分选择了最简单的阈值分割，是因为经过多次的尝试比对发现这样可以很大程度减少人工勾勒标记的时间(纹理分割或者深度学习都需要对每套数据进行人工的标记)，虽然整体的步骤较多，但整个可以自动化，只需要人为修改参数，对于不同批次的的数据可以减少很多人工时间，其次，因为全流程都是使用常规的图像处理方法，对于电脑配置较低的可以将第三方软件里完成的流程通过matlab/opencv进行复现。</p>
 <img src="/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/7.png" class="">
 
 <p><a target="_blank" rel="noopener" href="https://pubmed.ncbi.nlm.nih.gov/30766481/">可参考论文</a></p>
