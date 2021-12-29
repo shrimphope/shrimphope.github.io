@@ -959,8 +959,9 @@ tail -f ping.log（查看日志）
     <content><![CDATA[<p><img src="/pictures/SAS.jpeg"></p>
 <span id="more"></span>
 <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>&#160; &#160; &#160; &#160;SAS常规大小有二三十个G，下载安装运行对于一般的电脑都有点吃力，SAS Studio提供了一个在线编写、调试代码的环境，可以上传自己的数据。</p>
-<h1 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h1><p><a href="https://welcome.oda.sas.com/login">网站地址</a><br>&#160; &#160; &#160; &#160;用邮箱(无需.edu)注册一个账号，根据分配的ID和自设密码登录云服务器，选亚太地区。</p>
+<h1 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h1><p><a href="https://welcome.oda.sas.com/login">网站地址</a>&#160; &#160;用邮箱(无需.edu)注册一个账号，根据分配的ID和自设密码登录云服务器，选亚太地区。</p>
 <h1 id="测试环境"><a href="#测试环境" class="headerlink" title="测试环境"></a>测试环境</h1><p>&#160; &#160; &#160; &#160;右键单击 文件(主目录) 新建文件即可，小人那个图标就是run。<br><img src="./dvp.png"></p>
+<p><a href="https://pan.baidu.com/s/10xT7DKmQnmcplXJpCgo_5Q">9.1免安装版，提取码：qelx</a></p>
 ]]></content>
       <categories>
         <category>数据库</category>
