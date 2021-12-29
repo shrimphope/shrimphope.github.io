@@ -37,35 +37,6 @@
       </tags>
   </entry>
   <entry>
-    <title>175.组合两个表</title>
-    <url>/2019/04/27/LeetCode_175-%E7%BB%84%E5%90%88%E4%B8%A4%E4%B8%AA%E8%A1%A8/</url>
-    <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"><br>根据两个表的信息组合一个新表。</p>
-<span id="more"></span>
-<p>SQL架构：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Create</span> <span class="keyword">table</span> Person (PersonId <span class="type">int</span>, FirstName <span class="type">varchar</span>(<span class="number">255</span>), LastName <span class="type">varchar</span>(<span class="number">255</span>))</span><br><span class="line"><span class="keyword">Create</span> <span class="keyword">table</span> Address (AddressId <span class="type">int</span>, PersonId <span class="type">int</span>, City <span class="type">varchar</span>(<span class="number">255</span>), State <span class="type">varchar</span>(<span class="number">255</span>))</span><br><span class="line"><span class="keyword">Truncate</span> <span class="keyword">table</span> Person</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Person (PersonId, LastName, FirstName) <span class="keyword">values</span> (<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;Wang&#x27;</span>, <span class="string">&#x27;Allen&#x27;</span>)</span><br><span class="line"><span class="keyword">Truncate</span> <span class="keyword">table</span> Address</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Address (AddressId, PersonId, City, State) <span class="keyword">values</span> (<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;New York City&#x27;</span>, <span class="string">&#x27;New York&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>表1: Person：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">-------------+---------+</span></span><br><span class="line"><span class="operator">|</span> 列名         <span class="operator">|</span> 类型     <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">-------------+---------+</span></span><br><span class="line"><span class="operator">|</span> PersonId    <span class="operator">|</span> <span class="type">int</span>     <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> FirstName   <span class="operator">|</span> <span class="type">varchar</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> LastName    <span class="operator">|</span> <span class="type">varchar</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">-------------+---------+</span></span><br></pre></td></tr></table></figure>
-<p>PersonId 是上表主键</p>
-<p>表2: Address：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">-------------+---------+</span></span><br><span class="line"><span class="operator">|</span> 列名         <span class="operator">|</span> 类型    <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">-------------+---------+</span></span><br><span class="line"><span class="operator">|</span> AddressId   <span class="operator">|</span> <span class="type">int</span>     <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> PersonId    <span class="operator">|</span> <span class="type">int</span>     <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> City        <span class="operator">|</span> <span class="type">varchar</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> State       <span class="operator">|</span> <span class="type">varchar</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">-------------+---------+</span></span><br></pre></td></tr></table></figure>
-<p>AddressId 是上表主键</p>
-<p>编写一个 SQL 查询，满足条件：<br>无论 person 是否有地址信息，都需要基于两表提供 person 的以下信息：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">FirstName, LastName, City, State</span><br></pre></td></tr></table></figure>
-
-<p>思路:</p>
-<p>查询目标：Person表的FirstName, LastName, City, State<br>查询范围：Person和Address</p>
-<p>解答:</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Select</span></span><br><span class="line">    Person.FirstName, Person.LastName, Address.City, Address.State </span><br><span class="line"><span class="keyword">from</span></span><br><span class="line">    Person <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> Address <span class="keyword">ON</span> Person.PersonId <span class="operator">=</span> Address.PersonId;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>LeetCode</category>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>1.两数之和</title>
     <url>/2019/05/13/LeetCode_1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</url>
     <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"></p>
@@ -86,28 +57,26 @@
       </tags>
   </entry>
   <entry>
-    <title>183.从不订购的用户</title>
-    <url>/2019/04/29/LeetCode_183-%E4%BB%8E%E4%B8%8D%E8%AE%A2%E8%B4%AD%E7%9A%84%E7%94%A8%E6%88%B7/</url>
-    <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"></p>
-<p>某网站包含两个表，Customers表和 Orders 表编写一个 SQL 查询，找出所有从不订购任何东西的客户。</p>
+    <title>175.组合两个表</title>
+    <url>/2019/04/27/LeetCode_175-%E7%BB%84%E5%90%88%E4%B8%A4%E4%B8%AA%E8%A1%A8/</url>
+    <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"><br>根据两个表的信息组合一个新表。</p>
 <span id="more"></span>
 <p>SQL架构：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Create</span> <span class="keyword">table</span> If <span class="keyword">Not</span> <span class="keyword">Exists</span> Customers (Id <span class="type">int</span>, Name <span class="type">varchar</span>(<span class="number">255</span>))</span><br><span class="line"><span class="keyword">Create</span> <span class="keyword">table</span> If <span class="keyword">Not</span> <span class="keyword">Exists</span> Orders (Id <span class="type">int</span>, CustomerId <span class="type">int</span>)</span><br><span class="line"><span class="keyword">Truncate</span> <span class="keyword">table</span> Customers</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Customers (Id, Name) <span class="keyword">values</span> (<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;Joe&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Customers (Id, Name) <span class="keyword">values</span> (<span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;Henry&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Customers (Id, Name) <span class="keyword">values</span> (<span class="string">&#x27;3&#x27;</span>, <span class="string">&#x27;Sam&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Customers (Id, Name) <span class="keyword">values</span> (<span class="string">&#x27;4&#x27;</span>, <span class="string">&#x27;Max&#x27;</span>)</span><br><span class="line"><span class="keyword">Truncate</span> <span class="keyword">table</span> Orders</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Orders (Id, CustomerId) <span class="keyword">values</span> (<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;3&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Orders (Id, CustomerId) <span class="keyword">values</span> (<span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;1&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Create</span> <span class="keyword">table</span> Person (PersonId <span class="type">int</span>, FirstName <span class="type">varchar</span>(<span class="number">255</span>), LastName <span class="type">varchar</span>(<span class="number">255</span>))</span><br><span class="line"><span class="keyword">Create</span> <span class="keyword">table</span> Address (AddressId <span class="type">int</span>, PersonId <span class="type">int</span>, City <span class="type">varchar</span>(<span class="number">255</span>), State <span class="type">varchar</span>(<span class="number">255</span>))</span><br><span class="line"><span class="keyword">Truncate</span> <span class="keyword">table</span> Person</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Person (PersonId, LastName, FirstName) <span class="keyword">values</span> (<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;Wang&#x27;</span>, <span class="string">&#x27;Allen&#x27;</span>)</span><br><span class="line"><span class="keyword">Truncate</span> <span class="keyword">table</span> Address</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Address (AddressId, PersonId, City, State) <span class="keyword">values</span> (<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;New York City&#x27;</span>, <span class="string">&#x27;New York&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
-<p>Customers 表：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">----+-------+</span></span><br><span class="line"><span class="operator">|</span> Id <span class="operator">|</span> Name  <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----+-------+</span></span><br><span class="line"><span class="operator">|</span> <span class="number">1</span>  <span class="operator">|</span> Joe   <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">2</span>  <span class="operator">|</span> Henry <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">3</span>  <span class="operator">|</span> Sam   <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">4</span>  <span class="operator">|</span> Max   <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----+-------+</span></span><br></pre></td></tr></table></figure>
+<p>表1: Person：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">-------------+---------+</span></span><br><span class="line"><span class="operator">|</span> 列名         <span class="operator">|</span> 类型     <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">-------------+---------+</span></span><br><span class="line"><span class="operator">|</span> PersonId    <span class="operator">|</span> <span class="type">int</span>     <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> FirstName   <span class="operator">|</span> <span class="type">varchar</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> LastName    <span class="operator">|</span> <span class="type">varchar</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">-------------+---------+</span></span><br></pre></td></tr></table></figure>
+<p>PersonId 是上表主键</p>
+<p>表2: Address：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">-------------+---------+</span></span><br><span class="line"><span class="operator">|</span> 列名         <span class="operator">|</span> 类型    <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">-------------+---------+</span></span><br><span class="line"><span class="operator">|</span> AddressId   <span class="operator">|</span> <span class="type">int</span>     <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> PersonId    <span class="operator">|</span> <span class="type">int</span>     <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> City        <span class="operator">|</span> <span class="type">varchar</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> State       <span class="operator">|</span> <span class="type">varchar</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">-------------+---------+</span></span><br></pre></td></tr></table></figure>
+<p>AddressId 是上表主键</p>
+<p>编写一个 SQL 查询，满足条件：<br>无论 person 是否有地址信息，都需要基于两表提供 person 的以下信息：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">FirstName, LastName, City, State</span><br></pre></td></tr></table></figure>
 
-<p>Orders 表：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">----+------------+</span></span><br><span class="line"><span class="operator">|</span> Id <span class="operator">|</span> CustomerId <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----+------------+</span></span><br><span class="line"><span class="operator">|</span> <span class="number">1</span>  <span class="operator">|</span> <span class="number">3</span>          <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">2</span>  <span class="operator">|</span> <span class="number">1</span>          <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----+------------+</span></span><br></pre></td></tr></table></figure>
-
-<p>例如给定上述表格，你的查询应返回：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">-----------+</span></span><br><span class="line"><span class="operator">|</span> Customers <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">-----------+</span></span><br><span class="line"><span class="operator">|</span> Henry     <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> Max       <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">-----------+</span></span><br></pre></td></tr></table></figure>
-
-<p>思路：</p>
-<p>查询目标：Name(As Customers)<br>查询范围：Customers表和Orders表<br>查询条件：从不订购任何东西。</p>
-<p>解答：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span></span><br><span class="line">    Customers.Name <span class="keyword">as</span> Customers</span><br><span class="line"><span class="keyword">from</span></span><br><span class="line">    Customers <span class="keyword">left</span> <span class="keyword">join</span> Orders <span class="keyword">on</span> Customers.Id <span class="operator">=</span> Orders.CustomerId</span><br><span class="line"><span class="keyword">where</span></span><br><span class="line">    Orders.Id <span class="keyword">is</span> <span class="keyword">null</span></span><br></pre></td></tr></table></figure>
-]]></content>
+<p>思路:</p>
+<p>查询目标：Person表的FirstName, LastName, City, State<br>查询范围：Person和Address</p>
+<p>解答:</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Select</span></span><br><span class="line">    Person.FirstName, Person.LastName, Address.City, Address.State </span><br><span class="line"><span class="keyword">from</span></span><br><span class="line">    Person <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> Address <span class="keyword">ON</span> Person.PersonId <span class="operator">=</span> Address.PersonId;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>LeetCode</category>
         <category>数据库</category>
@@ -145,6 +114,37 @@
       </tags>
   </entry>
   <entry>
+    <title>183.从不订购的用户</title>
+    <url>/2019/04/29/LeetCode_183-%E4%BB%8E%E4%B8%8D%E8%AE%A2%E8%B4%AD%E7%9A%84%E7%94%A8%E6%88%B7/</url>
+    <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"></p>
+<p>某网站包含两个表，Customers表和 Orders 表编写一个 SQL 查询，找出所有从不订购任何东西的客户。</p>
+<span id="more"></span>
+<p>SQL架构：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">Create</span> <span class="keyword">table</span> If <span class="keyword">Not</span> <span class="keyword">Exists</span> Customers (Id <span class="type">int</span>, Name <span class="type">varchar</span>(<span class="number">255</span>))</span><br><span class="line"><span class="keyword">Create</span> <span class="keyword">table</span> If <span class="keyword">Not</span> <span class="keyword">Exists</span> Orders (Id <span class="type">int</span>, CustomerId <span class="type">int</span>)</span><br><span class="line"><span class="keyword">Truncate</span> <span class="keyword">table</span> Customers</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Customers (Id, Name) <span class="keyword">values</span> (<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;Joe&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Customers (Id, Name) <span class="keyword">values</span> (<span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;Henry&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Customers (Id, Name) <span class="keyword">values</span> (<span class="string">&#x27;3&#x27;</span>, <span class="string">&#x27;Sam&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Customers (Id, Name) <span class="keyword">values</span> (<span class="string">&#x27;4&#x27;</span>, <span class="string">&#x27;Max&#x27;</span>)</span><br><span class="line"><span class="keyword">Truncate</span> <span class="keyword">table</span> Orders</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Orders (Id, CustomerId) <span class="keyword">values</span> (<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;3&#x27;</span>)</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Orders (Id, CustomerId) <span class="keyword">values</span> (<span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;1&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Customers 表：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">----+-------+</span></span><br><span class="line"><span class="operator">|</span> Id <span class="operator">|</span> Name  <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----+-------+</span></span><br><span class="line"><span class="operator">|</span> <span class="number">1</span>  <span class="operator">|</span> Joe   <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">2</span>  <span class="operator">|</span> Henry <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">3</span>  <span class="operator">|</span> Sam   <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">4</span>  <span class="operator">|</span> Max   <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----+-------+</span></span><br></pre></td></tr></table></figure>
+
+<p>Orders 表：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">----+------------+</span></span><br><span class="line"><span class="operator">|</span> Id <span class="operator">|</span> CustomerId <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----+------------+</span></span><br><span class="line"><span class="operator">|</span> <span class="number">1</span>  <span class="operator">|</span> <span class="number">3</span>          <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">2</span>  <span class="operator">|</span> <span class="number">1</span>          <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----+------------+</span></span><br></pre></td></tr></table></figure>
+
+<p>例如给定上述表格，你的查询应返回：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">-----------+</span></span><br><span class="line"><span class="operator">|</span> Customers <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">-----------+</span></span><br><span class="line"><span class="operator">|</span> Henry     <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> Max       <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">-----------+</span></span><br></pre></td></tr></table></figure>
+
+<p>思路：</p>
+<p>查询目标：Name(As Customers)<br>查询范围：Customers表和Orders表<br>查询条件：从不订购任何东西。</p>
+<p>解答：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span></span><br><span class="line">    Customers.Name <span class="keyword">as</span> Customers</span><br><span class="line"><span class="keyword">from</span></span><br><span class="line">    Customers <span class="keyword">left</span> <span class="keyword">join</span> Orders <span class="keyword">on</span> Customers.Id <span class="operator">=</span> Orders.CustomerId</span><br><span class="line"><span class="keyword">where</span></span><br><span class="line">    Orders.Id <span class="keyword">is</span> <span class="keyword">null</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>185.部门工资前三高的员工</title>
     <url>/2019/05/07/LeetCode_185-%E9%83%A8%E9%97%A8%E5%B7%A5%E8%B5%84%E5%89%8D%E4%B8%89%E9%AB%98%E7%9A%84%E5%91%98%E5%B7%A5/</url>
     <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"><br>编写一个 SQL 查询，找出每个部门工资前三高的员工。</p>
@@ -170,6 +170,25 @@
       </tags>
   </entry>
   <entry>
+    <title>2.两数相加</title>
+    <url>/2019/05/09/LeetCode_2-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/</url>
+    <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"><br>给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。</p>
+<span id="more"></span>
+<p>如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。</p>
+<p>您可以假设除了数字 0 之外，这两个数都不会以 0 开头。</p>
+<figure class="highlight clean"><table><tr><td class="code"><pre><span class="line">输入：(<span class="number">2</span> -&gt; <span class="number">4</span> -&gt; <span class="number">3</span>) + (<span class="number">5</span> -&gt; <span class="number">6</span> -&gt; <span class="number">4</span>)</span><br><span class="line">输出：<span class="number">7</span> -&gt; <span class="number">0</span> -&gt; <span class="number">8</span></span><br><span class="line">原因：<span class="number">342</span> + <span class="number">465</span> = <span class="number">807</span></span><br></pre></td></tr></table></figure>
+
+<p>解答：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"># class ListNode:  # 定义链表节点类</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.next = None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span>  <span class="comment"># solution解决方案</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addTwoNumbers</span>(<span class="params">self, l1, l2</span>):</span>  <span class="comment"># 定义两数相加函数</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type l1: ListNode</span></span><br><span class="line"><span class="string">        :type l2: ListNode</span></span><br><span class="line"><span class="string">        :rtype: ListNode</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment"># 如果有一个链表为空，返回另外一个</span></span><br><span class="line">        <span class="keyword">if</span> l1 <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">return</span> l2</span><br><span class="line">        <span class="keyword">if</span> l2 <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">return</span> l1</span><br><span class="line">        <span class="comment"># tmp是暂存（temporal）</span></span><br><span class="line">        tmp = ListNode(<span class="number">0</span>)  <span class="comment"># 引用ListNode类定义了一个链表节点并赋给tmp</span></span><br><span class="line">        <span class="comment"># res是重置（reset）</span></span><br><span class="line">        res = tmp  <span class="comment"># 赋值</span></span><br><span class="line">        <span class="comment"># flag 标示</span></span><br><span class="line">        flag = <span class="number">0</span>  <span class="comment"># 初始化</span></span><br><span class="line">        <span class="keyword">while</span> l1 <span class="keyword">or</span> l2:  <span class="comment"># l1或l2不为空就持续执行</span></span><br><span class="line">            tmp_sum = <span class="number">0</span>  <span class="comment"># 链表节点值的和</span></span><br><span class="line">            <span class="keyword">if</span> l1:  <span class="comment"># 如果l1不为空，把l1的某个节点值的和赋给tmp_sum</span></span><br><span class="line">                tmp_sum = l1.val  <span class="comment"># 把l1的某个节点的值赋给tmp_sum</span></span><br><span class="line">                l1 = l1.<span class="built_in">next</span></span><br><span class="line">            <span class="keyword">if</span> l2:  <span class="comment"># 如果l2不为空，把l2中和l1对应的节点的值加到tmp_sum</span></span><br><span class="line">                tmp_sum += l2.val</span><br><span class="line">                l2 = l2.<span class="built_in">next</span>  <span class="comment"># 指向下一个节点，为下一次的加和做准备</span></span><br><span class="line">            tmp_res = ((tmp_sum + flag) % <span class="number">10</span>)  <span class="comment"># 个位数字</span></span><br><span class="line">            flag = ((tmp_sum + flag) // <span class="number">10</span>)  <span class="comment"># 进位的数</span></span><br><span class="line">            res.<span class="built_in">next</span> = ListNode(tmp_res)</span><br><span class="line">            res = res.<span class="built_in">next</span>  <span class="comment"># res后移</span></span><br><span class="line">            <span class="keyword">if</span> flag:  <span class="comment"># 如果flag不为0，就是对应位置相加后有进位</span></span><br><span class="line">                res.<span class="built_in">next</span> = ListNode(<span class="number">1</span>)  <span class="comment"># res的下一节点设为1</span></span><br><span class="line">        res = tmp.<span class="built_in">next</span>  <span class="comment"># 赋值</span></span><br><span class="line">        <span class="keyword">del</span> tmp  <span class="comment"># 删除tmp变量</span></span><br><span class="line">        <span class="keyword">return</span> res  <span class="comment"># 返回res链表</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>LeetCode</category>
+        <category>链表</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>196.删除重复的电子邮箱</title>
     <url>/2019/05/02/LeetCode_196-%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E7%9A%84%E7%94%B5%E5%AD%90%E9%82%AE%E7%AE%B1/</url>
     <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"><br>编写一个 SQL 查询，来删除 Person 表中所有重复的电子邮箱，<br>重复的邮箱里只保留 Id 最小 的那个。</p>
@@ -187,25 +206,6 @@
       <categories>
         <category>LeetCode</category>
         <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2.两数相加</title>
-    <url>/2019/05/09/LeetCode_2-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/</url>
-    <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"><br>给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。</p>
-<span id="more"></span>
-<p>如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。</p>
-<p>您可以假设除了数字 0 之外，这两个数都不会以 0 开头。</p>
-<figure class="highlight clean"><table><tr><td class="code"><pre><span class="line">输入：(<span class="number">2</span> -&gt; <span class="number">4</span> -&gt; <span class="number">3</span>) + (<span class="number">5</span> -&gt; <span class="number">6</span> -&gt; <span class="number">4</span>)</span><br><span class="line">输出：<span class="number">7</span> -&gt; <span class="number">0</span> -&gt; <span class="number">8</span></span><br><span class="line">原因：<span class="number">342</span> + <span class="number">465</span> = <span class="number">807</span></span><br></pre></td></tr></table></figure>
-
-<p>解答：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"># class ListNode:  # 定义链表节点类</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.next = None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span>  <span class="comment"># solution解决方案</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addTwoNumbers</span>(<span class="params">self, l1, l2</span>):</span>  <span class="comment"># 定义两数相加函数</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type l1: ListNode</span></span><br><span class="line"><span class="string">        :type l2: ListNode</span></span><br><span class="line"><span class="string">        :rtype: ListNode</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment"># 如果有一个链表为空，返回另外一个</span></span><br><span class="line">        <span class="keyword">if</span> l1 <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">return</span> l2</span><br><span class="line">        <span class="keyword">if</span> l2 <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">            <span class="keyword">return</span> l1</span><br><span class="line">        <span class="comment"># tmp是暂存（temporal）</span></span><br><span class="line">        tmp = ListNode(<span class="number">0</span>)  <span class="comment"># 引用ListNode类定义了一个链表节点并赋给tmp</span></span><br><span class="line">        <span class="comment"># res是重置（reset）</span></span><br><span class="line">        res = tmp  <span class="comment"># 赋值</span></span><br><span class="line">        <span class="comment"># flag 标示</span></span><br><span class="line">        flag = <span class="number">0</span>  <span class="comment"># 初始化</span></span><br><span class="line">        <span class="keyword">while</span> l1 <span class="keyword">or</span> l2:  <span class="comment"># l1或l2不为空就持续执行</span></span><br><span class="line">            tmp_sum = <span class="number">0</span>  <span class="comment"># 链表节点值的和</span></span><br><span class="line">            <span class="keyword">if</span> l1:  <span class="comment"># 如果l1不为空，把l1的某个节点值的和赋给tmp_sum</span></span><br><span class="line">                tmp_sum = l1.val  <span class="comment"># 把l1的某个节点的值赋给tmp_sum</span></span><br><span class="line">                l1 = l1.<span class="built_in">next</span></span><br><span class="line">            <span class="keyword">if</span> l2:  <span class="comment"># 如果l2不为空，把l2中和l1对应的节点的值加到tmp_sum</span></span><br><span class="line">                tmp_sum += l2.val</span><br><span class="line">                l2 = l2.<span class="built_in">next</span>  <span class="comment"># 指向下一个节点，为下一次的加和做准备</span></span><br><span class="line">            tmp_res = ((tmp_sum + flag) % <span class="number">10</span>)  <span class="comment"># 个位数字</span></span><br><span class="line">            flag = ((tmp_sum + flag) // <span class="number">10</span>)  <span class="comment"># 进位的数</span></span><br><span class="line">            res.<span class="built_in">next</span> = ListNode(tmp_res)</span><br><span class="line">            res = res.<span class="built_in">next</span>  <span class="comment"># res后移</span></span><br><span class="line">            <span class="keyword">if</span> flag:  <span class="comment"># 如果flag不为0，就是对应位置相加后有进位</span></span><br><span class="line">                res.<span class="built_in">next</span> = ListNode(<span class="number">1</span>)  <span class="comment"># res的下一节点设为1</span></span><br><span class="line">        res = tmp.<span class="built_in">next</span>  <span class="comment"># 赋值</span></span><br><span class="line">        <span class="keyword">del</span> tmp  <span class="comment"># 删除tmp变量</span></span><br><span class="line">        <span class="keyword">return</span> res  <span class="comment"># 返回res链表</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>LeetCode</category>
-        <category>链表</category>
       </categories>
       <tags>
         <tag>LeetCode</tag>
@@ -954,6 +954,21 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
+    <title>SAS_箱线图</title>
+    <url>/2021/04/01/SAS_%E7%AE%B1%E7%BA%BF%E5%9B%BE/</url>
+    <content><![CDATA[<p><img src="/pictures/SAS.jpeg"></p>
+<span id="more"></span>
+
+]]></content>
+      <categories>
+        <category>数据库</category>
+        <category>SAS</category>
+      </categories>
+      <tags>
+        <tag>SAS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>SAS Studio</title>
     <url>/2021/03/12/SAS_%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%AF%91/</url>
     <content><![CDATA[<p><img src="/pictures/SAS.jpeg"></p>
@@ -1028,21 +1043,6 @@ tail -f ping.log（查看日志）
 </tbody></table>
 <h1 id="测试用例"><a href="#测试用例" class="headerlink" title="测试用例"></a>测试用例</h1><p>&#160; &#160; &#160; &#160;我们可以随意写几个数字来看一下这个输入和输出，input x 6.限制了读入数据的长度和格式即为无小数位的五位整数，format X DOLLAR10.2则规定了显示的格式，这里我们可以看到数据的完全显示、美元符号和千位逗号的显示优先级。</p>
 <img src="/2021/03/13/SAS_%E6%95%B0%E5%AD%97%E6%A0%BC%E5%BC%8F/test.jpg" class="">
-]]></content>
-      <categories>
-        <category>数据库</category>
-        <category>SAS</category>
-      </categories>
-      <tags>
-        <tag>SAS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SAS_箱线图</title>
-    <url>/2021/04/01/SAS_%E7%AE%B1%E7%BA%BF%E5%9B%BE/</url>
-    <content><![CDATA[<p><img src="/pictures/SAS.jpeg"></p>
-<span id="more"></span>
-
 ]]></content>
       <categories>
         <category>数据库</category>
@@ -1242,6 +1242,23 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
+    <title>DNS</title>
+    <url>/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_DNS/</url>
+    <content><![CDATA[<p><img src="/pictures/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.jpg"></p>
+<span id="more"></span>
+<p>域名和IP地址相互映射的一个分布式数据库。</p>
+<p>打个比方就是一本记载名字和外号的字典</p>
+<img src="/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_DNS/DNS.jpg" class="">]]></content>
+      <categories>
+        <category>计算机网络</category>
+        <category>DNS</category>
+      </categories>
+      <tags>
+        <tag>基础</tag>
+        <tag>网络</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>正则表达式</title>
     <url>/2019/06/08/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
     <content><![CDATA[<p><img src="/pictures/regex.jpg"></p>
@@ -1378,7 +1395,7 @@ tail -f ping.log（查看日志）
 
 <p>[\w.] 匹配的是字母数字或者 . ，在其后面加上 + ，表示匹配多次。在字符集合 [ ] 里，. 不是元字符；</p>
 <p><em><strong>匹配结果</strong></em></p>
-<p><a href="mailto:&#97;&#98;&#x63;&#46;&#x64;&#x65;&#102;&#x40;&#x71;&#x71;&#46;&#99;&#111;&#109;">&#97;&#98;&#x63;&#46;&#x64;&#x65;&#102;&#x40;&#x71;&#x71;&#46;&#99;&#111;&#109;</a></p>
+<p><a href="mailto:&#97;&#98;&#x63;&#x2e;&#x64;&#x65;&#102;&#x40;&#113;&#x71;&#x2e;&#x63;&#111;&#x6d;">&#97;&#98;&#x63;&#x2e;&#x64;&#x65;&#102;&#x40;&#113;&#x71;&#x2e;&#x63;&#111;&#x6d;</a></p>
 <ul>
 <li><p>{n} 匹配 n 个字符</p>
 </li>
@@ -1411,23 +1428,6 @@ tail -f ping.log（查看日志）
       </categories>
       <tags>
         <tag>RegEx</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>DNS</title>
-    <url>/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_DNS/</url>
-    <content><![CDATA[<p><img src="/pictures/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.jpg"></p>
-<span id="more"></span>
-<p>域名和IP地址相互映射的一个分布式数据库。</p>
-<p>打个比方就是一本记载名字和外号的字典</p>
-<img src="/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_DNS/DNS.jpg" class="">]]></content>
-      <categories>
-        <category>计算机网络</category>
-        <category>DNS</category>
-      </categories>
-      <tags>
-        <tag>基础</tag>
-        <tag>网络</tag>
       </tags>
   </entry>
   <entry>
