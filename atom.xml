@@ -71,9 +71,9 @@
     <link href="http://wuranim.github.io/2021/08/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-CSF1/"/>
     <id>http://wuranim.github.io/2021/08/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-CSF1/</id>
     <published>2021-08-03T12:12:21.000Z</published>
-    <updated>2021-12-30T05:32:54.168Z</updated>
+    <updated>2021-12-30T09:57:02.854Z</updated>
     
-    <content type="html"><![CDATA[<img src="/2021/08/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-CSF1/1.png" class=""><span id="more"></span><p>&#160; &#160; &#160; &#160;做过很多复杂的动画，但这个脑脊液(CH1)和血管(CH2)双色成像是最喜欢的几个之一，虽然还是半成品。<br>&#160; &#160; &#160; &#160;我们需要基于采集的数据，做出脑脊液附着在血管(从MCA脑表面初级血管一直进入脑内)上的效果，按理说需先分割血管部分，CH2标记得很一般，而CH1信号不错，分割只能先打枪再画靶子，通过先对CH1通道分割得到所需ROI的label，再来分割CH2，其中还有一些细节如微血管的分割这里不去展开。<br>&#160; &#160; &#160; &#160;这根血管真的很漂亮，很有张力。</p><div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"autoplay":true,"hotkey":true,"preload":"metadata","video":{"url":"http://r4tk9xtxx.hn-bkt.clouddn.com/csf1.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script><blockquote><p>请移动端播放</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<img src="/2021/08/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-CSF1/1.png" class=""><span id="more"></span><p>&#160; &#160; &#160; &#160;做过很多复杂的视频，但这个脑脊液(CH1)和血管(CH2)双色成像是最喜欢的几个之一，虽然还是半成品。<br>&#160; &#160; &#160; &#160;我们需要基于采集的数据，做出脑脊液附着在血管(从MCA脑表面初级血管一直进入脑内)上的效果，按理说需先分割血管部分，CH2标记得很一般，而CH1信号不错，分割只能先打枪再画靶子，通过先对CH1通道分割得到所需ROI的label，再来分割CH2，其中还有一些细节如微血管的分割这里不去展开。<br>&#160; &#160; &#160; &#160;这根血管真的很漂亮，很有张力。</p><div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"autoplay":true,"hotkey":true,"preload":"metadata","video":{"url":"http://r4tk9xtxx.hn-bkt.clouddn.com/csf1.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script><blockquote><p>请移动端播放</p></blockquote>]]></content>
     
     
     <summary type="html">&lt;img src=&quot;/2021/08/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-CSF1/1.png&quot; class=&quot;&quot;&gt;</summary>
@@ -184,13 +184,13 @@
   </entry>
   
   <entry>
-    <title>SAS Studio</title>
+    <title>SAS</title>
     <link href="http://wuranim.github.io/2021/03/12/SAS_%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%AF%91/"/>
     <id>http://wuranim.github.io/2021/03/12/SAS_%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%AF%91/</id>
     <published>2021-03-12T05:32:50.000Z</published>
-    <updated>2021-12-29T07:57:09.142Z</updated>
+    <updated>2021-12-30T10:12:39.617Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/pictures/SAS.jpeg"></p><span id="more"></span><h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>&#160; &#160; &#160; &#160;SAS常规大小有二三十个G，下载安装运行对于一般的电脑都有点吃力，SAS Studio提供了一个在线编写、调试代码的环境，可以上传自己的数据。</p><h1 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h1><p><a href="https://welcome.oda.sas.com/login">网站地址</a>&#160; &#160;用邮箱(无需.edu)注册一个账号，根据分配的ID和自设密码登录云服务器，选亚太地区。</p><h1 id="测试环境"><a href="#测试环境" class="headerlink" title="测试环境"></a>测试环境</h1><p>&#160; &#160; &#160; &#160;右键单击 文件(主目录) 新建文件即可，小人那个图标就是run。<br><img src="./dvp.png"></p><p><a href="https://pan.baidu.com/s/10xT7DKmQnmcplXJpCgo_5Q">9.1免安装版，提取码：qelx</a></p>]]></content>
+    <content type="html"><![CDATA[<p><img src="/pictures/SAS.jpeg"></p><span id="more"></span><h1 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h1><p>&#160; &#160; &#160; &#160;SAS常规大小有二三十个G，下载安装运行对于一般的电脑都有点吃力，这里提供两种，Windows9.1免安装版和在线版。</p><h2 id="SAS-9-1-免安装版"><a href="#SAS-9-1-免安装版" class="headerlink" title="SAS_9.1 免安装版"></a>SAS_9.1 免安装版</h2><p><a href="https://pan.baidu.com/s/10xT7DKmQnmcplXJpCgo_5Q">提取码：qelx</a>&#160; &#160;解压完就可以用。</p><h2 id="SAS-Studio-在线版"><a href="#SAS-Studio-在线版" class="headerlink" title="SAS_Studio 在线版"></a>SAS_Studio 在线版</h2><h3 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h3><p><a href="https://welcome.oda.sas.com/login">网站地址</a>&#160; &#160;用邮箱(无需.edu)注册一个账号，根据分配的ID和自设密码登录云服务器，选亚太地区。</p><h3 id="测试环境"><a href="#测试环境" class="headerlink" title="测试环境"></a>测试环境</h3><p>&#160; &#160; &#160; &#160;右键单击 文件(主目录) 新建文件即可，小人那个图标就是run。<br><img src="./dvp.png"></p>]]></content>
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;/pictures/SAS.jpeg&quot;&gt;&lt;/p&gt;</summary>
