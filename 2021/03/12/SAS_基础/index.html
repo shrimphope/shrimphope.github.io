@@ -30,7 +30,7 @@
 <meta property="og:image" content="http://wuranim.github.io/2021/03/12/SAS_%E5%9F%BA%E7%A1%80/dvp.png">
 <meta property="og:image" content="http://wuranim.github.io/2021/03/12/SAS_%E5%9F%BA%E7%A1%80/%E6%95%B0%E6%8D%AE%E6%AD%A5.png">
 <meta property="article:published_time" content="2021-03-12T05:32:50.000Z">
-<meta property="article:modified_time" content="2021-12-31T07:39:22.721Z">
+<meta property="article:modified_time" content="2021-12-31T07:54:30.153Z">
 <meta property="article:author" content="Ran">
 <meta property="article:tag" content="SAS">
 <meta name="twitter:card" content="summary">
@@ -281,6 +281,9 @@
 <h1 id="三-BASE-SAS"><a href="#三-BASE-SAS" class="headerlink" title="三.BASE SAS"></a>三.BASE SAS</h1><h2 id="1-语言概述"><a href="#1-语言概述" class="headerlink" title="1.语言概述"></a>1.语言概述</h2><p>程序构成: 数据步、过程步和全程语句。</p>
 <figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">TITLE</span> ‘2021 级学生名单’;<span class="comment">/*全程语句*/</span></span><br><span class="line"><span class="meta">LIBNAME</span> mylib “c:\sasdata”;</span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">DATA </span>mylib.stud; <span class="comment">/*数据步 */</span></span><br><span class="line"><span class="meta">INPUT</span> id $ name $ gender $ age hometown $ ;</span><br><span class="line"><span class="emphasis">cards;</span></span><br><span class="line"><span class="emphasis">202101001 周国兴 男 19 长沙</span></span><br><span class="line"><span class="emphasis">202101002 李铭 女 18 广西壮族自治区</span></span><br><span class="line"><span class="emphasis">202102003 彭晓钢 男 19 广州</span></span><br><span class="line"><span class="emphasis">202102004 胡大伟 男 18 武汉</span></span><br><span class="line"><span class="emphasis">;</span></span><br><span class="line"><span class="emphasis"></span><span class="keyword"></span></span><br><span class="line"><span class="keyword">PROC PRINT </span>data=mylib.stud; <span class="comment">/*过程步 */</span></span><br><span class="line"><span class="keyword">RUN;</span></span><br></pre></td></tr></table></figure>
 <h2 id="2-数据步"><a href="#2-数据步" class="headerlink" title="2.数据步"></a>2.数据步</h2><p>思维导图(这不是一个新手教程，是个人学习的记录，有一定省略，后续常用的会展开)<br><img src="./%E6%95%B0%E6%8D%AE%E6%AD%A5.png"></p>
+<hr>
+<p>本文作者： Ran<br>版权声明： 本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</p>
+<hr>
 
     </div>
 
