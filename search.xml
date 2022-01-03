@@ -1038,7 +1038,7 @@ tail -f ping.log（查看日志）
 <div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"autoplay":true,"hotkey":true,"preload":"metadata","video":{"url":"http://r4tk9xtxx.hn-bkt.clouddn.com/csf1.mp4"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 
 <blockquote>
-<p>请移动端播放</p>
+<p>移动端播放</p>
 </blockquote>
 ]]></content>
       <categories>
