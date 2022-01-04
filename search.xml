@@ -663,6 +663,22 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
+    <title>Web框架_Flask</title>
+    <url>/2019/05/23/Python_Web%E6%A1%86%E6%9E%B6_Flask/</url>
+    <content><![CDATA[<p><img src="/pictures/python.jpg"></p>
+<p>Flask是一个Python构建的轻量级WEB框架。</p>
+<span id="more"></span>
+<p>官网：<a href="http://flask.pocoo.org/">http://flask.pocoo.org/</a><br>中文文档：<a href="http://docs.jinkan.org/docs/flask/">http://docs.jinkan.org/docs/flask/</a><br>demo：<a href="https://github.com/cimex7/new-watchlist">https://github.com/cimex7/new-watchlist</a></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Flask</category>
+      </categories>
+      <tags>
+        <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Web框架_Django</title>
     <url>/2019/03/22/Python_Web%E6%A1%86%E6%9E%B6_Django/</url>
     <content><![CDATA[<p><img src="/pictures/python.jpg"></p>
@@ -677,22 +693,6 @@ tail -f ping.log（查看日志）
       <categories>
         <category>Python</category>
         <category>Django</category>
-      </categories>
-      <tags>
-        <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Web框架_Flask</title>
-    <url>/2019/05/23/Python_Web%E6%A1%86%E6%9E%B6_Flask/</url>
-    <content><![CDATA[<p><img src="/pictures/python.jpg"></p>
-<p>Flask是一个Python构建的轻量级WEB框架。</p>
-<span id="more"></span>
-<p>官网：<a href="http://flask.pocoo.org/">http://flask.pocoo.org/</a><br>中文文档：<a href="http://docs.jinkan.org/docs/flask/">http://docs.jinkan.org/docs/flask/</a><br>demo：<a href="https://github.com/cimex7/new-watchlist">https://github.com/cimex7/new-watchlist</a></p>
-]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Flask</category>
       </categories>
       <tags>
         <tag>Web</tag>
@@ -939,6 +939,36 @@ tail -f ping.log（查看日志）
       </categories>
   </entry>
   <entry>
+    <title>SAS_图</title>
+    <url>/2021/03/15/SAS_%E5%9B%BE%E8%A1%A8/</url>
+    <content><![CDATA[<img src="/2021/03/15/SAS_%E5%9B%BE%E8%A1%A8/4.png" class="">
+
+<span id="more"></span>
+<img src="/2021/03/15/SAS_%E5%9B%BE%E8%A1%A8/2.jpg" class="">
+<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>&#160; &#160; &#160; &#160;如图，把一个小鼠脑海马区域血管分割出来了, 下面简单的给出两个参数的量化分析。</p>
+<img src="/2021/03/15/SAS_%E5%9B%BE%E8%A1%A8/5.png" class="">
+<p>&#160; &#160; &#160; &#160;从分割的体素图像A可以直观的看到右侧海马区域因为受到病灶的挤压，血管形态较正常的左侧有一定变形，血管的形变萎缩导致血管容积的减少，同时挤压导致血管的粘连使得无法通过常规手段正确的分割出主要的血管丛，所以C图中右侧海马血管出现了一些极大异常值。D图则是为了测试SAS的散点图效果(同一根血管的体积和表面积是一个线性的正相关)。</p>
+<h1 id="实操过程"><a href="#实操过程" class="headerlink" title="实操过程"></a>实操过程</h1><blockquote>
+<p>导入预处理完的.xlxs或者.csv文件</p>
+</blockquote>
+<figure class="highlight sas"><table><tr><td class="code"><pre><span class="line"><span class="meta">FILENAME</span> REFFILE <span class="string">&#x27;./Hipp_Label-Analysis.xlsx&#x27;</span>;</span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">PROC IMPORT </span>DATAFILE=REFFILE    </span><br><span class="line">	DBMS=xlsx</span><br><span class="line">	<span class="meta">OUT</span>=work.import;</span><br><span class="line">	GETNAMES=yes;</span><br><span class="line"><span class="keyword">RUN;</span></span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">PROC CONTENTS </span>DATA=work.import; RUN; <span class="comment">/*可查看导入文件信息*/</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>分析变量关系</p>
+</blockquote>
+<figure class="highlight sas"><table><tr><td class="code"><pre><span class="line"><span class="keyword">PROC SGPLOT </span> DATA=work.import;</span><br><span class="line">	VBOX volume3d / CATEGORY=hipp;</span><br><span class="line"><span class="keyword">RUN;</span> </span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">PROC SGSCATTER </span>  DATA=work.import;</span><br><span class="line">	COMPARE y=volume3d  <span class="meta">x</span>=area3d / <span class="meta">GROUP</span>=hipp ELLIPSE=(ALPHA =0.02 TYPE=predicted);  <span class="comment">/*绘制椭圆来预测相关性的强度*/</span></span><br><span class="line"><span class="keyword">RUN;</span> </span><br></pre></td></tr></table></figure>
+<hr>
+<p>本文作者： Ran<br>版权声明： 本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</p>
+<hr>
+]]></content>
+      <categories>
+        <category>数据库</category>
+        <category>SAS</category>
+      </categories>
+      <tags>
+        <tag>SAS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>BASE SAS</title>
     <url>/2021/03/12/SAS_%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<p><img src="/pictures/SAS.jpeg"></p>
@@ -1020,6 +1050,10 @@ tail -f ping.log（查看日志）
 </tbody></table>
 <h1 id="测试用例"><a href="#测试用例" class="headerlink" title="测试用例"></a>测试用例</h1><p>&#160; &#160; &#160; &#160;我们可以随意写几个数字来看一下这个输入和输出，input x 6.限制了读入数据的长度和格式即为无小数位的五位整数，format X DOLLAR10.2则规定了显示的格式，这里我们可以看到数据的完全显示、美元符号和千位逗号的显示优先级。</p>
 <img src="/2021/03/13/SAS_%E6%95%B0%E5%AD%97%E6%A0%BC%E5%BC%8F/test.jpg" class="">
+
+<hr>
+<p>本文作者： Ran<br>版权声明： 本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</p>
+<hr>
 ]]></content>
       <categories>
         <category>数据库</category>
@@ -1219,6 +1253,23 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
+    <title>DNS</title>
+    <url>/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_DNS/</url>
+    <content><![CDATA[<p><img src="/pictures/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.jpg"></p>
+<span id="more"></span>
+<p>域名和IP地址相互映射的一个分布式数据库。</p>
+<p>打个比方就是一本记载名字和外号的字典</p>
+<img src="/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_DNS/DNS.jpg" class="">]]></content>
+      <categories>
+        <category>计算机网络</category>
+        <category>DNS</category>
+      </categories>
+      <tags>
+        <tag>基础</tag>
+        <tag>网络</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>正则表达式</title>
     <url>/2019/06/08/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
     <content><![CDATA[<p><img src="/pictures/regex.jpg"></p>
@@ -1355,7 +1406,7 @@ tail -f ping.log（查看日志）
 
 <p>[\w.] 匹配的是字母数字或者 . ，在其后面加上 + ，表示匹配多次。在字符集合 [ ] 里，. 不是元字符；</p>
 <p><em><strong>匹配结果</strong></em></p>
-<p><a href="mailto:&#x61;&#x62;&#99;&#x2e;&#100;&#x65;&#102;&#64;&#x71;&#x71;&#46;&#x63;&#111;&#x6d;">&#x61;&#x62;&#99;&#x2e;&#100;&#x65;&#102;&#64;&#x71;&#x71;&#46;&#x63;&#111;&#x6d;</a></p>
+<p><a href="mailto:&#x61;&#98;&#x63;&#46;&#x64;&#x65;&#102;&#64;&#113;&#x71;&#46;&#x63;&#x6f;&#x6d;">&#x61;&#98;&#x63;&#46;&#x64;&#x65;&#102;&#64;&#113;&#x71;&#46;&#x63;&#x6f;&#x6d;</a></p>
 <ul>
 <li><p>{n} 匹配 n 个字符</p>
 </li>
@@ -1388,23 +1439,6 @@ tail -f ping.log（查看日志）
       </categories>
       <tags>
         <tag>RegEx</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>DNS</title>
-    <url>/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_DNS/</url>
-    <content><![CDATA[<p><img src="/pictures/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.jpg"></p>
-<span id="more"></span>
-<p>域名和IP地址相互映射的一个分布式数据库。</p>
-<p>打个比方就是一本记载名字和外号的字典</p>
-<img src="/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_DNS/DNS.jpg" class="">]]></content>
-      <categories>
-        <category>计算机网络</category>
-        <category>DNS</category>
-      </categories>
-      <tags>
-        <tag>基础</tag>
-        <tag>网络</tag>
       </tags>
   </entry>
   <entry>
