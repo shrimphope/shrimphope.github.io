@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>git和github</title>
-    <url>/2019/04/10/Git_&amp;Github/</url>
-    <content><![CDATA[<p><img src="/pictures/git+github.jpg"></p>
+    <title>1.两数之和</title>
+    <url>/2019/05/13/LeetCode_1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</url>
+    <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"></p>
+<p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。</p>
 <span id="more"></span>
-<h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><h2 id="git三个分区和远程仓库关系"><a href="#git三个分区和远程仓库关系" class="headerlink" title="git三个分区和远程仓库关系"></a>git三个分区和远程仓库关系</h2><img src="/2019/04/10/Git_&Github/git%E5%88%86%E5%8C%BA.jpg" class="">
-]]></content>
+<p>你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。</p>
+<p>示例:</p>
+<figure class="highlight inform7"><table><tr><td class="code"><pre><span class="line">给定 nums = <span class="comment">[2, 7, 11, 15]</span>, target = 9</span><br><span class="line"></span><br><span class="line">因为 nums<span class="comment">[0]</span> + nums<span class="comment">[1]</span> = 2 + 7 = 9</span><br><span class="line">所以返回 <span class="comment">[0, 1]</span></span><br></pre></td></tr></table></figure>
+
+<p>解答：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type nums: List[int]</span></span><br><span class="line"><span class="string">        :type target: int</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span>   </span><br><span class="line">        <span class="comment">#创建一个空字典        </span></span><br><span class="line">        n = <span class="built_in">len</span>(nums)</span><br><span class="line">        d = &#123;&#125;</span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            a = target - nums[x]</span><br><span class="line">            <span class="comment">#字典d中存在nums[x]时</span></span><br><span class="line">            <span class="keyword">if</span> nums[x] <span class="keyword">in</span> d:</span><br><span class="line">                <span class="keyword">return</span> d[nums[x]],x</span><br><span class="line">            <span class="comment">#否则往字典增加键/值对</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                d[a] = x</span><br><span class="line">        <span class="comment">#边往字典增加键/值对，边与nums[x]进行对比</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>版本控制</category>
-        <category>GIT</category>
+        <category>LeetCode</category>
+        <category>数组</category>
       </categories>
       <tags>
-        <tag>git</tag>
+        <tag>LeetCode</tag>
       </tags>
   </entry>
   <entry>
@@ -37,23 +42,18 @@
       </tags>
   </entry>
   <entry>
-    <title>1.两数之和</title>
-    <url>/2019/05/13/LeetCode_1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</url>
-    <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"></p>
-<p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。</p>
+    <title>git和github</title>
+    <url>/2019/04/10/Git_&amp;Github/</url>
+    <content><![CDATA[<p><img src="/pictures/git+github.jpg"></p>
 <span id="more"></span>
-<p>你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。</p>
-<p>示例:</p>
-<figure class="highlight inform7"><table><tr><td class="code"><pre><span class="line">给定 nums = <span class="comment">[2, 7, 11, 15]</span>, target = 9</span><br><span class="line"></span><br><span class="line">因为 nums<span class="comment">[0]</span> + nums<span class="comment">[1]</span> = 2 + 7 = 9</span><br><span class="line">所以返回 <span class="comment">[0, 1]</span></span><br></pre></td></tr></table></figure>
-
-<p>解答：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type nums: List[int]</span></span><br><span class="line"><span class="string">        :type target: int</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span>   </span><br><span class="line">        <span class="comment">#创建一个空字典        </span></span><br><span class="line">        n = <span class="built_in">len</span>(nums)</span><br><span class="line">        d = &#123;&#125;</span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">            a = target - nums[x]</span><br><span class="line">            <span class="comment">#字典d中存在nums[x]时</span></span><br><span class="line">            <span class="keyword">if</span> nums[x] <span class="keyword">in</span> d:</span><br><span class="line">                <span class="keyword">return</span> d[nums[x]],x</span><br><span class="line">            <span class="comment">#否则往字典增加键/值对</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                d[a] = x</span><br><span class="line">        <span class="comment">#边往字典增加键/值对，边与nums[x]进行对比</span></span><br></pre></td></tr></table></figure>]]></content>
+<h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><h2 id="git三个分区和远程仓库关系"><a href="#git三个分区和远程仓库关系" class="headerlink" title="git三个分区和远程仓库关系"></a>git三个分区和远程仓库关系</h2><img src="/2019/04/10/Git_&Github/git%E5%88%86%E5%8C%BA.jpg" class="">
+]]></content>
       <categories>
-        <category>LeetCode</category>
-        <category>数组</category>
+        <category>版本控制</category>
+        <category>GIT</category>
       </categories>
       <tags>
-        <tag>LeetCode</tag>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -193,6 +193,49 @@
       </tags>
   </entry>
   <entry>
+    <title>3.无重复字符的最长子串</title>
+    <url>/2019/05/10/LeetCode_3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/</url>
+    <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"><br>给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。</p>
+<span id="more"></span>
+<p>示例 1:</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">输入: &quot;abcabcbb&quot;</span></span><br><span class="line"><span class="section">输出: 3 </span></span><br><span class="line"><span class="section">解释: 因为无重复字符的最长子串是 &quot;abc&quot;，所以其长度为 3。</span></span><br></pre></td></tr></table></figure>
+<p>示例 2:</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">输入: &quot;bbbbb&quot;</span></span><br><span class="line"><span class="section">输出: 1</span></span><br><span class="line"><span class="section">解释: 因为无重复字符的最长子串是 &quot;b&quot;，所以其长度为 1。</span></span><br></pre></td></tr></table></figure>
+<p>示例 3:</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">输入: &quot;pwwkew&quot;</span></span><br><span class="line"><span class="section">输出: 3</span></span><br><span class="line"><span class="section">解释: 因为无重复字符的最长子串是 &quot;wke&quot;，所以其长度为 3。</span></span><br><span class="line">     请注意，你的答案必须是 子串 的长度，<span class="string">&quot;pwke&quot;</span> 是一个子序列，不是子串。</span><br></pre></td></tr></table></figure>
+
+<p>解答:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">lengthOfLongestSubstring</span>(<span class="params">self, s</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type s: str</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment"># 存储历史循环中最长的子串长度</span></span><br><span class="line">        max_len = <span class="number">0</span></span><br><span class="line">        <span class="comment"># 判断传入的字符串是否为空</span></span><br><span class="line">        <span class="keyword">if</span> s <span class="keyword">is</span> <span class="literal">None</span> <span class="keyword">or</span> <span class="built_in">len</span>(s) == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> max_len</span><br><span class="line">        <span class="comment"># 定义一个字典，存储不重复的字符和字符所在的下标</span></span><br><span class="line">        str_dict = &#123;&#125;</span><br><span class="line">        <span class="comment"># 存储每次循环中最长的子串长度</span></span><br><span class="line">        one_max = <span class="number">0</span></span><br><span class="line">        <span class="comment">#记录最近重复字符所在的位置+1</span></span><br><span class="line">        start = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(s)):</span><br><span class="line">            <span class="comment"># 判断当前字符是否在字典中和当前字符的下标是否大于等于最近重复字符的所在位置</span></span><br><span class="line">            <span class="keyword">if</span> s[i] <span class="keyword">in</span> str_dict <span class="keyword">and</span> str_dict[s[i]] &gt;= start:</span><br><span class="line">                <span class="comment"># 记录当前字符的值+1</span></span><br><span class="line">                start = str_dict[s[i]]</span><br><span class="line">            <span class="comment"># 在此次循环中，最大的不重复子串的长度</span></span><br><span class="line">            one_max = i - start+<span class="number">1</span></span><br><span class="line">            <span class="comment"># 把当前位置覆盖字典中的位置</span></span><br><span class="line">            str_dict[s[i]] = i</span><br><span class="line">            <span class="comment"># 比较此次循环的最大不重复子串长度和历史循环最大不重复子串长度</span></span><br><span class="line">            max_len = <span class="built_in">max</span>(max_len, one_max)</span><br><span class="line">        <span class="keyword">return</span> max_len</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>LeetCode</category>
+        <category>字符串</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>35.搜索插入位置</title>
+    <url>/2019/05/08/LeetCode_35-%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/</url>
+    <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"><br>给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。</p>
+<span id="more"></span>
+<p>你可以假设数组中无重复元素。</p>
+<p>示例 1:</p>
+<p>输入: [1,3,5,6], 5<br>输出: 2<br>示例 2:</p>
+<p>输入: [1,3,5,6], 2<br>输出: 1<br>示例 3:</p>
+<p>输入: [1,3,5,6], 7<br>输出: 4<br>示例 4:</p>
+<p>输入: [1,3,5,6], 0<br>输出: 0</p>
+<p>解答</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">searchInsert</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">for</span> i,num <span class="keyword">in</span> <span class="built_in">enumerate</span>(nums):<span class="comment">#没超过列表边界</span></span><br><span class="line">            <span class="keyword">if</span> target&lt;=num:</span><br><span class="line">                <span class="keyword">return</span> i</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">len</span>(nums)<span class="comment">#若超出</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>LeetCode</category>
+        <category>二分查找</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2.两数相加</title>
     <url>/2019/05/09/LeetCode_2-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/</url>
     <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"><br>给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。</p>
@@ -238,40 +281,17 @@
       </tags>
   </entry>
   <entry>
-    <title>3.无重复字符的最长子串</title>
-    <url>/2019/05/10/LeetCode_3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/</url>
-    <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"><br>给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。</p>
+    <title>输入有序数组</title>
+    <url>/2019/05/12/LeetCode_%E4%BA%8C%E5%88%86%E6%B3%95_%E8%BE%93%E5%85%A5%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/</url>
+    <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"><br>给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。</p>
 <span id="more"></span>
-<p>示例 1:</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">输入: &quot;abcabcbb&quot;</span></span><br><span class="line"><span class="section">输出: 3 </span></span><br><span class="line"><span class="section">解释: 因为无重复字符的最长子串是 &quot;abc&quot;，所以其长度为 3。</span></span><br></pre></td></tr></table></figure>
-<p>示例 2:</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">输入: &quot;bbbbb&quot;</span></span><br><span class="line"><span class="section">输出: 1</span></span><br><span class="line"><span class="section">解释: 因为无重复字符的最长子串是 &quot;b&quot;，所以其长度为 1。</span></span><br></pre></td></tr></table></figure>
-<p>示例 3:</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">输入: &quot;pwwkew&quot;</span></span><br><span class="line"><span class="section">输出: 3</span></span><br><span class="line"><span class="section">解释: 因为无重复字符的最长子串是 &quot;wke&quot;，所以其长度为 3。</span></span><br><span class="line">     请注意，你的答案必须是 子串 的长度，<span class="string">&quot;pwke&quot;</span> 是一个子序列，不是子串。</span><br></pre></td></tr></table></figure>
+<p>函数应该返回这两个下标值 index1 和 index2，其中 index1 必须小于 index2。</p>
+<p>说明:</p>
+<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">1</span>.返回的下标值（index<span class="number">1</span> 和 index<span class="number">2</span>）不是从零开始的。</span><br><span class="line"><span class="attribute">2</span>.你可以假设每个输入只对应唯一的答案，而且你不可以重复使用相同的元素。</span><br></pre></td></tr></table></figure>
+<p>示例:</p>
+<figure class="highlight nix"><table><tr><td class="code"><pre><span class="line">输入: <span class="attr">numbers</span> = [<span class="number">2</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span>], <span class="attr">target</span> = <span class="number">9</span></span><br><span class="line">输出: [<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">解释: <span class="number">2</span> 与 <span class="number">7</span> 之和等于目标数 <span class="number">9</span> 。因此 <span class="attr">index1</span> = <span class="number">1</span>, <span class="attr">index2</span> = <span class="number">2</span> 。</span><br></pre></td></tr></table></figure>
 
-<p>解答:</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">lengthOfLongestSubstring</span>(<span class="params">self, s</span>):</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type s: str</span></span><br><span class="line"><span class="string">        :rtype: int</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        <span class="comment"># 存储历史循环中最长的子串长度</span></span><br><span class="line">        max_len = <span class="number">0</span></span><br><span class="line">        <span class="comment"># 判断传入的字符串是否为空</span></span><br><span class="line">        <span class="keyword">if</span> s <span class="keyword">is</span> <span class="literal">None</span> <span class="keyword">or</span> <span class="built_in">len</span>(s) == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> max_len</span><br><span class="line">        <span class="comment"># 定义一个字典，存储不重复的字符和字符所在的下标</span></span><br><span class="line">        str_dict = &#123;&#125;</span><br><span class="line">        <span class="comment"># 存储每次循环中最长的子串长度</span></span><br><span class="line">        one_max = <span class="number">0</span></span><br><span class="line">        <span class="comment">#记录最近重复字符所在的位置+1</span></span><br><span class="line">        start = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(s)):</span><br><span class="line">            <span class="comment"># 判断当前字符是否在字典中和当前字符的下标是否大于等于最近重复字符的所在位置</span></span><br><span class="line">            <span class="keyword">if</span> s[i] <span class="keyword">in</span> str_dict <span class="keyword">and</span> str_dict[s[i]] &gt;= start:</span><br><span class="line">                <span class="comment"># 记录当前字符的值+1</span></span><br><span class="line">                start = str_dict[s[i]]</span><br><span class="line">            <span class="comment"># 在此次循环中，最大的不重复子串的长度</span></span><br><span class="line">            one_max = i - start+<span class="number">1</span></span><br><span class="line">            <span class="comment"># 把当前位置覆盖字典中的位置</span></span><br><span class="line">            str_dict[s[i]] = i</span><br><span class="line">            <span class="comment"># 比较此次循环的最大不重复子串长度和历史循环最大不重复子串长度</span></span><br><span class="line">            max_len = <span class="built_in">max</span>(max_len, one_max)</span><br><span class="line">        <span class="keyword">return</span> max_len</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>LeetCode</category>
-        <category>字符串</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>35.搜索插入位置</title>
-    <url>/2019/05/08/LeetCode_35-%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/</url>
-    <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"><br>给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。</p>
-<span id="more"></span>
-<p>你可以假设数组中无重复元素。</p>
-<p>示例 1:</p>
-<p>输入: [1,3,5,6], 5<br>输出: 2<br>示例 2:</p>
-<p>输入: [1,3,5,6], 2<br>输出: 1<br>示例 3:</p>
-<p>输入: [1,3,5,6], 7<br>输出: 4<br>示例 4:</p>
-<p>输入: [1,3,5,6], 0<br>输出: 0</p>
-<p>解答</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">searchInsert</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">for</span> i,num <span class="keyword">in</span> <span class="built_in">enumerate</span>(nums):<span class="comment">#没超过列表边界</span></span><br><span class="line">            <span class="keyword">if</span> target&lt;=num:</span><br><span class="line">                <span class="keyword">return</span> i</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">len</span>(nums)<span class="comment">#若超出</span></span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span>(<span class="params">self, numbers: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type numbers: List[int]</span></span><br><span class="line"><span class="string">        :type target: int</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        s = &#123;&#125;</span><br><span class="line">        r = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(numbers)):</span><br><span class="line">            <span class="keyword">if</span> numbers[i] <span class="keyword">in</span> s.keys():</span><br><span class="line">                r.append(s[numbers[i]]+<span class="number">1</span>)</span><br><span class="line">                r.append(i+<span class="number">1</span>)</span><br><span class="line">                <span class="keyword">return</span> r</span><br><span class="line">            s[target-numbers[i]] = i</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>LeetCode</category>
         <category>二分查找</category>
@@ -296,26 +316,6 @@
       <categories>
         <category>LeetCode</category>
         <category>排序</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>输入有序数组</title>
-    <url>/2019/05/12/LeetCode_%E4%BA%8C%E5%88%86%E6%B3%95_%E8%BE%93%E5%85%A5%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/</url>
-    <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"><br>给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。</p>
-<span id="more"></span>
-<p>函数应该返回这两个下标值 index1 和 index2，其中 index1 必须小于 index2。</p>
-<p>说明:</p>
-<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">1</span>.返回的下标值（index<span class="number">1</span> 和 index<span class="number">2</span>）不是从零开始的。</span><br><span class="line"><span class="attribute">2</span>.你可以假设每个输入只对应唯一的答案，而且你不可以重复使用相同的元素。</span><br></pre></td></tr></table></figure>
-<p>示例:</p>
-<figure class="highlight nix"><table><tr><td class="code"><pre><span class="line">输入: <span class="attr">numbers</span> = [<span class="number">2</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span>], <span class="attr">target</span> = <span class="number">9</span></span><br><span class="line">输出: [<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">解释: <span class="number">2</span> 与 <span class="number">7</span> 之和等于目标数 <span class="number">9</span> 。因此 <span class="attr">index1</span> = <span class="number">1</span>, <span class="attr">index2</span> = <span class="number">2</span> 。</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span>(<span class="params">self, numbers: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type numbers: List[int]</span></span><br><span class="line"><span class="string">        :type target: int</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        s = &#123;&#125;</span><br><span class="line">        r = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(numbers)):</span><br><span class="line">            <span class="keyword">if</span> numbers[i] <span class="keyword">in</span> s.keys():</span><br><span class="line">                r.append(s[numbers[i]]+<span class="number">1</span>)</span><br><span class="line">                r.append(i+<span class="number">1</span>)</span><br><span class="line">                <span class="keyword">return</span> r</span><br><span class="line">            s[target-numbers[i]] = i</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>LeetCode</category>
-        <category>二分查找</category>
       </categories>
       <tags>
         <tag>LeetCode</tag>
@@ -587,6 +587,20 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
+    <title>表的操作</title>
+    <url>/2019/03/17/MySQL_%E8%A1%A8%E7%9A%84%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<p><img src="/pictures/MySql.png"><br>初级表的操作</p>
+<span id="more"></span>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 创建表</span></span><br><span class="line">    <span class="keyword">CREATE</span> [TEMPORARY] <span class="keyword">TABLE</span>[ IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span>] [库名.]表名 ( 表的结构定义 )[ 表选项]</span><br><span class="line">        每个字段必须有数据类型</span><br><span class="line">        最后一个字段后不能有逗号</span><br><span class="line">        TEMPORARY 临时表，会话结束时表自动消失</span><br><span class="line">        对于字段的定义：</span><br><span class="line">            字段名 数据类型 [<span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="operator">|</span> <span class="keyword">NULL</span>] [<span class="keyword">DEFAULT</span> default_value] [AUTO_INCREMENT] [<span class="keyword">UNIQUE</span> [KEY] <span class="operator">|</span> [<span class="keyword">PRIMARY</span>] KEY] [COMMENT <span class="string">&#x27;string&#x27;</span>]</span><br><span class="line"><span class="comment">-- 表选项</span></span><br><span class="line">    <span class="comment">-- 字符集</span></span><br><span class="line">        CHARSET <span class="operator">=</span> charset_name</span><br><span class="line">        如果表没有设定，则使用数据库字符集</span><br><span class="line">    <span class="comment">-- 存储引擎</span></span><br><span class="line">        ENGINE <span class="operator">=</span> engine_name</span><br><span class="line">        表在管理数据时采用的不同的数据结构，结构不同会导致处理方式、提供的特性操作等不同</span><br><span class="line">        常见的引擎：InnoDB MyISAM Memory<span class="operator">/</span>Heap BDB <span class="keyword">Merge</span> Example CSV MaxDB Archive</span><br><span class="line">        不同的引擎在保存表的结构和数据时采用不同的方式</span><br><span class="line">        MyISAM表文件含义：.frm表定义，.MYD表数据，.MYI表索引</span><br><span class="line">        InnoDB表文件含义：.frm表定义，表空间数据和日志文件</span><br><span class="line">        <span class="keyword">SHOW</span> ENGINES <span class="comment">-- 显示存储引擎的状态信息</span></span><br><span class="line">        <span class="keyword">SHOW</span> ENGINE 引擎名 &#123;LOGS<span class="operator">|</span>STATUS&#125; <span class="comment">-- 显示存储引擎的日志或状态信息</span></span><br><span class="line">    <span class="comment">-- 自增起始数</span></span><br><span class="line">        AUTO_INCREMENT <span class="operator">=</span> 行数</span><br><span class="line">    <span class="comment">-- 数据文件目录</span></span><br><span class="line">        DATA DIRECTORY <span class="operator">=</span> <span class="string">&#x27;目录&#x27;</span></span><br><span class="line">    <span class="comment">-- 索引文件目录</span></span><br><span class="line">        INDEX DIRECTORY <span class="operator">=</span> <span class="string">&#x27;目录&#x27;</span></span><br><span class="line">    <span class="comment">-- 表注释</span></span><br><span class="line">        COMMENT <span class="operator">=</span> <span class="string">&#x27;string&#x27;</span></span><br><span class="line">    <span class="comment">-- 分区选项</span></span><br><span class="line">        <span class="keyword">PARTITION</span> <span class="keyword">BY</span> ... (详细见手册)</span><br><span class="line"><span class="comment">-- 查看所有表</span></span><br><span class="line">    <span class="keyword">SHOW</span> TABLES[ <span class="keyword">LIKE</span> <span class="string">&#x27;pattern&#x27;</span>]</span><br><span class="line">    <span class="keyword">SHOW</span> TABLES <span class="keyword">FROM</span> 表名</span><br><span class="line"><span class="comment">-- 查看表机构</span></span><br><span class="line">    <span class="keyword">SHOW</span> <span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 表名 （信息更详细）</span><br><span class="line">    <span class="keyword">DESC</span> 表名 <span class="operator">/</span> <span class="keyword">DESCRIBE</span> 表名 <span class="operator">/</span> EXPLAIN 表名 <span class="operator">/</span> <span class="keyword">SHOW</span> COLUMNS <span class="keyword">FROM</span> 表名 [<span class="keyword">LIKE</span> <span class="string">&#x27;PATTERN&#x27;</span>]</span><br><span class="line">    <span class="keyword">SHOW</span> <span class="keyword">TABLE</span> STATUS [<span class="keyword">FROM</span> db_name] [<span class="keyword">LIKE</span> <span class="string">&#x27;pattern&#x27;</span>]</span><br><span class="line"><span class="comment">-- 修改表</span></span><br><span class="line">    <span class="comment">-- 修改表本身的选项</span></span><br><span class="line">        <span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 表的选项</span><br><span class="line">        eg: <span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 ENGINE<span class="operator">=</span>MYISAM;</span><br><span class="line">    <span class="comment">-- 对表进行重命名</span></span><br><span class="line">        RENAME <span class="keyword">TABLE</span> 原表名 <span class="keyword">TO</span> 新表名</span><br><span class="line">        RENAME <span class="keyword">TABLE</span> 原表名 <span class="keyword">TO</span> 库名.表名 （可将表移动到另一个数据库）</span><br><span class="line">        <span class="comment">-- RENAME可以交换两个表名</span></span><br><span class="line">    <span class="comment">-- 修改表的字段机构（13.1.2. ALTER TABLE语法）</span></span><br><span class="line">        <span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 操作名</span><br><span class="line">        <span class="comment">-- 操作名</span></span><br><span class="line">            <span class="keyword">ADD</span>[ <span class="keyword">COLUMN</span>] 字段定义       <span class="comment">-- 增加字段</span></span><br><span class="line">                AFTER 字段名          <span class="comment">-- 表示增加在该字段名后面</span></span><br><span class="line">                <span class="keyword">FIRST</span>               <span class="comment">-- 表示增加在第一个</span></span><br><span class="line">            <span class="keyword">ADD</span> <span class="keyword">PRIMARY</span> KEY(字段名)   <span class="comment">-- 创建主键</span></span><br><span class="line">            <span class="keyword">ADD</span> <span class="keyword">UNIQUE</span> [索引名] (字段名)<span class="comment">-- 创建唯一索引</span></span><br><span class="line">            <span class="keyword">ADD</span> INDEX [索引名] (字段名) <span class="comment">-- 创建普通索引</span></span><br><span class="line">            <span class="keyword">DROP</span>[ <span class="keyword">COLUMN</span>] 字段名      <span class="comment">-- 删除字段</span></span><br><span class="line">            MODIFY[ <span class="keyword">COLUMN</span>] 字段名 字段属性     <span class="comment">-- 支持对字段属性进行修改，不能修改字段名(所有原有属性也需写上)</span></span><br><span class="line">            CHANGE[ <span class="keyword">COLUMN</span>] 原字段名 新字段名 字段属性      <span class="comment">-- 支持对字段名修改</span></span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">PRIMARY</span> KEY    <span class="comment">-- 删除主键(删除主键前需删除其AUTO_INCREMENT属性)</span></span><br><span class="line">            <span class="keyword">DROP</span> INDEX 索引名 <span class="comment">-- 删除索引</span></span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">FOREIGN</span> KEY 外键    <span class="comment">-- 删除外键</span></span><br><span class="line"><span class="comment">-- 删除表</span></span><br><span class="line">    <span class="keyword">DROP</span> <span class="keyword">TABLE</span>[ IF <span class="keyword">EXISTS</span>] 表名 ...</span><br><span class="line"><span class="comment">-- 清空表数据</span></span><br><span class="line">    <span class="keyword">TRUNCATE</span> [<span class="keyword">TABLE</span>] 表名</span><br><span class="line"><span class="comment">-- 复制表结构</span></span><br><span class="line">    <span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 表名 <span class="keyword">LIKE</span> 要复制的表名</span><br><span class="line"><span class="comment">-- 复制表结构和数据</span></span><br><span class="line">    <span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 表名 [<span class="keyword">AS</span>] <span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 要复制的表名</span><br><span class="line"><span class="comment">-- 检查表是否有错误</span></span><br><span class="line">    <span class="keyword">CHECK</span> <span class="keyword">TABLE</span> tbl_name [, tbl_name] ... [option] ...</span><br><span class="line"><span class="comment">-- 优化表</span></span><br><span class="line">    OPTIMIZE [<span class="keyword">LOCAL</span> <span class="operator">|</span> NO_WRITE_TO_BINLOG] <span class="keyword">TABLE</span> tbl_name [, tbl_name] ...</span><br><span class="line"><span class="comment">-- 修复表</span></span><br><span class="line">    REPAIR [<span class="keyword">LOCAL</span> <span class="operator">|</span> NO_WRITE_TO_BINLOG] <span class="keyword">TABLE</span> tbl_name [, tbl_name] ... [QUICK] [EXTENDED] [USE_FRM]</span><br><span class="line"><span class="comment">-- 分析表</span></span><br><span class="line">    ANALYZE [<span class="keyword">LOCAL</span> <span class="operator">|</span> NO_WRITE_TO_BINLOG] <span class="keyword">TABLE</span> tbl_name [, tbl_name] ...</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>数据库</category>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>SQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据库中的左连接(left join)和右连接(right join)区别</title>
     <url>/2019/03/18/MySQL_join/</url>
     <content><![CDATA[<p><img src="/pictures/MySql.png"><br>Left Join / Right Join /inner join<br>左连接where只影向右表，右连接where只影响左表。</p>
@@ -607,6 +621,26 @@ tail -f ping.log（查看日志）
       </categories>
       <tags>
         <tag>SQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Web框架_Django</title>
+    <url>/2019/03/22/Python_Web%E6%A1%86%E6%9E%B6_Django/</url>
+    <content><![CDATA[<p><img src="/pictures/python.jpg"></p>
+<h1 id="通常的WEB框架一般是MVC"><a href="#通常的WEB框架一般是MVC" class="headerlink" title="通常的WEB框架一般是MVC"></a>通常的WEB框架一般是MVC</h1><span id="more"></span>
+<img src="/2019/03/22/Python_Web%E6%A1%86%E6%9E%B6_Django/%E5%B8%B8%E7%94%A8web%E6%A1%86%E6%9E%B6.png" class="">
+
+<h1 id="Django框架是MTV模式"><a href="#Django框架是MTV模式" class="headerlink" title="Django框架是MTV模式"></a>Django框架是MTV模式</h1><img src="/2019/03/22/Python_Web%E6%A1%86%E6%9E%B6_Django/MTV%E6%A8%A1%E5%BC%8F.png" class="">
+<img src="/2019/03/22/Python_Web%E6%A1%86%E6%9E%B6_Django/MTV2.png" class="">
+
+<h1 id="最简的一个开发流程"><a href="#最简的一个开发流程" class="headerlink" title="最简的一个开发流程"></a>最简的一个开发流程</h1><img src="/2019/03/22/Python_Web%E6%A1%86%E6%9E%B6_Django/3.png" class="">
+<img src="/2019/03/22/Python_Web%E6%A1%86%E6%9E%B6_Django/4.png" class="">]]></content>
+      <categories>
+        <category>Python</category>
+        <category>Django</category>
+      </categories>
+      <tags>
+        <tag>Web</tag>
       </tags>
   </entry>
   <entry>
@@ -649,20 +683,6 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
-    <title>表的操作</title>
-    <url>/2019/03/17/MySQL_%E8%A1%A8%E7%9A%84%E6%93%8D%E4%BD%9C/</url>
-    <content><![CDATA[<p><img src="/pictures/MySql.png"><br>初级表的操作</p>
-<span id="more"></span>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 创建表</span></span><br><span class="line">    <span class="keyword">CREATE</span> [TEMPORARY] <span class="keyword">TABLE</span>[ IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span>] [库名.]表名 ( 表的结构定义 )[ 表选项]</span><br><span class="line">        每个字段必须有数据类型</span><br><span class="line">        最后一个字段后不能有逗号</span><br><span class="line">        TEMPORARY 临时表，会话结束时表自动消失</span><br><span class="line">        对于字段的定义：</span><br><span class="line">            字段名 数据类型 [<span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="operator">|</span> <span class="keyword">NULL</span>] [<span class="keyword">DEFAULT</span> default_value] [AUTO_INCREMENT] [<span class="keyword">UNIQUE</span> [KEY] <span class="operator">|</span> [<span class="keyword">PRIMARY</span>] KEY] [COMMENT <span class="string">&#x27;string&#x27;</span>]</span><br><span class="line"><span class="comment">-- 表选项</span></span><br><span class="line">    <span class="comment">-- 字符集</span></span><br><span class="line">        CHARSET <span class="operator">=</span> charset_name</span><br><span class="line">        如果表没有设定，则使用数据库字符集</span><br><span class="line">    <span class="comment">-- 存储引擎</span></span><br><span class="line">        ENGINE <span class="operator">=</span> engine_name</span><br><span class="line">        表在管理数据时采用的不同的数据结构，结构不同会导致处理方式、提供的特性操作等不同</span><br><span class="line">        常见的引擎：InnoDB MyISAM Memory<span class="operator">/</span>Heap BDB <span class="keyword">Merge</span> Example CSV MaxDB Archive</span><br><span class="line">        不同的引擎在保存表的结构和数据时采用不同的方式</span><br><span class="line">        MyISAM表文件含义：.frm表定义，.MYD表数据，.MYI表索引</span><br><span class="line">        InnoDB表文件含义：.frm表定义，表空间数据和日志文件</span><br><span class="line">        <span class="keyword">SHOW</span> ENGINES <span class="comment">-- 显示存储引擎的状态信息</span></span><br><span class="line">        <span class="keyword">SHOW</span> ENGINE 引擎名 &#123;LOGS<span class="operator">|</span>STATUS&#125; <span class="comment">-- 显示存储引擎的日志或状态信息</span></span><br><span class="line">    <span class="comment">-- 自增起始数</span></span><br><span class="line">        AUTO_INCREMENT <span class="operator">=</span> 行数</span><br><span class="line">    <span class="comment">-- 数据文件目录</span></span><br><span class="line">        DATA DIRECTORY <span class="operator">=</span> <span class="string">&#x27;目录&#x27;</span></span><br><span class="line">    <span class="comment">-- 索引文件目录</span></span><br><span class="line">        INDEX DIRECTORY <span class="operator">=</span> <span class="string">&#x27;目录&#x27;</span></span><br><span class="line">    <span class="comment">-- 表注释</span></span><br><span class="line">        COMMENT <span class="operator">=</span> <span class="string">&#x27;string&#x27;</span></span><br><span class="line">    <span class="comment">-- 分区选项</span></span><br><span class="line">        <span class="keyword">PARTITION</span> <span class="keyword">BY</span> ... (详细见手册)</span><br><span class="line"><span class="comment">-- 查看所有表</span></span><br><span class="line">    <span class="keyword">SHOW</span> TABLES[ <span class="keyword">LIKE</span> <span class="string">&#x27;pattern&#x27;</span>]</span><br><span class="line">    <span class="keyword">SHOW</span> TABLES <span class="keyword">FROM</span> 表名</span><br><span class="line"><span class="comment">-- 查看表机构</span></span><br><span class="line">    <span class="keyword">SHOW</span> <span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 表名 （信息更详细）</span><br><span class="line">    <span class="keyword">DESC</span> 表名 <span class="operator">/</span> <span class="keyword">DESCRIBE</span> 表名 <span class="operator">/</span> EXPLAIN 表名 <span class="operator">/</span> <span class="keyword">SHOW</span> COLUMNS <span class="keyword">FROM</span> 表名 [<span class="keyword">LIKE</span> <span class="string">&#x27;PATTERN&#x27;</span>]</span><br><span class="line">    <span class="keyword">SHOW</span> <span class="keyword">TABLE</span> STATUS [<span class="keyword">FROM</span> db_name] [<span class="keyword">LIKE</span> <span class="string">&#x27;pattern&#x27;</span>]</span><br><span class="line"><span class="comment">-- 修改表</span></span><br><span class="line">    <span class="comment">-- 修改表本身的选项</span></span><br><span class="line">        <span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 表的选项</span><br><span class="line">        eg: <span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 ENGINE<span class="operator">=</span>MYISAM;</span><br><span class="line">    <span class="comment">-- 对表进行重命名</span></span><br><span class="line">        RENAME <span class="keyword">TABLE</span> 原表名 <span class="keyword">TO</span> 新表名</span><br><span class="line">        RENAME <span class="keyword">TABLE</span> 原表名 <span class="keyword">TO</span> 库名.表名 （可将表移动到另一个数据库）</span><br><span class="line">        <span class="comment">-- RENAME可以交换两个表名</span></span><br><span class="line">    <span class="comment">-- 修改表的字段机构（13.1.2. ALTER TABLE语法）</span></span><br><span class="line">        <span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 操作名</span><br><span class="line">        <span class="comment">-- 操作名</span></span><br><span class="line">            <span class="keyword">ADD</span>[ <span class="keyword">COLUMN</span>] 字段定义       <span class="comment">-- 增加字段</span></span><br><span class="line">                AFTER 字段名          <span class="comment">-- 表示增加在该字段名后面</span></span><br><span class="line">                <span class="keyword">FIRST</span>               <span class="comment">-- 表示增加在第一个</span></span><br><span class="line">            <span class="keyword">ADD</span> <span class="keyword">PRIMARY</span> KEY(字段名)   <span class="comment">-- 创建主键</span></span><br><span class="line">            <span class="keyword">ADD</span> <span class="keyword">UNIQUE</span> [索引名] (字段名)<span class="comment">-- 创建唯一索引</span></span><br><span class="line">            <span class="keyword">ADD</span> INDEX [索引名] (字段名) <span class="comment">-- 创建普通索引</span></span><br><span class="line">            <span class="keyword">DROP</span>[ <span class="keyword">COLUMN</span>] 字段名      <span class="comment">-- 删除字段</span></span><br><span class="line">            MODIFY[ <span class="keyword">COLUMN</span>] 字段名 字段属性     <span class="comment">-- 支持对字段属性进行修改，不能修改字段名(所有原有属性也需写上)</span></span><br><span class="line">            CHANGE[ <span class="keyword">COLUMN</span>] 原字段名 新字段名 字段属性      <span class="comment">-- 支持对字段名修改</span></span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">PRIMARY</span> KEY    <span class="comment">-- 删除主键(删除主键前需删除其AUTO_INCREMENT属性)</span></span><br><span class="line">            <span class="keyword">DROP</span> INDEX 索引名 <span class="comment">-- 删除索引</span></span><br><span class="line">            <span class="keyword">DROP</span> <span class="keyword">FOREIGN</span> KEY 外键    <span class="comment">-- 删除外键</span></span><br><span class="line"><span class="comment">-- 删除表</span></span><br><span class="line">    <span class="keyword">DROP</span> <span class="keyword">TABLE</span>[ IF <span class="keyword">EXISTS</span>] 表名 ...</span><br><span class="line"><span class="comment">-- 清空表数据</span></span><br><span class="line">    <span class="keyword">TRUNCATE</span> [<span class="keyword">TABLE</span>] 表名</span><br><span class="line"><span class="comment">-- 复制表结构</span></span><br><span class="line">    <span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 表名 <span class="keyword">LIKE</span> 要复制的表名</span><br><span class="line"><span class="comment">-- 复制表结构和数据</span></span><br><span class="line">    <span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 表名 [<span class="keyword">AS</span>] <span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 要复制的表名</span><br><span class="line"><span class="comment">-- 检查表是否有错误</span></span><br><span class="line">    <span class="keyword">CHECK</span> <span class="keyword">TABLE</span> tbl_name [, tbl_name] ... [option] ...</span><br><span class="line"><span class="comment">-- 优化表</span></span><br><span class="line">    OPTIMIZE [<span class="keyword">LOCAL</span> <span class="operator">|</span> NO_WRITE_TO_BINLOG] <span class="keyword">TABLE</span> tbl_name [, tbl_name] ...</span><br><span class="line"><span class="comment">-- 修复表</span></span><br><span class="line">    REPAIR [<span class="keyword">LOCAL</span> <span class="operator">|</span> NO_WRITE_TO_BINLOG] <span class="keyword">TABLE</span> tbl_name [, tbl_name] ... [QUICK] [EXTENDED] [USE_FRM]</span><br><span class="line"><span class="comment">-- 分析表</span></span><br><span class="line">    ANALYZE [<span class="keyword">LOCAL</span> <span class="operator">|</span> NO_WRITE_TO_BINLOG] <span class="keyword">TABLE</span> tbl_name [, tbl_name] ...</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>数据库</category>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>SQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Web框架_Flask</title>
     <url>/2019/05/23/Python_Web%E6%A1%86%E6%9E%B6_Flask/</url>
     <content><![CDATA[<p><img src="/pictures/python.jpg"></p>
@@ -673,26 +693,6 @@ tail -f ping.log（查看日志）
       <categories>
         <category>Python</category>
         <category>Flask</category>
-      </categories>
-      <tags>
-        <tag>Web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Web框架_Django</title>
-    <url>/2019/03/22/Python_Web%E6%A1%86%E6%9E%B6_Django/</url>
-    <content><![CDATA[<p><img src="/pictures/python.jpg"></p>
-<h1 id="通常的WEB框架一般是MVC"><a href="#通常的WEB框架一般是MVC" class="headerlink" title="通常的WEB框架一般是MVC"></a>通常的WEB框架一般是MVC</h1><span id="more"></span>
-<img src="/2019/03/22/Python_Web%E6%A1%86%E6%9E%B6_Django/%E5%B8%B8%E7%94%A8web%E6%A1%86%E6%9E%B6.png" class="">
-
-<h1 id="Django框架是MTV模式"><a href="#Django框架是MTV模式" class="headerlink" title="Django框架是MTV模式"></a>Django框架是MTV模式</h1><img src="/2019/03/22/Python_Web%E6%A1%86%E6%9E%B6_Django/MTV%E6%A8%A1%E5%BC%8F.png" class="">
-<img src="/2019/03/22/Python_Web%E6%A1%86%E6%9E%B6_Django/MTV2.png" class="">
-
-<h1 id="最简的一个开发流程"><a href="#最简的一个开发流程" class="headerlink" title="最简的一个开发流程"></a>最简的一个开发流程</h1><img src="/2019/03/22/Python_Web%E6%A1%86%E6%9E%B6_Django/3.png" class="">
-<img src="/2019/03/22/Python_Web%E6%A1%86%E6%9E%B6_Django/4.png" class="">]]></content>
-      <categories>
-        <category>Python</category>
-        <category>Django</category>
       </categories>
       <tags>
         <tag>Web</tag>
@@ -876,6 +876,95 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
+    <title>科赫雪花</title>
+    <url>/2019/04/03/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_%E9%9B%AA%E8%8A%B1/</url>
+    <content><![CDATA[<p><img src="/pictures/python.jpg"></p>
+<span id="more"></span>
+<p>koch曲线</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">koch</span>(<span class="params">size, n</span>):</span></span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">0</span>:</span><br><span class="line">        turtle.fd(size)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">for</span> angle <span class="keyword">in</span> [<span class="number">0</span>, <span class="number">60</span>, -<span class="number">120</span>, <span class="number">60</span>]:</span><br><span class="line">            turtle.left(angle)</span><br><span class="line">            koch(size/<span class="number">3</span>, n-<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    turtle.setup(<span class="number">0.5</span>,<span class="number">0.8</span>)</span><br><span class="line">    turtle.speed(<span class="number">0</span>)</span><br><span class="line">    turtle.penup()</span><br><span class="line">    turtle.goto(-<span class="number">200</span>, <span class="number">100</span>)</span><br><span class="line">    turtle.pendown()</span><br><span class="line">    turtle.pensize(<span class="number">2</span>)</span><br><span class="line">    koch(<span class="number">600</span>,<span class="number">3</span>)</span><br><span class="line">    turtle.hideturtle()</span><br><span class="line">    turtle.done()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<img src="/2019/04/03/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_%E9%9B%AA%E8%8A%B1/koch%E6%9B%B2%E7%BA%BF.png" class="">
+
+<h1 id="koch雪花"><a href="#koch雪花" class="headerlink" title="koch雪花"></a>koch雪花</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">koch</span>(<span class="params">size, n</span>):</span></span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">0</span>:</span><br><span class="line">        turtle.fd(size)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">for</span> angle <span class="keyword">in</span> [<span class="number">0</span>, <span class="number">60</span>, -<span class="number">120</span>, <span class="number">60</span>]:</span><br><span class="line">            turtle.left(angle)</span><br><span class="line">            koch(size/<span class="number">3</span>, n-<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    turtle.setup(<span class="number">0.5</span>,<span class="number">0.8</span>)</span><br><span class="line">    turtle.speed(<span class="number">0</span>)</span><br><span class="line">    turtle.penup()</span><br><span class="line">    turtle.goto(-<span class="number">200</span>, <span class="number">100</span>)</span><br><span class="line">    turtle.pendown()</span><br><span class="line">    turtle.pensize(<span class="number">2</span>)</span><br><span class="line">    level = <span class="number">3</span></span><br><span class="line">    koch(<span class="number">400</span>, level)</span><br><span class="line">    turtle.right(<span class="number">120</span>)</span><br><span class="line">    koch(<span class="number">400</span>, level)</span><br><span class="line">    turtle.right(<span class="number">120</span>)</span><br><span class="line">    koch(<span class="number">400</span>, level)</span><br><span class="line">    turtle.hideturtle()</span><br><span class="line">    turtle.done()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+<img src="/2019/04/03/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_%E9%9B%AA%E8%8A%B1/koch%E9%9B%AA%E8%8A%B1.png" class="">]]></content>
+      <categories>
+        <category>Python</category>
+        <category>常用库</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>turtle</tag>
+        <tag>递归</tag>
+        <tag>分形几何</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SAS_图</title>
+    <url>/2021/03/15/SAS_%E5%9B%BE%E8%A1%A8/</url>
+    <content><![CDATA[<img src="/2021/03/15/SAS_%E5%9B%BE%E8%A1%A8/4.png" class="">
+
+<span id="more"></span>
+<img src="/2021/03/15/SAS_%E5%9B%BE%E8%A1%A8/2.jpg" class="">
+<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>&#160; &#160; &#160; &#160;如上图，把一个小鼠脑海马区域血管分割出来了, 下面简单的给出两个参数的量化分析。</p>
+<img src="/2021/03/15/SAS_%E5%9B%BE%E8%A1%A8/5.png" class="">
+<p>&#160; &#160; &#160; &#160;从分割的体素图像A可以直观的看到右侧海马区域因为受到病灶的挤压，血管形态较正常的左侧有一定变形，血管的形变萎缩导致血管容积的减少，同时挤压导致血管的粘连使得无法通过常规手段正确的分割出主要的血管丛，所以C图中右侧海马血管出现了一些极大异常值。D图则是为了测试SAS的散点图效果(同一根血管的体积和表面积是一个线性的正相关)。</p>
+<h1 id="实操过程"><a href="#实操过程" class="headerlink" title="实操过程"></a>实操过程</h1><blockquote>
+<p>导入预处理完的.xlxs或.csv文件</p>
+</blockquote>
+<figure class="highlight sas"><table><tr><td class="code"><pre><span class="line"><span class="meta">FILENAME</span> REFFILE <span class="string">&#x27;./Hipp_Label-Analysis.xlsx&#x27;</span>;</span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">PROC IMPORT </span>DATAFILE=REFFILE    </span><br><span class="line">	DBMS=xlsx</span><br><span class="line">	<span class="meta">OUT</span>=work.import;</span><br><span class="line">	GETNAMES=yes;</span><br><span class="line"><span class="keyword">RUN;</span></span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">PROC CONTENTS </span>DATA=work.import; RUN; <span class="comment">/*可查看导入文件信息*/</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>分析变量关系</p>
+</blockquote>
+<figure class="highlight sas"><table><tr><td class="code"><pre><span class="line"><span class="keyword">PROC SGPLOT </span> DATA=work.import;</span><br><span class="line">	VBOX volume3d / CATEGORY=hipp;</span><br><span class="line"><span class="keyword">RUN;</span> </span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">PROC SGSCATTER </span>  DATA=work.import;             </span><br><span class="line">	COMPARE y=volume3d  <span class="meta">x</span>=area3d / <span class="meta">GROUP</span>=hipp ELLIPSE=(ALPHA =0.02 TYPE=predicted);  <span class="comment">/*绘制椭圆来预测相关性的强度*/</span></span><br><span class="line"><span class="keyword">RUN;</span> </span><br></pre></td></tr></table></figure>
+<hr>
+<p>本文作者： Ran<br>版权声明： 本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</p>
+<hr>
+]]></content>
+      <categories>
+        <category>数据库</category>
+        <category>SAS</category>
+      </categories>
+      <tags>
+        <tag>SAS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>图片转字符</title>
+    <url>/2019/03/20/Python_%E8%84%9A%E6%9C%AC_%E5%9B%BE%E7%89%87%E8%BD%AC%E5%AD%97%E7%AC%A6/</url>
+    <content><![CDATA[<p><img src="/pictures/python.jpg"></p>
+<span id="more"></span>
+<p>代码如下</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding=utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> argparse</span><br><span class="line"></span><br><span class="line"><span class="comment">#命令行输入参数处理</span></span><br><span class="line">parser = argparse.ArgumentParser()</span><br><span class="line"></span><br><span class="line">parser.add_argument(<span class="string">&#x27;file&#x27;</span>)     <span class="comment">#输入文件</span></span><br><span class="line">parser.add_argument(<span class="string">&#x27;-o&#x27;</span>, <span class="string">&#x27;--output&#x27;</span>)   <span class="comment">#输出文件</span></span><br><span class="line">parser.add_argument(<span class="string">&#x27;--width&#x27;</span>, <span class="built_in">type</span> = <span class="built_in">int</span>, default = <span class="number">80</span>) <span class="comment">#输出字符画宽</span></span><br><span class="line">parser.add_argument(<span class="string">&#x27;--height&#x27;</span>, <span class="built_in">type</span> = <span class="built_in">int</span>, default = <span class="number">80</span>) <span class="comment">#输出字符画高</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#获取参数</span></span><br><span class="line">args = parser.parse_args()</span><br><span class="line"></span><br><span class="line">IMG = args.file</span><br><span class="line">WIDTH = args.width</span><br><span class="line">HEIGHT = args.height</span><br><span class="line">OUTPUT = args.output</span><br><span class="line"></span><br><span class="line">ascii_char = <span class="built_in">list</span>(<span class="string">&quot;$@B%8&amp;WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1&#123;&#125;[]?-_+~&lt;&gt;i!lI;:,\&quot;^`&#x27;. &quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将256灰度映射到70个字符上</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_char</span>(<span class="params">r,g,b,alpha = <span class="number">256</span></span>):</span></span><br><span class="line">    <span class="keyword">if</span> alpha == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27; &#x27;</span></span><br><span class="line">    length = <span class="built_in">len</span>(ascii_char)</span><br><span class="line">    gray = <span class="built_in">int</span>(<span class="number">0.2126</span> * r + <span class="number">0.7152</span> * g + <span class="number">0.0722</span> * b)</span><br><span class="line"></span><br><span class="line">    unit = (<span class="number">256.0</span> + <span class="number">1</span>)/length</span><br><span class="line">    <span class="keyword">return</span> ascii_char[<span class="built_in">int</span>(gray/unit)]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line"></span><br><span class="line">    im = Image.<span class="built_in">open</span>(IMG)</span><br><span class="line">    im = im.resize((WIDTH,HEIGHT), Image.NEAREST)</span><br><span class="line"></span><br><span class="line">    txt = <span class="string">&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(HEIGHT):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(WIDTH):</span><br><span class="line">            txt += get_char(*im.getpixel((j,i)))</span><br><span class="line">        txt += <span class="string">&#x27;\n&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(txt)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#字符画输出到文件</span></span><br><span class="line">    <span class="keyword">if</span> OUTPUT:</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(OUTPUT,<span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">            f.write(txt)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;output.txt&quot;</span>,<span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">            f.write(txt)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>BASE SAS</title>
+    <url>/2021/03/12/SAS_%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<p><img src="/pictures/SAS.jpeg"></p>
+<span id="more"></span>
+<h1 id="一-软件安装"><a href="#一-软件安装" class="headerlink" title="一.软件安装"></a>一.软件安装</h1><p>SAS常规大小有二三十个G，下载安装运行对于一般的电脑都有点吃力，这里提供两种，Windows9.1免安装版和在线版。</p>
+<h2 id="1-SAS-9-1-免安装版"><a href="#1-SAS-9-1-免安装版" class="headerlink" title="1.SAS_9.1 免安装版"></a>1.SAS_9.1 免安装版</h2><p><a href="https://pan.baidu.com/s/10xT7DKmQnmcplXJpCgo_5Q">提取码：qelx</a>，解压完就可以用。</p>
+<h2 id="2-SAS-Studio-在线版"><a href="#2-SAS-Studio-在线版" class="headerlink" title="2.SAS_Studio 在线版"></a>2.SAS_Studio 在线版</h2><h4 id="1-注册账号"><a href="#1-注册账号" class="headerlink" title="1.注册账号"></a>1.注册账号</h4><p><a href="https://welcome.oda.sas.com/login">网站地址</a>，用邮箱(无需.edu)注册一个账号，根据分配的ID和自设密码登录云服务器，选亚太地区。</p>
+<h4 id="2-测试环境"><a href="#2-测试环境" class="headerlink" title="2.测试环境"></a>2.测试环境</h4><p>右键单击 文件(主目录) 新建文件即可，小人那个图标就是run。<br><img src="./dvp.png"></p>
+<h1 id="二-学习资料"><a href="#二-学习资料" class="headerlink" title="二.学习资料"></a>二.学习资料</h1><p>推荐慕课网武大<a href="https://www.icourse163.org/course/WHU-1205976811">SAS统计分析及应用</a>和W3<a href="https://www.w3cschool.cn/sas/">SAS教程</a>，慕网这个是从整体框架根据语言特点结合统计分析相关理论去展开，W3教程适合查漏补缺，建议先看慕课。</p>
+<h1 id="三-BASE-SAS"><a href="#三-BASE-SAS" class="headerlink" title="三.BASE SAS"></a>三.BASE SAS</h1><h2 id="1-语言概述"><a href="#1-语言概述" class="headerlink" title="1.语言概述"></a>1.语言概述</h2><p>程序构成: 数据步、过程步和全程语句。</p>
+<figure class="highlight sas"><table><tr><td class="code"><pre><span class="line"><span class="meta">TITLE</span> ‘2021 级学生名单’;<span class="comment">/*全程语句*/</span></span><br><span class="line"><span class="meta">LIBNAME</span> mylib “c:\sasdata”;</span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">DATA </span>mylib.stud; <span class="comment">/*数据步 */</span></span><br><span class="line"><span class="meta">INPUT</span> id $ name $ gender $ age hometown $ ;</span><br><span class="line"><span class="emphasis">cards;</span></span><br><span class="line"><span class="emphasis">202101001 周国兴 男 19 长沙</span></span><br><span class="line"><span class="emphasis">202101002 李铭 女 18 广西壮族自治区</span></span><br><span class="line"><span class="emphasis">202102003 彭晓钢 男 19 广州</span></span><br><span class="line"><span class="emphasis">202102004 胡大伟 男 18 武汉</span></span><br><span class="line"><span class="emphasis">;</span></span><br><span class="line"><span class="emphasis"></span><span class="keyword"></span></span><br><span class="line"><span class="keyword">PROC PRINT </span>data=mylib.stud; <span class="comment">/*过程步 */</span></span><br><span class="line"><span class="keyword">RUN;</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-数据步"><a href="#2-数据步" class="headerlink" title="2.数据步"></a>2.数据步</h2><p>思维导图(这不是一个新手教程，是个人学习的记录，有一定省略，后续常用的会展开)<br><img src="./%E6%95%B0%E6%8D%AE%E6%AD%A5.png"></p>
+<hr>
+<p>本文作者： Ran<br>版权声明： 本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</p>
+<hr>
+]]></content>
+      <categories>
+        <category>数据库</category>
+        <category>SAS</category>
+      </categories>
+      <tags>
+        <tag>SAS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用PyInstaller库生成可执行文件</title>
     <url>/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/</url>
     <content><![CDATA[<p><img src="/pictures/python.jpg"></p>
@@ -905,92 +994,33 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
-    <title>科赫雪花</title>
-    <url>/2019/04/03/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_%E9%9B%AA%E8%8A%B1/</url>
-    <content><![CDATA[<p><img src="/pictures/python.jpg"></p>
+    <title>同步辐射成像_血管分割</title>
+    <url>/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/</url>
+    <content><![CDATA[<img src="/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/0.png" class="">
 <span id="more"></span>
-<p>koch曲线</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">koch</span>(<span class="params">size, n</span>):</span></span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">0</span>:</span><br><span class="line">        turtle.fd(size)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">for</span> angle <span class="keyword">in</span> [<span class="number">0</span>, <span class="number">60</span>, -<span class="number">120</span>, <span class="number">60</span>]:</span><br><span class="line">            turtle.left(angle)</span><br><span class="line">            koch(size/<span class="number">3</span>, n-<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    turtle.setup(<span class="number">0.5</span>,<span class="number">0.8</span>)</span><br><span class="line">    turtle.speed(<span class="number">0</span>)</span><br><span class="line">    turtle.penup()</span><br><span class="line">    turtle.goto(-<span class="number">200</span>, <span class="number">100</span>)</span><br><span class="line">    turtle.pendown()</span><br><span class="line">    turtle.pensize(<span class="number">2</span>)</span><br><span class="line">    koch(<span class="number">600</span>,<span class="number">3</span>)</span><br><span class="line">    turtle.hideturtle()</span><br><span class="line">    turtle.done()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-<img src="/2019/04/03/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_%E9%9B%AA%E8%8A%B1/koch%E6%9B%B2%E7%BA%BF.png" class="">
+<p>&#160; &#160; &#160; &#160;如下图是一张同步辐射鼠脑断面图(8位灰度图)，如何将血管(红色框)分割出来？</p>
+<img src="/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/1.png" class="">
+<p>&#160; &#160; &#160; &#160;因为同步辐射相衬成像的特点和部分容积效应，脑组织与背景和脑室之间的交界处(蓝色框部分)会出现灰度值并不连续的过渡带，且血管的灰度值与背景和脑室更为接近，很难通过灰度分布直方图直接选取血管的灰度值范围进行阈值分割。</p>
+<img src="/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/2.png" class="">
+<p>&#160; &#160; &#160; &#160;那我们可以换一个思路，分割非血管部分的脑组织，后续再通过一系列的逻辑运算和形态学处理的组合使用，得到血管与脑室部分。</p>
+<img src="/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/3.png" class="">
+<p>&#160; &#160; &#160; &#160;最后我们再分割血管、脑室和病灶部分，图像分割承前启后，分割效果至关重要，分割完成后就可以进行一系列的建模分析和渲染展示。</p>
+<img src="/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/5.jpg" class="">
+<p>&#160; &#160; &#160; &#160;整个处理流程的探索主要使用Amira/Avizo完成，流程中最重要的分割部分选择了最简单的阈值分割，是因为经过多次的尝试比对发现这样可以很大程度减少人工勾勒标记的时间(纹理分割或者深度学习都需要对每套数据进行人工的标记)，虽然整体的步骤较多，但整个可以自动化，只需要人为修改参数，对于不同批次的的数据可以减少很多人工时间，其次，因为全流程都是使用常规的图像处理方法，对于电脑配置较低的可以将第三方软件里完成的流程通过matlab/opencv进行复现。</p>
+<img src="/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/7.png" class="">
 
-<h1 id="koch雪花"><a href="#koch雪花" class="headerlink" title="koch雪花"></a>koch雪花</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> turtle</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">koch</span>(<span class="params">size, n</span>):</span></span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">0</span>:</span><br><span class="line">        turtle.fd(size)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">for</span> angle <span class="keyword">in</span> [<span class="number">0</span>, <span class="number">60</span>, -<span class="number">120</span>, <span class="number">60</span>]:</span><br><span class="line">            turtle.left(angle)</span><br><span class="line">            koch(size/<span class="number">3</span>, n-<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    turtle.setup(<span class="number">0.5</span>,<span class="number">0.8</span>)</span><br><span class="line">    turtle.speed(<span class="number">0</span>)</span><br><span class="line">    turtle.penup()</span><br><span class="line">    turtle.goto(-<span class="number">200</span>, <span class="number">100</span>)</span><br><span class="line">    turtle.pendown()</span><br><span class="line">    turtle.pensize(<span class="number">2</span>)</span><br><span class="line">    level = <span class="number">3</span></span><br><span class="line">    koch(<span class="number">400</span>, level)</span><br><span class="line">    turtle.right(<span class="number">120</span>)</span><br><span class="line">    koch(<span class="number">400</span>, level)</span><br><span class="line">    turtle.right(<span class="number">120</span>)</span><br><span class="line">    koch(<span class="number">400</span>, level)</span><br><span class="line">    turtle.hideturtle()</span><br><span class="line">    turtle.done()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-
-<img src="/2019/04/03/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_%E9%9B%AA%E8%8A%B1/koch%E9%9B%AA%E8%8A%B1.png" class="">]]></content>
-      <categories>
-        <category>Python</category>
-        <category>常用库</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>turtle</tag>
-        <tag>递归</tag>
-        <tag>分形几何</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>图片转字符</title>
-    <url>/2019/03/20/Python_%E8%84%9A%E6%9C%AC_%E5%9B%BE%E7%89%87%E8%BD%AC%E5%AD%97%E7%AC%A6/</url>
-    <content><![CDATA[<p><img src="/pictures/python.jpg"></p>
-<span id="more"></span>
-<p>代码如下</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding=utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> argparse</span><br><span class="line"></span><br><span class="line"><span class="comment">#命令行输入参数处理</span></span><br><span class="line">parser = argparse.ArgumentParser()</span><br><span class="line"></span><br><span class="line">parser.add_argument(<span class="string">&#x27;file&#x27;</span>)     <span class="comment">#输入文件</span></span><br><span class="line">parser.add_argument(<span class="string">&#x27;-o&#x27;</span>, <span class="string">&#x27;--output&#x27;</span>)   <span class="comment">#输出文件</span></span><br><span class="line">parser.add_argument(<span class="string">&#x27;--width&#x27;</span>, <span class="built_in">type</span> = <span class="built_in">int</span>, default = <span class="number">80</span>) <span class="comment">#输出字符画宽</span></span><br><span class="line">parser.add_argument(<span class="string">&#x27;--height&#x27;</span>, <span class="built_in">type</span> = <span class="built_in">int</span>, default = <span class="number">80</span>) <span class="comment">#输出字符画高</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#获取参数</span></span><br><span class="line">args = parser.parse_args()</span><br><span class="line"></span><br><span class="line">IMG = args.file</span><br><span class="line">WIDTH = args.width</span><br><span class="line">HEIGHT = args.height</span><br><span class="line">OUTPUT = args.output</span><br><span class="line"></span><br><span class="line">ascii_char = <span class="built_in">list</span>(<span class="string">&quot;$@B%8&amp;WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1&#123;&#125;[]?-_+~&lt;&gt;i!lI;:,\&quot;^`&#x27;. &quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将256灰度映射到70个字符上</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_char</span>(<span class="params">r,g,b,alpha = <span class="number">256</span></span>):</span></span><br><span class="line">    <span class="keyword">if</span> alpha == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27; &#x27;</span></span><br><span class="line">    length = <span class="built_in">len</span>(ascii_char)</span><br><span class="line">    gray = <span class="built_in">int</span>(<span class="number">0.2126</span> * r + <span class="number">0.7152</span> * g + <span class="number">0.0722</span> * b)</span><br><span class="line"></span><br><span class="line">    unit = (<span class="number">256.0</span> + <span class="number">1</span>)/length</span><br><span class="line">    <span class="keyword">return</span> ascii_char[<span class="built_in">int</span>(gray/unit)]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line"></span><br><span class="line">    im = Image.<span class="built_in">open</span>(IMG)</span><br><span class="line">    im = im.resize((WIDTH,HEIGHT), Image.NEAREST)</span><br><span class="line"></span><br><span class="line">    txt = <span class="string">&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(HEIGHT):</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(WIDTH):</span><br><span class="line">            txt += get_char(*im.getpixel((j,i)))</span><br><span class="line">        txt += <span class="string">&#x27;\n&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(txt)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#字符画输出到文件</span></span><br><span class="line">    <span class="keyword">if</span> OUTPUT:</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(OUTPUT,<span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">            f.write(txt)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;output.txt&quot;</span>,<span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">            f.write(txt)</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>SAS_图</title>
-    <url>/2021/03/15/SAS_%E5%9B%BE%E8%A1%A8/</url>
-    <content><![CDATA[<img src="/2021/03/15/SAS_%E5%9B%BE%E8%A1%A8/4.png" class="">
-
-<span id="more"></span>
-<img src="/2021/03/15/SAS_%E5%9B%BE%E8%A1%A8/2.jpg" class="">
-<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>&#160; &#160; &#160; &#160;如图，把一个小鼠脑海马区域血管分割出来了, 下面简单的给出两个参数的量化分析。</p>
-<img src="/2021/03/15/SAS_%E5%9B%BE%E8%A1%A8/5.png" class="">
-<p>&#160; &#160; &#160; &#160;从分割的体素图像A可以直观的看到右侧海马区域因为受到病灶的挤压，血管形态较正常的左侧有一定变形，血管的形变萎缩导致血管容积的减少，同时挤压导致血管的粘连使得无法通过常规手段正确的分割出主要的血管丛，所以C图中右侧海马血管出现了一些极大异常值。D图则是为了测试SAS的散点图效果(同一根血管的体积和表面积是一个线性的正相关)。</p>
-<h1 id="实操过程"><a href="#实操过程" class="headerlink" title="实操过程"></a>实操过程</h1><blockquote>
-<p>导入预处理完的.xlxs或者.csv文件</p>
-</blockquote>
-<figure class="highlight sas"><table><tr><td class="code"><pre><span class="line"><span class="meta">FILENAME</span> REFFILE <span class="string">&#x27;./Hipp_Label-Analysis.xlsx&#x27;</span>;</span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">PROC IMPORT </span>DATAFILE=REFFILE    </span><br><span class="line">	DBMS=xlsx</span><br><span class="line">	<span class="meta">OUT</span>=work.import;</span><br><span class="line">	GETNAMES=yes;</span><br><span class="line"><span class="keyword">RUN;</span></span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">PROC CONTENTS </span>DATA=work.import; RUN; <span class="comment">/*可查看导入文件信息*/</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>分析变量关系</p>
-</blockquote>
-<figure class="highlight sas"><table><tr><td class="code"><pre><span class="line"><span class="keyword">PROC SGPLOT </span> DATA=work.import;</span><br><span class="line">	VBOX volume3d / CATEGORY=hipp;</span><br><span class="line"><span class="keyword">RUN;</span> </span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">PROC SGSCATTER </span>  DATA=work.import;</span><br><span class="line">	COMPARE y=volume3d  <span class="meta">x</span>=area3d / <span class="meta">GROUP</span>=hipp ELLIPSE=(ALPHA =0.02 TYPE=predicted);  <span class="comment">/*绘制椭圆来预测相关性的强度*/</span></span><br><span class="line"><span class="keyword">RUN;</span> </span><br></pre></td></tr></table></figure>
+<p><a href="https://pubmed.ncbi.nlm.nih.gov/30766481/">论文参考</a></p>
 <hr>
 <p>本文作者： Ran<br>版权声明： 本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</p>
 <hr>
 ]]></content>
       <categories>
-        <category>数据库</category>
-        <category>SAS</category>
+        <category>图像处理</category>
+        <category>图像分割</category>
       </categories>
       <tags>
-        <tag>SAS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>BASE SAS</title>
-    <url>/2021/03/12/SAS_%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<p><img src="/pictures/SAS.jpeg"></p>
-<span id="more"></span>
-<h1 id="一-软件安装"><a href="#一-软件安装" class="headerlink" title="一.软件安装"></a>一.软件安装</h1><p>SAS常规大小有二三十个G，下载安装运行对于一般的电脑都有点吃力，这里提供两种，Windows9.1免安装版和在线版。</p>
-<h2 id="1-SAS-9-1-免安装版"><a href="#1-SAS-9-1-免安装版" class="headerlink" title="1.SAS_9.1 免安装版"></a>1.SAS_9.1 免安装版</h2><p><a href="https://pan.baidu.com/s/10xT7DKmQnmcplXJpCgo_5Q">提取码：qelx</a>，解压完就可以用。</p>
-<h2 id="2-SAS-Studio-在线版"><a href="#2-SAS-Studio-在线版" class="headerlink" title="2.SAS_Studio 在线版"></a>2.SAS_Studio 在线版</h2><h4 id="1-注册账号"><a href="#1-注册账号" class="headerlink" title="1.注册账号"></a>1.注册账号</h4><p><a href="https://welcome.oda.sas.com/login">网站地址</a>，用邮箱(无需.edu)注册一个账号，根据分配的ID和自设密码登录云服务器，选亚太地区。</p>
-<h4 id="2-测试环境"><a href="#2-测试环境" class="headerlink" title="2.测试环境"></a>2.测试环境</h4><p>右键单击 文件(主目录) 新建文件即可，小人那个图标就是run。<br><img src="./dvp.png"></p>
-<h1 id="二-学习资料"><a href="#二-学习资料" class="headerlink" title="二.学习资料"></a>二.学习资料</h1><p>推荐慕课网武大<a href="https://www.icourse163.org/course/WHU-1205976811">SAS统计分析及应用</a>和W3<a href="https://www.w3cschool.cn/sas/">SAS教程</a>，慕网这个是从整体框架根据语言特点结合统计分析相关理论去展开，W3教程适合查漏补缺，建议先看慕课。</p>
-<h1 id="三-BASE-SAS"><a href="#三-BASE-SAS" class="headerlink" title="三.BASE SAS"></a>三.BASE SAS</h1><h2 id="1-语言概述"><a href="#1-语言概述" class="headerlink" title="1.语言概述"></a>1.语言概述</h2><p>程序构成: 数据步、过程步和全程语句。</p>
-<figure class="highlight sas"><table><tr><td class="code"><pre><span class="line"><span class="meta">TITLE</span> ‘2021 级学生名单’;<span class="comment">/*全程语句*/</span></span><br><span class="line"><span class="meta">LIBNAME</span> mylib “c:\sasdata”;</span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">DATA </span>mylib.stud; <span class="comment">/*数据步 */</span></span><br><span class="line"><span class="meta">INPUT</span> id $ name $ gender $ age hometown $ ;</span><br><span class="line"><span class="emphasis">cards;</span></span><br><span class="line"><span class="emphasis">202101001 周国兴 男 19 长沙</span></span><br><span class="line"><span class="emphasis">202101002 李铭 女 18 广西壮族自治区</span></span><br><span class="line"><span class="emphasis">202102003 彭晓钢 男 19 广州</span></span><br><span class="line"><span class="emphasis">202102004 胡大伟 男 18 武汉</span></span><br><span class="line"><span class="emphasis">;</span></span><br><span class="line"><span class="emphasis"></span><span class="keyword"></span></span><br><span class="line"><span class="keyword">PROC PRINT </span>data=mylib.stud; <span class="comment">/*过程步 */</span></span><br><span class="line"><span class="keyword">RUN;</span></span><br></pre></td></tr></table></figure>
-<h2 id="2-数据步"><a href="#2-数据步" class="headerlink" title="2.数据步"></a>2.数据步</h2><p>思维导图(这不是一个新手教程，是个人学习的记录，有一定省略，后续常用的会展开)<br><img src="./%E6%95%B0%E6%8D%AE%E6%AD%A5.png"></p>
-<hr>
-<p>本文作者： Ran<br>版权声明： 本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</p>
-<hr>
-]]></content>
-      <categories>
-        <category>数据库</category>
-        <category>SAS</category>
-      </categories>
-      <tags>
-        <tag>SAS</tag>
+        <tag>amira</tag>
+        <tag>matlab</tag>
       </tags>
   </entry>
   <entry>
@@ -1064,6 +1094,30 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
+    <title>3D-brain Ⅱ</title>
+    <url>/2021/11/19/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%832/</url>
+    <content><![CDATA[<img src="/2021/11/19/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%832/%E6%B5%81%E7%A8%8B.png" class="">
+
+<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>&#160; &#160; &#160; &#160;2021年11月11日，南华大学公共卫生学院曹毅博士课题组在 Cell Biology and Toxicology (影响因子6.691)发表研究论文 “The cytotoxicity of zinc oxide nanoparticles to 3D brain organoids results from excessive intracellular zinc ions and defective autophagy”，应用三维成像技术分析纳米氧化锌对新型人3D类脑模型的损伤机制。</p>
+<span id="more"></span>
+
+<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>&#160; &#160; &#160; &#160;研究人员使用了一种新型的基于人诱导多能干细胞分化出来的3D类脑模型，分析了纳米氧化锌对3D类脑模型的损伤作用。通过传统的毒理学分析手段，研究人员发高浓度纳米氧化锌会导致自噬不足，自噬蛋白LC3B下调，进而导致对类脑的神经毒性的发生。这证实了类脑模型可以应用于纳米材料毒性的机理的研究工作。但传统理学分析手段并没有提供空间分布信息，无法确定LC3B蛋白变化最显著的部位，也无法确定LC3B蛋白下调以后所伴随的细节变化。<br><img src="./wb2.png" alt="应用传统Westernblot技术分析纳米氧化锌对3D类脑LC3B蛋白及其底物蛋白p62的影响。"></p>
+<h1 id="三维重建"><a href="#三维重建" class="headerlink" title="三维重建"></a>三维重建</h1><p>&#160; &#160; &#160; &#160;与三维重建技术结合后，研究人员得以分析纳米氧化锌暴露以后LC3B蛋白在全类脑的分布，结果表明，纳米氧化锌暴露导致了LC3B蛋白的重排，与纳米氧化锌直接接触的外层细胞LC3B蛋白的荧光信号有明显的下调，而里层不明显，这可能是因为类脑作为一种3D模型，外层的细胞保护了内层的细胞。<br><img src="./3d-1.PNG" alt="A为control组，B为64 ug/mL纳米氧化锌暴露组。"></p>
+<p>&#160; &#160; &#160; &#160;为进一步说明LC3B蛋白在外层变化的情况，团队重构了LC3B荧光结果图。假定LC3B绿色荧光的外围代表LC3B蛋白可以分布的最大范围，而最外层的细胞核红色光可以代表类脑的最大外围，那么LC3B的体积变化就可以计算出来。结果表明，纳米氧化锌的暴露导致LC3B的体积缩小。<br><img src="./volume2.png" alt="A和B为control组，C和D为64 μg/mL 纳米氧化锌暴露组。"></p>
+<p>&#160; &#160; &#160; &#160;再进一步分析LC3B蛋白变化明显区域细胞核形态的变化，团队重构了70um^3内类脑细胞核的高清晰度的变化，发现在control组外层和内层类脑细胞核均出现一定的微核．但数量并不多。纳米氧化锌暴露以后，外层类脑细胞的细胞核微核出现明显增加，而内层细胞的微核出现不明显。这提示LC3B在外层的下调可能加大了纳米氧化锌对细胞核的损伤作用。与传统的毒理学分析技术相结合，三维高精度成像可以用于进一步确认纳米材料的暴露对类脑特定蛋白的影响，并提供传统的分析技术所无法提供的信息。<br><img src="./local2.png" alt="A和B为control组，C和D为64um/mL纳米氧化锌暴露"></p>
+<p>个人贡献：图像处理及三维建模分析。</p>
+<p><a href="https://link.springer.com/article/10.1007/s10565-021-09678-x">原文链接</a></p>
+]]></content>
+      <categories>
+        <category>图像处理</category>
+        <category>三维重建</category>
+      </categories>
+      <tags>
+        <tag>Sci</tag>
+        <tag>Cell Biology and Toxicology</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CSF_video Ⅰ</title>
     <url>/2021/08/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-CSF1/</url>
     <content><![CDATA[<img src="/2021/08/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-CSF1/1.png" class="">
@@ -1081,36 +1135,6 @@ tail -f ping.log（查看日志）
       </categories>
       <tags>
         <tag>CSF</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>同步辐射成像_血管分割</title>
-    <url>/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/</url>
-    <content><![CDATA[<img src="/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/0.png" class="">
-<span id="more"></span>
-<p>&#160; &#160; &#160; &#160;如下图是一张同步辐射鼠脑断面图(8位灰度图)，如何将血管(红色框)分割出来？</p>
-<img src="/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/1.png" class="">
-<p>&#160; &#160; &#160; &#160;因为同步辐射相衬成像的特点和部分容积效应，脑组织与背景和脑室之间的交界处(蓝色框部分)会出现灰度值并不连续的过渡带，且血管的灰度值与背景和脑室更为接近，很难通过灰度分布直方图直接选取血管的灰度值范围进行阈值分割。</p>
-<img src="/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/2.png" class="">
-<p>&#160; &#160; &#160; &#160;那我们可以换一个思路，分割非血管部分的脑组织，后续再通过一系列的逻辑运算和形态学处理的组合使用，得到血管与脑室部分。</p>
-<img src="/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/3.png" class="">
-<p>&#160; &#160; &#160; &#160;最后我们再分割血管、脑室和病灶部分，图像分割承前启后，分割效果至关重要，分割完成后就可以进行一系列的建模分析和渲染展示。</p>
-<img src="/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/5.jpg" class="">
-<p>&#160; &#160; &#160; &#160;整个处理流程的探索主要使用Amira/Avizo完成，流程中最重要的分割部分选择了最简单的阈值分割，是因为经过多次的尝试比对发现这样可以很大程度减少人工勾勒标记的时间(纹理分割或者深度学习都需要对每套数据进行人工的标记)，虽然整体的步骤较多，但整个可以自动化，只需要人为修改参数，对于不同批次的的数据可以减少很多人工时间，其次，因为全流程都是使用常规的图像处理方法，对于电脑配置较低的可以将第三方软件里完成的流程通过matlab/opencv进行复现。</p>
-<img src="/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/7.png" class="">
-
-<p><a href="https://pubmed.ncbi.nlm.nih.gov/30766481/">论文参考</a></p>
-<hr>
-<p>本文作者： Ran<br>版权声明： 本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</p>
-<hr>
-]]></content>
-      <categories>
-        <category>图像处理</category>
-        <category>图像分割</category>
-      </categories>
-      <tags>
-        <tag>amira</tag>
-        <tag>matlab</tag>
       </tags>
   </entry>
   <entry>
@@ -1134,30 +1158,6 @@ tail -f ping.log（查看日志）
       <tags>
         <tag>Sci</tag>
         <tag>Science of The Total Environment</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>3D-brain Ⅱ</title>
-    <url>/2021/11/19/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%832/</url>
-    <content><![CDATA[<img src="/2021/11/19/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%832/%E6%B5%81%E7%A8%8B.png" class="">
-
-<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>&#160; &#160; &#160; &#160;2021年11月11日，南华大学公共卫生学院曹毅博士课题组在 Cell Biology and Toxicology (影响因子6.691)发表研究论文 “The cytotoxicity of zinc oxide nanoparticles to 3D brain organoids results from excessive intracellular zinc ions and defective autophagy”，应用三维成像技术分析纳米氧化锌对新型人3D类脑模型的损伤机制。</p>
-<span id="more"></span>
-
-<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>&#160; &#160; &#160; &#160;研究人员使用了一种新型的基于人诱导多能干细胞分化出来的3D类脑模型，分析了纳米氧化锌对3D类脑模型的损伤作用。通过传统的毒理学分析手段，研究人员发高浓度纳米氧化锌会导致自噬不足，自噬蛋白LC3B下调，进而导致对类脑的神经毒性的发生。这证实了类脑模型可以应用于纳米材料毒性的机理的研究工作。但传统理学分析手段并没有提供空间分布信息，无法确定LC3B蛋白变化最显著的部位，也无法确定LC3B蛋白下调以后所伴随的细节变化。<br><img src="./wb2.png" alt="应用传统Westernblot技术分析纳米氧化锌对3D类脑LC3B蛋白及其底物蛋白p62的影响。"></p>
-<h1 id="三维重建"><a href="#三维重建" class="headerlink" title="三维重建"></a>三维重建</h1><p>&#160; &#160; &#160; &#160;与三维重建技术结合后，研究人员得以分析纳米氧化锌暴露以后LC3B蛋白在全类脑的分布，结果表明，纳米氧化锌暴露导致了LC3B蛋白的重排，与纳米氧化锌直接接触的外层细胞LC3B蛋白的荧光信号有明显的下调，而里层不明显，这可能是因为类脑作为一种3D模型，外层的细胞保护了内层的细胞。<br><img src="./3d-1.PNG" alt="A为control组，B为64 ug/mL纳米氧化锌暴露组。"></p>
-<p>&#160; &#160; &#160; &#160;为进一步说明LC3B蛋白在外层变化的情况，团队重构了LC3B荧光结果图。假定LC3B绿色荧光的外围代表LC3B蛋白可以分布的最大范围，而最外层的细胞核红色光可以代表类脑的最大外围，那么LC3B的体积变化就可以计算出来。结果表明，纳米氧化锌的暴露导致LC3B的体积缩小。<br><img src="./volume2.png" alt="A和B为control组，C和D为64 μg/mL 纳米氧化锌暴露组。"></p>
-<p>&#160; &#160; &#160; &#160;再进一步分析LC3B蛋白变化明显区域细胞核形态的变化，团队重构了70um^3内类脑细胞核的高清晰度的变化，发现在control组外层和内层类脑细胞核均出现一定的微核．但数量并不多。纳米氧化锌暴露以后，外层类脑细胞的细胞核微核出现明显增加，而内层细胞的微核出现不明显。这提示LC3B在外层的下调可能加大了纳米氧化锌对细胞核的损伤作用。与传统的毒理学分析技术相结合，三维高精度成像可以用于进一步确认纳米材料的暴露对类脑特定蛋白的影响，并提供传统的分析技术所无法提供的信息。<br><img src="./local2.png" alt="A和B为control组，C和D为64um/mL纳米氧化锌暴露"></p>
-<p>个人贡献：图像处理及三维建模分析。</p>
-<p><a href="https://link.springer.com/article/10.1007/s10565-021-09678-x">原文链接</a></p>
-]]></content>
-      <categories>
-        <category>图像处理</category>
-        <category>三维重建</category>
-      </categories>
-      <tags>
-        <tag>Sci</tag>
-        <tag>Cell Biology and Toxicology</tag>
       </tags>
   </entry>
   <entry>
@@ -1209,6 +1209,26 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
+    <title>hanoi问题</title>
+    <url>/2019/04/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95_%E9%80%92%E5%BD%92_hanoi/</url>
+    <content><![CDATA[<p><img src="/pictures/%E7%AE%97%E6%B3%95.jpg"></p>
+<span id="more"></span>
+<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>用递归求解(A原始柱，B过渡柱，C目标柱)：<br>1.当A只有一个时，A-&gt;C</p>
+<p>2.否则将n-1个从A先移动到B(C作为过渡柱)，然后再将这n-1个从B移动到C(A作为过渡柱)</p>
+<h1 id="Python代码"><a href="#Python代码" class="headerlink" title="Python代码"></a>Python代码</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">count = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hanoi</span>(<span class="params">n, src, dst, mid</span>):</span></span><br><span class="line">    <span class="keyword">global</span> count</span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;:&#123;&#125;-&gt;&#123;&#125;&quot;</span>.<span class="built_in">format</span>(<span class="number">1</span>, src, dst))</span><br><span class="line">        count += <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        hanoi(n-<span class="number">1</span>, src, mid, dst)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;:&#123;&#125;-&gt;&#123;&#125;&quot;</span>.<span class="built_in">format</span>(n, src, dst))</span><br><span class="line">        count += <span class="number">1</span></span><br><span class="line">        hanoi(n-<span class="number">1</span>, mid, dst, src)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    hanoi(<span class="number">3</span>, <span class="string">&quot;A&quot;</span>, <span class="string">&quot;C&quot;</span>, <span class="string">&quot;B&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(count)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<h1 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h1><img src="/2019/04/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95_%E9%80%92%E5%BD%92_hanoi/hanoi.png" class="">
+
+<h1 id="移动示意图"><a href="#移动示意图" class="headerlink" title="移动示意图"></a>移动示意图</h1><img src="/2019/04/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95_%E9%80%92%E5%BD%92_hanoi/hanoi3%E9%98%B6%E7%A4%BA%E6%84%8F%E5%9B%BE.jpg" class="">
+]]></content>
+      <categories>
+        <category>数据结构和算法</category>
+        <category>递归</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>插入排序</title>
     <url>/2019/04/05/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95_%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/</url>
     <content><![CDATA[<p><img src="/pictures/%E7%AE%97%E6%B3%95.jpg"><br>小规模数据需要排序，并且初始数据几乎是有序的(稳定)。</p>
@@ -1233,23 +1253,48 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
-    <title>hanoi问题</title>
-    <url>/2019/04/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95_%E9%80%92%E5%BD%92_hanoi/</url>
-    <content><![CDATA[<p><img src="/pictures/%E7%AE%97%E6%B3%95.jpg"></p>
+    <title>TCP三次握手四次挥手</title>
+    <url>/2019/04/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_TCP-IP/</url>
+    <content><![CDATA[<p><img src="/pictures/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.jpg"></p>
 <span id="more"></span>
-<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>用递归求解(A原始柱，B过渡柱，C目标柱)：<br>1.当A只有一个时，A-&gt;C</p>
-<p>2.否则将n-1个从A先移动到B(C作为过渡柱)，然后再将这n-1个从B移动到C(A作为过渡柱)</p>
-<h1 id="Python代码"><a href="#Python代码" class="headerlink" title="Python代码"></a>Python代码</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">count = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hanoi</span>(<span class="params">n, src, dst, mid</span>):</span></span><br><span class="line">    <span class="keyword">global</span> count</span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">1</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;:&#123;&#125;-&gt;&#123;&#125;&quot;</span>.<span class="built_in">format</span>(<span class="number">1</span>, src, dst))</span><br><span class="line">        count += <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        hanoi(n-<span class="number">1</span>, src, mid, dst)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;&#123;&#125;:&#123;&#125;-&gt;&#123;&#125;&quot;</span>.<span class="built_in">format</span>(n, src, dst))</span><br><span class="line">        count += <span class="number">1</span></span><br><span class="line">        hanoi(n-<span class="number">1</span>, mid, dst, src)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span></span><br><span class="line">    hanoi(<span class="number">3</span>, <span class="string">&quot;A&quot;</span>, <span class="string">&quot;C&quot;</span>, <span class="string">&quot;B&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(count)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
-<h1 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h1><img src="/2019/04/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95_%E9%80%92%E5%BD%92_hanoi/hanoi.png" class="">
+<h1 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h1><h2 id="三次握手过程"><a href="#三次握手过程" class="headerlink" title="三次握手过程"></a>三次握手过程</h2><ul>
+<li>B 处于 LISTEN 状态，等待来自 A 的连接请求。</li>
+</ul>
+<ol>
+<li>A 向 B发送连接请求报文SYN(synchronize)。</li>
+<li>B 收到 A 发来的 SYN，如果同意建立连接，则向 A 发送连接确认报文 SYN/ACK。</li>
+<li>A 收到 SYN/ACK 后，再向B发出确认报文 ACK，代表握手结束。</li>
+</ol>
+<ul>
+<li>B 收到 ACK 后，连接建立。</li>
+</ul>
+<img src="/2019/04/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_TCP-IP/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.jpg" class="">
 
-<h1 id="移动示意图"><a href="#移动示意图" class="headerlink" title="移动示意图"></a>移动示意图</h1><img src="/2019/04/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95_%E9%80%92%E5%BD%92_hanoi/hanoi3%E9%98%B6%E7%A4%BA%E6%84%8F%E5%9B%BE.jpg" class="">
+<h2 id="三次握手的原因"><a href="#三次握手的原因" class="headerlink" title="三次握手的原因"></a>三次握手的原因</h2><p>第三次握手是为了防止失效的连接请求到达服务器，让服务器错误打开连接。</p>
+<p>客户端发送的连接请求如果在网络中滞留，那么就会隔很长一段时间才能收到服务器端发回的连接确认。客户端等待一个超时重传时间之后，就会重新请求连接。但是这个滞留的连接请求最后还是会到达服务器，如果不进行三次握手，那么服务器就会打开两个连接。如果有第三次握手，客户端会忽略服务器之后发送的对滞留连接请求的连接确认，不进行第三次握手，因此就不会再次打开连接。</p>
+<h1 id="四次挥手"><a href="#四次挥手" class="headerlink" title="四次挥手"></a>四次挥手</h1><h2 id="四次挥手过程"><a href="#四次挥手过程" class="headerlink" title="四次挥手过程"></a>四次挥手过程</h2><ul>
+<li>A 发送连接释放报文 FIN。</li>
+<li>B 收到 FIN 之后发出确认 ACK，此时 TCP 属于半关闭状态，B 能向 A 发送数据但是 A 不能向 B 发送数据。</li>
+<li>当 B 不再需要连接时，发送连接释放报文 FIN。</li>
+<li>A 收到 FIN 后发出确认 ACK，进入 TIME-WAIT 状态，等待 2 倍的 MSL（最大报文存活时间）后释放连接。</li>
+<li>B 收到 ACK 后释放连接。</li>
+</ul>
+<img src="/2019/04/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_TCP-IP/%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B.jpg" class="">
+
+<h2 id="四次挥手的原因"><a href="#四次挥手的原因" class="headerlink" title="四次挥手的原因"></a>四次挥手的原因</h2><p>客户端发送了 FIN 连接释放报文之后，服务器端收到了这个报文，就进入了 CLOSE-WAIT 状态。这个状态是为了让服务器端发送还未传送完毕的数据，传送完毕之后，服务器端会发送 FIN 连接释放报文。</p>
+<h2 id="TIME-WAIT"><a href="#TIME-WAIT" class="headerlink" title="TIME_WAIT"></a>TIME_WAIT</h2><p>客户端接收到服务器端的 FIN 报文后进入此状态，而并不是直接进入 CLOSED 状态，还需要等待一个时间计时器设置的时间 2MSL。这么做有两个理由：</p>
+<ul>
+<li>确保最后一个确认报文 ACK 能够到达。如果服务器端没收到客户端发送来的确认报文 ACK，那么就需要重新发送连接释放请求报文 FIN，客户端等待一段时间就是为了处理这种情况的发生。</li>
+<li>等待一段时间是为了让本次连接持续时间内产生的所有报文都从网络中消失，使得下一个新的连接不会出现旧的连接请求报文 SYN，从而错误打开连接。</li>
+</ul>
 ]]></content>
       <categories>
-        <category>数据结构和算法</category>
-        <category>递归</category>
+        <category>计算机网络</category>
+        <category>TCP/IP</category>
       </categories>
       <tags>
-        <tag>python</tag>
+        <tag>基础</tag>
+        <tag>网络</tag>
       </tags>
   </entry>
   <entry>
@@ -1263,6 +1308,23 @@ tail -f ping.log（查看日志）
       <categories>
         <category>计算机网络</category>
         <category>DNS</category>
+      </categories>
+      <tags>
+        <tag>基础</tag>
+        <tag>网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>http协议</title>
+    <url>/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_http/</url>
+    <content><![CDATA[<p><img src="/pictures/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.jpg"></p>
+<span id="more"></span>
+<h2 id="从输入url到页面加载的过程中发生了什么？"><a href="#从输入url到页面加载的过程中发生了什么？" class="headerlink" title="从输入url到页面加载的过程中发生了什么？"></a>从输入url到页面加载的过程中发生了什么？</h2><p>DNS解析url的ip地址<br>发送HTTP请求<br>TCP分割HTTP请求报文进行可靠的传输<br>IP协议对请求报文进行中转和传送<br>服务端TCP接受并重组报文<br>服务端HTTP处理请求<br>返回资源</p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><img src="/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_http/%E6%95%B4%E4%B8%AA%E8%BF%87%E7%A8%8B.jpg" class="">
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+        <category>HTTP</category>
       </categories>
       <tags>
         <tag>基础</tag>
@@ -1406,7 +1468,7 @@ tail -f ping.log（查看日志）
 
 <p>[\w.] 匹配的是字母数字或者 . ，在其后面加上 + ，表示匹配多次。在字符集合 [ ] 里，. 不是元字符；</p>
 <p><em><strong>匹配结果</strong></em></p>
-<p><a href="mailto:&#x61;&#98;&#x63;&#46;&#x64;&#x65;&#102;&#64;&#113;&#x71;&#46;&#x63;&#x6f;&#x6d;">&#x61;&#98;&#x63;&#46;&#x64;&#x65;&#102;&#64;&#113;&#x71;&#46;&#x63;&#x6f;&#x6d;</a></p>
+<p><a href="mailto:&#97;&#x62;&#x63;&#46;&#x64;&#x65;&#x66;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#109;">&#97;&#x62;&#x63;&#46;&#x64;&#x65;&#x66;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#109;</a></p>
 <ul>
 <li><p>{n} 匹配 n 个字符</p>
 </li>
@@ -1439,68 +1501,6 @@ tail -f ping.log（查看日志）
       </categories>
       <tags>
         <tag>RegEx</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>TCP三次握手四次挥手</title>
-    <url>/2019/04/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_TCP-IP/</url>
-    <content><![CDATA[<p><img src="/pictures/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.jpg"></p>
-<span id="more"></span>
-<h1 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h1><h2 id="三次握手过程"><a href="#三次握手过程" class="headerlink" title="三次握手过程"></a>三次握手过程</h2><ul>
-<li>B 处于 LISTEN 状态，等待来自 A 的连接请求。</li>
-</ul>
-<ol>
-<li>A 向 B发送连接请求报文SYN(synchronize)。</li>
-<li>B 收到 A 发来的 SYN，如果同意建立连接，则向 A 发送连接确认报文 SYN/ACK。</li>
-<li>A 收到 SYN/ACK 后，再向B发出确认报文 ACK，代表握手结束。</li>
-</ol>
-<ul>
-<li>B 收到 ACK 后，连接建立。</li>
-</ul>
-<img src="/2019/04/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_TCP-IP/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.jpg" class="">
-
-<h2 id="三次握手的原因"><a href="#三次握手的原因" class="headerlink" title="三次握手的原因"></a>三次握手的原因</h2><p>第三次握手是为了防止失效的连接请求到达服务器，让服务器错误打开连接。</p>
-<p>客户端发送的连接请求如果在网络中滞留，那么就会隔很长一段时间才能收到服务器端发回的连接确认。客户端等待一个超时重传时间之后，就会重新请求连接。但是这个滞留的连接请求最后还是会到达服务器，如果不进行三次握手，那么服务器就会打开两个连接。如果有第三次握手，客户端会忽略服务器之后发送的对滞留连接请求的连接确认，不进行第三次握手，因此就不会再次打开连接。</p>
-<h1 id="四次挥手"><a href="#四次挥手" class="headerlink" title="四次挥手"></a>四次挥手</h1><h2 id="四次挥手过程"><a href="#四次挥手过程" class="headerlink" title="四次挥手过程"></a>四次挥手过程</h2><ul>
-<li>A 发送连接释放报文 FIN。</li>
-<li>B 收到 FIN 之后发出确认 ACK，此时 TCP 属于半关闭状态，B 能向 A 发送数据但是 A 不能向 B 发送数据。</li>
-<li>当 B 不再需要连接时，发送连接释放报文 FIN。</li>
-<li>A 收到 FIN 后发出确认 ACK，进入 TIME-WAIT 状态，等待 2 倍的 MSL（最大报文存活时间）后释放连接。</li>
-<li>B 收到 ACK 后释放连接。</li>
-</ul>
-<img src="/2019/04/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_TCP-IP/%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B.jpg" class="">
-
-<h2 id="四次挥手的原因"><a href="#四次挥手的原因" class="headerlink" title="四次挥手的原因"></a>四次挥手的原因</h2><p>客户端发送了 FIN 连接释放报文之后，服务器端收到了这个报文，就进入了 CLOSE-WAIT 状态。这个状态是为了让服务器端发送还未传送完毕的数据，传送完毕之后，服务器端会发送 FIN 连接释放报文。</p>
-<h2 id="TIME-WAIT"><a href="#TIME-WAIT" class="headerlink" title="TIME_WAIT"></a>TIME_WAIT</h2><p>客户端接收到服务器端的 FIN 报文后进入此状态，而并不是直接进入 CLOSED 状态，还需要等待一个时间计时器设置的时间 2MSL。这么做有两个理由：</p>
-<ul>
-<li>确保最后一个确认报文 ACK 能够到达。如果服务器端没收到客户端发送来的确认报文 ACK，那么就需要重新发送连接释放请求报文 FIN，客户端等待一段时间就是为了处理这种情况的发生。</li>
-<li>等待一段时间是为了让本次连接持续时间内产生的所有报文都从网络中消失，使得下一个新的连接不会出现旧的连接请求报文 SYN，从而错误打开连接。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>计算机网络</category>
-        <category>TCP/IP</category>
-      </categories>
-      <tags>
-        <tag>基础</tag>
-        <tag>网络</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>http协议</title>
-    <url>/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_http/</url>
-    <content><![CDATA[<p><img src="/pictures/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C.jpg"></p>
-<span id="more"></span>
-<h2 id="从输入url到页面加载的过程中发生了什么？"><a href="#从输入url到页面加载的过程中发生了什么？" class="headerlink" title="从输入url到页面加载的过程中发生了什么？"></a>从输入url到页面加载的过程中发生了什么？</h2><p>DNS解析url的ip地址<br>发送HTTP请求<br>TCP分割HTTP请求报文进行可靠的传输<br>IP协议对请求报文进行中转和传送<br>服务端TCP接受并重组报文<br>服务端HTTP处理请求<br>返回资源</p>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><img src="/2019/04/02/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C_http/%E6%95%B4%E4%B8%AA%E8%BF%87%E7%A8%8B.jpg" class="">
-]]></content>
-      <categories>
-        <category>计算机网络</category>
-        <category>HTTP</category>
-      </categories>
-      <tags>
-        <tag>基础</tag>
-        <tag>网络</tag>
       </tags>
   </entry>
 </search>
