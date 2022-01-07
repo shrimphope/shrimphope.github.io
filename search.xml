@@ -900,13 +900,13 @@ tail -f ping.log（查看日志）
   </entry>
   <entry>
     <title>SAS_图</title>
-    <url>/2021/03/15/SAS_%E5%9B%BE%E8%A1%A8/</url>
-    <content><![CDATA[<img src="/2021/03/15/SAS_%E5%9B%BE%E8%A1%A8/4.png" class="">
+    <url>/2020/03/15/SAS_%E5%9B%BE%E8%A1%A8/</url>
+    <content><![CDATA[<img src="/2020/03/15/SAS_%E5%9B%BE%E8%A1%A8/4.png" class="">
 
 <span id="more"></span>
-<img src="/2021/03/15/SAS_%E5%9B%BE%E8%A1%A8/2.jpg" class="">
+<img src="/2020/03/15/SAS_%E5%9B%BE%E8%A1%A8/2.jpg" class="">
 <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>&#160; &#160; &#160; &#160;如上图，把一个小鼠脑海马区域血管分割出来了, 下面简单的给出两个参数的量化分析。</p>
-<img src="/2021/03/15/SAS_%E5%9B%BE%E8%A1%A8/5.png" class="">
+<img src="/2020/03/15/SAS_%E5%9B%BE%E8%A1%A8/5.png" class="">
 <p>&#160; &#160; &#160; &#160;从分割的体素图像A可以直观的看到右侧海马区域因为受到病灶的挤压，血管形态较正常的左侧有一定变形，血管的形变萎缩导致血管容积的减少，同时挤压导致血管的粘连使得无法通过常规手段正确的分割出主要的血管丛，所以C图中右侧海马血管出现了一些极大异常值。</p>
 <h1 id="实操过程"><a href="#实操过程" class="headerlink" title="实操过程"></a>实操过程</h1><blockquote>
 <p>导入预处理完的.xlxs或.csv文件</p>
@@ -941,7 +941,7 @@ tail -f ping.log（查看日志）
   </entry>
   <entry>
     <title>BASE SAS</title>
-    <url>/2021/03/12/SAS_%E5%9F%BA%E7%A1%80/</url>
+    <url>/2020/03/12/SAS_%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<p><img src="/pictures/SAS.jpeg"></p>
 <span id="more"></span>
 <h1 id="一-软件安装"><a href="#一-软件安装" class="headerlink" title="一.软件安装"></a>一.软件安装</h1><p>SAS常规大小有二三十个G，下载安装运行对于一般的电脑都有点吃力，这里提供两种，Windows9.1免安装版和在线版。</p>
@@ -1025,7 +1025,7 @@ tail -f ping.log（查看日志）
   </entry>
   <entry>
     <title>SAS_数字格式</title>
-    <url>/2021/03/13/SAS_%E6%95%B0%E5%AD%97%E6%A0%BC%E5%BC%8F/</url>
+    <url>/2020/03/13/SAS_%E6%95%B0%E5%AD%97%E6%A0%BC%E5%BC%8F/</url>
     <content><![CDATA[<p><img src="/pictures/SAS.jpeg"></p>
 <span id="more"></span>
 <h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&#160; &#160; &#160; &#160;SAS可以处理各种数字数据格式，它在变量名的末尾使用这些格式，以向数据应用特定的数字格式。 SAS使用两种数字格式，一个用于读取数字数据的特定格式，称为informat，另一个用于显示称为输出格式的特定格式。这个格式带有很鲜明的语言特点。</p>
@@ -1079,7 +1079,7 @@ tail -f ping.log（查看日志）
 </tr>
 </tbody></table>
 <h1 id="测试用例"><a href="#测试用例" class="headerlink" title="测试用例"></a>测试用例</h1><p>&#160; &#160; &#160; &#160;我们可以随意写几个数字来看一下这个输入和输出，input x 6.限制了读入数据的长度和格式即为无小数位的五位整数，format X DOLLAR10.2则规定了显示的格式，这里我们可以看到数据的完全显示、美元符号和千位逗号的显示优先级。</p>
-<img src="/2021/03/13/SAS_%E6%95%B0%E5%AD%97%E6%A0%BC%E5%BC%8F/test.jpg" class="">
+<img src="/2020/03/13/SAS_%E6%95%B0%E5%AD%97%E6%A0%BC%E5%BC%8F/test.jpg" class="">
 
 <hr>
 <p>本文作者： Ran<br>版权声明： 本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</p>
