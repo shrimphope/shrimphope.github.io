@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>git和github</title>
+    <url>/2019/04/10/Git_&amp;Github/</url>
+    <content><![CDATA[<p><img src="/pictures/git+github.jpg"></p>
+<span id="more"></span>
+<h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><h2 id="git三个分区和远程仓库关系"><a href="#git三个分区和远程仓库关系" class="headerlink" title="git三个分区和远程仓库关系"></a>git三个分区和远程仓库关系</h2><img src="/2019/04/10/Git_&Github/git%E5%88%86%E5%8C%BA.jpg" class="">
+]]></content>
+      <categories>
+        <category>版本控制</category>
+        <category>GIT</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>git提交到远程库问题</title>
     <url>/2019/06/06/Git_%E6%8F%90%E4%BA%A4%E5%88%B0%E8%BF%9C%E7%A8%8B%E5%BA%93%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<p><img src="/pictures/git+github.jpg"><br>用git提交到github时出现问题</p>
@@ -12,21 +27,6 @@
 <p>最后成功</p>
 <img src="/2019/06/06/Git_%E6%8F%90%E4%BA%A4%E5%88%B0%E8%BF%9C%E7%A8%8B%E5%BA%93%E9%97%AE%E9%A2%98/3.png" class="">
 <p>应该是README文件的问题</p>
-]]></content>
-      <categories>
-        <category>版本控制</category>
-        <category>GIT</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git和github</title>
-    <url>/2019/04/10/Git_&amp;Github/</url>
-    <content><![CDATA[<p><img src="/pictures/git+github.jpg"></p>
-<span id="more"></span>
-<h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><h2 id="git三个分区和远程仓库关系"><a href="#git三个分区和远程仓库关系" class="headerlink" title="git三个分区和远程仓库关系"></a>git三个分区和远程仓库关系</h2><img src="/2019/04/10/Git_&Github/git%E5%88%86%E5%8C%BA.jpg" class="">
 ]]></content>
       <categories>
         <category>版本控制</category>
@@ -145,6 +145,29 @@
       </tags>
   </entry>
   <entry>
+    <title>196.删除重复的电子邮箱</title>
+    <url>/2019/05/02/LeetCode_196-%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E7%9A%84%E7%94%B5%E5%AD%90%E9%82%AE%E7%AE%B1/</url>
+    <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"><br>编写一个 SQL 查询，来删除 Person 表中所有重复的电子邮箱，<br>重复的邮箱里只保留 Id 最小 的那个。</p>
+<span id="more"></span>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">+----+------------------+</span><br><span class="line">| Id | Email            |</span><br><span class="line">+----+------------------+</span><br><span class="line">| 1  | john@example.com |</span><br><span class="line">| 2  | bob@example.com  |</span><br><span class="line">| 3  | john@example.com |</span><br><span class="line">+----+------------------+</span><br></pre></td></tr></table></figure>
+
+<p>Id 是这个表的主键。<br>例如，在运行你的查询语句之后，上面的 Person 表应返回以下几行:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">+----+------------------+</span><br><span class="line">| Id | Email            |</span><br><span class="line">+----+------------------+</span><br><span class="line">| 1  | john@example.com |</span><br><span class="line">| 2  | bob@example.com  |</span><br><span class="line">+----+------------------+</span><br></pre></td></tr></table></figure>
+
+<p>思路：<br>1.查询目标：删除一条记录<br>2.查询范围：Person表<br>3.查询条件：删除所有重复的电子邮箱 ，重复的邮箱里只保留Id最小的哪个。<br>显然，通过这个查询条件可以提取出来两条and关系的条件：<br>（1）找出所有重复的电子邮箱（2）删除Id大的重复邮箱；<br>对于条件（1），需要判断出所有重复的电子邮箱，即p1.Email = p2.Email；<br>对于条件（2），需要判断重复邮箱中Id较大的：p1.Id &gt; p2.Id</p>
+<p>解答：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">delete</span> </span><br><span class="line">    p1 </span><br><span class="line"><span class="keyword">from</span> </span><br><span class="line">    Person p1,</span><br><span class="line">    Person p2 </span><br><span class="line"><span class="keyword">where</span> </span><br><span class="line">    (p1.email <span class="operator">=</span> p2.email) <span class="keyword">and</span> (p1.id <span class="operator">&gt;</span> p2.id)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>LeetCode</category>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>185.部门工资前三高的员工</title>
     <url>/2019/05/07/LeetCode_185-%E9%83%A8%E9%97%A8%E5%B7%A5%E8%B5%84%E5%89%8D%E4%B8%89%E9%AB%98%E7%9A%84%E5%91%98%E5%B7%A5/</url>
     <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"><br>编写一个 SQL 查询，找出每个部门工资前三高的员工。</p>
@@ -159,29 +182,6 @@
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">----+----------+</span></span><br><span class="line"><span class="operator">|</span> Id <span class="operator">|</span> Name     <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----+----------+</span></span><br><span class="line"><span class="operator">|</span> <span class="number">1</span>  <span class="operator">|</span> IT       <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">2</span>  <span class="operator">|</span> Sales    <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----+----------+</span></span><br></pre></td></tr></table></figure>
 <p>编写一个 SQL 查询，找出每个部门工资前三高的员工。例如，根据上述给定的表格，查询结果应返回：</p>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">+</span><span class="comment">------------+----------+--------+</span></span><br><span class="line"><span class="operator">|</span> Department <span class="operator">|</span> Employee <span class="operator">|</span> Salary <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">------------+----------+--------+</span></span><br><span class="line"><span class="operator">|</span> IT         <span class="operator">|</span> Max      <span class="operator">|</span> <span class="number">90000</span>  <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> IT         <span class="operator">|</span> Randy    <span class="operator">|</span> <span class="number">85000</span>  <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> IT         <span class="operator">|</span> Joe      <span class="operator">|</span> <span class="number">70000</span>  <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> Sales      <span class="operator">|</span> Henry    <span class="operator">|</span> <span class="number">80000</span>  <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> Sales      <span class="operator">|</span> Sam      <span class="operator">|</span> <span class="number">60000</span>  <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">------------+----------+--------+</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>LeetCode</category>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>196.删除重复的电子邮箱</title>
-    <url>/2019/05/02/LeetCode_196-%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E7%9A%84%E7%94%B5%E5%AD%90%E9%82%AE%E7%AE%B1/</url>
-    <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"><br>编写一个 SQL 查询，来删除 Person 表中所有重复的电子邮箱，<br>重复的邮箱里只保留 Id 最小 的那个。</p>
-<span id="more"></span>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">+----+------------------+</span><br><span class="line">| Id | Email            |</span><br><span class="line">+----+------------------+</span><br><span class="line">| 1  | john@example.com |</span><br><span class="line">| 2  | bob@example.com  |</span><br><span class="line">| 3  | john@example.com |</span><br><span class="line">+----+------------------+</span><br></pre></td></tr></table></figure>
-
-<p>Id 是这个表的主键。<br>例如，在运行你的查询语句之后，上面的 Person 表应返回以下几行:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">+----+------------------+</span><br><span class="line">| Id | Email            |</span><br><span class="line">+----+------------------+</span><br><span class="line">| 1  | john@example.com |</span><br><span class="line">| 2  | bob@example.com  |</span><br><span class="line">+----+------------------+</span><br></pre></td></tr></table></figure>
-
-<p>思路：<br>1.查询目标：删除一条记录<br>2.查询范围：Person表<br>3.查询条件：删除所有重复的电子邮箱 ，重复的邮箱里只保留Id最小的哪个。<br>显然，通过这个查询条件可以提取出来两条and关系的条件：<br>（1）找出所有重复的电子邮箱（2）删除Id大的重复邮箱；<br>对于条件（1），需要判断出所有重复的电子邮箱，即p1.Email = p2.Email；<br>对于条件（2），需要判断重复邮箱中Id较大的：p1.Id &gt; p2.Id</p>
-<p>解答：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">delete</span> </span><br><span class="line">    p1 </span><br><span class="line"><span class="keyword">from</span> </span><br><span class="line">    Person p1,</span><br><span class="line">    Person p2 </span><br><span class="line"><span class="keyword">where</span> </span><br><span class="line">    (p1.email <span class="operator">=</span> p2.email) <span class="keyword">and</span> (p1.id <span class="operator">&gt;</span> p2.id)</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -238,27 +238,6 @@
       </tags>
   </entry>
   <entry>
-    <title>35.搜索插入位置</title>
-    <url>/2019/05/08/LeetCode_35-%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/</url>
-    <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"><br>给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。</p>
-<span id="more"></span>
-<p>你可以假设数组中无重复元素。</p>
-<p>示例 1:</p>
-<p>输入: [1,3,5,6], 5<br>输出: 2<br>示例 2:</p>
-<p>输入: [1,3,5,6], 2<br>输出: 1<br>示例 3:</p>
-<p>输入: [1,3,5,6], 7<br>输出: 4<br>示例 4:</p>
-<p>输入: [1,3,5,6], 0<br>输出: 0</p>
-<p>解答</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">searchInsert</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">for</span> i,num <span class="keyword">in</span> <span class="built_in">enumerate</span>(nums):<span class="comment">#没超过列表边界</span></span><br><span class="line">            <span class="keyword">if</span> target&lt;=num:</span><br><span class="line">                <span class="keyword">return</span> i</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">len</span>(nums)<span class="comment">#若超出</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>LeetCode</category>
-        <category>二分查找</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>3.无重复字符的最长子串</title>
     <url>/2019/05/10/LeetCode_3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/</url>
     <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"><br>给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。</p>
@@ -281,17 +260,18 @@
       </tags>
   </entry>
   <entry>
-    <title>输入有序数组</title>
-    <url>/2019/05/12/LeetCode_%E4%BA%8C%E5%88%86%E6%B3%95_%E8%BE%93%E5%85%A5%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/</url>
-    <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"><br>给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。</p>
+    <title>35.搜索插入位置</title>
+    <url>/2019/05/08/LeetCode_35-%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/</url>
+    <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"><br>给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。</p>
 <span id="more"></span>
-<p>函数应该返回这两个下标值 index1 和 index2，其中 index1 必须小于 index2。</p>
-<p>说明:</p>
-<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">1</span>.返回的下标值（index<span class="number">1</span> 和 index<span class="number">2</span>）不是从零开始的。</span><br><span class="line"><span class="attribute">2</span>.你可以假设每个输入只对应唯一的答案，而且你不可以重复使用相同的元素。</span><br></pre></td></tr></table></figure>
-<p>示例:</p>
-<figure class="highlight nix"><table><tr><td class="code"><pre><span class="line">输入: <span class="attr">numbers</span> = [<span class="number">2</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span>], <span class="attr">target</span> = <span class="number">9</span></span><br><span class="line">输出: [<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">解释: <span class="number">2</span> 与 <span class="number">7</span> 之和等于目标数 <span class="number">9</span> 。因此 <span class="attr">index1</span> = <span class="number">1</span>, <span class="attr">index2</span> = <span class="number">2</span> 。</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span>(<span class="params">self, numbers: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type numbers: List[int]</span></span><br><span class="line"><span class="string">        :type target: int</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        s = &#123;&#125;</span><br><span class="line">        r = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(numbers)):</span><br><span class="line">            <span class="keyword">if</span> numbers[i] <span class="keyword">in</span> s.keys():</span><br><span class="line">                r.append(s[numbers[i]]+<span class="number">1</span>)</span><br><span class="line">                r.append(i+<span class="number">1</span>)</span><br><span class="line">                <span class="keyword">return</span> r</span><br><span class="line">            s[target-numbers[i]] = i</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure>]]></content>
+<p>你可以假设数组中无重复元素。</p>
+<p>示例 1:</p>
+<p>输入: [1,3,5,6], 5<br>输出: 2<br>示例 2:</p>
+<p>输入: [1,3,5,6], 2<br>输出: 1<br>示例 3:</p>
+<p>输入: [1,3,5,6], 7<br>输出: 4<br>示例 4:</p>
+<p>输入: [1,3,5,6], 0<br>输出: 0</p>
+<p>解答</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">searchInsert</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">for</span> i,num <span class="keyword">in</span> <span class="built_in">enumerate</span>(nums):<span class="comment">#没超过列表边界</span></span><br><span class="line">            <span class="keyword">if</span> target&lt;=num:</span><br><span class="line">                <span class="keyword">return</span> i</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">len</span>(nums)<span class="comment">#若超出</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>LeetCode</category>
         <category>二分查找</category>
@@ -316,6 +296,26 @@
       <categories>
         <category>LeetCode</category>
         <category>排序</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>输入有序数组</title>
+    <url>/2019/05/12/LeetCode_%E4%BA%8C%E5%88%86%E6%B3%95_%E8%BE%93%E5%85%A5%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/</url>
+    <content><![CDATA[<p><img src="/pictures/leetcode.jpeg"><br>给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。</p>
+<span id="more"></span>
+<p>函数应该返回这两个下标值 index1 和 index2，其中 index1 必须小于 index2。</p>
+<p>说明:</p>
+<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">1</span>.返回的下标值（index<span class="number">1</span> 和 index<span class="number">2</span>）不是从零开始的。</span><br><span class="line"><span class="attribute">2</span>.你可以假设每个输入只对应唯一的答案，而且你不可以重复使用相同的元素。</span><br></pre></td></tr></table></figure>
+<p>示例:</p>
+<figure class="highlight nix"><table><tr><td class="code"><pre><span class="line">输入: <span class="attr">numbers</span> = [<span class="number">2</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span>], <span class="attr">target</span> = <span class="number">9</span></span><br><span class="line">输出: [<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">解释: <span class="number">2</span> 与 <span class="number">7</span> 之和等于目标数 <span class="number">9</span> 。因此 <span class="attr">index1</span> = <span class="number">1</span>, <span class="attr">index2</span> = <span class="number">2</span> 。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span>(<span class="params">self, numbers: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="type">List</span>[<span class="built_in">int</span>]:</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        :type numbers: List[int]</span></span><br><span class="line"><span class="string">        :type target: int</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        s = &#123;&#125;</span><br><span class="line">        r = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(numbers)):</span><br><span class="line">            <span class="keyword">if</span> numbers[i] <span class="keyword">in</span> s.keys():</span><br><span class="line">                r.append(s[numbers[i]]+<span class="number">1</span>)</span><br><span class="line">                r.append(i+<span class="number">1</span>)</span><br><span class="line">                <span class="keyword">return</span> r</span><br><span class="line">            s[target-numbers[i]] = i</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>LeetCode</category>
+        <category>二分查找</category>
       </categories>
       <tags>
         <tag>LeetCode</tag>
@@ -502,29 +502,6 @@ Hello
       </tags>
   </entry>
   <entry>
-    <title>数据库中的左连接(left join)和右连接(right join)区别</title>
-    <url>/2019/03/18/MySQL_join/</url>
-    <content><![CDATA[<p><img src="/pictures/MySql.png"><br>Left Join / Right Join /inner join<br>左连接where只影向右表，右连接where只影响左表。</p>
-<span id="more"></span>
-<h1 id="Left-Join"><a href="#Left-Join" class="headerlink" title="Left Join"></a>Left Join</h1><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> tbl1 <span class="keyword">Left</span> <span class="keyword">Join</span> tbl2</span><br><span class="line">    <span class="keyword">where</span> tbl1.ID <span class="operator">=</span> tbl2.ID</span><br></pre></td></tr></table></figure>
-<p>左连接后的检索结果是显示tbl1的所有数据和tbl2中满足where 条件的数据。</p>
-<p>简言之 Left Join影响到的是右边的表</p>
-<h1 id="Right-Join"><a href="#Right-Join" class="headerlink" title="Right Join"></a>Right Join</h1><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> tbl1 <span class="keyword">Right</span> <span class="keyword">Join</span> tbl2</span><br><span class="line">    <span class="keyword">where</span> tbl1.ID <span class="operator">=</span> tbl2.ID</span><br></pre></td></tr></table></figure>
-<p>检索结果是tbl2的所有数据和tbl1中满足where 条件的数据。</p>
-<p>简言之 Right Join影响到的是左边的表。</p>
-<h1 id="inner-join"><a href="#inner-join" class="headerlink" title="inner join"></a>inner join</h1><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">FROM</span> tbl1 <span class="keyword">INNER</span> <span class="keyword">JOIN</span> tbl2</span><br><span class="line">    <span class="keyword">ON</span> tbl1.ID <span class="operator">=</span> tbl2.ID</span><br></pre></td></tr></table></figure>
-
-<p>功能和 select * from tbl1,tbl2 where tbl1.id=tbl2.id相同。</p>
-]]></content>
-      <categories>
-        <category>数据库</category>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>SQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Linux常用命令(二)</title>
     <url>/2019/03/15/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4(%E4%BA%8C)/</url>
     <content><![CDATA[<p><img src="/pictures/Linux.jpeg"></p>
@@ -555,6 +532,81 @@ tail -f ping.log（查看日志）
       </categories>
       <tags>
         <tag>基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MongoDB数据库和集合的基本操作</title>
+    <url>/2019/03/17/MongoDB%E6%93%8D%E4%BD%9C(%E4%B8%80)/</url>
+    <content><![CDATA[<p><img src="/pictures/MongoDB.jpeg"></p>
+<p>MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富、最像关系数据库的。</p>
+<span id="more"></span>
+
+<h2 id="面向集合的存储"><a href="#面向集合的存储" class="headerlink" title="面向集合的存储"></a>面向集合的存储</h2><p>在 MongoDB 中，一个数据库包含多个集合，类似于 MySQL 中一个数据库包含多个表；一个集合包含多个文档，类似于 MySQL 中一个表包含多条数据。</p>
+<p>可以把集合记为表，文档记为一条记录。</p>
+<p>这样命名是有原因的，因为 MongoDB 没有行列统一的表格式排列，而是采用一个大仓库的形式将所有数据包纳其中。文档也一样，它是一段自由独立的数据，受外部限制少，所以区别于关系型数据库的记录。</p>
+<h2 id="虚拟机开机配置"><a href="#虚拟机开机配置" class="headerlink" title="虚拟机开机配置"></a>虚拟机开机配置</h2><p>启动 MongoDB 服务，因为 MongoDB 并不随系统一起启动，可能以下命令运行后会等一小段的时间才会启动完毕。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo service mongodb start</span><br></pre></td></tr></table></figure>
+
+<p>在命令行中敲 exit 可以退出。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mongo</span><br></pre></td></tr></table></figure>
+
+<h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><ul>
+<li>一个 MongoDB 可以创建多个数据库</li>
+<li>使用 show dbs 可以查看所有数据库的列表</li>
+<li>执行 db 命令则可以查看当前数据库对象或者集合</li>
+<li>运行 use 命令可以连接到指定的数据库</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash">mongo    <span class="comment"># 进入到mongo命令行</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">use <span class="built_in">test</span>    <span class="comment"># 连接到test数据库</span></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h2><p>文档是 MongoDB 的核心，类似于 SQLite 数据库（关系数据库）中的每一行数据。多个键及其关联的值放在一起就是文档。在 Mongodb 中使用一种类 json 的 bson 存储数据，bson 数据可以理解为在 json 的基础上添加了一些 json 中没有的数据类型。</p>
+<p>例如：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">&#123;&quot;company&quot;:&quot;Chenshi keji&quot;&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="文档的逻辑联系"><a href="#文档的逻辑联系" class="headerlink" title="文档的逻辑联系"></a>文档的逻辑联系</h2><p>假设有两个文档：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> user文档</span></span><br><span class="line">&#123;</span><br><span class="line">   &quot;name&quot;: &quot;Tom Hanks&quot;,</span><br><span class="line">   &quot;contact&quot;: &quot;987654321&quot;,</span><br><span class="line">   &quot;dob&quot;: &quot;01-01-1991&quot;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> address文档</span></span><br><span class="line">&#123;</span><br><span class="line">   &quot;building&quot;: &quot;22 A, Indiana Apt&quot;,</span><br><span class="line">   &quot;pincode&quot;: 123456,</span><br><span class="line">   &quot;city&quot;: &quot;chengdu&quot;,</span><br><span class="line">   &quot;state&quot;: &quot;sichuan&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>关系 1：嵌入式关系：把 address 文档嵌入到 user 文档中</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 这就是嵌入式的关系</span></span><br><span class="line">&#123;</span><br><span class="line">   &quot;name&quot;: &quot;Tom Hanks&quot;,</span><br><span class="line">   &quot;contact&quot;: &quot;987654321&quot;,</span><br><span class="line">   &quot;dob&quot;: &quot;01-01-1991&quot;,</span><br><span class="line">   &quot;address&quot;:</span><br><span class="line">   [&#123;</span><br><span class="line">   &quot;building&quot;: &quot;22 A, Indiana Apt&quot;,</span><br><span class="line">   &quot;pincode&quot;: 123456,</span><br><span class="line">   &quot;city&quot;: &quot;chengdu&quot;,</span><br><span class="line">   &quot;state&quot;: &quot;sichuan&quot;</span><br><span class="line">   &#125;,</span><br><span class="line">   &#123;</span><br><span class="line">   &quot;building&quot;: &quot;170 A, Acropolis Apt&quot;,</span><br><span class="line">   &quot;pincode&quot;: 456789,</span><br><span class="line">   &quot;city&quot;: &quot;beijing&quot;,</span><br><span class="line">   &quot;state&quot;: &quot;beijing&quot;</span><br><span class="line">   &#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>关系 2：引用式关系：将两个文档分开，通过引用文档的_id 字段来建立关系</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 这就是引用式关系</span></span><br><span class="line">&#123;</span><br><span class="line">   &quot;name&quot;: &quot;Tom Benzamin&quot;,</span><br><span class="line">   &quot;contact&quot;: &quot;987654321&quot;,</span><br><span class="line">   &quot;dob&quot;: &quot;01-01-1991&quot;,</span><br><span class="line">   &quot;address_ids&quot;: [</span><br><span class="line">      ObjectId(&quot;52ffc4a5d85242602e000000&quot;)    #对应address文档的id字段</span><br><span class="line">   ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在实际应用的时候，嵌入式关系比较适合一对一的关系，引用式关系比较适合一对多或者多对多的情况。</p>
+<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p>集合就是一组文档的组合，就相当于是关系数据库中的表，在 MongoDB 中可以存储不同的文档结构的文档。</p>
+<p>例如：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">&#123;&quot;company&quot;:&quot;Chenshi keji&quot;&#125; &#123;&quot;people&quot;:&quot;man&quot;,&quot;name&quot;:&quot;peter&quot;&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>数据库</category>
+        <category>MongoDB</category>
+      </categories>
+      <tags>
+        <tag>基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据库中的左连接(left join)和右连接(right join)区别</title>
+    <url>/2019/03/18/MySQL_join/</url>
+    <content><![CDATA[<p><img src="/pictures/MySql.png"><br>Left Join / Right Join /inner join<br>左连接where只影向右表，右连接where只影响左表。</p>
+<span id="more"></span>
+<h1 id="Left-Join"><a href="#Left-Join" class="headerlink" title="Left Join"></a>Left Join</h1><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> tbl1 <span class="keyword">Left</span> <span class="keyword">Join</span> tbl2</span><br><span class="line">    <span class="keyword">where</span> tbl1.ID <span class="operator">=</span> tbl2.ID</span><br></pre></td></tr></table></figure>
+<p>左连接后的检索结果是显示tbl1的所有数据和tbl2中满足where 条件的数据。</p>
+<p>简言之 Left Join影响到的是右边的表</p>
+<h1 id="Right-Join"><a href="#Right-Join" class="headerlink" title="Right Join"></a>Right Join</h1><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> tbl1 <span class="keyword">Right</span> <span class="keyword">Join</span> tbl2</span><br><span class="line">    <span class="keyword">where</span> tbl1.ID <span class="operator">=</span> tbl2.ID</span><br></pre></td></tr></table></figure>
+<p>检索结果是tbl2的所有数据和tbl1中满足where 条件的数据。</p>
+<p>简言之 Right Join影响到的是左边的表。</p>
+<h1 id="inner-join"><a href="#inner-join" class="headerlink" title="inner join"></a>inner join</h1><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">FROM</span> tbl1 <span class="keyword">INNER</span> <span class="keyword">JOIN</span> tbl2</span><br><span class="line">    <span class="keyword">ON</span> tbl1.ID <span class="operator">=</span> tbl2.ID</span><br></pre></td></tr></table></figure>
+
+<p>功能和 select * from tbl1,tbl2 where tbl1.id=tbl2.id相同。</p>
+]]></content>
+      <categories>
+        <category>数据库</category>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>SQL</tag>
       </tags>
   </entry>
   <entry>
@@ -608,58 +660,6 @@ tail -f ping.log（查看日志）
       </categories>
       <tags>
         <tag>SQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MongoDB数据库和集合的基本操作</title>
-    <url>/2019/03/17/MongoDB%E6%93%8D%E4%BD%9C(%E4%B8%80)/</url>
-    <content><![CDATA[<p><img src="/pictures/MongoDB.jpeg"></p>
-<p>MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富、最像关系数据库的。</p>
-<span id="more"></span>
-
-<h2 id="面向集合的存储"><a href="#面向集合的存储" class="headerlink" title="面向集合的存储"></a>面向集合的存储</h2><p>在 MongoDB 中，一个数据库包含多个集合，类似于 MySQL 中一个数据库包含多个表；一个集合包含多个文档，类似于 MySQL 中一个表包含多条数据。</p>
-<p>可以把集合记为表，文档记为一条记录。</p>
-<p>这样命名是有原因的，因为 MongoDB 没有行列统一的表格式排列，而是采用一个大仓库的形式将所有数据包纳其中。文档也一样，它是一段自由独立的数据，受外部限制少，所以区别于关系型数据库的记录。</p>
-<h2 id="虚拟机开机配置"><a href="#虚拟机开机配置" class="headerlink" title="虚拟机开机配置"></a>虚拟机开机配置</h2><p>启动 MongoDB 服务，因为 MongoDB 并不随系统一起启动，可能以下命令运行后会等一小段的时间才会启动完毕。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo service mongodb start</span><br></pre></td></tr></table></figure>
-
-<p>在命令行中敲 exit 可以退出。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mongo</span><br></pre></td></tr></table></figure>
-
-<h1 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h1><h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><ul>
-<li>一个 MongoDB 可以创建多个数据库</li>
-<li>使用 show dbs 可以查看所有数据库的列表</li>
-<li>执行 db 命令则可以查看当前数据库对象或者集合</li>
-<li>运行 use 命令可以连接到指定的数据库</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash">mongo    <span class="comment"># 进入到mongo命令行</span></span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">use <span class="built_in">test</span>    <span class="comment"># 连接到test数据库</span></span></span><br></pre></td></tr></table></figure>
-
-<h2 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h2><p>文档是 MongoDB 的核心，类似于 SQLite 数据库（关系数据库）中的每一行数据。多个键及其关联的值放在一起就是文档。在 Mongodb 中使用一种类 json 的 bson 存储数据，bson 数据可以理解为在 json 的基础上添加了一些 json 中没有的数据类型。</p>
-<p>例如：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">&#123;&quot;company&quot;:&quot;Chenshi keji&quot;&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="文档的逻辑联系"><a href="#文档的逻辑联系" class="headerlink" title="文档的逻辑联系"></a>文档的逻辑联系</h2><p>假设有两个文档：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> user文档</span></span><br><span class="line">&#123;</span><br><span class="line">   &quot;name&quot;: &quot;Tom Hanks&quot;,</span><br><span class="line">   &quot;contact&quot;: &quot;987654321&quot;,</span><br><span class="line">   &quot;dob&quot;: &quot;01-01-1991&quot;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> address文档</span></span><br><span class="line">&#123;</span><br><span class="line">   &quot;building&quot;: &quot;22 A, Indiana Apt&quot;,</span><br><span class="line">   &quot;pincode&quot;: 123456,</span><br><span class="line">   &quot;city&quot;: &quot;chengdu&quot;,</span><br><span class="line">   &quot;state&quot;: &quot;sichuan&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<p>关系 1：嵌入式关系：把 address 文档嵌入到 user 文档中</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 这就是嵌入式的关系</span></span><br><span class="line">&#123;</span><br><span class="line">   &quot;name&quot;: &quot;Tom Hanks&quot;,</span><br><span class="line">   &quot;contact&quot;: &quot;987654321&quot;,</span><br><span class="line">   &quot;dob&quot;: &quot;01-01-1991&quot;,</span><br><span class="line">   &quot;address&quot;:</span><br><span class="line">   [&#123;</span><br><span class="line">   &quot;building&quot;: &quot;22 A, Indiana Apt&quot;,</span><br><span class="line">   &quot;pincode&quot;: 123456,</span><br><span class="line">   &quot;city&quot;: &quot;chengdu&quot;,</span><br><span class="line">   &quot;state&quot;: &quot;sichuan&quot;</span><br><span class="line">   &#125;,</span><br><span class="line">   &#123;</span><br><span class="line">   &quot;building&quot;: &quot;170 A, Acropolis Apt&quot;,</span><br><span class="line">   &quot;pincode&quot;: 456789,</span><br><span class="line">   &quot;city&quot;: &quot;beijing&quot;,</span><br><span class="line">   &quot;state&quot;: &quot;beijing&quot;</span><br><span class="line">   &#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>关系 2：引用式关系：将两个文档分开，通过引用文档的_id 字段来建立关系</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 这就是引用式关系</span></span><br><span class="line">&#123;</span><br><span class="line">   &quot;name&quot;: &quot;Tom Benzamin&quot;,</span><br><span class="line">   &quot;contact&quot;: &quot;987654321&quot;,</span><br><span class="line">   &quot;dob&quot;: &quot;01-01-1991&quot;,</span><br><span class="line">   &quot;address_ids&quot;: [</span><br><span class="line">      ObjectId(&quot;52ffc4a5d85242602e000000&quot;)    #对应address文档的id字段</span><br><span class="line">   ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在实际应用的时候，嵌入式关系比较适合一对一的关系，引用式关系比较适合一对多或者多对多的情况。</p>
-<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p>集合就是一组文档的组合，就相当于是关系数据库中的表，在 MongoDB 中可以存储不同的文档结构的文档。</p>
-<p>例如：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">&#123;&quot;company&quot;:&quot;Chenshi keji&quot;&#125; &#123;&quot;people&quot;:&quot;man&quot;,&quot;name&quot;:&quot;peter&quot;&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>数据库</category>
-        <category>MongoDB</category>
-      </categories>
-      <tags>
-        <tag>基础</tag>
       </tags>
   </entry>
   <entry>
@@ -876,6 +876,35 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
+    <title>使用PyInstaller库生成可执行文件</title>
+    <url>/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/</url>
+    <content><![CDATA[<p><img src="/pictures/python.jpg"></p>
+<span id="more"></span>
+<h1 id="首先安装PyInstaller库-cmd命令行"><a href="#首先安装PyInstaller库-cmd命令行" class="headerlink" title="首先安装PyInstaller库(cmd命令行)"></a>首先安装PyInstaller库(cmd命令行)</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install pyinstaller</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="主要参数"><a href="#主要参数" class="headerlink" title="主要参数"></a>主要参数</h1><img src="/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/%E4%B8%BB%E8%A6%81%E5%8F%82%E6%95%B0.png" class="">
+
+<h1 id="修改图标并打包"><a href="#修改图标并打包" class="headerlink" title="修改图标并打包"></a>修改图标并打包</h1><p>需要一个ico图标</p>
+<img src="/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/%E6%89%93%E5%8C%85%E5%89%8D.png" class="">
+
+<p>在需要打包的文件根目录下使用命令</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pyinstaller -i Digits.ico -F SevenDigits.py</span><br></pre></td></tr></table></figure>
+
+<p>打包完成</p>
+<img src="/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/%E6%89%93%E5%8C%85%E5%90%8E.png" class="">
+<p>需要的可执行文件在dist目录，如下</p>
+<img src="/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/dist%E6%96%87%E4%BB%B6%E5%A4%B9.png" class="">]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>基础</tag>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>科赫雪花</title>
     <url>/2019/04/03/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_%E9%9B%AA%E8%8A%B1/</url>
     <content><![CDATA[<p><img src="/pictures/python.jpg"></p>
@@ -910,35 +939,6 @@ tail -f ping.log（查看日志）
       </categories>
   </entry>
   <entry>
-    <title>使用PyInstaller库生成可执行文件</title>
-    <url>/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/</url>
-    <content><![CDATA[<p><img src="/pictures/python.jpg"></p>
-<span id="more"></span>
-<h1 id="首先安装PyInstaller库-cmd命令行"><a href="#首先安装PyInstaller库-cmd命令行" class="headerlink" title="首先安装PyInstaller库(cmd命令行)"></a>首先安装PyInstaller库(cmd命令行)</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install pyinstaller</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="主要参数"><a href="#主要参数" class="headerlink" title="主要参数"></a>主要参数</h1><img src="/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/%E4%B8%BB%E8%A6%81%E5%8F%82%E6%95%B0.png" class="">
-
-<h1 id="修改图标并打包"><a href="#修改图标并打包" class="headerlink" title="修改图标并打包"></a>修改图标并打包</h1><p>需要一个ico图标</p>
-<img src="/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/%E6%89%93%E5%8C%85%E5%89%8D.png" class="">
-
-<p>在需要打包的文件根目录下使用命令</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pyinstaller -i Digits.ico -F SevenDigits.py</span><br></pre></td></tr></table></figure>
-
-<p>打包完成</p>
-<img src="/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/%E6%89%93%E5%8C%85%E5%90%8E.png" class="">
-<p>需要的可执行文件在dist目录，如下</p>
-<img src="/2019/03/02/Python_%E5%B8%B8%E7%94%A8%E5%BA%93_PyInstaller/dist%E6%96%87%E4%BB%B6%E5%A4%B9.png" class="">]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>基础</tag>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>SAS_图</title>
     <url>/2020/03/15/SAS_%E5%9B%BE%E8%A1%A8/</url>
     <content><![CDATA[<img src="/2020/03/15/SAS_%E5%9B%BE%E8%A1%A8/4.png" class="">
@@ -956,6 +956,31 @@ tail -f ping.log（查看日志）
 <p>分析变量关系</p>
 </blockquote>
 <figure class="highlight sas"><table><tr><td class="code"><pre><span class="line"><span class="keyword">PROC SGPLOT </span> DATA=work.import;</span><br><span class="line">	VBOX volume3d / CATEGORY=hipp;</span><br><span class="line"><span class="keyword">RUN;</span> </span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">PROC SGSCATTER </span>  DATA=work.import;             </span><br><span class="line">	COMPARE y=volume3d  <span class="meta">x</span>=area3d / <span class="meta">GROUP</span>=hipp ELLIPSE=(ALPHA =0.02 TYPE=predicted);  <span class="comment">/*绘制椭圆来预测相关性的强度*/</span></span><br><span class="line"><span class="keyword">RUN;</span> </span><br></pre></td></tr></table></figure>
+<hr>
+<p>本文作者： Ran<br>版权声明： 本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</p>
+<hr>
+]]></content>
+      <categories>
+        <category>数据库</category>
+        <category>SAS</category>
+      </categories>
+      <tags>
+        <tag>SAS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>BASE SAS</title>
+    <url>/2020/03/12/SAS_%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<p><img src="/pictures/SAS.jpeg"></p>
+<span id="more"></span>
+<h1 id="一-软件安装"><a href="#一-软件安装" class="headerlink" title="一.软件安装"></a>一.软件安装</h1><p>SAS常规大小有二三十个G，下载安装运行对于一般的电脑都有点吃力，这里提供两种，Windows9.1免安装版和在线版。</p>
+<h2 id="1-SAS-9-1-免安装版"><a href="#1-SAS-9-1-免安装版" class="headerlink" title="1.SAS_9.1 免安装版"></a>1.SAS_9.1 免安装版</h2><p><a href="https://pan.baidu.com/s/10xT7DKmQnmcplXJpCgo_5Q">提取码：qelx</a>，解压完就可以用。</p>
+<h2 id="2-SAS-Studio-在线版"><a href="#2-SAS-Studio-在线版" class="headerlink" title="2.SAS_Studio 在线版"></a>2.SAS_Studio 在线版</h2><h4 id="1-注册账号"><a href="#1-注册账号" class="headerlink" title="1.注册账号"></a>1.注册账号</h4><p><a href="https://welcome.oda.sas.com/login">网站地址</a>，用邮箱(无需.edu)注册一个账号，根据分配的ID和自设密码登录云服务器，选亚太地区。</p>
+<h4 id="2-测试环境"><a href="#2-测试环境" class="headerlink" title="2.测试环境"></a>2.测试环境</h4><p>右键单击 文件(主目录) 新建文件即可，小人那个图标就是run。<br><img src="./dvp.png"></p>
+<h1 id="二-学习资料"><a href="#二-学习资料" class="headerlink" title="二.学习资料"></a>二.学习资料</h1><p>推荐慕课网武大<a href="https://www.icourse163.org/course/WHU-1205976811">SAS统计分析及应用</a>和W3<a href="https://www.w3cschool.cn/sas/">SAS教程</a>，慕网这个是从整体框架根据语言特点结合统计分析相关理论去展开，W3教程适合查漏补缺，建议先看慕课。</p>
+<h1 id="三-BASE-SAS"><a href="#三-BASE-SAS" class="headerlink" title="三.BASE SAS"></a>三.BASE SAS</h1><h2 id="1-语言概述"><a href="#1-语言概述" class="headerlink" title="1.语言概述"></a>1.语言概述</h2><p>程序构成: 数据步、过程步和全程语句。</p>
+<figure class="highlight sas"><table><tr><td class="code"><pre><span class="line"><span class="meta">TITLE</span> ‘2020 级学生名单’;<span class="comment">/*全程语句*/</span></span><br><span class="line"><span class="meta">LIBNAME</span> mylib “c:\sasdata”;</span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">DATA </span>mylib.stud; <span class="comment">/*数据步 */</span></span><br><span class="line"><span class="meta">INPUT</span> id $ name $ gender $ age hometown $ ;</span><br><span class="line"><span class="emphasis">cards;</span></span><br><span class="line"><span class="emphasis">202001001 周国兴 男 19 长沙</span></span><br><span class="line"><span class="emphasis">202001002 李铭 女 19 广西壮族自治区</span></span><br><span class="line"><span class="emphasis">202002003 彭晓钢 男 19 广州</span></span><br><span class="line"><span class="emphasis">202002004 胡大伟 男 19 武汉</span></span><br><span class="line"><span class="emphasis">;</span></span><br><span class="line"><span class="emphasis"></span><span class="keyword"></span></span><br><span class="line"><span class="keyword">PROC PRINT </span>data=mylib.stud; <span class="comment">/*过程步 */</span></span><br><span class="line"><span class="keyword">RUN;</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-数据步"><a href="#2-数据步" class="headerlink" title="2.数据步"></a>2.数据步</h2><p>思维导图<br><img src="./%E6%95%B0%E6%8D%AE%E6%AD%A5.png"></p>
 <hr>
 <p>本文作者： Ran<br>版权声明： 本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</p>
 <hr>
@@ -1026,31 +1051,6 @@ tail -f ping.log（查看日志）
 <h1 id="测试用例"><a href="#测试用例" class="headerlink" title="测试用例"></a>测试用例</h1><p>&#160; &#160; &#160; &#160;我们可以随意写几个数字来看一下这个输入和输出，input x 6.限制了读入数据的长度和格式即为无小数位的五位整数，format X DOLLAR10.2则规定了显示的格式，这里我们可以看到数据的完全显示、美元符号和千位逗号的显示优先级。</p>
 <img src="/2020/03/13/SAS_%E6%95%B0%E5%AD%97%E6%A0%BC%E5%BC%8F/test.jpg" class="">
 
-<hr>
-<p>本文作者： Ran<br>版权声明： 本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</p>
-<hr>
-]]></content>
-      <categories>
-        <category>数据库</category>
-        <category>SAS</category>
-      </categories>
-      <tags>
-        <tag>SAS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>BASE SAS</title>
-    <url>/2020/03/12/SAS_%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<p><img src="/pictures/SAS.jpeg"></p>
-<span id="more"></span>
-<h1 id="一-软件安装"><a href="#一-软件安装" class="headerlink" title="一.软件安装"></a>一.软件安装</h1><p>SAS常规大小有二三十个G，下载安装运行对于一般的电脑都有点吃力，这里提供两种，Windows9.1免安装版和在线版。</p>
-<h2 id="1-SAS-9-1-免安装版"><a href="#1-SAS-9-1-免安装版" class="headerlink" title="1.SAS_9.1 免安装版"></a>1.SAS_9.1 免安装版</h2><p><a href="https://pan.baidu.com/s/10xT7DKmQnmcplXJpCgo_5Q">提取码：qelx</a>，解压完就可以用。</p>
-<h2 id="2-SAS-Studio-在线版"><a href="#2-SAS-Studio-在线版" class="headerlink" title="2.SAS_Studio 在线版"></a>2.SAS_Studio 在线版</h2><h4 id="1-注册账号"><a href="#1-注册账号" class="headerlink" title="1.注册账号"></a>1.注册账号</h4><p><a href="https://welcome.oda.sas.com/login">网站地址</a>，用邮箱(无需.edu)注册一个账号，根据分配的ID和自设密码登录云服务器，选亚太地区。</p>
-<h4 id="2-测试环境"><a href="#2-测试环境" class="headerlink" title="2.测试环境"></a>2.测试环境</h4><p>右键单击 文件(主目录) 新建文件即可，小人那个图标就是run。<br><img src="./dvp.png"></p>
-<h1 id="二-学习资料"><a href="#二-学习资料" class="headerlink" title="二.学习资料"></a>二.学习资料</h1><p>推荐慕课网武大<a href="https://www.icourse163.org/course/WHU-1205976811">SAS统计分析及应用</a>和W3<a href="https://www.w3cschool.cn/sas/">SAS教程</a>，慕网这个是从整体框架根据语言特点结合统计分析相关理论去展开，W3教程适合查漏补缺，建议先看慕课。</p>
-<h1 id="三-BASE-SAS"><a href="#三-BASE-SAS" class="headerlink" title="三.BASE SAS"></a>三.BASE SAS</h1><h2 id="1-语言概述"><a href="#1-语言概述" class="headerlink" title="1.语言概述"></a>1.语言概述</h2><p>程序构成: 数据步、过程步和全程语句。</p>
-<figure class="highlight sas"><table><tr><td class="code"><pre><span class="line"><span class="meta">TITLE</span> ‘2020 级学生名单’;<span class="comment">/*全程语句*/</span></span><br><span class="line"><span class="meta">LIBNAME</span> mylib “c:\sasdata”;</span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">DATA </span>mylib.stud; <span class="comment">/*数据步 */</span></span><br><span class="line"><span class="meta">INPUT</span> id $ name $ gender $ age hometown $ ;</span><br><span class="line"><span class="emphasis">cards;</span></span><br><span class="line"><span class="emphasis">202001001 周国兴 男 19 长沙</span></span><br><span class="line"><span class="emphasis">202001002 李铭 女 19 广西壮族自治区</span></span><br><span class="line"><span class="emphasis">202002003 彭晓钢 男 19 广州</span></span><br><span class="line"><span class="emphasis">202002004 胡大伟 男 19 武汉</span></span><br><span class="line"><span class="emphasis">;</span></span><br><span class="line"><span class="emphasis"></span><span class="keyword"></span></span><br><span class="line"><span class="keyword">PROC PRINT </span>data=mylib.stud; <span class="comment">/*过程步 */</span></span><br><span class="line"><span class="keyword">RUN;</span></span><br></pre></td></tr></table></figure>
-<h2 id="2-数据步"><a href="#2-数据步" class="headerlink" title="2.数据步"></a>2.数据步</h2><p>思维导图<br><img src="./%E6%95%B0%E6%8D%AE%E6%AD%A5.png"></p>
 <hr>
 <p>本文作者： Ran<br>版权声明： 本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</p>
 <hr>
@@ -1177,29 +1177,6 @@ tail -f ping.log（查看日志）
       </categories>
       <tags>
         <tag>鼠脑</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>3D-brain Ⅰ</title>
-    <url>/2020/08/15/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%831/</url>
-    <content><![CDATA[<img src="/2020/08/15/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%831/%E6%B5%81%E7%A8%8B.jpg" class="">
-<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>&#160; &#160; &#160; &#160;2020年8月8日，湘潭大学化学学院曹毅博士课题组在 Science of the Total Environment (影响因子6.551)发表研究论文 “Multi-walled carbon nanotubes decrease neuronal NO synthase in 3D brain organoids”，应用三维成像技术实现了对一种新型人3D类脑中的特定蛋白空间分布的成像。</p>
-<span id="more"></span>
-
-<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>&#160; &#160; &#160; &#160;团队利用了一种新型的3D人类脑模型来分析碳管对神经系统一氧化氮活性的影响，发现高浓度的碳管能降低神经型nNOS的活性，进而导致类脑中一氧化氮产生量不足，但传统毒理学分析手段并不能提供空间分布信息，无法确定类脑对多壁碳纳米管暴露最敏感的部位。</p>
-<p><img src="./wb.jpeg" alt="利用三维重建技术在脑范围内3D重构了nNOS蛋白的分布。A为control组，B为64 mg/mL多壁碳纳米管暴露组。"></p>
-<h1 id="三维重建"><a href="#三维重建" class="headerlink" title="三维重建"></a>三维重建</h1><p>&#160; &#160; &#160; &#160;在与三维成像技术相结合后，研究人员得以分析多壁碳纳米管暴露以后nNOS在全类脑的分布，发现这种影响不仅仅发生在类脑的外层细胞，也发生在类脑的内部，这表明碳管的作用是整体的。</p>
-<p><img src="./volume.jpeg" alt="利用三维重建技术在脑范围内3D重构了nNOS蛋白的分布。A为control组，B为64 mg/mL多壁碳纳米管暴露组。"></p>
-<p>个人贡献：图像处理及三维建模分析。</p>
-<p><a href="https://doi.org/10.1016/j.scitotenv.2020.141384">原文链接</a></p>
-]]></content>
-      <categories>
-        <category>图像处理</category>
-        <category>三维重建</category>
-      </categories>
-      <tags>
-        <tag>Sci</tag>
-        <tag>Science of The Total Environment</tag>
       </tags>
   </entry>
   <entry>
@@ -1351,6 +1328,29 @@ tail -f ping.log（查看日志）
       </tags>
   </entry>
   <entry>
+    <title>3D-brain Ⅰ</title>
+    <url>/2020/08/15/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%831/</url>
+    <content><![CDATA[<img src="/2020/08/15/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%831/%E6%B5%81%E7%A8%8B.jpg" class="">
+<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>&#160; &#160; &#160; &#160;2020年8月8日，湘潭大学化学学院曹毅博士课题组在 Science of the Total Environment (影响因子6.551)发表研究论文 “Multi-walled carbon nanotubes decrease neuronal NO synthase in 3D brain organoids”，应用三维成像技术实现了对一种新型人3D类脑中的特定蛋白空间分布的成像。</p>
+<span id="more"></span>
+
+<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>&#160; &#160; &#160; &#160;团队利用了一种新型的3D人类脑模型来分析碳管对神经系统一氧化氮活性的影响，发现高浓度的碳管能降低神经型nNOS的活性，进而导致类脑中一氧化氮产生量不足，但传统毒理学分析手段并不能提供空间分布信息，无法确定类脑对多壁碳纳米管暴露最敏感的部位。</p>
+<p><img src="./wb.jpeg" alt="利用三维重建技术在脑范围内3D重构了nNOS蛋白的分布。A为control组，B为64 mg/mL多壁碳纳米管暴露组。"></p>
+<h1 id="三维重建"><a href="#三维重建" class="headerlink" title="三维重建"></a>三维重建</h1><p>&#160; &#160; &#160; &#160;在与三维成像技术相结合后，研究人员得以分析多壁碳纳米管暴露以后nNOS在全类脑的分布，发现这种影响不仅仅发生在类脑的外层细胞，也发生在类脑的内部，这表明碳管的作用是整体的。</p>
+<p><img src="./volume.jpeg" alt="利用三维重建技术在脑范围内3D重构了nNOS蛋白的分布。A为control组，B为64 mg/mL多壁碳纳米管暴露组。"></p>
+<p>个人贡献：图像处理及三维建模分析。</p>
+<p><a href="https://doi.org/10.1016/j.scitotenv.2020.141384">原文链接</a></p>
+]]></content>
+      <categories>
+        <category>图像处理</category>
+        <category>三维重建</category>
+      </categories>
+      <tags>
+        <tag>Sci</tag>
+        <tag>Science of The Total Environment</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>正则表达式</title>
     <url>/2019/06/08/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
     <content><![CDATA[<p><img src="/pictures/regex.jpg"></p>
@@ -1487,7 +1487,7 @@ tail -f ping.log（查看日志）
 
 <p>[\w.] 匹配的是字母数字或者 . ，在其后面加上 + ，表示匹配多次。在字符集合 [ ] 里，. 不是元字符；</p>
 <p><em><strong>匹配结果</strong></em></p>
-<p><a href="mailto:&#x61;&#x62;&#99;&#46;&#100;&#101;&#x66;&#x40;&#113;&#113;&#46;&#99;&#111;&#109;">&#x61;&#x62;&#99;&#46;&#100;&#101;&#x66;&#x40;&#113;&#113;&#46;&#99;&#111;&#109;</a></p>
+<p><a href="mailto:&#97;&#x62;&#x63;&#x2e;&#100;&#x65;&#x66;&#64;&#x71;&#x71;&#46;&#99;&#x6f;&#109;">&#97;&#x62;&#x63;&#x2e;&#100;&#x65;&#x66;&#64;&#x71;&#x71;&#46;&#99;&#x6f;&#109;</a></p>
 <ul>
 <li><p>{n} 匹配 n 个字符</p>
 </li>
