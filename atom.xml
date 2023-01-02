@@ -3,11 +3,11 @@
   <title>Ran</title>
   
   
-  <link href="http://wuranim.github.io/atom.xml" rel="self"/>
+  <link href="https://pawn.github.io/atom.xml" rel="self"/>
   
-  <link href="http://wuranim.github.io/"/>
+  <link href="https://pawn.github.io/"/>
   <updated>2022-12-30T07:18:15.475Z</updated>
-  <id>http://wuranim.github.io/</id>
+  <id>https://pawn.github.io/</id>
   
   <author>
     <name>Ran</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>CSF_video Ⅰ</title>
-    <link href="http://wuranim.github.io/2022/07/08/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-CSF1/"/>
-    <id>http://wuranim.github.io/2022/07/08/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-CSF1/</id>
+    <link href="https://pawn.github.io/2022/07/08/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-CSF1/"/>
+    <id>https://pawn.github.io/2022/07/08/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-CSF1/</id>
     <published>2022-07-08T13:25:21.000Z</published>
     <updated>2022-12-30T07:18:15.475Z</updated>
     
@@ -30,46 +30,46 @@
     
     
     
-    <category term="图像处理" scheme="http://wuranim.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    <category term="图像处理" scheme="https://pawn.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
     
-    <category term="三维重建" scheme="http://wuranim.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA/"/>
+    <category term="三维重建" scheme="https://pawn.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA/"/>
     
     
-    <category term="fMOST" scheme="http://wuranim.github.io/tags/fMOST/"/>
+    <category term="fMOST" scheme="https://pawn.github.io/tags/fMOST/"/>
     
-    <category term="CSF" scheme="http://wuranim.github.io/tags/CSF/"/>
+    <category term="CSF" scheme="https://pawn.github.io/tags/CSF/"/>
     
   </entry>
   
   <entry>
     <title>CSF_video Ⅱ</title>
-    <link href="http://wuranim.github.io/2021/12/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86_%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA_CSF2/"/>
-    <id>http://wuranim.github.io/2021/12/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86_%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA_CSF2/</id>
+    <link href="https://pawn.github.io/2021/12/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-CSF2/"/>
+    <id>https://pawn.github.io/2021/12/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-CSF2/</id>
     <published>2021-12-03T02:14:42.000Z</published>
-    <updated>2022-12-30T07:18:43.184Z</updated>
+    <updated>2022-12-30T10:08:13.938Z</updated>
     
-    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <script id="hbeData" type="hbeData" data-hmacdigest="7a5d03898102449b2dca18919c99c26b70f9492d3928a9f21adae9e2550b5348">d5c4fced169deb7c2dcc9596bbbc8b4d30985a68dddbc87d48f849d878de335aac932256c6359ab5fb0a16e1d1bbc301459943f26fd9ca2b2fa453b6ac05b207865074a47dcf06eacc6b5d2eb3b2fd0cf3f158ed4c189f545d1e189079df63230b664dbeb219657cd593cce76172ca092a91b7e1e967531419bb6d2fb63f20eaba954239628573e730eb1f3ea531cc335d4eb0de549c9860ff754229fcfc634873f7b48f2c8cbbecde0aa6a35767a88395e511eba65f959a7adb6cbe0d912cfc9d9dde2e4f0a902993f3d9f3d17a6307de9b7a0e110fcb0384cad47abeb330e9b6d4507b5683c7e35d5b4b224bd2f5c1b4f21f5adf02e19e77af6ff37ff0d957ef6cbeb7ddbac331a73b8e41bffc927a0a02e5009ef46e9c2243b0114f9f5fef4da6c88d285ea362e93c03d24cb60434879cb9174ac5bb61155f70bf804d8de57ae03e593e7a28cb3e860e886bd47a9493e589bca4d01e6643a7403dd337f1bd95ae44c3cb20886ad6e70ab3a6382bc3ff8f8609d744ebaf957528fefd376b5347f07c8b50a02eecd05b8f8d87e3626376d30d6b83b3a5804da184562e3a5cc76d9463eefeb744141084daca44856311c647a8266d63986337e994d2fa2a6c62cd5058ecda01bc8e7b122fcf5e87169b6a25de6cc97f1b45cb2bc8a8fbc4f9e574935fae8c8b803c01c182be519e8de339683b6aa3be6cbcfee3e72b17d6acd013feb8d4291617cc7b199eee84b477a334debcc632ba7582ab2a03b5d4c39b5f6ce257d281d1a18a72edcf85cb78398a</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">password is required here.</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <script id="hbeData" type="hbeData" data-hmacdigest="2cb4d5b6847caee9b157aa12dd8ca90552de2ff313157c0197dd7d9ba41f7a49">d5c4fced169deb7c2dcc9596bbbc8b4d30985a68dddbc87d48f849d878de335aac932256c6359ab5fb0a16e1d1bbc301459943f26fd9ca2b2fa453b6ac05b207865074a47dcf06eacc6b5d2eb3b2fd0cf8e3ac31cead52d5e69600bb84e2998c70dea009dabacc1652ddc2581a82b83fe3e63719c050c1f059258b406a57f931cc2d696bb426ff85948697ecc18ea2569312f1588a21a5475c14a6c960b4b25767ed0b3419c3043dfaf4a60f94e859bce801b3927971b9cef9b9eab7e3b83ac717fcba7cb700488a11f2c2f5ad29138b5bea9ddad4849855fc9f1ce158cf59cd516f40cbb7adf7ed4a403200e49fa3d870107d6bb0222e47a7a418bf32999dc5df74318b8e52883e580c67b62f4e5e0835c3381ccffb6e4feb4adef903fcc4dd85423994efcd6b9b7eb7da7ee2f37feec2163e54231a2b9f04b08e0f4ff4489026e7ee5e770f938613928818d83aeea0021d1d7d6669edfc1d7d85fad24b3aee8db6b4fc444e48cc83f01aa9d999a2d1f1cb7858010bda43389fa774063733369c77999518763fb00fd183f66ca29546e25d07f28d4ed6e738eb90cebb64e66d9000508b55093b4b3127ed21c9766eeea9b8781d1d3b9810a07cbeacebe9af613018a415f4e54bd578c01aec3182989a9fce3ae51ae081499f79c8544fd32501c1018a4ce58d69197867c1edd67a2f89a1ac376fa439025cfcb53511a3ca19e2c3f206676564a291e53365451058950d6730da665608494e88b936843ec882ea8c29aa141756b209de585ba280d754a6</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">password is required here.</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
     
     
     <summary type="html">Here&#39;s something encrypted, password is required to continue reading.</summary>
     
     
     
-    <category term="图像处理" scheme="http://wuranim.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    <category term="图像处理" scheme="https://pawn.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
     
-    <category term="三维重建" scheme="http://wuranim.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA/"/>
+    <category term="三维重建" scheme="https://pawn.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA/"/>
     
     
-    <category term="fMOST" scheme="http://wuranim.github.io/tags/fMOST/"/>
+    <category term="fMOST" scheme="https://pawn.github.io/tags/fMOST/"/>
     
-    <category term="CSF" scheme="http://wuranim.github.io/tags/CSF/"/>
+    <category term="CSF" scheme="https://pawn.github.io/tags/CSF/"/>
     
   </entry>
   
   <entry>
     <title>3D-brain Ⅱ</title>
-    <link href="http://wuranim.github.io/2021/11/19/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%832/"/>
-    <id>http://wuranim.github.io/2021/11/19/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%832/</id>
+    <link href="https://pawn.github.io/2021/11/19/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%832/"/>
+    <id>https://pawn.github.io/2021/11/19/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%832/</id>
     <published>2021-11-19T14:19:52.000Z</published>
     <updated>2022-12-30T07:19:50.742Z</updated>
     
@@ -82,21 +82,21 @@
     
     
     
-    <category term="图像处理" scheme="http://wuranim.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    <category term="图像处理" scheme="https://pawn.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
     
-    <category term="三维重建" scheme="http://wuranim.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA/"/>
+    <category term="三维重建" scheme="https://pawn.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA/"/>
     
     
-    <category term="fMOST" scheme="http://wuranim.github.io/tags/fMOST/"/>
+    <category term="fMOST" scheme="https://pawn.github.io/tags/fMOST/"/>
     
-    <category term="Cell Biology and Toxicology" scheme="http://wuranim.github.io/tags/Cell-Biology-and-Toxicology/"/>
+    <category term="Cell Biology and Toxicology" scheme="https://pawn.github.io/tags/Cell-Biology-and-Toxicology/"/>
     
   </entry>
   
   <entry>
     <title>同步辐射成像_血管分割</title>
-    <link href="http://wuranim.github.io/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/"/>
-    <id>http://wuranim.github.io/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/</id>
+    <link href="https://pawn.github.io/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/"/>
+    <id>https://pawn.github.io/2021/04/28/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E5%90%8C%E6%AD%A5%E8%BE%90%E5%B0%84%E6%95%B0%E6%8D%AE/</id>
     <published>2021-04-28T04:04:01.000Z</published>
     <updated>2022-02-06T15:18:50.140Z</updated>
     
@@ -107,23 +107,23 @@
     
     
     
-    <category term="图像处理" scheme="http://wuranim.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    <category term="图像处理" scheme="https://pawn.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
     
-    <category term="图像分割" scheme="http://wuranim.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/"/>
+    <category term="图像分割" scheme="https://pawn.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2/"/>
     
     
-    <category term="amira" scheme="http://wuranim.github.io/tags/amira/"/>
+    <category term="amira" scheme="https://pawn.github.io/tags/amira/"/>
     
-    <category term="matlab" scheme="http://wuranim.github.io/tags/matlab/"/>
+    <category term="matlab" scheme="https://pawn.github.io/tags/matlab/"/>
     
   </entry>
   
   <entry>
     <title>3D-brain Ⅰ</title>
-    <link href="http://wuranim.github.io/2020/08/15/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%831/"/>
-    <id>http://wuranim.github.io/2020/08/15/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%831/</id>
+    <link href="https://pawn.github.io/2020/08/15/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%831/"/>
+    <id>https://pawn.github.io/2020/08/15/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%831/</id>
     <published>2020-08-15T13:20:32.000Z</published>
-    <updated>2022-12-30T07:19:34.875Z</updated>
+    <updated>2022-12-30T08:57:15.360Z</updated>
     
     <content type="html"><![CDATA[<img src="/2020/08/15/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA-%E7%B1%BB%E8%84%91%E5%B0%8F%E7%90%831/%E6%B5%81%E7%A8%8B.jpg" class=""><h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>&#160; &#160; &#160; &#160;2020年8月8日，湘潭大学化学学院曹毅博士课题组在 Science of the Total Environment (影响因子6.551)发表研究论文 “Multi-walled carbon nanotubes decrease neuronal NO synthase in 3D brain organoids”，应用三维成像技术实现了对一种新型人3D类脑中的特定蛋白空间分布的成像。</p><span id="more"></span><h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>&#160; &#160; &#160; &#160;团队利用了一种新型的3D人类脑模型来分析碳管对神经系统一氧化氮活性的影响，发现高浓度的碳管能降低神经型nNOS的活性，进而导致类脑中一氧化氮产生量不足，但传统毒理学分析手段并不能提供空间分布信息，无法确定类脑对多壁碳纳米管暴露最敏感的部位。</p><p><img src="./wb.jpeg" alt="利用三维重建技术在脑范围内3D重构了nNOS蛋白的分布。A为control组，B为64 mg/mL多壁碳纳米管暴露组。"></p><h1 id="三维重建"><a href="#三维重建" class="headerlink" title="三维重建"></a>三维重建</h1><p>&#160; &#160; &#160; &#160;在与三维成像技术相结合后，研究人员得以分析多壁碳纳米管暴露以后nNOS在全类脑的分布，发现这种影响不仅仅发生在类脑的外层细胞，也发生在类脑的内部，这表明碳管的作用是整体的。</p><p><img src="./volume.jpeg" alt="利用三维重建技术在脑范围内3D重构了nNOS蛋白的分布。A为control组，B为64 mg/mL多壁碳纳米管暴露组。"></p><p><a href="https://doi.org/10.1016/j.scitotenv.2020.141384">原文链接</a></p>]]></content>
     
@@ -133,90 +133,90 @@
     
     
     
-    <category term="图像处理" scheme="http://wuranim.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    <category term="图像处理" scheme="https://pawn.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
     
-    <category term="三维重建" scheme="http://wuranim.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA/"/>
+    <category term="三维重建" scheme="https://pawn.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/%E4%B8%89%E7%BB%B4%E9%87%8D%E5%BB%BA/"/>
     
     
-    <category term="fMOST" scheme="http://wuranim.github.io/tags/fMOST/"/>
+    <category term="fMOST" scheme="https://pawn.github.io/tags/fMOST/"/>
     
-    <category term="Science of The Total Environment" scheme="http://wuranim.github.io/tags/Science-of-The-Total-Environment/"/>
+    <category term="Science of The Total Environment" scheme="https://pawn.github.io/tags/Science-of-The-Total-Environment/"/>
     
   </entry>
   
   <entry>
     <title>配准(一)</title>
-    <link href="http://wuranim.github.io/2020/05/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86_%E9%85%8D%E5%87%86_%E4%BA%8C%E7%BB%B4%E8%84%91%E7%89%87/"/>
-    <id>http://wuranim.github.io/2020/05/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86_%E9%85%8D%E5%87%86_%E4%BA%8C%E7%BB%B4%E8%84%91%E7%89%87/</id>
+    <link href="https://pawn.github.io/2020/05/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E9%85%8D%E5%87%86-%E4%BA%8C%E7%BB%B4%E8%84%91%E7%89%87/"/>
+    <id>https://pawn.github.io/2020/05/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E9%85%8D%E5%87%86-%E4%BA%8C%E7%BB%B4%E8%84%91%E7%89%87/</id>
     <published>2020-05-03T12:12:21.000Z</published>
     <updated>2022-02-06T16:30:48.724Z</updated>
     
-    <content type="html"><![CDATA[<img src="/2020/05/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86_%E9%85%8D%E5%87%86_%E4%BA%8C%E7%BB%B4%E8%84%91%E7%89%87/0.png" class=""><span id="more"></span><p>使用imagej的BigWarp插件进行小鼠脑片配准，可选择变换图谱还是数据：</p><img src="/2020/05/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86_%E9%85%8D%E5%87%86_%E4%BA%8C%E7%BB%B4%E8%84%91%E7%89%87/1.png" class=""><p>标记对应的特征点：</p><img src="/2020/05/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86_%E9%85%8D%E5%87%86_%E4%BA%8C%E7%BB%B4%E8%84%91%E7%89%87/2.png" class=""><p>导出变换的图谱与源数据叠加(这里的参考图谱未作预处理，一般只保留框线)：</p><img src="/2020/05/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86_%E9%85%8D%E5%87%86_%E4%BA%8C%E7%BB%B4%E8%84%91%E7%89%87/3.png" class="">]]></content>
+    <content type="html"><![CDATA[<img src="/2020/05/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E9%85%8D%E5%87%86-%E4%BA%8C%E7%BB%B4%E8%84%91%E7%89%87/0.png" class=""><span id="more"></span><p>使用imagej的BigWarp插件进行小鼠脑片配准，可选择变换图谱还是数据：</p><img src="/2020/05/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E9%85%8D%E5%87%86-%E4%BA%8C%E7%BB%B4%E8%84%91%E7%89%87/1.png" class=""><p>标记对应的特征点：</p><img src="/2020/05/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E9%85%8D%E5%87%86-%E4%BA%8C%E7%BB%B4%E8%84%91%E7%89%87/2.png" class=""><p>导出变换的图谱与源数据叠加(这里的参考图谱未作预处理，一般只保留框线)：</p><img src="/2020/05/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E9%85%8D%E5%87%86-%E4%BA%8C%E7%BB%B4%E8%84%91%E7%89%87/3.png" class="">]]></content>
     
     
-    <summary type="html">&lt;img src=&quot;/2020/05/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86_%E9%85%8D%E5%87%86_%E4%BA%8C%E7%BB%B4%E8%84%91%E7%89%87/0.png&quot; class=&quot;&quot;&gt;</summary>
+    <summary type="html">&lt;img src=&quot;/2020/05/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86-%E9%85%8D%E5%87%86-%E4%BA%8C%E7%BB%B4%E8%84%91%E7%89%87/0.png&quot; class=&quot;&quot;&gt;</summary>
     
     
     
-    <category term="图像处理" scheme="http://wuranim.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    <category term="图像处理" scheme="https://pawn.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
     
-    <category term="配准" scheme="http://wuranim.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/%E9%85%8D%E5%87%86/"/>
+    <category term="配准" scheme="https://pawn.github.io/categories/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/%E9%85%8D%E5%87%86/"/>
     
     
-    <category term="鼠脑" scheme="http://wuranim.github.io/tags/%E9%BC%A0%E8%84%91/"/>
+    <category term="鼠脑" scheme="https://pawn.github.io/tags/%E9%BC%A0%E8%84%91/"/>
     
   </entry>
   
   <entry>
     <title>SAS_图</title>
-    <link href="http://wuranim.github.io/2020/03/15/SAS_%E5%9B%BE%E8%A1%A8/"/>
-    <id>http://wuranim.github.io/2020/03/15/SAS_%E5%9B%BE%E8%A1%A8/</id>
+    <link href="https://pawn.github.io/2020/03/15/SAS-%E5%9B%BE%E8%A1%A8/"/>
+    <id>https://pawn.github.io/2020/03/15/SAS-%E5%9B%BE%E8%A1%A8/</id>
     <published>2020-03-15T14:08:58.000Z</published>
     <updated>2022-01-07T07:49:44.205Z</updated>
     
-    <content type="html"><![CDATA[<img src="/2020/03/15/SAS_%E5%9B%BE%E8%A1%A8/4.png" class=""><span id="more"></span><img src="/2020/03/15/SAS_%E5%9B%BE%E8%A1%A8/2.jpg" class=""><h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>&#160; &#160; &#160; &#160;如上图，把一个小鼠脑海马区域血管分割出来了, 下面简单的给出两个参数的量化分析。</p><img src="/2020/03/15/SAS_%E5%9B%BE%E8%A1%A8/5.png" class=""><p>&#160; &#160; &#160; &#160;从分割的体素图像A可以直观的看到右侧海马区域因为受到病灶的挤压，血管形态较正常的左侧有一定变形，血管的形变萎缩导致血管容积的减少，同时挤压导致血管的粘连使得无法通过常规手段正确的分割出主要的血管丛，所以C图中右侧海马血管出现了一些极大异常值。</p><h1 id="作图"><a href="#作图" class="headerlink" title="作图"></a>作图</h1><blockquote><p>导入预处理完的.xlxs或.csv文件</p></blockquote><figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">FILENAME</span> REFFILE <span class="string">&#x27;./Hipp_Label-Analysis.xlsx&#x27;</span>;</span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">PROC IMPORT </span>DATAFILE=REFFILE    </span><br><span class="line">DBMS=xlsx</span><br><span class="line"><span class="meta">OUT</span>=work.import;</span><br><span class="line">GETNAMES=yes;</span><br><span class="line"><span class="keyword">RUN;</span></span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">PROC CONTENTS </span>DATA=work.import; RUN; <span class="comment">/*可查看导入文件信息*/</span></span><br></pre></td></tr></table></figure><blockquote><p>分析变量关系</p></blockquote><figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">PROC SGPLOT </span> DATA=work.import;</span><br><span class="line">VBOX volume3d / CATEGORY=hipp;</span><br><span class="line"><span class="keyword">RUN;</span> </span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">PROC SGSCATTER </span>  DATA=work.import;             </span><br><span class="line">COMPARE y=volume3d  <span class="meta">x</span>=area3d / <span class="meta">GROUP</span>=hipp ELLIPSE=(ALPHA =0.02 TYPE=predicted);  <span class="comment">/*绘制椭圆来预测相关性的强度*/</span></span><br><span class="line"><span class="keyword">RUN;</span> </span><br></pre></td></tr></table></figure><hr><p>本文作者： Ran<br>版权声明： 本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</p><hr>]]></content>
+    <content type="html"><![CDATA[<img src="/2020/03/15/SAS-%E5%9B%BE%E8%A1%A8/4.png" class=""><span id="more"></span><img src="/2020/03/15/SAS-%E5%9B%BE%E8%A1%A8/2.jpg" class=""><h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>&#160; &#160; &#160; &#160;如上图，把一个小鼠脑海马区域血管分割出来了, 下面简单的给出两个参数的量化分析。</p><img src="/2020/03/15/SAS-%E5%9B%BE%E8%A1%A8/5.png" class=""><p>&#160; &#160; &#160; &#160;从分割的体素图像A可以直观的看到右侧海马区域因为受到病灶的挤压，血管形态较正常的左侧有一定变形，血管的形变萎缩导致血管容积的减少，同时挤压导致血管的粘连使得无法通过常规手段正确的分割出主要的血管丛，所以C图中右侧海马血管出现了一些极大异常值。</p><h1 id="作图"><a href="#作图" class="headerlink" title="作图"></a>作图</h1><blockquote><p>导入预处理完的.xlxs或.csv文件</p></blockquote><figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">FILENAME</span> REFFILE <span class="string">&#x27;./Hipp_Label-Analysis.xlsx&#x27;</span>;</span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">PROC IMPORT </span>DATAFILE=REFFILE    </span><br><span class="line">DBMS=xlsx</span><br><span class="line"><span class="meta">OUT</span>=work.import;</span><br><span class="line">GETNAMES=yes;</span><br><span class="line"><span class="keyword">RUN;</span></span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">PROC CONTENTS </span>DATA=work.import; RUN; <span class="comment">/*可查看导入文件信息*/</span></span><br></pre></td></tr></table></figure><blockquote><p>分析变量关系</p></blockquote><figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">PROC SGPLOT </span> DATA=work.import;</span><br><span class="line">VBOX volume3d / CATEGORY=hipp;</span><br><span class="line"><span class="keyword">RUN;</span> </span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">PROC SGSCATTER </span>  DATA=work.import;             </span><br><span class="line">COMPARE y=volume3d  <span class="meta">x</span>=area3d / <span class="meta">GROUP</span>=hipp ELLIPSE=(ALPHA =0.02 TYPE=predicted);  <span class="comment">/*绘制椭圆来预测相关性的强度*/</span></span><br><span class="line"><span class="keyword">RUN;</span> </span><br></pre></td></tr></table></figure><hr><p>本文作者： Ran<br>版权声明： 本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</p><hr>]]></content>
     
     
-    <summary type="html">&lt;img src=&quot;/2020/03/15/SAS_%E5%9B%BE%E8%A1%A8/4.png&quot; class=&quot;&quot;&gt;</summary>
+    <summary type="html">&lt;img src=&quot;/2020/03/15/SAS-%E5%9B%BE%E8%A1%A8/4.png&quot; class=&quot;&quot;&gt;</summary>
     
     
     
-    <category term="数据库" scheme="http://wuranim.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <category term="数据库" scheme="https://pawn.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
-    <category term="SAS" scheme="http://wuranim.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/SAS/"/>
+    <category term="SAS" scheme="https://pawn.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/SAS/"/>
     
     
-    <category term="SAS" scheme="http://wuranim.github.io/tags/SAS/"/>
+    <category term="SAS" scheme="https://pawn.github.io/tags/SAS/"/>
     
   </entry>
   
   <entry>
     <title>SAS_数字格式</title>
-    <link href="http://wuranim.github.io/2020/03/13/SAS_%E6%95%B0%E5%AD%97%E6%A0%BC%E5%BC%8F/"/>
-    <id>http://wuranim.github.io/2020/03/13/SAS_%E6%95%B0%E5%AD%97%E6%A0%BC%E5%BC%8F/</id>
+    <link href="https://pawn.github.io/2020/03/13/SAS-%E6%95%B0%E5%AD%97%E6%A0%BC%E5%BC%8F/"/>
+    <id>https://pawn.github.io/2020/03/13/SAS-%E6%95%B0%E5%AD%97%E6%A0%BC%E5%BC%8F/</id>
     <published>2020-03-13T14:08:58.000Z</published>
     <updated>2022-01-09T15:00:09.022Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/pictures/SAS.jpeg"></p><span id="more"></span><h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&#160; &#160; &#160; &#160;SAS可以处理各种数字数据格式，它在变量名末尾使用这些格式，以向数据应用特定的数字格式。 SAS使用两种数字格式，一个用于读取数字数据的特定格式，称为informat，另一个用于显示称为输出格式的特定格式。这个格式带有很鲜明的语言特点。</p><h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Varname <span class="module-access"><span class="module"><span class="identifier">Formatnamew</span>.</span></span>d</span><br></pre></td></tr></table></figure><ul><li>VARNAME 变量名。</li><li>FORMATNAME 应用于变量的数字格式名称（COMMA/DOLLAR）。</li><li>w是允许变量存储的数据列的最大位数（整数位和小数位，小数点也算一位，即使没有小数位）。</li><li>d是小数的位数。</li></ul><h1 id="读取数据格式"><a href="#读取数据格式" class="headerlink" title="读取数据格式"></a>读取数据格式</h1><p>&#160; &#160; &#160; &#160;读取输入的数据，按照给定的格式进行显示 </p><h2 id="输入数字格式"><a href="#输入数字格式" class="headerlink" title="输入数字格式"></a>输入数字格式</h2><table><thead><tr><th>格式</th><th>使用</th></tr></thead><tbody><tr><td>n.</td><td>最多“n”个没有小数的列数,实际的整数位可用的只有n-1</td></tr><tr><td>n.p</td><td>最多“n”个带“p”位小数的列数。</td></tr><tr><td>COMMAn.p</td><td>COMMAn.p最多“n”个具有“p”小数的列，删除任何逗号或美元符号。</td></tr></tbody></table><h1 id="显示数据格式"><a href="#显示数据格式" class="headerlink" title="显示数据格式"></a>显示数据格式</h1><p>&#160; &#160; &#160; &#160;类似于在读取数据时应用格式，以下是用于在SAS程序的输出中显示数据的格式的列表。</p><h2 id="输出数字格式"><a href="#输出数字格式" class="headerlink" title="输出数字格式"></a>输出数字格式</h2><table><thead><tr><th>格式</th><th>使用</th></tr></thead><tbody><tr><td>n.</td><td>写入最多“n”个没有小数的列数。</td></tr><tr><td>n.p</td><td>写入最多“n”个带“p”位小数的列数。</td></tr><tr><td>DOLLARn.p</td><td>写入最多“n”个具有“p”小数的列，前面带有美元符号，在第千个位置使用逗号。</td></tr></tbody></table><h1 id="测试用例"><a href="#测试用例" class="headerlink" title="测试用例"></a>测试用例</h1><p>&#160; &#160; &#160; &#160;我们可以随意写几个数字来看一下这个输入和输出，input x 6.限制了读入数据的长度和格式即为无小数位的五位整数，format X DOLLAR10.2则规定了显示的格式，这里我们可以看到数据的完全显示、美元符号和千位逗号的显示优先级。</p><img src="/2020/03/13/SAS_%E6%95%B0%E5%AD%97%E6%A0%BC%E5%BC%8F/test.jpg" class=""><hr><p>本文作者： Ran<br>版权声明： 本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</p><hr>]]></content>
+    <content type="html"><![CDATA[<p><img src="/pictures/SAS.jpeg"></p><span id="more"></span><h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>&#160; &#160; &#160; &#160;SAS可以处理各种数字数据格式，它在变量名末尾使用这些格式，以向数据应用特定的数字格式。 SAS使用两种数字格式，一个用于读取数字数据的特定格式，称为informat，另一个用于显示称为输出格式的特定格式。这个格式带有很鲜明的语言特点。</p><h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Varname <span class="module-access"><span class="module"><span class="identifier">Formatnamew</span>.</span></span>d</span><br></pre></td></tr></table></figure><ul><li>VARNAME 变量名。</li><li>FORMATNAME 应用于变量的数字格式名称（COMMA/DOLLAR）。</li><li>w是允许变量存储的数据列的最大位数（整数位和小数位，小数点也算一位，即使没有小数位）。</li><li>d是小数的位数。</li></ul><h1 id="读取数据格式"><a href="#读取数据格式" class="headerlink" title="读取数据格式"></a>读取数据格式</h1><p>&#160; &#160; &#160; &#160;读取输入的数据，按照给定的格式进行显示 </p><h2 id="输入数字格式"><a href="#输入数字格式" class="headerlink" title="输入数字格式"></a>输入数字格式</h2><table><thead><tr><th>格式</th><th>使用</th></tr></thead><tbody><tr><td>n.</td><td>最多“n”个没有小数的列数,实际的整数位可用的只有n-1</td></tr><tr><td>n.p</td><td>最多“n”个带“p”位小数的列数。</td></tr><tr><td>COMMAn.p</td><td>COMMAn.p最多“n”个具有“p”小数的列，删除任何逗号或美元符号。</td></tr></tbody></table><h1 id="显示数据格式"><a href="#显示数据格式" class="headerlink" title="显示数据格式"></a>显示数据格式</h1><p>&#160; &#160; &#160; &#160;类似于在读取数据时应用格式，以下是用于在SAS程序的输出中显示数据的格式的列表。</p><h2 id="输出数字格式"><a href="#输出数字格式" class="headerlink" title="输出数字格式"></a>输出数字格式</h2><table><thead><tr><th>格式</th><th>使用</th></tr></thead><tbody><tr><td>n.</td><td>写入最多“n”个没有小数的列数。</td></tr><tr><td>n.p</td><td>写入最多“n”个带“p”位小数的列数。</td></tr><tr><td>DOLLARn.p</td><td>写入最多“n”个具有“p”小数的列，前面带有美元符号，在第千个位置使用逗号。</td></tr></tbody></table><h1 id="测试用例"><a href="#测试用例" class="headerlink" title="测试用例"></a>测试用例</h1><p>&#160; &#160; &#160; &#160;我们可以随意写几个数字来看一下这个输入和输出，input x 6.限制了读入数据的长度和格式即为无小数位的五位整数，format X DOLLAR10.2则规定了显示的格式，这里我们可以看到数据的完全显示、美元符号和千位逗号的显示优先级。</p><img src="/2020/03/13/SAS-%E6%95%B0%E5%AD%97%E6%A0%BC%E5%BC%8F/test.jpg" class=""><hr><p>本文作者： Ran<br>版权声明： 本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！</p><hr>]]></content>
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;/pictures/SAS.jpeg&quot;&gt;&lt;/p&gt;</summary>
     
     
     
-    <category term="数据库" scheme="http://wuranim.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <category term="数据库" scheme="https://pawn.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
-    <category term="SAS" scheme="http://wuranim.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/SAS/"/>
+    <category term="SAS" scheme="https://pawn.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/SAS/"/>
     
     
-    <category term="SAS" scheme="http://wuranim.github.io/tags/SAS/"/>
+    <category term="SAS" scheme="https://pawn.github.io/tags/SAS/"/>
     
   </entry>
   
   <entry>
     <title>BASE SAS</title>
-    <link href="http://wuranim.github.io/2020/03/12/SAS_%E5%9F%BA%E7%A1%80/"/>
-    <id>http://wuranim.github.io/2020/03/12/SAS_%E5%9F%BA%E7%A1%80/</id>
+    <link href="https://pawn.github.io/2020/03/12/SAS-%E5%9F%BA%E7%A1%80/"/>
+    <id>https://pawn.github.io/2020/03/12/SAS-%E5%9F%BA%E7%A1%80/</id>
     <published>2020-03-12T05:32:50.000Z</published>
     <updated>2022-01-20T15:21:06.427Z</updated>
     
@@ -227,23 +227,23 @@
     
     
     
-    <category term="数据库" scheme="http://wuranim.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <category term="数据库" scheme="https://pawn.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
-    <category term="SAS" scheme="http://wuranim.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/SAS/"/>
+    <category term="SAS" scheme="https://pawn.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/SAS/"/>
     
     
-    <category term="SAS" scheme="http://wuranim.github.io/tags/SAS/"/>
+    <category term="SAS" scheme="https://pawn.github.io/tags/SAS/"/>
     
   </entry>
   
   <entry>
     <title>正则表达式</title>
-    <link href="http://wuranim.github.io/2019/06/08/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
-    <id>http://wuranim.github.io/2019/06/08/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</id>
+    <link href="https://pawn.github.io/2019/06/08/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    <id>https://pawn.github.io/2019/06/08/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</id>
     <published>2019-06-07T16:00:00.000Z</published>
     <updated>2021-12-17T09:01:01.358Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/pictures/regex.jpg"></p><p>正则表达式用于文本内容的查找，替换。(<a href="https://regexr.com/" title="" target="">一个正则表达式在线测试网站</a>)</p><span id="more"></span><h1 id="匹配单个字符"><a href="#匹配单个字符" class="headerlink" title="匹配单个字符"></a>匹配单个字符</h1><p>. 可以用来匹配任何的单个字符，但是在大多数实现里面，不能匹配换行符；</p><p>. 是元字符，表示它有特殊的含义，而不是字符本身的含义。如果需要匹配 . 那么要用 \ 进行转义，即在 . 前面加上 \ 。</p><p>正则表达式一般是区分大小写的，但是也有些实现是不区分。</p><p>正则表达式</p><figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nam.</span><br></pre></td></tr></table></figure><p>匹配结果</p><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">My <span class="built_in">name</span> <span class="keyword">is</span> Zheng.</span><br></pre></td></tr></table></figure><h1 id="匹配一组字符"><a href="#匹配一组字符" class="headerlink" title="匹配一组字符"></a>匹配一组字符</h1><p>[ ] 定义一个字符集合；</p><p>0-9、a-z 定义了一个字符区间，区间使用ASCII码来确定，字符区间在[ ]中使用。</p><ul><li>只有在 [ ] 之间才是元字符，在 [ ] 之外就是一个普通字符；</li></ul><p>^ 在[ ]中是取非操作。</p><p><em><strong>应用</strong></em></p><p>匹配以abc为开头，并且最后一个字母不为数字的字符串：</p><p><em><strong>正则表达式</strong></em></p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">abc</span>[^<span class="number">0</span>-<span class="number">9</span>]</span><br></pre></td></tr></table></figure><p><em><strong>匹配结果</strong></em></p><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">abcd</span></span><br><span class="line">abc1</span><br><span class="line">abc2</span><br></pre></td></tr></table></figure><h1 id="使用元字符"><a href="#使用元字符" class="headerlink" title="使用元字符"></a>使用元字符</h1><p><em><strong>匹配空白字符</strong></em></p><table><thead><tr><th>元字符</th><th>说明</th></tr></thead><tbody><tr><td>[\b]</td><td>回退（删除）一个字符</td></tr><tr><td>\f</td><td>换页符</td></tr><tr><td>\n</td><td>换行符</td></tr><tr><td>\r</td><td>回车符</td></tr><tr><td>\t</td><td>制表符</td></tr><tr><td>\v</td><td>垂直制表符</td></tr></tbody></table><p>\r\n是 Windows 中的文本行结束标签，在 Unix/Linux 则是 \n。</p><p>\r\n\r\n 可以匹配 Windows 下的空白行，因为它匹配两个连续的行尾标签，而这正是两条记录之间的空白行；</p><p><em><strong>匹配特定的字符类别</strong></em></p><ol><li>数字元字符</li></ol><table><thead><tr><th>元字符</th><th>说明</th></tr></thead><tbody><tr><td>\d</td><td>数字字符，等价于 [0-9]</td></tr><tr><td>\D</td><td>非数字字符，等价于 [^0-9]</td></tr></tbody></table><ol start="2"><li>字母数字元字符</li></ol><table><thead><tr><th>元字符</th><th>说明</th></tr></thead><tbody><tr><td>\w</td><td>大小写字母，下划线和数字，等价于 [a-zA-Z0-9_]</td></tr><tr><td>\W</td><td>对 \w 取非</td></tr></tbody></table><ol start="3"><li>空白字符元字符</li></ol><table><thead><tr><th>元字符</th><th>说明</th></tr></thead><tbody><tr><td>\s</td><td>任何一个空白字符，等价于 [\f\n\r\t\v]</td></tr><tr><td>\S</td><td>对 \s 取非</td></tr><tr><td>\x</td><td>匹配十六进制字符，\0 匹配八进制，例如 \x0A 对应 ASCII 字符 10，等价于 \n。</td></tr></tbody></table><h1 id="重复匹配"><a href="#重复匹配" class="headerlink" title="重复匹配"></a>重复匹配</h1><ul><li>+匹配 1 个或者多个字符</li><li>\ *匹配 0 个或者多个</li><li>? 匹配 0 个或者 1 个</li></ul><p><em><strong>应用</strong></em></p><p>匹配邮箱地址。</p><p><em><strong>正则表达式</strong></em></p><figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="symbol">\w</span>.]+@<span class="symbol">\w</span>+<span class="symbol">\.</span><span class="symbol">\w</span>+</span><br></pre></td></tr></table></figure><p>[\w.] 匹配的是字母数字或者 . ，在其后面加上 + ，表示匹配多次。在字符集合 [ ] 里，. 不是元字符；</p><p><em><strong>匹配结果</strong></em></p><p><a href="mailto:&#97;&#x62;&#x63;&#46;&#100;&#x65;&#x66;&#64;&#x71;&#113;&#x2e;&#99;&#x6f;&#109;">&#97;&#x62;&#x63;&#46;&#100;&#x65;&#x66;&#64;&#x71;&#113;&#x2e;&#99;&#x6f;&#109;</a></p><ul><li><p>{n} 匹配 n 个字符</p></li><li><p>{m, n} 匹配 m~n 个字符</p></li><li><p>{m,} 至少匹配 m 个字符</p></li><li><p>和 + 都是贪婪型元字符，会匹配尽可能多的内容。在后面加<br>? 可以转换为懒惰型元字符，例如 *?、+? 和 {m, n}? 。</p></li></ul><p><em><strong>正则表达式</strong></em></p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span>.+c</span><br></pre></td></tr></table></figure><p>由于 + 是贪婪型的，因此 .+ 会匹配更可能多的内容，所以会把整个abcabcabc<br>文本都匹配，而不是只匹配前面的 abc 文本。用懒惰型可以实现匹配前面的。</p><p><em><strong>匹配结果</strong></em></p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">abcabcabc</span></span><br></pre></td></tr></table></figure><h1 id="位置匹配"><a href="#位置匹配" class="headerlink" title="位置匹配"></a>位置匹配</h1><p><em><strong>单词边界</strong></em><br>\b 可以匹配一个单词的边界,边界是指位于 \w 和 \W 之间的位置；\B 匹配一个不是单词边界的位置。</p><p>\b 只匹配位置，不匹配字符，因此 \babc\b 匹配出来的结果为3个字符。</p><p><em><strong>字符串边界</strong></em><br>^ 匹配整个字符串的开头，$ 匹配结尾。</p><p>^ 元字符在字符集合中用作求非，在字符集合外用作匹配字符串的开头。</p><p>分行匹配模式（multiline）下，换行被当做字符串的边界。</p><p>应用</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">匹配代码中以<span class="regexp">//</span> 开始的注释行</span><br></pre></td></tr></table></figure><p>正则表达式</p><figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^<span class="symbol">\s</span>*<span class="symbol">\/</span><span class="symbol">\/</span>.*$</span><br></pre></td></tr></table></figure><p>匹配结果为注释1和2</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span> </span>&#123;</span><br><span class="line">     <span class="comment">// 注释1</span></span><br><span class="line">     <span class="keyword">int</span> a = <span class="number">1</span>;</span><br><span class="line">     <span class="keyword">int</span> b = <span class="number">2</span>;</span><br><span class="line">     <span class="comment">// 注释2</span></span><br><span class="line">     <span class="keyword">int</span> c = a + b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p><img src="/pictures/regex.jpg"></p><p>正则表达式用于文本内容的查找，替换。(<a href="https://regexr.com/" title="" target="">一个正则表达式在线测试网站</a>)</p><span id="more"></span><h1 id="匹配单个字符"><a href="#匹配单个字符" class="headerlink" title="匹配单个字符"></a>匹配单个字符</h1><p>. 可以用来匹配任何的单个字符，但是在大多数实现里面，不能匹配换行符；</p><p>. 是元字符，表示它有特殊的含义，而不是字符本身的含义。如果需要匹配 . 那么要用 \ 进行转义，即在 . 前面加上 \ 。</p><p>正则表达式一般是区分大小写的，但是也有些实现是不区分。</p><p>正则表达式</p><figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nam.</span><br></pre></td></tr></table></figure><p>匹配结果</p><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">My <span class="built_in">name</span> <span class="keyword">is</span> Zheng.</span><br></pre></td></tr></table></figure><h1 id="匹配一组字符"><a href="#匹配一组字符" class="headerlink" title="匹配一组字符"></a>匹配一组字符</h1><p>[ ] 定义一个字符集合；</p><p>0-9、a-z 定义了一个字符区间，区间使用ASCII码来确定，字符区间在[ ]中使用。</p><ul><li>只有在 [ ] 之间才是元字符，在 [ ] 之外就是一个普通字符；</li></ul><p>^ 在[ ]中是取非操作。</p><p><em><strong>应用</strong></em></p><p>匹配以abc为开头，并且最后一个字母不为数字的字符串：</p><p><em><strong>正则表达式</strong></em></p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">abc</span>[^<span class="number">0</span>-<span class="number">9</span>]</span><br></pre></td></tr></table></figure><p><em><strong>匹配结果</strong></em></p><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">abcd</span></span><br><span class="line">abc1</span><br><span class="line">abc2</span><br></pre></td></tr></table></figure><h1 id="使用元字符"><a href="#使用元字符" class="headerlink" title="使用元字符"></a>使用元字符</h1><p><em><strong>匹配空白字符</strong></em></p><table><thead><tr><th>元字符</th><th>说明</th></tr></thead><tbody><tr><td>[\b]</td><td>回退（删除）一个字符</td></tr><tr><td>\f</td><td>换页符</td></tr><tr><td>\n</td><td>换行符</td></tr><tr><td>\r</td><td>回车符</td></tr><tr><td>\t</td><td>制表符</td></tr><tr><td>\v</td><td>垂直制表符</td></tr></tbody></table><p>\r\n是 Windows 中的文本行结束标签，在 Unix/Linux 则是 \n。</p><p>\r\n\r\n 可以匹配 Windows 下的空白行，因为它匹配两个连续的行尾标签，而这正是两条记录之间的空白行；</p><p><em><strong>匹配特定的字符类别</strong></em></p><ol><li>数字元字符</li></ol><table><thead><tr><th>元字符</th><th>说明</th></tr></thead><tbody><tr><td>\d</td><td>数字字符，等价于 [0-9]</td></tr><tr><td>\D</td><td>非数字字符，等价于 [^0-9]</td></tr></tbody></table><ol start="2"><li>字母数字元字符</li></ol><table><thead><tr><th>元字符</th><th>说明</th></tr></thead><tbody><tr><td>\w</td><td>大小写字母，下划线和数字，等价于 [a-zA-Z0-9_]</td></tr><tr><td>\W</td><td>对 \w 取非</td></tr></tbody></table><ol start="3"><li>空白字符元字符</li></ol><table><thead><tr><th>元字符</th><th>说明</th></tr></thead><tbody><tr><td>\s</td><td>任何一个空白字符，等价于 [\f\n\r\t\v]</td></tr><tr><td>\S</td><td>对 \s 取非</td></tr><tr><td>\x</td><td>匹配十六进制字符，\0 匹配八进制，例如 \x0A 对应 ASCII 字符 10，等价于 \n。</td></tr></tbody></table><h1 id="重复匹配"><a href="#重复匹配" class="headerlink" title="重复匹配"></a>重复匹配</h1><ul><li>+匹配 1 个或者多个字符</li><li>\ *匹配 0 个或者多个</li><li>? 匹配 0 个或者 1 个</li></ul><p><em><strong>应用</strong></em></p><p>匹配邮箱地址。</p><p><em><strong>正则表达式</strong></em></p><figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="symbol">\w</span>.]+@<span class="symbol">\w</span>+<span class="symbol">\.</span><span class="symbol">\w</span>+</span><br></pre></td></tr></table></figure><p>[\w.] 匹配的是字母数字或者 . ，在其后面加上 + ，表示匹配多次。在字符集合 [ ] 里，. 不是元字符；</p><p><em><strong>匹配结果</strong></em></p><p><a href="mailto:&#97;&#x62;&#99;&#46;&#x64;&#x65;&#x66;&#64;&#x71;&#x71;&#x2e;&#99;&#x6f;&#x6d;">&#97;&#x62;&#99;&#46;&#x64;&#x65;&#x66;&#64;&#x71;&#x71;&#x2e;&#99;&#x6f;&#x6d;</a></p><ul><li><p>{n} 匹配 n 个字符</p></li><li><p>{m, n} 匹配 m~n 个字符</p></li><li><p>{m,} 至少匹配 m 个字符</p></li><li><p>和 + 都是贪婪型元字符，会匹配尽可能多的内容。在后面加<br>? 可以转换为懒惰型元字符，例如 *?、+? 和 {m, n}? 。</p></li></ul><p><em><strong>正则表达式</strong></em></p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span>.+c</span><br></pre></td></tr></table></figure><p>由于 + 是贪婪型的，因此 .+ 会匹配更可能多的内容，所以会把整个abcabcabc<br>文本都匹配，而不是只匹配前面的 abc 文本。用懒惰型可以实现匹配前面的。</p><p><em><strong>匹配结果</strong></em></p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">abcabcabc</span></span><br></pre></td></tr></table></figure><h1 id="位置匹配"><a href="#位置匹配" class="headerlink" title="位置匹配"></a>位置匹配</h1><p><em><strong>单词边界</strong></em><br>\b 可以匹配一个单词的边界,边界是指位于 \w 和 \W 之间的位置；\B 匹配一个不是单词边界的位置。</p><p>\b 只匹配位置，不匹配字符，因此 \babc\b 匹配出来的结果为3个字符。</p><p><em><strong>字符串边界</strong></em><br>^ 匹配整个字符串的开头，$ 匹配结尾。</p><p>^ 元字符在字符集合中用作求非，在字符集合外用作匹配字符串的开头。</p><p>分行匹配模式（multiline）下，换行被当做字符串的边界。</p><p>应用</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">匹配代码中以<span class="regexp">//</span> 开始的注释行</span><br></pre></td></tr></table></figure><p>正则表达式</p><figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">^<span class="symbol">\s</span>*<span class="symbol">\/</span><span class="symbol">\/</span>.*$</span><br></pre></td></tr></table></figure><p>匹配结果为注释1和2</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span> </span>&#123;</span><br><span class="line">     <span class="comment">// 注释1</span></span><br><span class="line">     <span class="keyword">int</span> a = <span class="number">1</span>;</span><br><span class="line">     <span class="keyword">int</span> b = <span class="number">2</span>;</span><br><span class="line">     <span class="comment">// 注释2</span></span><br><span class="line">     <span class="keyword">int</span> c = a + b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;/pictures/regex.jpg&quot;&gt;&lt;/p&gt;
@@ -251,42 +251,42 @@
     
     
     
-    <category term="工具" scheme="http://wuranim.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    <category term="工具" scheme="https://pawn.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
     
-    <category term="正则表达式" scheme="http://wuranim.github.io/categories/%E5%B7%A5%E5%85%B7/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    <category term="正则表达式" scheme="https://pawn.github.io/categories/%E5%B7%A5%E5%85%B7/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     
     
-    <category term="RegEx" scheme="http://wuranim.github.io/tags/RegEx/"/>
+    <category term="RegEx" scheme="https://pawn.github.io/tags/RegEx/"/>
     
   </entry>
   
   <entry>
     <title>git提交到远程库问题</title>
-    <link href="http://wuranim.github.io/2019/06/06/Git_%E6%8F%90%E4%BA%A4%E5%88%B0%E8%BF%9C%E7%A8%8B%E5%BA%93%E9%97%AE%E9%A2%98/"/>
-    <id>http://wuranim.github.io/2019/06/06/Git_%E6%8F%90%E4%BA%A4%E5%88%B0%E8%BF%9C%E7%A8%8B%E5%BA%93%E9%97%AE%E9%A2%98/</id>
+    <link href="https://pawn.github.io/2019/06/06/Git-%E6%8F%90%E4%BA%A4%E5%88%B0%E8%BF%9C%E7%A8%8B%E5%BA%93%E9%97%AE%E9%A2%98/"/>
+    <id>https://pawn.github.io/2019/06/06/Git-%E6%8F%90%E4%BA%A4%E5%88%B0%E8%BF%9C%E7%A8%8B%E5%BA%93%E9%97%AE%E9%A2%98/</id>
     <published>2019-06-05T16:00:00.000Z</published>
     <updated>2021-12-23T02:58:03.670Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="/pictures/git+github.jpg"><br>用git提交到github时出现问题</p><span id="more"></span><p>如图，第一次出现这种问题，这个demo是在pycharm做的，<br>以前没有pycharm时没有出现过这种问题。</p><img src="/2019/06/06/Git_%E6%8F%90%E4%BA%A4%E5%88%B0%E8%BF%9C%E7%A8%8B%E5%BA%93%E9%97%AE%E9%A2%98/1.png" class=""><p>我觉得是冲突了，就用git pull –rebase origin master进行合并提交，行不通。<br>最后尝试git push -f进行强推</p><img src="/2019/06/06/Git_%E6%8F%90%E4%BA%A4%E5%88%B0%E8%BF%9C%E7%A8%8B%E5%BA%93%E9%97%AE%E9%A2%98/2.png" class=""><p>最后成功</p><img src="/2019/06/06/Git_%E6%8F%90%E4%BA%A4%E5%88%B0%E8%BF%9C%E7%A8%8B%E5%BA%93%E9%97%AE%E9%A2%98/3.png" class=""><p>应该是README文件的问题</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="/pictures/git+github.jpg"><br>用git提交到github时出现问题</p><span id="more"></span><p>如图，第一次出现这种问题，这个demo是在pycharm做的，<br>以前没有pycharm时没有出现过这种问题。</p><img src="/2019/06/06/Git-%E6%8F%90%E4%BA%A4%E5%88%B0%E8%BF%9C%E7%A8%8B%E5%BA%93%E9%97%AE%E9%A2%98/1.png" class=""><p>我觉得是冲突了，就用git pull –rebase origin master进行合并提交，行不通。<br>最后尝试git push -f进行强推</p><img src="/2019/06/06/Git-%E6%8F%90%E4%BA%A4%E5%88%B0%E8%BF%9C%E7%A8%8B%E5%BA%93%E9%97%AE%E9%A2%98/2.png" class=""><p>最后成功</p><img src="/2019/06/06/Git-%E6%8F%90%E4%BA%A4%E5%88%B0%E8%BF%9C%E7%A8%8B%E5%BA%93%E9%97%AE%E9%A2%98/3.png" class=""><p>应该是README文件的问题</p>]]></content>
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;/pictures/git+github.jpg&quot;&gt;&lt;br&gt;用git提交到github时出现问题&lt;/p&gt;</summary>
     
     
     
-    <category term="版本控制" scheme="http://wuranim.github.io/categories/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
+    <category term="版本控制" scheme="https://pawn.github.io/categories/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
     
-    <category term="GIT" scheme="http://wuranim.github.io/categories/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/GIT/"/>
+    <category term="GIT" scheme="https://pawn.github.io/categories/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/GIT/"/>
     
     
-    <category term="git" scheme="http://wuranim.github.io/tags/git/"/>
+    <category term="git" scheme="https://pawn.github.io/tags/git/"/>
     
   </entry>
   
   <entry>
     <title>Web框架_Flask</title>
-    <link href="http://wuranim.github.io/2019/05/23/Python_Web%E6%A1%86%E6%9E%B6_Flask/"/>
-    <id>http://wuranim.github.io/2019/05/23/Python_Web%E6%A1%86%E6%9E%B6_Flask/</id>
+    <link href="https://pawn.github.io/2019/05/23/Python-Web%E6%A1%86%E6%9E%B6-Flask/"/>
+    <id>https://pawn.github.io/2019/05/23/Python-Web%E6%A1%86%E6%9E%B6-Flask/</id>
     <published>2019-05-22T16:00:00.000Z</published>
     <updated>2021-12-17T08:57:31.526Z</updated>
     
@@ -298,19 +298,19 @@
     
     
     
-    <category term="Python" scheme="http://wuranim.github.io/categories/Python/"/>
+    <category term="Python" scheme="https://pawn.github.io/categories/Python/"/>
     
-    <category term="Flask" scheme="http://wuranim.github.io/categories/Python/Flask/"/>
+    <category term="Flask" scheme="https://pawn.github.io/categories/Python/Flask/"/>
     
     
-    <category term="Web" scheme="http://wuranim.github.io/tags/Web/"/>
+    <category term="Web" scheme="https://pawn.github.io/tags/Web/"/>
     
   </entry>
   
   <entry>
     <title>20.有效的括号</title>
-    <link href="http://wuranim.github.io/2019/05/14/LeetCode_20-%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7/"/>
-    <id>http://wuranim.github.io/2019/05/14/LeetCode_20-%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7/</id>
+    <link href="https://pawn.github.io/2019/05/14/LeetCode-20-%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7/"/>
+    <id>https://pawn.github.io/2019/05/14/LeetCode-20-%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7/</id>
     <published>2019-05-13T16:00:00.000Z</published>
     <updated>2021-12-17T08:52:17.429Z</updated>
     
@@ -321,19 +321,19 @@
     
     
     
-    <category term="LeetCode" scheme="http://wuranim.github.io/categories/LeetCode/"/>
+    <category term="LeetCode" scheme="https://pawn.github.io/categories/LeetCode/"/>
     
-    <category term="字符串" scheme="http://wuranim.github.io/categories/LeetCode/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <category term="字符串" scheme="https://pawn.github.io/categories/LeetCode/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
     
-    <category term="LeetCode" scheme="http://wuranim.github.io/tags/LeetCode/"/>
+    <category term="LeetCode" scheme="https://pawn.github.io/tags/LeetCode/"/>
     
   </entry>
   
   <entry>
     <title>1.两数之和</title>
-    <link href="http://wuranim.github.io/2019/05/13/LeetCode_1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/"/>
-    <id>http://wuranim.github.io/2019/05/13/LeetCode_1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</id>
+    <link href="https://pawn.github.io/2019/05/13/LeetCode-1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/"/>
+    <id>https://pawn.github.io/2019/05/13/LeetCode-1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</id>
     <published>2019-05-12T16:00:00.000Z</published>
     <updated>2021-12-17T08:51:22.967Z</updated>
     
@@ -345,19 +345,19 @@
     
     
     
-    <category term="LeetCode" scheme="http://wuranim.github.io/categories/LeetCode/"/>
+    <category term="LeetCode" scheme="https://pawn.github.io/categories/LeetCode/"/>
     
-    <category term="数组" scheme="http://wuranim.github.io/categories/LeetCode/%E6%95%B0%E7%BB%84/"/>
+    <category term="数组" scheme="https://pawn.github.io/categories/LeetCode/%E6%95%B0%E7%BB%84/"/>
     
     
-    <category term="LeetCode" scheme="http://wuranim.github.io/tags/LeetCode/"/>
+    <category term="LeetCode" scheme="https://pawn.github.io/tags/LeetCode/"/>
     
   </entry>
   
   <entry>
     <title>输入有序数组</title>
-    <link href="http://wuranim.github.io/2019/05/12/LeetCode_%E4%BA%8C%E5%88%86%E6%B3%95_%E8%BE%93%E5%85%A5%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/"/>
-    <id>http://wuranim.github.io/2019/05/12/LeetCode_%E4%BA%8C%E5%88%86%E6%B3%95_%E8%BE%93%E5%85%A5%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/</id>
+    <link href="https://pawn.github.io/2019/05/12/LeetCode-%E4%BA%8C%E5%88%86%E6%B3%95-%E8%BE%93%E5%85%A5%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/"/>
+    <id>https://pawn.github.io/2019/05/12/LeetCode-%E4%BA%8C%E5%88%86%E6%B3%95-%E8%BE%93%E5%85%A5%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/</id>
     <published>2019-05-11T16:00:00.000Z</published>
     <updated>2021-12-17T08:52:08.392Z</updated>
     
@@ -368,19 +368,19 @@
     
     
     
-    <category term="LeetCode" scheme="http://wuranim.github.io/categories/LeetCode/"/>
+    <category term="LeetCode" scheme="https://pawn.github.io/categories/LeetCode/"/>
     
-    <category term="二分查找" scheme="http://wuranim.github.io/categories/LeetCode/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
+    <category term="二分查找" scheme="https://pawn.github.io/categories/LeetCode/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
     
     
-    <category term="LeetCode" scheme="http://wuranim.github.io/tags/LeetCode/"/>
+    <category term="LeetCode" scheme="https://pawn.github.io/tags/LeetCode/"/>
     
   </entry>
   
   <entry>
     <title>56.合并区间</title>
-    <link href="http://wuranim.github.io/2019/05/11/LeetCode_56-%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4/"/>
-    <id>http://wuranim.github.io/2019/05/11/LeetCode_56-%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4/</id>
+    <link href="https://pawn.github.io/2019/05/11/LeetCode-56-%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4/"/>
+    <id>https://pawn.github.io/2019/05/11/LeetCode-56-%E5%90%88%E5%B9%B6%E5%8C%BA%E9%97%B4/</id>
     <published>2019-05-10T16:00:00.000Z</published>
     <updated>2021-12-17T08:52:15.857Z</updated>
     
@@ -391,19 +391,19 @@
     
     
     
-    <category term="LeetCode" scheme="http://wuranim.github.io/categories/LeetCode/"/>
+    <category term="LeetCode" scheme="https://pawn.github.io/categories/LeetCode/"/>
     
-    <category term="排序" scheme="http://wuranim.github.io/categories/LeetCode/%E6%8E%92%E5%BA%8F/"/>
+    <category term="排序" scheme="https://pawn.github.io/categories/LeetCode/%E6%8E%92%E5%BA%8F/"/>
     
     
-    <category term="LeetCode" scheme="http://wuranim.github.io/tags/LeetCode/"/>
+    <category term="LeetCode" scheme="https://pawn.github.io/tags/LeetCode/"/>
     
   </entry>
   
   <entry>
     <title>3.无重复字符的最长子串</title>
-    <link href="http://wuranim.github.io/2019/05/10/LeetCode_3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/"/>
-    <id>http://wuranim.github.io/2019/05/10/LeetCode_3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/</id>
+    <link href="https://pawn.github.io/2019/05/10/LeetCode-3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/"/>
+    <id>https://pawn.github.io/2019/05/10/LeetCode-3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/</id>
     <published>2019-05-09T16:00:00.000Z</published>
     <updated>2021-12-17T08:52:18.158Z</updated>
     
@@ -414,19 +414,19 @@
     
     
     
-    <category term="LeetCode" scheme="http://wuranim.github.io/categories/LeetCode/"/>
+    <category term="LeetCode" scheme="https://pawn.github.io/categories/LeetCode/"/>
     
-    <category term="字符串" scheme="http://wuranim.github.io/categories/LeetCode/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <category term="字符串" scheme="https://pawn.github.io/categories/LeetCode/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
     
-    <category term="LeetCode" scheme="http://wuranim.github.io/tags/LeetCode/"/>
+    <category term="LeetCode" scheme="https://pawn.github.io/tags/LeetCode/"/>
     
   </entry>
   
   <entry>
     <title>2.两数相加</title>
-    <link href="http://wuranim.github.io/2019/05/09/LeetCode_2-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/"/>
-    <id>http://wuranim.github.io/2019/05/09/LeetCode_2-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/</id>
+    <link href="https://pawn.github.io/2019/05/09/LeetCode-2-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/"/>
+    <id>https://pawn.github.io/2019/05/09/LeetCode-2-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/</id>
     <published>2019-05-08T16:00:00.000Z</published>
     <updated>2021-12-17T08:52:20.247Z</updated>
     
@@ -437,19 +437,19 @@
     
     
     
-    <category term="LeetCode" scheme="http://wuranim.github.io/categories/LeetCode/"/>
+    <category term="LeetCode" scheme="https://pawn.github.io/categories/LeetCode/"/>
     
-    <category term="链表" scheme="http://wuranim.github.io/categories/LeetCode/%E9%93%BE%E8%A1%A8/"/>
+    <category term="链表" scheme="https://pawn.github.io/categories/LeetCode/%E9%93%BE%E8%A1%A8/"/>
     
     
-    <category term="LeetCode" scheme="http://wuranim.github.io/tags/LeetCode/"/>
+    <category term="LeetCode" scheme="https://pawn.github.io/tags/LeetCode/"/>
     
   </entry>
   
   <entry>
     <title>35.搜索插入位置</title>
-    <link href="http://wuranim.github.io/2019/05/08/LeetCode_35-%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/"/>
-    <id>http://wuranim.github.io/2019/05/08/LeetCode_35-%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/</id>
+    <link href="https://pawn.github.io/2019/05/08/LeetCode-35-%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/"/>
+    <id>https://pawn.github.io/2019/05/08/LeetCode-35-%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/</id>
     <published>2019-05-07T16:00:00.000Z</published>
     <updated>2021-12-17T08:52:16.638Z</updated>
     
@@ -460,19 +460,19 @@
     
     
     
-    <category term="LeetCode" scheme="http://wuranim.github.io/categories/LeetCode/"/>
+    <category term="LeetCode" scheme="https://pawn.github.io/categories/LeetCode/"/>
     
-    <category term="二分查找" scheme="http://wuranim.github.io/categories/LeetCode/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
+    <category term="二分查找" scheme="https://pawn.github.io/categories/LeetCode/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
     
     
-    <category term="LeetCode" scheme="http://wuranim.github.io/tags/LeetCode/"/>
+    <category term="LeetCode" scheme="https://pawn.github.io/tags/LeetCode/"/>
     
   </entry>
   
   <entry>
     <title>185.部门工资前三高的员工</title>
-    <link href="http://wuranim.github.io/2019/05/07/LeetCode_185-%E9%83%A8%E9%97%A8%E5%B7%A5%E8%B5%84%E5%89%8D%E4%B8%89%E9%AB%98%E7%9A%84%E5%91%98%E5%B7%A5/"/>
-    <id>http://wuranim.github.io/2019/05/07/LeetCode_185-%E9%83%A8%E9%97%A8%E5%B7%A5%E8%B5%84%E5%89%8D%E4%B8%89%E9%AB%98%E7%9A%84%E5%91%98%E5%B7%A5/</id>
+    <link href="https://pawn.github.io/2019/05/07/LeetCode-185-%E9%83%A8%E9%97%A8%E5%B7%A5%E8%B5%84%E5%89%8D%E4%B8%89%E9%AB%98%E7%9A%84%E5%91%98%E5%B7%A5/"/>
+    <id>https://pawn.github.io/2019/05/07/LeetCode-185-%E9%83%A8%E9%97%A8%E5%B7%A5%E8%B5%84%E5%89%8D%E4%B8%89%E9%AB%98%E7%9A%84%E5%91%98%E5%B7%A5/</id>
     <published>2019-05-06T16:00:00.000Z</published>
     <updated>2021-12-17T08:52:11.759Z</updated>
     
@@ -483,12 +483,12 @@
     
     
     
-    <category term="LeetCode" scheme="http://wuranim.github.io/categories/LeetCode/"/>
+    <category term="LeetCode" scheme="https://pawn.github.io/categories/LeetCode/"/>
     
-    <category term="数据库" scheme="http://wuranim.github.io/categories/LeetCode/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <category term="数据库" scheme="https://pawn.github.io/categories/LeetCode/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
     
-    <category term="LeetCode" scheme="http://wuranim.github.io/tags/LeetCode/"/>
+    <category term="LeetCode" scheme="https://pawn.github.io/tags/LeetCode/"/>
     
   </entry>
   
